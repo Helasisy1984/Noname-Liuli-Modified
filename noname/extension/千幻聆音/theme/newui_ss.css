@@ -1,0 +1,1970 @@
+@font-face {
+  font-family: 'QH_HYZLSJ';
+  src: local('隶简'), url('../font/QH_HYZLSJ.ttf');
+}
+
+@keyframes qh-jinjie {
+  0% {
+    background-image: url('shousha/jinjie6.png');
+  }
+
+  42.5% {
+    background-image: url('shousha/jinjie0.png');
+  }
+
+  45% {
+    background-image: url('shousha/jinjie1.png');
+  }
+
+  47.5% {
+    background-image: url('shousha/jinjie2.png');
+  }
+
+  50% {
+    background-image: url('shousha/jinjie3.png');
+  }
+
+  52.5% {
+    background-image: url('shousha/jinjie4.png');
+  }
+
+  55% {
+    background-image: url('shousha/jinjie5.png');
+  }
+
+  57.5% {
+    background-image: url('shousha/jinjie6.png');
+  }
+
+  100% {
+    background-image: url('shousha/jinjie6.png');
+  }
+}
+
+@keyframes qh-guangmangnei {
+  from {}
+
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes qh-guangmangwai {
+  from {}
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.qh-background {
+  --w: 100%;
+  z-index: 13;
+  position: absolute;
+  background-size: 100% 100%;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* min-height: 100%; */
+  transform: translate(-50%, -50%);
+  background-image: url('shousha/bg_lobby.jpg');
+  font-family: 'shousha';
+  text-shadow: none;
+  font-size: 16px;
+}
+
+.qh-window {
+  position: absolute;
+  height: 1338px;
+  width: 778px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+  /* background-image: url('newui_background.png'); */
+  z-index: 30;
+}
+
+.qh-window>.qh-back {
+  --w: 10%;
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: calc(var(--w));
+  height: calc(var(--w) * 1.6);
+  display: block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url('shousha/exitbutton.png');
+}
+
+.qh-window>.qh-dibuhuo {
+  --w: 45%;
+  z-index: 1;
+  position: absolute;
+  right: -9%;
+  bottom: 0px;
+  width: calc(var(--w));
+  height: calc(var(--w) * 0.16);
+  display: block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url('shousha/chr_detail_prop_cnt_bg.png');
+}
+
+.qh-shoushabg {
+  z-index: 3;
+  top: 8%;
+  right: 13%;
+  width: 38%;
+  height: 53%;
+  background-image: url('shousha/chr_detail_des_bghead.png');
+  background-size: 100% 2.7em;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition: all 0.3s linear;
+}
+
+.qh-shoushabgbody {
+  top: calc(8% + 2.7em);
+  right: 12.4%;
+  width: 38.6%;
+  height: 45%;
+  margin-top: -0.1%;
+  margin-bottom: -0.1%;
+  background-image: url('shousha/chr_detail_des_bgbody.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition: all 0.3s linear;
+}
+
+.qh-shoushabgtail {
+  top: calc(52.6% + 2.7em);
+  right: 12.4%;
+  width: 38.7%;
+  height: 4%;
+  background-image: url('shousha/chr_detail_des_bgtail.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition: all 0.3s linear;
+}
+
+.qh-shoushabg.suoxiao {
+  height: 41%;
+}
+
+.qh-shoushabgbody.suoxiao {
+  height: 33%;
+}
+
+.qh-shoushabgtail.suoxiao {
+  top: calc(40.6% + 2.7em);
+}
+
+
+.qh-window>.qh-shousha-big-avatar {
+  z-index: 61;
+  position: absolute;
+  left: calc(16%);
+  /*top: calc(3%);*/
+  top: 0%;
+  width: 28%;
+  /*height: 93%;*/
+  height: 96%;
+  display: block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url('../image/newui_avatar.png');
+}
+
+.qh-shousha-big-avatar>.qh-image-standard {
+  --p: 50%;
+  z-index: 1;
+  position: absolute;
+  bottom: calc(3.6%);
+  left: calc(5%);
+  width: calc(90%);
+  height: calc(92.4%);
+  background-size: cover;
+  background-position: var(--p);
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  transition: none;
+}
+
+.qhly_blackbg>.qh-image-standard {
+  --p: 50%;
+  --w: 1vw;
+  z-index: 1;
+  position: absolute;
+  bottom: calc(50% - var(--w) * 19.2);
+  left: calc(17.5%);
+  width: calc(var(--w) * 26.05);
+  height: calc(var(--w) * 38.6);
+  background-size: cover;
+  background-position: var(--p);
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  transition: none;
+}
+
+.qh-shousha-big-avatar>.qh-image-lutou {
+  z-index: 61;
+  position: absolute;
+  bottom: calc(3.6%);
+  left: calc(5%);
+  width: calc(90%);
+  height: calc(98%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  transition: none;
+}
+
+.qh-shousha-big-avatar.shousha>.qh-image-lutou {
+  z-index: 61;
+  position: absolute;
+  bottom: calc(3.6%);
+  left: calc(6.7%);
+  width: calc(87.8%);
+  height: calc(103%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  transition: none;
+}
+
+
+.qhly_blackbg>.qh-image-lutou {
+  --p: 50%;
+  --w: 1vw;
+  z-index: 1;
+  position: absolute;
+  bottom: calc(50% - var(--w) * 19.2);
+  left: calc(17.5%);
+  width: calc(var(--w) * 26.05);
+  height: calc(var(--w) * 41);
+  background-size: cover;
+  background-position: var(--p);
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  transition: none;
+}
+
+.qh-shousha-big-avatar>.qh-shousha-skintype {
+  display: flex;
+  flex-direction: column;
+  height: 26%;
+  width: 19%;
+  top: 17%;
+  right: 2%;
+  position: absolute;
+  z-index: 64;
+  transition: none;
+}
+
+.qh-shousha-skintype>.qh-shousha-skintype0 {
+  margin: -3% 10% -3% auto;
+  width: 63%;
+  height: 33%;
+  position: relative;
+  background-image: url('shousha/chr_detail_mode_biaozhun.png');
+  background-size: 100% 100%;
+  transition: none;
+}
+
+.qh-shousha-skintype>.qh-shousha-skintype0.sel {
+  margin: -3% 0 -3% auto;
+  width: 100%;
+  height: 40%;
+  background-image: url('shousha/chr_detail_mode_biaozhunsel.png');
+}
+
+.qh-shousha-skintype>.qh-shousha-skintype1 {
+  margin: -3% 10% -3% auto;
+  width: 63%;
+  height: 33%;
+  position: relative;
+  background-image: url('shousha/chr_detail_mode_guozhan.png');
+  background-size: 100% 100%;
+  transition: none;
+}
+
+.qh-shousha-skintype>.qh-shousha-skintype1.sel {
+  margin: -3% 0 -3% auto;
+  width: 100%;
+  height: 40%;
+  background-image: url('shousha/chr_detail_mode_guozhansel.png');
+}
+
+.qh-shousha-skintype>.qh-shousha-skintype2 {
+  margin: -3% 10% -3% auto;
+  width: 63%;
+  height: 33%;
+  position: relative;
+  background-image: url('shousha/chr_detail_mode_jingji.png');
+  background-size: 100% 100%;
+  transition: none;
+}
+
+.qh-shousha-skintype>.qh-shousha-skintype2.sel {
+  margin: -3% 0 -3% auto;
+  width: 100%;
+  height: 40%;
+  background-image: url('shousha/chr_detail_mode_jingjisel.png');
+}
+
+.qh-shousha-big-avatar>.qh-avatar-label {
+  --u: url('shousha/detail_cong.png');
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  display: block;
+  width: calc(110%);
+  height: calc(103%);
+  left: calc(-9%);
+  top: calc(0%);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--u);
+}
+
+.qh-shousha-big-avatar>.qh-avatar-label-title {
+  z-index: 61;
+  position: absolute;
+  top: calc(16%);
+  left: calc(9%);
+  width: calc(20%);
+  height: calc(50%);
+  color: #B5AB82;
+  font-size: 17px;
+  display: block;
+  font-weight: bold;
+  filter: drop-shadow(1px 0 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(0 -1px 0 black);
+}
+
+.qh-shousha-big-avatar>.qh-avatar-label-other {
+  pointer-events: none;
+  --u: url('shousha/detail_cong.png');
+  z-index: 63;
+  position: absolute;
+  display: block;
+  width: calc(110%);
+  height: calc(103%);
+  left: calc(-9%);
+  top: calc(0%);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--u);
+}
+
+.qh-shousha-big-avatar>.qh-avatar-rank {
+  z-index: 63;
+  top: 3%;
+  right: 4%;
+  width: 18%;
+  height: 12%;
+  background-size: 100% 100%;
+  transition: none;
+  pointer-events: none;
+}
+
+.qh-shousha-big-avatar>.qh-skin-rank {
+  z-index: 63;
+  top: 3%;
+  right: 4%;
+  width: 18%;
+  height: 12%;
+  background-size: 100% 100%;
+  transition: none;
+  pointer-events: none;
+}
+
+/* .qh-avatar-label>.qh-avatar-label-rank {
+    z-index: 35;
+    position: absolute;
+    top: calc(10%);
+    left: calc(260%);
+    width: calc(88.94%);
+    height: calc(22.49%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+} */
+
+/* .qh-shousha-big-avatar>.qh-avatar-dragonhead {
+    z-index: 62;
+    left: calc(93.8%);
+    bottom: calc(51%);
+
+    width: calc(12%);
+    height: calc(34%);
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: repeat-y;
+    background-image: url('shousha/chr_star_off.png');
+} */
+
+.qh-shousha-big-avatar>.qh-avatar-dragontail {
+  z-index: 63;
+  left: calc(67.4%);
+  top: calc(48%);
+  width: calc(40%);
+  height: calc(52%);
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url('shousha/chrfrm_flower1.png');
+  transition: none;
+}
+
+.qh-avatar-dragontail>.qh-avatar-jindutiao {
+  z-index: 1;
+  left: calc(76%);
+  bottom: calc(37.3%);
+  width: calc(10%);
+  /* height: calc(60.3%); */
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url('shousha/jindutiao.png');
+  background-size: cover;
+  transition: none;
+}
+
+.qh-avatar-dragontail>.qh-avatar-jindufenge {
+  z-index: 2;
+  left: calc(73.4%);
+  bottom: calc(35.5%);
+  width: calc(14.4%);
+  height: calc(64%);
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url('shousha/jinjiefenge.png');
+  transition: none;
+}
+
+.qh-avatar-dragontailball {
+  z-index: 1;
+  left: 37%;
+  top: 66%;
+  width: 59%;
+  height: 29.8%;
+  background-size: 100% 100%;
+  background-image: url('shousha/chr_advance_btn1.png');
+}
+
+.qh-avatar-dragontailball:active {
+  filter: brightness(2);
+}
+
+.qh-avatar-dragontailballguangmangnei {
+  pointer-events: none;
+  z-index: 2;
+  left: 17%;
+  top: 60%;
+  width: 100%;
+  height: 42.8%;
+  background-size: 100% 100%;
+  animation: qh-guangmangnei 5s infinite linear;
+  background-image: url('shousha/guangmang0.png');
+}
+
+.qh-avatar-dragontailballguangmangwai {
+  pointer-events: none;
+  z-index: 2;
+  left: 17%;
+  top: 60%;
+  width: 100%;
+  height: 42.8%;
+  background-size: 100% 100%;
+  animation: qh-guangmangwai 5s infinite linear;
+  background-image: url('shousha/guangmang1.png');
+}
+
+.qh-avatar-dragontailjinjie {
+  pointer-events: none;
+  z-index: 3;
+  left: 15%;
+  top: 59%;
+  width: 104%;
+  height: 44%;
+  background-size: 100% 100%;
+  animation: qh-jinjie 3s infinite linear;
+  background-image:
+    url('shousha/jinjie0.png'),
+    url('shousha/jinjie1.png'),
+    url('shousha/jinjie2.png'),
+    url('shousha/jinjie3.png'),
+    url('shousha/jinjie4.png'),
+    url('shousha/jinjie5.png'),
+    url('shousha/jinjie6.png');
+}
+
+.qh-avatar-dragontailcur {
+  z-index: 4;
+  left: 88%;
+  top: 59.4%;
+  width: 30.5%;
+  height: 8%;
+  background-size: 100% 100%;
+  background-image: url('shousha/chr_prg_cur.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  line-height: 0%;
+  font-size: 1.2em;
+  transition: none;
+}
+
+.qh-avatar-dragontailtotal {
+  z-index: 3;
+  left: 88%;
+  top: -1.2%;
+  width: 30.5%;
+  height: 8%;
+  background-size: 100% 100%;
+  background-image: url('shousha/chr_prg_total.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  line-height: 0%;
+  font-size: 1.2em;
+}
+
+.qh-avatar-dragontailstar {
+  display: flex;
+  right: 17%;
+  width: 19%;
+  height: 60%;
+  bottom: 101%;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  flex-direction: column;
+  z-index: 63;
+}
+
+.qh-avatar-dragontailstartext {
+  position: static;
+  width: 180%;
+  height: 120%;
+  border: none;
+  background-image: url('shousha/chr_star_off.png');
+  background-size: cover;
+  background-position: top;
+}
+
+.qh-avatar-dragontailstartext.jinjie {
+  background-image: url('shousha/chr_star_on.png');
+}
+
+.qh-avatar-shoushabuttons {
+  z-index: -1;
+  left: 9%;
+  bottom: 6%;
+  width: 6%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.qh-avatar-shoushabuttons>div:active {
+  filter: contrast(0.4) brightness(2);
+}
+
+.qh-avatar-share {
+  position: static;
+  width: 4em;
+  height: 4em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('shousha/chr_detail_btn_share.png');
+}
+
+.qh-avatar-default {
+  position: static;
+  width: 4em;
+  height: 4em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('shousha/chr_detail_btn_set_my_image.png');
+}
+
+.qh-avatar-shiyong {
+  position: static;
+  width: 4em;
+  height: 4em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('shousha/chr_detail_btn_trial.png');
+}
+
+.qh-avatar-guofu {
+  position: static;
+  width: 3.1em;
+  height: 3.1em;
+  background:
+    url('shousha/adv_ranklist_icon1.png') no-repeat center / cover,
+    url('shousha/adv_icon_bg1.png') no-repeat center / contain;
+}
+
+
+/* .qh-avatar-label>.qh-avatar-label-group {
+    z-index: 35;
+    position: absolute;
+    left: calc(8.8496%);
+    top: calc(2.237%);
+    height: calc(20%);
+    width: calc(84%);
+    color: yellow;
+    font-family: 'xingkai';
+    line-height: 100%;
+    font-size: 3.7em;
+    text-shadow: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+.qh-shousha-big-avatar>.qh-avatar-label-name {
+  z-index: 63;
+  position: absolute;
+  top: calc(19%);
+  left: calc(-3.3%);
+  width: calc(9%);
+  height: calc(50%);
+  color: white;
+  line-height: 100%;
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.qh-shoushaName-pre {
+  position: relative;
+  width: 106%;
+  height: 9%;
+  background-size: 100% 100%;
+}
+
+.qh-shoushaName-other {
+  position: relative;
+  filter: drop-shadow(1px 0 0 rgb(36, 35, 35)) drop-shadow(-1px 0 0 rgb(36, 35, 35)) drop-shadow(0 1px 0 rgb(36, 35, 35)) drop-shadow(0 -1px 0 rgb(36, 35, 35));
+}
+
+/* .qh-shousha-big-avatar>.qh-avatar-label-name {
+    z-index: 80;
+    position: absolute;
+    top: calc(1%);
+    left: calc(-23.7%);
+    width: calc(47.79%);
+    height: calc(52.13%);
+    color: white;
+    line-height: 100%;
+    font-size: 1.6em;
+    filter: drop-shadow(1px 0 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(0 -1px 0 black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+} */
+
+.qh-window>.qh-hp {
+  display: flex;
+  left: 15.03%;
+  right: unset;
+  width: 2.6%;
+  /*右移*/
+  bottom: 10%;
+  /*上移*/
+  font-size: 0.9em;
+  /*字体大小*/
+  line-height: 0.9em;
+  /*纵向间隔*/
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  z-index: 63;
+  transition: none;
+}
+
+.qh-hp>.qh-hptext {
+  /*Hp<=5(勾玉)*/
+  position: static;
+  --u: url('shousha/chr_detail_hp_0.png');
+  --ub: url('shousha/chr_detail_hp_0_none.png');
+  margin-top: -0.5px;
+  /*纵向间隔*/
+  width: 1.9em;
+  /*宽度*/
+  height: 2em;
+  /*高度*/
+  /*line-height: 100%;*/
+  border: none;
+  background-image: var(--u);
+  background-size: 100% 100%;
+}
+
+.qh-hptext.blank {
+  background-image: var(--ub);
+}
+
+.qh-hp>.qh-hpGZtext {
+  /*Hp<=5(勾玉)*/
+  position: static;
+  --u: url('shousha/chr_detail_guo_hp_purple.png');
+  --ub: url('shousha/chr_detail_guo_hp_purple_2.png');
+  margin-top: -0.5px;
+  /*纵向间隔*/
+  width: 1.9em;
+  /*宽度*/
+  height: 2em;
+  /*高度*/
+  /*line-height: 100%;*/
+  border: none;
+  background-image: var(--u);
+  background-size: 100% 100%;
+}
+
+.qh-hpGZtext.blank {
+  background-image: var(--ub);
+}
+
+.qh-hptextnumber {
+  position: static;
+  margin-top: -0.5px;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.qh-hpnumber {
+  --w: 1.6em;
+  width: var(--w);
+  max-width: 1.6em;
+  height: 2em;
+  position: static;
+  background-position: center;
+  background-size: cover;
+}
+
+.qh-hpsplit {
+  width: 1.6em;
+  height: 0.9em;
+  margin: -0.3em 0 0.1em;
+  position: static;
+  background-image: url('shousha/chr_detail_hp_split.png');
+  background-size: 100% 100%;
+}
+
+.qh-hp>.qh-mpnode {
+  position: static;
+  margin-bottom: 22%;
+  width: 1.2em;
+  height: 1.2em;
+  border: none;
+  background-image: url('shousha/mp.png');
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  line-height: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+}
+
+.qh-hp>.qh-hujianode {
+  position: static;
+  margin-bottom: 22%;
+  width: 1.2em;
+  height: 1.2em;
+  border: none;
+  background-image: url('shousha/shield.png');
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  line-height: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+}
+
+.qh-lingyu {
+  z-index: 3;
+  position: absolute;
+  left: 28%;
+  bottom: 7%;
+  width: 6.5%;
+  height: 79%;
+  background-image: url('shousha/lingyu.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.qh-lingyutext {
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  line-height: 100%;
+  font-size: 1.2em;
+  color: #c8c3c7;
+  left: 130%;
+  top: 7%;
+  height: calc(100%);
+  width: calc(25%);
+}
+
+.qh-jianghun {
+  z-index: 3;
+  position: absolute;
+  left: 51%;
+  bottom: 9%;
+  width: 6%;
+  height: 76%;
+  background-image: url('shousha/jianghun.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.qh-jianghuntext {
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  line-height: 100%;
+  font-size: 1.2em;
+  color: #c8c3c7;
+  left: 130%;
+  top: 7%;
+  height: calc(100%);
+  width: calc(25%);
+}
+
+
+.qh-button {
+  z-index: 3;
+  position: absolute;
+  height: 1.9em;
+  line-height: 1.9em;
+  font-size: 1.4em;
+  width: 11.3%;
+  top: 8.1%;
+  left: 73.8%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #9b908a;
+  text-align: center;
+  padding-left: 1.1%;
+  letter-spacing: 0.6em;
+  text-shadow: 2px 2px 2px 2px black;
+}
+
+.qh-button>.qh-otherinfoarrow {
+  display: block;
+  z-index: 15;
+  right: 3px;
+  top: calc(33%);
+  width: 10px;
+  height: 17px;
+  background-image: url('decade/qhly_pic_down_arrow.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: rotateY 0.5s;
+}
+
+.qh-otherinfoarrow.sel {
+  transform: rotate(90deg);
+  transform-origin: center center;
+}
+
+.qh-button.skillB {
+  left: 49.9%;
+}
+
+.qh-button.skinB {
+  height: 0;
+  width: 0;
+}
+
+.qh-button.configB {
+  left: 62%;
+}
+
+.qh-button.sel {
+  background-image: url('shousha/chr_detail_des_tab.png');
+  color: white;
+  text-shadow: none;
+}
+
+.qh-skillinfohead {
+  padding-left: 1%;
+  width: 5.5em;
+  height: 3.4em;
+  line-height: 1.8em;
+  font-family: 'HYZLSJ', 'QH_HYZLSJ';
+  background-image: url('shousha/chr_detail_skill_button_normal.png');
+  background-size: 100% 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /*margin-right: 2.5em;*//*helasisy*/
+  margin-right: 1.5em;
+}
+
+.qh-skillinfoimg {}
+
+.qh-skillinfohead.sel {
+  background-image: url('shousha/chr_detail_skill_button_selected.png');
+}
+
+.qh-skillinfoheadcontent {
+  background: linear-gradient(180deg, #f7d78e 0%, #af8e31 50%);
+  font-family: 'HYZLSJ', 'QH_HYZLSJ';
+  align-self: center;
+  font-weight: 600;
+  font-size: 1.9em;
+  -webkit-background-clip: text;
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 0 0 #453325) drop-shadow(-2px 0 0 #453325) drop-shadow(0 2px 0 #453325) drop-shadow(0 -2px 0 #453325);
+}
+
+.qh-skillinfobody {
+  width: 93%;
+  left: 0;
+  min-height: 90px;
+  padding: 12% 4%;
+  font-size: 17px;
+  color: #d9c299;
+  display: none;
+  margin-top: -2px;
+}
+
+.qh-skillinfobody.show {
+  display: block;
+}
+
+.qh_skilltest {
+  z-index: 32;
+  left: 4%;
+  top: 0.4em;
+  width: 3.6em;
+  height: 2.1em;
+  background-size: 100% 100%;
+  background-image: url('shousha/chr_try_play_game.png');
+}
+
+.qh-zhubeidong {
+  z-index: 32;
+  left: 4%;
+  top: 0.4em;
+  width: 2em;
+  height: 2em;
+  background-size: 100% 100%;
+}
+
+.qh-zhubeidongcontent {
+  z-index: 32;
+  left: calc(4% + 1.8em);
+  top: 0.75em;
+  width: 25%;
+  height: 1.3em;
+  padding-left: 2%;
+  line-height: 1.4em;
+  background-size: 100% 100%;
+  background-image: url('shousha/chr_detail_skill_name_bg.png');
+}
+
+.qh-skinchange-decade-big-dialog {
+  z-index: 10;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url('shousha/chr_detail_skin_list_bg.png') no-repeat center / cover;
+}
+
+.qh-skinchange-decade-big-cover {
+  z-index: 9;
+  display: block;
+  left: 3.6%;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  /* border-radius: 10px; */
+  overflow: hidden;
+}
+
+.qh-skinchange-decade-big-area {
+  z-index: 9;
+  text-align: left;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  /* border-radius: 10px; */
+  transition: transform 0s;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+/* .qh-skinchange-decade-big-autoskin {
+    left: calc(19%);
+    width: 78px;
+    bottom: 6%;
+    height: 27px;
+    z-index: 41;
+    overflow: hidden;
+} */
+
+/* .qh-skinchange-decade-big-autoskinborder {
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: 100%;
+    z-index: 41;
+    background-image: url('dc_autoskinborder.png');
+}
+
+.qh-skinchange-decade-big-autoskinitem {
+    left: calc(-67%);
+    width: 130px;
+    bottom: 1%;
+    height: 25px;
+    background-size: 100% 100%;
+    background-position: 100%;
+    z-index: 40;
+    background-image: url('dc_autoskinitem.png');
+    transition: all 1s;
+}
+
+.qh-skinchange-decade-big-autoskin[data-auto=true]>.qh-skinchange-decade-big-autoskinitem {
+    left: calc(0%);
+} */
+
+/* .qh-skinchange-decade-big-skin {
+    z-index: 10;
+    display: block;
+    left: 63px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    transition: scale 0.2s;
+}
+
+.qh-skinchange-decade-big-skin.original {
+    height: 159px;
+}
+
+.qh-skinchange-decade-big-skin>.primary-avatar {
+    left: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 8px;
+    transition-property: opacity, transform;
+    z-index: 62;
+}
+
+.qh-skinchange-decade-big-dialog[data-outcrop-skin='on'] .primary-avatar {
+    height: 96%;
+    clip-path: url(#solo-clip);
+    -webkit-clip-path: url(#solo-clip);
+}
+
+.qh-skinchange-decade-big-skin.unseen>.primary-avatar,
+.qh-skinchange-decade-big-skin.d-skin>.primary-avatar,
+.qh-skinchange-decade-big-skin.d-skin2>.primary-avatar {
+    opacity: 0;
+} */
+
+.qhavatar-name {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  line-height: 16px;
+  text-align: center;
+  /*text-shadow: none; #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;*/
+  left: 26%;
+  top: 24%;
+  right: 26%;
+  bottom: 1%;
+  position: absolute;
+}
+
+.qhhp-decade-big-wrap {
+  right: 9%;
+  bottom: 6%;
+  width: 8.6em;
+  height: 1.4em;
+  border: #8a8884 1px solid;
+  border-radius: 8px;
+  z-index: 63;
+  transition: none;
+  background-color: rgba(1, 1, 1, 0.5);
+}
+
+.qh-skinchange-decade-big-skin-text {
+  color: #8a8884;
+  width: 90%;
+  height: 90%;
+  text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 15px rgb(0, 0, 0);
+  font-size: 1.2em;
+  line-height: 1em;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  /* letter-spacing: -2px; */
+}
+
+.qhhp-decade-big-skininfo-wrap {
+  left: 9%;
+  bottom: 14%;
+  max-width: 81%;
+  border: #8a8884 1px solid;
+  border-radius: 8px;
+  z-index: 63;
+  transition: none;
+  background-color: rgba(1, 1, 1, 0.5);
+  display: flex;
+  flex-flow: column-reverse wrap;
+}
+
+.qhhp-decade-big-skininfotext-wrap {
+  color: #8a8884;
+  text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 15px rgb(0, 0, 0);
+  font-size: 1.2em;
+  display: block;
+  position: relative;
+}
+
+.qh-image-standard>.qhdynamic-big-wrap {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 62;
+  transition: none;
+}
+
+.qh-image-lutou>.qhdynamic-big-wrap {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 94%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 62;
+  transition: none;
+}
+
+.qh-shousha-big-avatar.shousha>.qh-image-lutou>.qhdynamic-big-wrap {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 89.3%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 62;
+  transition: none;
+}
+
+.qhdynamic-big-wrap>.animation-player {
+  display: block;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: inherit;
+  pointer-events: none;
+  height: 100%;
+  transition: none;
+}
+
+.qh-skinchange-big-dynamicChange {
+  width: 17%;
+  height: 11%;
+  right: 3%;
+  top: 15%;
+  background-image: url('shousha/chr_detail_skin_normal.png');
+  background-size: contain;/*100% 100%;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 63;
+  display: none;
+}
+
+.qh-skinchange-big-dynamicChange[toggle=true] {
+  display: block;
+}
+
+.qh-skinchange-big-dynamicChange.jing {
+  background-image: url('shousha/chr_detail_skin_dynamic.png');
+}
+
+.qh-skinchange-decade-big-title {
+  width: 100%;
+  height: 50px;
+  line-height: 51px;
+  left: 0;
+  top: 0;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bolder;
+  color: #4b381a;
+  position: absolute;
+}
+
+.qh-skinchange-decade-big-skinaudiolist {
+  width: 100%;
+  height: auto;
+  top: 55px;
+  left: 0px;
+  color: #4b381a;
+  position: absolute;
+}
+
+.qh-skinchange-decade-big-skillaudioinfo {
+  width: 80%;
+  left: 5%;
+  height: 26px;
+  line-height: 26px;
+  border: 2px solid;
+  border-left: none;
+  border-right: none;
+  padding-left: 30px;
+  border-image: -webkit-linear-gradient(left, transparent, #5d5a53 10%, #4a463a 30%, #656258 50%, transparent 100%) 1;
+  background-image: -webkit-linear-gradient(left, transparent, #5d5a53 10%, #565144 30%, #656050 50%, transparent 100%);
+  font-size: 20px;
+  color: white;
+  position: relative;
+}
+
+.qh-skinchange-decade-big-huawen {
+  height: 26px;
+  width: 17px;
+  background: url('decade/huawen.png') no-repeat;
+  background-size: 100% 100%;
+  left: 1.5%;
+  top: 0;
+}
+
+.qh-skinchange-decade-big-skillaudiobar {
+  width: 26px;
+  height: 26px;
+  float: right;
+}
+
+.qh-skinchange-decade-big-skilltaici {
+  width: 90%;
+  left: 5%;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.qh-skinchange-decade-big-skinconfig {
+  width: 80%;
+  left: 5%;
+  height: auto;
+  position: relative;
+}
+
+
+.qh-below-menu {
+  z-index: 39;
+  width: calc(11.7%);
+  height: auto;
+  max-height: calc(76% - 20px);
+  overflow: scroll;
+  right: 14.3%;
+  top: 15.8%;
+  border-spacing: 0px 0px;
+  border-collapse: separate;
+}
+
+.qh-below-menu-item {
+  z-index: 3;
+  color: #c2905d;
+  height: 2.5em;
+  width: calc(100%);
+  background-image: url('decade/button.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* .qh-window>.qh-button1 {
+    z-index: 31;
+    left: calc(39.54%);
+    top: calc(14.65%);
+    width: calc(14.05%);
+    height: calc(9.13%);
+    background-image: url('newui_button_rq.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: white;
+    font-family: 'qh_youyuan';
+    line-height: 100%;
+    font-size: 1.8em;
+}
+
+.qh-window>.qh-button2 {
+    z-index: 31;
+    left: calc(53.44%);
+    top: calc(14.65%);
+    width: calc(14.05%);
+    height: calc(9.13%);
+    background-image: url('newui_button_rq.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: white;
+    font-family: 'qh_youyuan';
+    line-height: 100%;
+    font-size: 1.8em;
+}
+
+.qh-window>.qh-button3 {
+    z-index: 31;
+    left: calc(67.34%);
+    top: calc(14.65%);
+    width: calc(14.05%);
+    height: calc(9.13%);
+    background-image: url('newui_button_rq.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: white;
+    font-family: 'qh_youyuan';
+    line-height: 100%;
+    font-size: 1.8em;
+}
+
+.qh-window>.qh-button4 {
+    z-index: 31;
+    left: calc(81.24%);
+    top: calc(14.65%);
+    width: calc(14.05%);
+    height: calc(9.13%);
+    background-image: url('newui_button_rq.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: white;
+    font-family: 'qh_youyuan';
+    line-height: 100%;
+    font-size: 1.8em;
+}
+ */
+.qh-shoushabg>.qh-page-introduce {
+  z-index: 31;
+  left: calc(2%);
+  top: 2.7em;
+  width: calc(95%);
+  height: calc(95% - 2.7em);
+  display: block;
+}
+
+.qh-page-introduce>.qh-page-introduce-text {
+  z-index: 32;
+  left: 4%;
+  top: 3%;
+  width: 94%;
+  height: 97%;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  display: block;
+  color: #d9c299;
+  /* filter: drop-shadow(1px 0 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(0 -1px 0 black); */
+  overflow: scroll;
+}
+
+.qh-shoushabg>.qh-page-skill {
+  z-index: 31;
+  left: calc(2%);
+  top: 2.7em;
+  width: calc(95%);
+  height: calc(95% - 2.7em);
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  align-content: center;
+}
+
+.qh-window>.qh-page-skin {
+  z-index: 1;
+  left: calc(49.5%);
+  bottom: calc(8.6%);
+  width: calc(38%);
+  height: calc(25.6%);
+  display: block;
+  transition: all 0.3s linear;
+  /* overflow: hidden; */
+}
+
+.qh-page-skin.skinbgfangda {
+  height: 38%;
+}
+
+.qh-skinchange-decade-big-dibuhuo {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  background: url('shousha/skin-dibuhuo.png') no-repeat bottom / 100% 2em;
+  -webkit-filter: blur(2px);
+  z-index: 39;
+  pointer-events: none;
+}
+
+.qh-page-skin>.qh-page-skin-text {
+  z-index: 32;
+  left: calc(100%);
+  top: calc(0%);
+  width: calc(100%);
+  height: calc(100%);
+  display: block;
+  background-size: 100% 100%;
+  background-image: url('shousha/chr_detail_skin_list_bg.png');
+}
+
+.qh-skinchange-shousha-bigarrow {
+  top: 70px;
+  left: 95%;
+  width: 5%;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url('shousha/chr_detail_skin_list_arrow.png');
+  z-index: 65;
+  display: none;
+}
+
+.qh-skinchange-shousha-bigarrow.left {
+  transform: rotateY(180deg);
+  left: -0.8%;
+}
+
+.qh-skinchange-shousha-bigarrow[data-visiable=true] {
+  display: block;
+}
+
+.qh-shoushabg>.qh-page-config {
+  z-index: 31;
+  left: calc(2%);
+  top: 2.7em;
+  width: calc(95%);
+  height: calc(95% - 2.7em);
+  display: block;
+}
+
+.qh-page-config>.qh-page-config-text {
+  z-index: 32;
+  left: 20px;
+  top: 8px;
+  width: calc(100% - 40px);
+  height: calc(95%);
+  display: block;
+  color: #e3c857;
+  overflow: scroll;
+}
+
+.qh-page-skill>.qh-page-skill-button {
+  z-index: 32;
+  padding-left: 3%;
+  padding-top: 0.4em;
+  position: static;
+  /*max-width: 86%;*//*helasisy*/
+  max-width: 95%;
+  display: flex;
+  color: #4f3c1e;
+  font-size: 0.7em;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.qh-page-skill>.qh-page-skill-text {
+  z-index: 32;
+  left: 0;
+  position: static;
+  width: 100%;
+  display: table;
+  color: #f6dfb5;
+  /* overflow: scroll; */
+}
+
+.qh-page-skill>.qh-page-skill-voice {
+  z-index: 33;
+  right: 2.5%;
+  top: 0.6em;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background-size: 100% 100%;
+  background-image: url('shousha/chr_spell_list_btn.png');
+}
+
+.qh-page-skill-taicibalckbg {
+  z-index: 40;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.qh-page-skill-taici {
+  z-index: 67;
+  left: calc(50% - 380px);
+  top: calc(50% - 170px);
+  width: 760px;
+  height: 340px;
+  background-size: 100% 100%;
+  background-image: url('shousha/TaiciBg.png');
+}
+
+.qh-page-skill-taicineirong {
+  left: 30px;
+  top: 30px;
+  width: 700px;
+  height: 275px;
+  overflow: scroll;
+  /* font-family: 'HYZLSJ', 'QH_HYZLSJ'; */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: green;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 5px;
+}
+
+.qh-skillTaiciContent {
+  margin-left: 4px;
+  display: table-row;
+  position: static;
+  color: #f6ffde;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  font-size: 17px;
+  /*filter: drop-shadow(2px 0 0 #453325) drop-shadow(-2px 0 0 #453325) drop-shadow(0 2px 0 #453325) drop-shadow(0 -2px 0 #453325);*/
+  filter: drop-shadow(1px 0 0.5px #453325) drop-shadow(-1px 0 0.5px #453325) drop-shadow(0 1px 0.5px #453325) drop-shadow(0 -1px 0.5px #453325);
+}
+
+.qh-victoryName {
+  margin-top: -22px;
+  position: absolute;
+  color: #f6ffde;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  font-size: 17px;
+  /*filter: drop-shadow(2px 0 0 #453325) drop-shadow(-2px 0 0 #453325) drop-shadow(0 2px 0 #453325) drop-shadow(0 -2px 0 #453325);*/
+  filter: drop-shadow(1px 0 0.5px #453325) drop-shadow(-1px 0 0.5px #453325) drop-shadow(0 1px 0.5px #453325) drop-shadow(0 -1px 0.5px #453325);
+}
+
+.qh-skillTaicibg {
+  display: inline-block;
+  width: 342px;
+  height: 55px;
+
+  margin-top: 3px;
+  margin-bottom: 19px;
+  margin-right: 15px;
+  position: static;
+  background: url('shousha/upgrade_item_long_bg.png') no-repeat center / 100% 100%;
+  transition: none;
+}
+
+.qh-skillTaicibg[data-type=right] {
+  margin-right: 0;
+}
+
+.qh-skillTaicibg[data-type=bottom] {
+  margin-bottom: 0;
+}
+
+.qh-skillTaicibg[data-type=end] {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.qh-trumpet {
+  width: 40px;
+  height: 40px;
+  left: 5px;
+  top: 8px;
+  position: relative;
+  background-size: 100% 100%;
+  background-image: url('shousha/chr_spell_voice_2.png');
+}
+
+.qh-trumpet.origin {
+  background-image: url('shousha/chr_spell_voice.png');
+}
+
+.qh-taiciinner {
+  width: 290px;
+  height: 30px;
+  left: 47px;
+  top: -31px;
+  color: #e4e0d5;
+  position: relative;
+  font-size: 15px;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.qh-page-skin>.qh-hide-skin-button {
+  z-index: 35;
+  left: 159px;
+  bottom: 18px;
+  width: calc(9.86%);
+  height: calc(9.58%);
+  display: block;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('rq/qhly_skin_button_rq.png');
+}
+
+.qh-skinchange-shousha-big-skin {
+  z-index: 10;
+  display: block;
+  left: 0;
+  top: 12px;
+  /* width: 100px;
+    height: 150px; */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.qh-skinchange-shousha-big-skin.sel {
+  transform: scale(1.1);
+}
+
+.qh-page-skinavatarlevel {
+  width: 42%;
+  height: 29%;
+  right: -2%;
+  top: 8px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 98;
+  transition: none;
+}
+
+.qh-skinchange-shousha-big-skin>.primary-avatar {
+  left: 3.8%;
+  top: auto;
+  bottom: 1.7%;
+  width: 90.5%;
+  height: 90%;
+  opacity: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 8%;
+  transition-property: opacity, transform;
+  z-index: 61;
+}
+
+.qh-skinchange-decade-big-dialog[data-outcrop-skin='on'] .primary-avatar {
+  height: 96%;
+  clip-path: url(#solo-clip);
+  -webkit-clip-path: url(#solo-clip);
+}
+
+.qh-skinchange-decade-big-dialog[data-outcrop-skin='on'].shousha .primary-avatar {
+  height: 103.4%;
+  clip-path: url(#solo-clip);
+  -webkit-clip-path: url(#solo-clip);
+}
+
+.qh-skinchange-decade-big-dialog[data-outcrop-skin='fix'] .primary-avatar {
+  height: 103.4%;
+  clip-path: url(#solo-clip);
+  -webkit-clip-path: url(#solo-clip);
+}
+
+.qh-skinchange-decade-big-dialog[data-outcrop-skin='fix'].shousha .primary-avatar {
+  height: 103.4%;
+  clip-path: url(#solo-clip);
+  -webkit-clip-path: url(#solo-clip);
+}
+
+.qh-shousha-big-avatar.unseen>.qh-image-standard,
+.qh-shousha-big-avatar.d-skin>.qh-image-standard,
+.qh-shousha-big-avatar.d-skin2>.qh-image-standard,
+.qh-shousha-big-avatar.unseen>.qh-image-lutou,
+.qh-shousha-big-avatar.d-skin>.qh-image-lutou,
+.qh-shousha-big-avatar.d-skin2>.qh-image-lutou {
+  opacity: 0;
+}
+
+.qhcamp-big-wrap.shousha {
+  display: block;
+  left: -8px;
+  top: -4px;
+  width: 33px;
+  height: 118px;
+  transition: none;
+  z-index: 95;
+}
+
+.qhcamp-shousha-big-back {
+  left: -4.2%;
+  bottom: -4%;
+  height: 101%;
+  width: 107%;
+  background-image: url('../image/decoration/skinFrm1.png');
+  background-size: 100% 100%;
+  transition: none;
+  pointer-events: none;
+}
+
+.qhcamp-shousha-big-back[data-pinzhi='精良'] {
+  background-image: url('../image/decoration/skinFrm2.png');
+}
+
+.qhcamp-shousha-big-back[data-pinzhi='精品'] {
+  background-image: url('../image/decoration/skinFrm3.png');
+}
+
+.qhcamp-shousha-big-back[data-pinzhi='稀有'] {
+  background-image: url('../image/decoration/skinFrm3.png');
+}
+
+.qhcamp-shousha-big-back[data-pinzhi='史诗'] {
+  background-image: url('../image/decoration/skinFrm4.png');
+}
+
+.qhcamp-shousha-big-back[data-pinzhi='传说'] {
+  background-image: url('../image/decoration/skinFrm5.png');
+}
+
+/* .qhcamp-shousha-back[data-pinzhi='史诗'].dong {
+    height: 113%;
+    width: 104%;
+    left: -3.7%;
+    z-index: 94;
+    background-image: url('../image/decoration/skin_dynamic_frame4.png');
+}
+
+.qhcamp-shousha-back[data-pinzhi='传说'].dong {
+    height: 113%;
+    width: 103%;
+    left: -3%;
+    z-index: 94;
+    background-image: url('../image/decoration/skin_dynamic_frame5.png');
+} */
+
+/* .qhcamp-shousha-back.dong+.qhhp-shousha-wrap {
+    bottom: -11%;
+}
+
+.qhcamp-shousha-back.dong~.qh-skinchange-skin-shousha-default {
+    bottom: -13%;
+} */
+
+/* .qhcamp-big-wrap.shousha>.qhcamp-name {
+    font-display: swap;
+    font-size: 26px;
+    width: 160%;
+    height: 50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: none;
+    text-shadow: 0 0 5px #e0ea33, 0 0 15px #e0ea33, 0 0 25px #e0ea33;
+}
+
+.qhcamp-big-wrap.shousha[data-camp='wei']>.qhcamp-name {
+    text-shadow: 0 0 5px rgb(50, 50, 255), 0 0 10px rgb(120, 120, 255), 0 0 15px rgb(100, 100, 255);
+}
+
+.qhcamp-big-wrap.shousha[data-camp='shu']>.qhcamp-name {
+    text-shadow: 0 0 5px rgb(255, 100, 100), 0 0 10px rgb(255, 50, 50), 0 0 15px rgb(255, 50, 50);
+}
+
+.qhcamp-big-wrap.shousha[data-camp='wu']>.qhcamp-name {
+    text-shadow: 0 0 5px rgb(100, 233, 100), 0 0 10px rgb(50, 255, 50), 0 0 15px rgb(50, 255, 50);
+}
+
+.qhcamp-big-wrap.shousha[data-camp='qun']>.qhcamp-name {
+    text-shadow: 0 0 5px rgb(170, 170, 170), 0 0 10px rgb(118, 118, 118), 0 0 15px rgb(118, 118, 118);
+}
+
+.qhcamp-big-wrap.shousha[data-camp='shen']>.qhcamp-name {
+    text-shadow: 0 0 5px rgb(255, 200, 0), 0 0 10px rgb(255, 200, 0), 0 0 15px rgb(255, 200, 0);
+}
+
+.qhcamp-big-wrap.shousha>.qhavatar-name {
+    display: block;
+    font-size: 20px;
+    writing-mode: lr-tb;
+    line-height: 22px;
+    font-family: shousha;
+    text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+    left: 43%;
+    top: 49%;
+    width: 8%;
+    position: absolute;
+} */
+
+.qhhp-shousha-big-wrap {
+  right: 5%;
+  bottom: 1%;
+  width: 40px;
+  height: 32px;
+  border: #8a8884 1px solid;
+  border-radius: 8px;
+  z-index: 80;
+  transition: none;
+  background-color: rgba(1, 1, 1, 0.5);
+}
+
+.qh-skinchange-shousha-big-skin-text {
+  writing-mode: lr-tb;
+  color: #8a8884;
+  width: 90%;
+  height: 90%;
+  text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 15px rgb(0, 0, 0);
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: bold;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  /* letter-spacing: -2px; */
+}
+
+.qh-dynamictrue {
+  z-index: 80;
+  right: -8%;
+  top: 30%;
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  background-image: url('shousha/dynamic.png');
+  display: none;
+}
+
+.qh-dynamictrue[dynamic='true'] {
+  display: block;
+}
+
+.qh-skinchange-big-skinBar {
+  bottom: -5%;
+  left: 7%;
+  position: absolute;
+  width: 68%;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+}
+
+.qh-skinchange-big-skinBar>div.sel {
+  filter: brightness(1.2);
+}
+
+#qhly_dgselect.selectless {
+  filter: grayscale(1);
+  pointer-events: none;
+}

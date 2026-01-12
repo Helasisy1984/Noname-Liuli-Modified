@@ -1,0 +1,17 @@
+.hiddenAvatar {
+    background-image: url(profile-icon.png) !important;
+}
+.hiddenAvatar::after {
+    content: "";
+    background-color: black;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+}
+.hiddenAvatar * {
+    visibility: hidden;
+}

@@ -1,0 +1,405 @@
+/*z-index:0、1、2、3全部加了1*/
+/*菜单界面武将露头*/
+.button.character.decadeUI.newstyle.noclick>.character{
+height:172px;
+z-index:2;
+}
+/*控制台的边框*/
+.button.character.noclick::before{
+border: none;
+background:none;
+}
+.button.character.noclick.glow::after{
+	border: none;
+	background:none;
+	background-image:none;
+	}
+.menu.main>.menu-content>div>.menubutton.round {
+	z-index: 50;
+}
+.button.character>.showintro.rarity {
+    left: calc(50% + 8px);
+    top: -5px;
+    z-index:3;
+}
+.button.character>.name {/*开始菜单武将名字*/
+	font-family: 'shousha';
+	top: 18px;
+	left: -18px;
+	font-size: 15px;
+	z-index:4;
+}
+.button.character>.name[data-double="on"] {
+	/*top: 42px;*/
+	top: 38px;/*Helasisy修*/
+}
+/*这个调整选将框的武将大小*/
+/*这里的设置可能会出现两份武将图*/
+.dialog .buttons>.button.character.decadeUI, .button.character.longcharacter.decadeUI {
+    width: 96px;
+    height: 150px;
+	border-radius:none;
+	/*border-radius: 8px;*/
+	box-shadow:none !important;
+    background-position: fixed;
+    background-size:100% 100%;
+    /*background-size:100% 100% !important;*/
+    /*z-index:10;*/
+}
+/*选将露头*/
+#arena[data-outcrop-skin='shizhounian'] .button.character>.character {
+    height: 161px;
+    z-index:2;
+}
+#arena[data-outcrop-skin='shousha'] .button.character>.character {
+	height: 172px;
+	z-index:2;
+}
+/*这里开始是选将框去除阴影*/
+#arena.decadeUI.dui-mobile[data-loading-style='othersOn']>.dialog.scroll1, #arena.decadeUI.dui-mobile[data-loading-style='othersOn']>.dialog.scroll2{
+	background: none ;
+	box-shadow: none !important;
+	/*width:90% !important;*/
+}
+/*这里是默认的武将边框为群，大小位置也在这里调*/
+.button.character.newstyle>.identity {
+    left: -20px;
+	height: 155px;
+	width: 118px;
+    top: -2px;
+	font-size: 0px;
+	/*index正常是0*/
+	z-index: 2;
+	background-color: none;
+	background-image: url('image/group/qun.png') !important;
+	background-size: 100% 100% !important;
+}
+/*按照下面的格式填写扩展武将的边框，不填写的默认为群*/
+.button.character.newstyle>.identity[data-nature="western"]{
+	background-image: url('image/group/western.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="westernmm"]{
+	background-image: url('image/group/western.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="devil"]{
+	background-image: url('image/group/devil.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="devilmm"]{
+	background-image: url('image/group/devil.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="metal"]{
+	background-image: url('image/group/qun.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="metalmm"]{
+	background-image: url('image/group/qun.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="soil"]{
+	background-image: url('image/group/shu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="soilmm"]{
+	background-image: url('image/group/shu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="thunder"]{
+	background-image: url('image/group/jin.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="thundermm"]{
+	background-image: url('image/group/jin.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="wood"]{
+	background-image: url('image/group/wu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="weiwu"]{
+	background-image: url('image/group/weiwu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="watermm"]{
+	background-image: url('image/group/wei.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="water"]{
+	background-image: url('image/group/wei.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="shen"]{
+	background-image: url('image/group/shen.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="ye"]{
+	background-image: url('image/group/ye.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="key"]{
+	background-image: url('image/group/key.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="keymm"]{
+	background-image: url('image/group/key.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="qun_shu"]{
+	background-image: url('image/group/qun_shu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="qun_wei"]{
+	background-image: url('image/group/qun_wei.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="qun_wu"]{
+	background-image: url('image/group/qun_wu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="shu_qun"]{
+	background-image: url('image/group/shu_qun.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="shu_wei"]{
+	background-image: url('image/group/shu_wei.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="shu_wu"]{
+	background-image: url('image/group/shu_wu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="wei_qun"]{
+	background-image: url('image/group/wei_qun.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="wei_shu"]{
+	background-image: url('image/group/wei_shu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="wei_wu"]{
+	background-image: url('image/group/wei_wu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="wu_qun"]{
+	background-image: url('image/group/wu_qun.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="wu_shu"]{
+	background-image: url('image/group/wu_shu.png') !important;
+	background-size: 100% 100% !important;
+}
+.button.character.newstyle>.identity[data-nature="wu_wei"]{
+	background-image: url('image/group/wu_wei.png') !important;
+	background-size: 100% 100% !important;
+}
+.content-container>.content>.buttons>.button.decadeUI.character.newstyle>.name[data-double="on"] {
+  /*top: 42px !important;*/
+  top: 38px !important;/*Helasisy修*/
+}
+#arena .button.character > .name.doubleGroup {
+    top: 35px;
+}
+
+/*武将名字位置*/
+#arena .button.character > .name {
+	top: 18px;
+	left:-18px;
+	font-size: 15px;
+	text-align: center;
+	z-index: 100;
+}
+.button.character.decadeUI.newstyle>.hp>.text{
+	left:-1px;
+	font-family: 'huangcao';
+	font-weight: bolder;/*加粗*/
+	line-height: 11px;
+   }
+.button.character>.hp {
+	display: flex;
+    left: -19px;
+    top: 105px;
+	width: 15px;
+	white-space:normal;
+	height:15px;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content:flex-end;
+	font-size: 16px;
+    word-break: break-word;
+	z-index: 100;
+}
+.button.character::before {
+    left: -24px;
+    top: -7px;/*这两条是框的位置*/
+    width: calc(100% + 30px);
+    height: calc(100% + 17px);/*这两条是框的大小*/
+    box-shadow: none;
+    /*盒子阴影不用改*/
+    box-sizing: border-box;
+    /*盒子大小，同框，不用改*/
+    border-image-source: url('image/xuanjiang.png');
+    /*边框图片*/
+    background-image: url('image/xuanjiang1.png');
+    /*背景图片，也就是确认*/
+    background-size:100px 75px;
+    /*确认图片的宽高*/
+    border-width:6px;
+    /*框的粗细*/
+    background-position:bottom !important;
+    /*用来给确认定位的，前面调上下，后面调左右，不写就是默认居中*/
+   background-repeat: no-repeat;
+   /*图片只显示一次，删掉会出现很多图片*/
+   /* background-attachment:fixed;*/
+	border-radius: 10px  7px  7px  10px;
+	/*框四周的圆角，从左到右顺时针*/
+    border-style: solid;
+    border-color: transparent;
+    /*框的颜色，不用管，这是本体设置的*/
+    z-index:11;/*图层*/
+}
+
+/*菜单界面武将的属性*/
+.button.character.decadeUI.newstyle.noclick{
+	/*border-style: none;*/
+	zoom: 0.85;
+	width:96px;
+	height: 150px;
+	/*margin-left:10px;/*这里不要设置成-10会挤在一起*/
+	/*武将牌边距*/
+	margin-left:20px;/*现在是4格，5px是5格*/
+	/*margin-right:5px;*/
+   }
+.button.character.decadeUI.newstyle.noclick::before{
+	zoom:0.5;
+   }
+.button.character.decadeUI.newstyle.noclick>.hp{
+  position: absolute;
+  width:18px;
+  left: -21.5px;
+   }
+.button.character.decadeUI.newstyle.noclick>.hp>.text{
+   display:inline;
+	left:3px;
+	bottom:10px;
+   }
+/*将框230 310 -> 1380 1860*/
+.button.character.decadeUI.newstyle{
+	border-image-source: url('image/border.png');
+	border-image-slice: 40 16 8 40 fill;/*Helasisy这个fill真是关键*/
+	/*border-image-slice: 240 96 108 240;*/
+	float: top;
+	border-width:25px 8.5px 7px 25px;
+	border-style: solid;
+	box-shadow: none;
+	/*margin-left:20px;原版是这样*/
+	/*武将牌边距*/
+	margin-left:10px;
+	margin-right:10px;
+	border-radius: 3px 6px 7px 3px;/*左上到左下顺时针*/
+	z-index:20;
+	background: content-box;
+	opacity: 1;
+	zoom: 0.95;
+	transition: opacity 0.3s linear;
+	/*transition: all 0.3s;*/
+	filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 1));
+   }
+
+/*这是boss框，已在boss本体写入*/
+.player.fullskin.bossplayer::after{
+	/*background-image: url('image/group/demon.png');*/
+	background-image: none;
+	zoom: 1.1;
+	border: none;
+	box-shadow: none;
+	/*width: 160px;
+	height: 210px;
+	top: -4px;
+	left: -10px;*/
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	transform: scale(1.05);
+	background-size: 100% 100% !important;
+	/*margin-left:15px;*/
+	border-radius: 10px;
+	z-index:90;
+	opacity: 1;
+	/*transition: opacity 0.3s linear;*/
+	transition: all 0.3s ease;
+	/*box-shadow: 0 0 10px 10px rgba(250,250,250,1);*/
+   }
+   .player.fullskin.bossplayer{
+border: none;
+background: none;
+box-shadow: none;
+   }
+   .player.bossplayer>.identity {
+z-index: 91;
+top: 50px;
+}
+/*.player.fullskin.bossplayer.highlight::after{
+	z-index: 90;
+	animation:0.5s ease 0s 1 normal none running kf-sprites-glow;
+}*/
+.player.fullskin.bossplayer.highlight{
+	border: none;
+	filter: brightness(1) blur(0);
+}
+
+/*这里是单行选将框*/
+
+.dialog.scroll1.scroll2.singlex>.content-container>.content>.caption + .buttons:not(*:last-child) {
+white-space: pre;
+overflow-x: scroll;
+overflow-y: hidden;
+}
+.dialog.scroll1.scroll2.singlex>.content-container>.content {
+    display: flex;
+    flex-direction: column;
+}
+.dialog.scroll1.scroll2.singlex>.content-container>.content>div {
+	white-space: pre;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	}
+
+.nmscore1{/*手牌分十位*/
+display: block;
+position: absolute;
+width:35px;
+left:20px;
+bottom:25px;
+height:35px;
+background-repeat:no-repeat;
+background-size:contain;
+z-index:9;
+}
+.nmscore2{/*手牌分个位*/
+display: block;
+position: absolute;
+width:35px;
+right:25px;
+bottom:25px;
+height:35px;
+background-repeat:no-repeat;
+background-size:contain;
+z-index:9;
+}
+.nmcardscore{/*手牌分背景*/
+display: block;
+position: absolute;
+width:100px;
+background-image: url('handscore/score.png')!important;
+right:36%;
+bottom:10px;
+height:110px;
+background-repeat:no-repeat;
+background-size:contain;
+border-radius:16px;
+z-index:8;
+}

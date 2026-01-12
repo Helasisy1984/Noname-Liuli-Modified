@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1669718963998') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-warning:before {
+  content: "\e653";
+}
+
+.icon-shousuo:before {
+  content: "\e616";
+}
+
+.icon-info:before {
+  content: "\e643";
+}
+
+.icon-left:before {
+  content: "\e601";
+}
+
+.icon-gengduo:before {
+  content: "\e606";
+}
+
+.icon-qiehuan:before {
+  content: "\e60e";
+}
+
+.icon-setting:before {
+  content: "\e613";
+}
+
+.icon-loading:before {
+  content: "\e644";
+}
+
+.icon-error:before {
+  content: "\e6c6";
+}
+
+.icon-close:before {
+  content: "\e6a7";
+}
+
+.icon-fangda:before {
+  content: "\e605";
+}
+
+.icon-nizhuan:before {
+  content: "\e60d";
+}
+
+.icon-shoucang:before {
+  content: "\e615";
+}
+
+.icon-shuliebiao:before {
+  content: "\e617";
+}
+
+.icon-shuaxin:before {
+  content: "\e618";
+}
+
+.icon-sousuo:before {
+  content: "\e619";
+}
+
+.icon-shunzhuan:before {
+  content: "\e61a";
+}
+
+.icon-suoxiao:before {
+  content: "\e61b";
+}
+
+.icon-tuichu:before {
+  content: "\e61c";
+}
+
+.icon-xinxi:before {
+  content: "\e622";
+}
+
+.icon-right:before {
+  content: "\e626";
+}
+
+.icon-yingyong:before {
+  content: "\e627";
+}
+
+.icon-zengjia:before {
+  content: "\e628";
+}
+
+.icon-zengjia1:before {
+  content: "\e629";
+}
+
+.icon-zhengque:before {
+  content: "\e62c";
+}
+
+.icon-success:before {
+  content: "\e62d";
+}
+
+.icon-donghua:before {
+  content: "\e7c7";
+}
+
+
+.icon-alpha:before {
+  content: "\e61d";
+}
+
+.icon-pifu:before {
+  content: "\e647";
+}
+
+.icon-collect:before {
+  content: "\e612";
+}
+
+.icon-sudutiaojie:before {
+  content: "\e610";
+}
+
+.icon-shichang:before {
+  content: "\e667";
+}
+
+.icon-qitaxinxi:before {
+  content: "\e6a1";
+}
+
+.icon-kanwumingcheng:before {
+  content: "\e65d";
+}
+
+.icon-banben:before {
+  content: "\e611";
+}
+
+.icon-info1:before {
+  content: "\e83d";
+}
+
+.icon-paixu:before {
+  content: "\e600";
+}
+
+.icon-fanhui:before {
+  content: "\e625";
+}
+
+.icon-paixu1:before {
+  content: "\e64e";
+}
+
+.icon-daoxu:before {
+  content: "\e65a";
+}
+
+.icon-viscan-marquee:before {
+  content: "\e632";
+}

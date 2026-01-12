@@ -1,0 +1,525 @@
+.button.character,
+#arena > .player.xplayer {
+  --width: 120px;
+}
+/*信息界面主框*/
+/*.character-dialog {
+  width: 560px;
+  height: 395px;
+  position: absolute;
+  border-image-source: url("./images/dialog.png");
+  border-width: 30px 90px 90px 90px;
+  border-style: solid;
+  border-color: transparent;
+  border-image-slice: 30 90 90 90 fill;
+  border-image-repeat: stretch;    
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  position: absolute;
+  animation:none!important;
+  //transition:all 0s!important;
+  transition:all 0.3s ease !important;
+  zoom:0.9;
+  z-index:13;
+}*/
+.character-dialog {
+  /*width: 720px;*/
+  width: 740px;
+  height: 510px;
+  position: absolute;
+  background-image: url("./images/box3.png");
+  background-size: 100% 100%;
+  border-image-repeat: stretch;    
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  position: absolute;
+  animation:none!important;
+  transition:all 0s!important;
+  zoom:0.9;
+  z-index:13;
+  filter: drop-shadow(0 0 5px black);
+}
+.character-dialog.popped {
+  animation: dialog_start2 0.3s;
+  -webkit-animation: dialog_start2 0.3s;
+}
+/*上阴影底图*/
+.character-dialog>.shadowTop {
+border-image-source: url("./images/shadowMap.png");
+  border-width: 20px 20px 20px 20px;
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  border-image-slice: 20 20 20 20 fill;
+  border-image-repeat: stretch;    
+  left:50%;
+  top:6.5%;/*3%*/
+  transform:translateX(-50%);
+  zoom:0.8;
+  width: 780px;
+  height: 175px;
+  z-index:14;
+}
+/*玩家名字*/
+.character-dialog>.shadowTop>.name{
+  font-size:32px;
+  color:#392B24;
+  filter:blur(0.5px);
+  position: absolute;
+  left:5%;
+  top:10%;
+  font-family:shousha;
+  text-shadow:none;
+  z-index:15;
+}
+/*官阶底图遮罩*/
+.character-dialog>.shadowTop>.officialContainer{
+  left:5%;
+  top:40%;
+  width: 600px;
+  height: 50px;
+  overflow:hidden;
+  z-index:15;
+}
+/*官阶底图*/
+.character-dialog>.shadowTop>.officialContainer>.redMap{
+  background-image: url("./images/redMap.png");
+  left:-250px;
+  top:0;
+  height:100%;
+  width:700px;
+  background-size:100% 100%;
+  z-index:16;
+}
+/*官阶图片*/
+.character-dialog>.shadowTop>.official{
+  left:2%;
+  top:25%;
+  width: 153px;
+  height: 170px;
+  background-size:100% 100%;
+  zoom:0.6;
+  z-index:15;
+}
+/*官阶名字*/
+.character-dialog>.shadowTop>.officialContainer>.redMap>.officialName{
+  font-size:33px;
+  color:#F2C316;
+  filter:blur(0.5px);
+  position: absolute;
+  left:50%;
+  top:50%;
+  font-family:shousha;
+  text-shadow:none;
+  transform:translateY(-50%);
+  z-index:17;
+}
+/*胜率*/
+.character-dialog>.shadowTop>.winPercent{
+  font-size:32px;
+  color:#E4D6BA;
+  filter:blur(0.5px);
+  position: absolute;
+  left:3%;
+  top:80%;
+  font-family:shousha;
+  text-shadow:none;
+  z-index:15;
+}
+/*逃率*/
+.character-dialog>.shadowTop>.runPercent{
+  font-size:32px;
+  color:#E4D6BA;
+  filter:blur(0.5px);
+  position: absolute;
+  left:45%;
+  top:80%;
+  font-family:shousha;
+  text-shadow:none;
+  z-index:15;
+}
+/*查看名片按钮*/
+.character-dialog>.shadowTop>.btn {
+  background-image: url("./images/btn.png");
+  right: 20px;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 23px;
+  line-height: 65px;
+  color: rgba(255,255,255,0.9);
+  font-family: shousha;
+  text-shadow: none;
+  text-align: center;
+  white-space: nowrap;
+  height: 63px;
+  width: 162px;
+  background-size: 100% 100%;
+  z-index: 16;
+}
+.character-dialog>.shadowTop>.btn .blur-text {
+  filter: blur(0.45px);
+}
+.character-dialog>.shadowTop>.btn:active {
+	filter: brightness(1.8) saturate(0.5) contrast(0.8);
+	/*transition:all 0s!important;*/
+	transition:all 0.3s ease !important;
+	animation:none!important;
+} 
+/*下阴影底图*/
+.character-dialog>.shadowDown {
+border-image-source: url("./images/shadowMap.png");
+  border-width: 20px 20px 20px 20px;
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  border-image-slice: 20 20 20 20 fill;
+  border-image-repeat: stretch;    
+  left:50%;
+  bottom:8%;/*-12%*/
+  transform:translateX(-50%);
+  zoom:0.8;
+  width: 780px;
+  height: 265px;
+  z-index:14;
+}
+/*武将区域*/
+.character-dialog>.shadowDown>.character{
+width:220px;
+height:100%;
+left:0;
+}
+/*武将框*/
+.character-dialog>.shadowDown>.character>.wujiangkuang{
+width:175px;
+height:233px;
+left:50%;
+top:50%;
+transform:translate(-50%, -50%);
+zoom:0.9;
+background-size: 100% 100%;
+}
+/*武将框*/
+.character-dialog>.shadowDown>.character>.wujiangkuang2{
+width:175px;
+height:233px;
+left:123%;
+top:50%;
+transform:translate(-50%, -50%);
+zoom:0.9;
+background-size: 100% 100%;
+}
+/*武将名字*/
+.character-dialog>.shadowDown>.character>.wujiangkuang>.wujiangName{
+        writing-mode:vertical-lr;
+        background-size: 100% 100%;
+        width: 100%;
+        left: 3%;
+        height:100%;
+        font-size:23px;
+        -webkit-filter: blur(0.5px);
+        letter-spacing:-3px;
+        text-shadow:none;
+        font-family:shousha;
+        top: 15%;
+}
+.character-dialog>.shadowDown>.character>.wujiangkuang2>.wujiangName2{
+        writing-mode:vertical-lr;
+        background-size: 100% 100%;
+        width: 100%;
+        left: 3%;
+        height:100%;
+        font-size:23px;
+        -webkit-filter: blur(0.5px);
+        letter-spacing:-3px;
+        text-shadow:none;
+        font-family:shousha;
+        top: 15%;
+}
+/*星星区域*/
+.character-dialog>.shadowDown>.character>.wujiangkuang>.wujiangstar{
+width:28px;
+height:160px;
+left: 2%;
+bottom:6%;
+display: flex;
+flex-direction: column-reverse; 
+align-items: center; 
+}
+/*每个星星*/
+.character-dialog>.shadowDown>.character>.wujiangkuang>.wujiangstar>.star-element{
+    position:relative;
+    width: 28px;
+    height: 28px;
+    background-size: 100% 100%;
+    margin-bottom: -6.5px; 
+    display:block;
+    zoom:1.1;
+    transform: scale(0.8);/*新加*/
+}
+.character-dialog>.shadowDown>.character>.wujiangkuang2>.wujiangstar2{
+width:28px;
+height:160px;
+left: 2%;
+bottom:6%;
+display: flex;
+flex-direction: column-reverse; 
+align-items: center; 
+}
+.character-dialog>.shadowDown>.character>.wujiangkuang2>.wujiangstar2>.star-element{
+    position:relative;
+    width: 28px;
+    height: 28px;
+    background-size: 100% 100%;
+    margin-bottom: -6.5px; 
+    display:block;
+    zoom:1.1;
+    transform: scale(0.8);/*新加*/
+}
+/*黄星星*/
+.filled-star{
+background-image: url("./images/star.png");
+}
+/*灰星星*/
+.empty-star{
+background-image: url("./images/star.png");
+filter:grayscale(100%);
+}
+/*武将图*/
+.character-dialog>.shadowDown>.character>.wujiangkuang>.wujiangImage{
+        left: 18.2%;
+        bottom: 1.8%;
+        border-radius:8px;
+        width: 138px;
+        height: 255px;
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform:scale(0.99);
+}
+.character-dialog>.shadowDown>.character>.wujiangkuang2>.wujiangImage2{
+        left: 18.2%;
+        bottom: 1.8%;
+        border-radius:8px;
+        width: 138px;
+        height: 255px;
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform:scale(0.99);
+}
+
+.character-dialog>.shadowDown>.character>.wujiangkuang>.wujiangImage>.skinClick{
+        background-image: url("./images/click2.png");
+        left: 50%;
+        top: 55%;
+        width: 83px;
+        height: 155px;
+        transform:translate(-50%, -50%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        zoom:1.1;
+}
+.character-dialog>.shadowDown>.character>.wujiangkuang2>.wujiangImage2>.skinClick2{
+        background-image: url("./images/click2.png");
+        left: 50%;
+        top: 55%;
+        width: 83px;
+        height: 155px;
+        transform:translate(-50%, -50%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        zoom:1.1;
+}
+
+
+/*皮肤数量阴影*/
+.character-dialog>.shadowDown>.character>.wujiangkuang>.skinShadow{
+        background-image: url("./images/skin_shadow.png");
+        right: 1.5%;
+        bottom: 1%;
+        width: 128px;
+        height: 33px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        zoom:1.05;
+        z-index:17;
+}
+/*皮肤小标*/
+.character-dialog>.shadowDown>.character>.wujiangkuang>.skinShadow>.skinIcon{
+        background-image: url("./images/skin_icon.png");
+        right: 5%;
+        bottom: -1%;
+        width: 38px;
+        height: 37px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index:18;
+}
+/*皮肤数量*/
+.character-dialog>.shadowDown>.character>.wujiangkuang>.skinShadow>.skinNum{
+font-family:'shousha';
+font-size: 26px;
+color:white;
+position:absolute;
+text-shadow:none;
+right:35%;
+top:50%;
+  -webkit-filter:blur(0.35px);
+transform:translateY(-50%);
+}
+.character-dialog>.shadowDown>.character>.wujiangkuang2>.skinShadow{
+        background-image: url("./images/skin_shadow.png");
+        right: 1.5%;
+        bottom: 1%;
+        width: 128px;
+        height: 33px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        zoom:1.05;
+        z-index:17;
+}
+.character-dialog>.shadowDown>.character>.wujiangkuang2>.skinShadow>.skinIcon{
+        background-image: url("./images/skin_icon.png");
+        right: 5%;
+        bottom: -1%;
+        width: 38px;
+        height: 37px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index:18;
+}
+.character-dialog>.shadowDown>.character>.wujiangkuang2>.skinShadow>.skinNum{
+font-family:'shousha';
+font-size: 26px;
+color:white;
+position:absolute;
+text-shadow:none;
+right:35%;
+top:50%;
+  -webkit-filter:blur(0.35px);
+transform:translateY(-50%);
+}
+/*技能区*/
+.character-dialog>.shadowDown>div.ss-skillsarea {
+  left: 26%;
+  width: 73%;
+  box-sizing: border-box;
+  padding: 5px 5px 5px 5px;
+  overflow-y: scroll;
+  /*top:auto;*/
+  top:12%;
+  max-height:80%;
+}
+.character-dialog>.shadowDown>div.ss-skillsarea::-webkit-scrollbar {
+    width: 18px;
+    height: 509px;
+    zoom: 0.7;
+}
+.character-dialog>.shadowDown>div.ss-skillsarea::-webkit-scrollbar-track {
+    border-width: 3px 0px 5px 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('images/pub_scrollbar_bg.png');
+    border-image-slice: 3 0 5 0 fill;
+    border-image-repeat: stretch;
+    background: none;
+}
+.character-dialog>.shadowDown>div.ss-skillsarea::-webkit-scrollbar-thumb {
+    border-width: 4px 0px 7px 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('images/pub_scrollbar_src.png');
+    border-image-slice: 4 0 7 0 fill;
+    border-image-repeat: stretch;
+    background: none;
+}
+.character-dialog>.shadowDown>div.ss-skillsarea>div {
+  width: 100%;
+  height: 60%;
+  overflow: auto;
+  margin-top:-8px;
+}
+
+.character-dialog>.shadowDown>div.ss-skillsarea div {
+  position: relative;
+  bottom: -35%;
+}
+
+.character-dialog>.shadowDown>div.ss-skillsarea .xcaption {
+  width: 100%;
+  bottom: 0%;
+  color: #C8A82C;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  font-family: 'shousha';
+}
+
+.character-dialog>.shadowDown>div.ss-skillsarea .xskill {
+  line-height:25px!important;
+  width: 100%;
+  bottom: 0%;
+}
+
+.character-dialog>.shadowDown>div.ss-skillsarea .xskill>div {
+  display: inline;
+  color: #4B3B30;
+  letter-spacing:0px;
+  text-shadow:none;
+  -webkit-filter:blur(0.4px);
+  font-size: 24px;
+  line-height:25px!important;
+  font-weight:100;
+  font-family:shousha;
+  font-family: 'shousha';
+}
+
+.character-dialog>.shadowDown>div.ss-skillsarea .xskill>div[data-color] {
+  color: #FBCE08;
+  font-size: 24px;
+}
+
+.character-dialog>.shadowDown>div.ss-skillsarea .xskill+.xskill {
+  margin-top: -5px;
+}
+/*技能区置顶文字*/
+.character-dialog>.shadowDown>.skillwenzi{
+font-family:'HYZLSJ';
+font-size: 26px;
+color:#BDAF91;
+text-shadow:0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30,0 0 0.5px #4B3B30;
+left:50%;
+top:-2%;
+text-shadow:none;
+font-weight:60;
+  white-space: nowrap;
+}
+.skill-area-wenzi{
+    font-family: 'HYZLSJ';
+    font-size: 26px;
+    color: #BDAF91;
+    left: 50%;
+    transform:translateX(-50%);
+    font-weight: 60;
+    text-shadow: none;
+    white-space: nowrap;
+}
+.ej-area-wenzi{
+    margin-top: 14px;
+}
+/*隐匿武将专属文字*/
+.character-dialog>.shadowDown>.yinniwenzi{
+font-family:'shousha';
+font-size: 35px;
+color:#BDAF91;
+text-shadow:none;
+left:40%;
+top:50%;
+transform:translateY(-50%);
+filter:blur(0.5px);
+line-height:45px;
+font-weight:60;
+}

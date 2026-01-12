@@ -1,0 +1,566 @@
+/*html{
+  overflow-y:visible;
+}*/
+/*HELASISY - 那边要将所有px/4.3改成vh*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+#kcdh {
+			position: absolute;
+			z-index:1000;
+			width: 100vw;
+			height: 100vh;
+			object-fit: cover;
+		}
+#transitionscreen {
+  width: 100vw;
+  height:100vh;
+  overflow:visible; 
+  	z-index:-1;
+  background-size: 100% 100%;
+}
+#spinebg {
+  width: 100%;
+  height:100%;
+  display: flex;
+  position:absolute;
+  z-index:-1;
+  background-size: 100% 100%;
+}
+#spinepe {
+  width: 100%;
+  height:100%; 
+    display: flex;
+  z-index:0;
+  position:absolute;
+  background-size: 100% 100%;
+}
+#startgamebutton {
+ /* border:none;*/
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  box-shadow:none;  
+  position:absolute;
+  background-size:contain;
+  right:13%;
+  top:46%;
+  z-index:0;
+}
+/* 右上角图片样式 */
+#imagecontainer {
+  position: absolute;
+  top: 0;
+  right: 0;           
+  display: flex;
+  /* justify-content: flex-end;
+  align-items: center;    */
+  /*height: 90px; 
+  width:290px;*/
+  height:calc(23.3*1.15vh)/*HELASISY - 100px*/;
+  width:calc(69.8*1.15vh)/*HELASISY - 300px*/;
+  background-position: right calc(-2.3*1.15vh)/*HELASISY - -10px*/;
+  /*background-image: url('../images/loginui/right.png');*/
+  background-image: url('../images/loginui/right_new.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+#updatelogimage {
+  border:none;
+  box-shadow:none; 
+  width:calc(10.9*1.15vh)/*HELASISY - 47px*/;
+  height:calc(10.9*1.15vh)/*HELASISY - 47px*/;
+  top:calc(-0.47*1.15vh)/*HELASISY - -2px*/;
+  /*margin-left:65px;*/
+  margin-left:calc(16.5*1.15vh)/*HELASISY - 71px*/;
+  position:relative;
+  z-index:10;
+  background-image: url('../images/loginui/gg.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:center;
+  overflow: hidden;  
+  background-color: transparent;
+}
+#updatelogmodal{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  left:0;
+ top:0;
+justify-content:center;
+align-items:center;
+ /* transform: translate(-50%, -50%);*/
+  display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+  border:none;
+  box-shadow:none;
+  z-index:100;
+}
+#updatelog{
+  position: absolute;
+  width: 60%;
+  display:flex;
+height:80%;
+left:20%;
+top:10%;
+  border:none;
+    background-color: transparent;
+  box-shadow:none;  
+  background-position:center;
+  background-image: url('../images/loginui/update.png');
+  background-size:100% 100%;
+background-repeat: no-repeat;
+}
+#updateve {
+        position: absolute;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:justify;
+      font-family: 'shousha';
+        top: 17%;
+        height:10%;
+        left: 0;
+        width:100%;      
+        font-size: 14px;
+        font-weight: bold;      
+        color: white;             
+      }
+#updatetext {
+        position: absolute;   
+      font-family: 'shousha';
+        top: 28%;
+        left: 10%;
+       width:80%;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;     
+      }      
+#kfbt {
+  border:none;
+  box-shadow:none; 
+  width:calc(10*1.15vh)/*HELASISY - 43px*/;
+  height:calc(10*1.15vh)/*HELASISY - 43px*/;
+  top:calc(0.7*1.15vh)/*HELASISY - 3px*/;
+  /*margin-left:6.5px;*/
+  margin-left:calc(1.16*1.15vh)/*HELASISY - 5px*/;
+  position:relative;
+  z-index:10;
+    background-image: url('../images/loginui/kf.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:center;
+  overflow: hidden;  
+  background-color: transparent;
+}
+#kfsp{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  left:0;
+ top:0;
+justify-content:center;
+align-items:center;
+  display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+  border:none;
+  box-shadow:none;
+  z-index:100;
+}
+#kfbg{
+  position: absolute;
+  width: 60%;
+  display:flex;
+height:80%;
+left:20%;
+top:10%;
+  border:none;
+    background-color: transparent;
+  box-shadow:none;  
+  background-position:center;
+  background-image: url('../images/loginui/loginbg2.png');
+  background-size:100% 100%;
+background-repeat: no-repeat;
+}
+#kfhe {
+        position: absolute;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:justify;
+        top: 17%;
+        height:10%;
+      font-family: 'shousha';
+        left: 0;
+        width:100%;      
+        font-size: 14px;
+        font-weight: bold;      
+        color: white;             
+      }
+#kftext {
+        position: absolute;       
+        top: 28%;
+        font-family: 'shousha';
+        left: 10%;
+       width:80%;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;     
+      }      
+#sqbt {
+  border:none;
+  box-shadow:none; 
+  transform: rotate(-90deg);
+  width:calc(10*1.15vh)/*HELASISY - 43px*/;
+  height:calc(10*1.15vh)/*HELASISY - 43px*/;
+  top:calc(0.7*1.15vh)/*HELASISY - 3px*/;
+  /*margin-left:6.5px;*/
+  margin-left:calc(1.16*1.15vh)/*HELASISY - 5px*/;
+  position:relative;
+  z-index:10;
+  background-image: url('../images/loginui/sq.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:center;
+  overflow: hidden;  
+  background-color: transparent;
+}
+#sqsp{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  left:0;
+  top:0;
+  justify-content:center;
+  align-items:center;
+ /* transform: translate(-50%, -50%);*/
+  display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+  border:none;
+  box-shadow:none;
+  z-index:100;
+}
+#sqbg{
+  position: absolute;
+  width: 30%;  
+  display:block;
+height:60%;
+left:35%;
+top:26%;
+  border:none;   
+  z-index:50; 
+  box-shadow:none;  
+  background-position:center;
+       /* background-color:yellow; */     
+ background-image: url('../images/loginui/sqm.jpg');
+  background-size:contain;
+background-repeat: no-repeat;
+}
+#sqbg::before {
+        content:'';
+        position: absolute;         
+  background-image: url('../images/loginui/sqbg.png');
+  background-size:contain;
+  background-position:center;
+background-repeat: no-repeat;  
+       top: -40%;    
+      left:-30%;
+        height:160%;        
+        width:160%;
+      /*  background-color:red;   */   
+      }
+#sqtext {
+        position: absolute;       
+        top: 28%;
+        left: 10%;
+       width:80%;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;     
+      }      
+#offlinebutton {
+  /*淡季贴吧？*/
+  border:none;
+  box-shadow:none; 
+  /*width:65px;
+  height:65px; 
+  top:4px;
+  margin-left:6px;
+  margin-right:4px;*/
+  width:calc(21.4*1.15vh)/*HELASISY - 92px*/;
+  height:calc(21.4*1.15vh)/*HELASISY - 92px*/; 
+  top: 0px;
+  /*right: -10px;*/
+  right: 0px;
+  /*position:relative;*/
+  position: absolute;
+  z-index:10;
+  /*background-image: url('../images/loginui/offline.png');*/
+  background-image: url('../images/loginui/offline_new.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+  /*background-position: right top;*/
+  background-position: 10px top;
+  overflow: hidden;  
+  background-color: transparent;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#startgamebutton:focus {
+  outline: none;
+  box-shadow: none;
+}
+#loginoverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:100;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#loginbox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding-top: 60px;
+  padding-left:50px;
+  padding-right:50px;
+  padding-bottom:70px;
+  margin:5px;
+  border:none;
+  box-shadow:none;  
+  background-image: url('../images/loginui/loginbg2.png');
+  background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#loginbox h2 {
+  margin-top: 5px;
+}
+
+#loginbox input {
+  display: block;
+  width: 80%;
+  padding: 5px;
+  transform: translate(20%,-150%);
+  margin-top:10px; 
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#loginzh {
+transform: translateY(80%);
+  }
+    #loginmm {
+transform: translateY(170%);
+  }
+#loginbox button {
+  display: block;
+   position: absolute;
+  top: 70%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  padding-left: 100px;
+  padding-right:100px;
+  padding-bottom:60px;
+  margin-top:10px;
+  background-image: url('../images/loginui/loginbtn.png');
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow:none;
+  cursor: pointer;
+  background-color: transparent;
+}
+#version {
+    position: absolute;
+    /*top: 2%;*/
+    top: 2.3%;
+    /*left: 5%;版本号原位置*/
+    left: 6%;
+    padding: calc(2.3*1.15vh)/*HELASISY - 10px*/;
+    font-size: calc(3.5*1.15vh)/*HELASISY - 15px*/;
+    font-family: shousha;
+    font-weight: bold;
+    filter: drop-shadow(-0.8px 0px 0.2px rgb(60,50,40)) drop-shadow(1.2px 0px 0.2px rgb(60,50,40)) drop-shadow(0px 1.2px 0.2px rgb(60,50,40)) drop-shadow(0px -0.8px 0.2px rgb(60,50,40));
+    color: white;
+    letter-spacing: calc(0.35*1.15vh)/*HELASISY - 1.5px*/;
+    z-index:30;  
+  }
+  #xuanqu {
+    position: absolute;
+    bottom:calc(9.3*1.15vh)/*HELASISY - 40px*/;
+    /*left:487px;*/
+    left: calc(75% - 23.25*1.15vh)/*HELASISY*/;
+    z-index:21;
+    width:calc(46.5*1.15vh)/*HELASISY - 200px*/;
+    height:calc(29.8*1.15vh)/*HELASISY - 128px*/;
+  background-position:center bottom; 
+  background-image: url('../images/loginui/xuanqu.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow:none;
+      }
+      /*底下三国杀图片*/
+#under {
+        position: absolute;
+        bottom:0; 
+        width:100%;
+        height:40px; 
+        margin:0px;           
+     background-size: 100% 100%;
+     z-index:20;
+     opacity:0.4;
+       background-color:black;
+      }
+#nunder {
+        position: absolute;
+        bottom:0px;
+        left:50px;
+        z-index:21;
+        width:170px;
+        height:80px; 
+     background-position:center bottom; 
+  background-image: url('../images/loginui/nunder.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow:none;
+  /*阴影*/
+  filter: drop-shadow(0px 0 3px #000);
+      }  
+/*底部字体栏*/
+#underSgs {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index:21;
+        width: 100%;
+        height: 30%;
+        pointer-events: none;
+     background-position:center bottom; 
+  background-image: url('../images/loginui/under_new.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow:none;
+  /*阴影*/
+  /*filter: drop-shadow(0px 0 3px #000);*/
+      }  
+#undertext {
+        position: absolute;
+        bottom:5px;
+        left:190px;      
+        z-index:21;
+        /*width:60%*/
+        width:67%;
+        height:30px; 
+        color:white;
+        font-size:8px;
+        font-family: shousha; 
+        /*字体靠右*/
+        text-align:right;
+        /*字体描边*/
+        filter: drop-shadow(1px 0 0.5px #000) drop-shadow(-1px 0 0.5px #000) drop-shadow(0 1px 0.5px #000) drop-shadow(0 -1px 0.5px #000);
+      } 
+#page {
+        position: absolute;
+        bottom:calc(14*1.15vh)/*HELASISY - 60px*/;
+        left:calc(7*1.15vh)/*HELASISY - 30px*/;
+        display:flex;
+        z-index:21;
+        width:calc(7.7*1.15vh)/*HELASISY - 33px*/;
+        height:calc(9.8*1.15vh)/*HELASISY - 42px*/;  
+  background-image: url('../images/loginui/page.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+    background-color: transparent;
+  border: none;
+  box-shadow:none;
+      } 
+#loginfo {
+      display:none;
+      align-items: center;
+        position: absolute;
+        top:calc(2.8*1.15vh)/*HELASISY - 12px*/;
+        left:calc(65.1*1.15vh)/*HELASISY - 280px*/;
+        z-index:21;
+        width:calc(41.9*1.15vh)/*HELASISY - 180px*/;
+        height:calc(6.5*1.15vh)/*HELASISY - 28px*/;                    
+        background-position:center; 
+        background-image: url('../images/loginui/loginfo.png');
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+        box-shadow:none;
+      }    
+#logqq {
+    position: absolute;      
+    z-index:21;
+    left:calc(3.5*1.15vh)/*HELASISY - 15px*/;
+    top:calc(0.5*1.15vh)/*HELASISY - 2px*/;   
+    width:calc(5.6*1.15vh)/*HELASISY - 24px*/;
+    height:calc(5.6*1.15vh)/*HELASISY - 24px*/;
+    background-position:center; 
+    background-image: url('../images/loginui/logqq.png');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    box-shadow:none;
+} 
+#loginfoname {
+    position: absolute;          
+    z-index:21;   
+    display:flex;
+    align-items: center; 
+    justify-content: center;    
+    text-align: justify;
+    width:100%;
+    height:100%;  
+    font-size:calc(3*1.15vh)/*HELASISY - 13px*/;
+    font-family: shousha; 
+    color:white;                    
+    border: none;
+    box-shadow:none;
+    /*以下为微调*/
+    left:calc(-2.1*1.15vh)/*HELASISY - -9px*/;
+    top:calc(0.2*1.15vh)/*HELASISY - 1px*/;
+    filter: drop-shadow(-0.7px 0px 0.2px rgb(60,50,40)) drop-shadow(1.1px 0px 0.2px rgb(60,50,40)) drop-shadow(0px 1.1px 0.2px rgb(60,50,40)) drop-shadow(0px -0.7px 0.2px rgb(60,50,40));
+} 
+#relog{
+    position: absolute;      
+    z-index:21;
+    top:calc(1.2*1.15vh)/*HELASISY - 5px*/;
+    right:calc(2.3*1.15vh)/*HELASISY - 10px*/;
+    width:calc(10.5*1.15vh)/*HELASISY - 45px*/;
+    height:calc(4.2*1.15vh)/*HELASISY - 18px*/;
+    background-position:center; 
+    background-image: url('../images/loginui/relog.png');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    box-shadow:none;
+}  
+@font-face {
+  font-family: 'shousha';
+  src: url("../fonts/shousha.TTF");
+}

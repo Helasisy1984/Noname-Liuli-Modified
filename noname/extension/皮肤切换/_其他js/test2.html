@@ -1,0 +1,46 @@
+<!--
+ * @!: *********************************************************************
+ * @?: *********************************************************************
+ * @Author: Weidows
+ * @Date: 2022-03-26 11:49:37
+ * @Description:
+ * @FilePath: \Blog-private\source\_posts\Web\JavaScript\Live2dLoader\index.html
+ * @LastEditors: Weidows
+ * @LastEditTime: 2023-02-07 20:18:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>live2d-demo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../component/live2d/live2dcubismcore.min.js"></script>
+    <script src="../component/live2d/pixi.min.js"></script>
+    <script src="../component/live2d/Live2dLoader.js"></script>
+</head>
+<body>
+<!-- Canvas -->
+<script>
+    addEventListener("DOMContentLoaded", function () {
+        console.log('xxxxxxx')
+        new CustomLive2dLoader([
+            {
+                width: window.innerWidth,
+                height: window.innerHeight,
+                left: "0px",
+                bottom: "0px",
+                // role: "../live2d_assets/aisaikesi_4/aisaikesi_4.model3.json",
+                role: "../live2d_assets/pinghai_6/pinghai_6.model3.json",
+                background:
+                    "https://cdn.jsdelivr.net/gh/alg-wiki/AzurLaneL2DViewer@gh-pages/assets/bg/bg_church_jp.png",
+                opacity: 1,
+                // mobile: false,
+                mobile: true,
+                draggable: true,
+                pierceThrough: true,
+            },
+        ]);
+    });
+</script>
+</body>
+</html>

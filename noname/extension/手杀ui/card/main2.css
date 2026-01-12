@@ -1,0 +1,35 @@
+.card,
+
+card:empty,
+.card.infohidden {
+  background-size: cover;
+}
+
+.card.fullskin {
+  background-size: cover;
+}
+.card.fullskin > .image {
+  --iw: calc(var(--w) * 140 / 185);
+  --ih: calc(var(--iw) * 120 / 162);
+  --im: calc((var(--w) - var(--iw)) / 2);
+  top: auto;
+  left: var(--im);
+  bottom: var(--im);
+  width: var(--iw);
+  height: var(--ih);
+  border-radius: 4px;
+}
+
+.card > .virtualMark {
+  background-size: 100% 100%;
+  top: 12px;
+  left: 8px;
+  width: 23.5px;
+  height: 42.3px;
+  background-image: url("./images/virtual.png");
+  
+}
+.card:not([data-virtual-card]) > .virtualMark {
+  display: none;
+}
+

@@ -1,0 +1,493 @@
+	/*-----分割线------*/
+
+/*挑战模式boss位置*/
+.player.bossplayer>div:not(.hp):not(.identity):not(.avatar):not(.framebg){
+    display:none !important;
+    /*height: 112%;
+    left: 18px;*/
+    height: 90%;
+    width: 80%;
+    left: 10%;
+    top: 5%;
+    /*bottom: 0px;*/
+}
+	
+/*体力颜色*/
+.hp[data-condition="high"]>div:not(.lost) {
+   color: #05ff00;
+   text-shadow: 0 0 2px black;
+}
+.hp[data-condition="mid"]>div:not(.lost) {
+   color: #ffcc00;
+   text-shadow: 0 0 2px black;
+}
+.hp[data-condition="low"]>div:not(.lost) {
+   color: #ff0000;
+   text-shadow: 0 0 2px black;
+}
+.hp.text[data-condition="low"],
+.hp.textstyle[data-condition="low"] {
+   color: #ff0000;
+   text-shadow: 0 0 2px black;
+}
+.hp.text[data-condition="mid"],
+.hp.textstyle[data-condition="mid"] {
+   color: #ffcc00;
+   text-shadow: 0 0 2px black;
+}
+.hp.text[data-condition="high"],
+.hp.textstyle[data-condition="high"] {
+   color: #05ff00;
+   text-shadow: 0 0 2px black;
+}
+
+/*判定区转化牌*/
+.card .tempname {
+	font-size: 0px;
+}
+	
+	/*--------样式--------*/
+#arena.selecting:not(.video) .player[data-position='0'] .card:not(.selectable)>.background,
+#arena.selecting:not(.video) .player[data-position='0'] .card:not(.selectable)>.image,
+#arena.selecting:not(.video) .player[data-position='0'] .card:not(.selectable)>.name,
+#arena.selecting:not(.video) .player[data-position='0'] .card:not(.selectable)>.name2,
+#arena.selecting:not(.video) .player[data-position='0'] .card:not(.selectable)>.info,
+#arena.selecting:not(.video) .player[data-position='0'] .card:not(.selectable)>.range,
+#arena.selecting:not(.video) .player[data-position='0'] .card:not(.selectable)>.gaintag,
+#arena.selecting:not(.video) .player[data-position='0'] .card:not(.selectable)>.addinfo,
+#arena.selecting:not(.video) .player.current_action .card:not(.selectable)>.background,
+#arena.selecting:not(.video) .player.current_action .card:not(.selectable)>.image,
+#arena.selecting:not(.video) .player.current_action .card:not(.selectable)>.name,
+#arena.selecting:not(.video) .player.current_action .card:not(.selectable)>.name2,
+#arena.selecting:not(.video) .player.current_action .card:not(.selectable)>.info,
+#arena.selecting:not(.video) .player.current_action .card:not(.selectable)>.range,
+#arena.selecting:not(.video) .player.current_action .card:not(.selectable)>.gaintag,
+#arena.selecting:not(.video) .player.current_action .card:not(.selectable)>.addinfo,
+#arena.selecting:not(.video) #me .card:not(.selectable)>.background,
+#arena.selecting:not(.video) #me .card:not(.selectable)>.image,
+#arena.selecting:not(.video) #me .card:not(.selectable)>.name,
+#arena.selecting:not(.video) #me .card:not(.selectable)>.name2,
+#arena.selecting:not(.video) #me .card:not(.selectable)>.info,
+#arena.selecting:not(.video) #me .card:not(.selectable)>.range,
+#arena.selecting:not(.video) #me .card:not(.selectable)>.gaintag,
+#arena.selecting:not(.video) #me .card:not(.selectable)>.addinfo,
+#arena.selecting:not(.video) .dialog:not(.noselect) .button:not(.selectable):not(.noclick):not(.replaceButton),
+.dead,.likedead {
+	opacity: 1; /*回合内虚化效果*/
+}
+
+#window:not(.nopointer) .player .judges>.card,
+#window:not(.nopointer) .player .marks>.card{
+	cursor: context-menu;
+}
+#window:not(.nopointer) .player .identity.guessing{
+	cursor: help;
+}
+
+#window:not(.nopointer) #system>div>div:not(.hidden),
+#window:not(.nopointer) .choosedouble.character,
+#window:not(.nopointer) .config.more,
+#window:not(.nopointer) .dashboard,
+#window:not(.nopointer) .textlink,
+#window:not(.nopointer) .hrefnode,
+#window:not(.nopointer) #historybar>div>div,
+#window:not(.nopointer) .closenode,
+#window:not(.nopointer) .pointerdiv,
+#window:not(.nopointer) .pointernode div,
+#window:not(.nopointer) .pointerspan span,
+#window:not(.nopointer) .pointertable td>span,
+#window:not(.nopointer) .config>.toggle.onoff,
+#window:not(.nopointer) .pointerdialog .button:not(.unselectable),
+#window:not(.nopointer) .dialog.fullheight .buttons .button:not(.selectedx):not(.glow):not(.glows):not(.forbidden),
+#window:not(.nopointer) #arena.selecting:not(.video) .player .equips>.card.selectable,
+#window:not(.nopointer) #arena.selecting #me .card.selectable,
+#window:not(.nopointer) #arena.selecting .button.selectable,
+#window:not(.nopointer) #arena.selecting .player.selectable,
+#window:not(.nopointer) .menubutton.round,
+*[data-cursor_style="pointer"]{
+	cursor: pointer;
+}
+*[data-cursor_style="forbidden"]{
+	cursor: not-allowed;
+}
+*[data-cursor_style="menu"]{
+	cursor: context-menu;
+}
+*[data-cursor_style="zoom"]{
+	cursor: -webkit-zoom-in;
+}
+#arena.dragging{
+	cursor: -webkit-grabbing;
+}
+
+#arena.selecting:not(.video) .player[data-position='0'] .marks>.card:not(.selectable)>.image,
+#arena.selecting:not(.video) .player[data-position='0'] .judges>.card:not(.selectable)>.image,
+#arena.selecting:not(.video) .player[data-position='0'] .judges>.card:not(.selectable)>.background,
+#arena.selecting:not(.video) .player .marks>.card:not(.selectable)>.image,
+#arena.selecting:not(.video) .player .judges>.card:not(.selectable)>.image,
+#arena.selecting:not(.video) .player .judges>.card:not(.selectable)>.background {
+	opacity: 1;
+}
+
+#arena.tempnoe .player.selectable .equips>.card{
+	pointer-events: none;
+}
+
+.unselectable:not(.selected):not(.removing) {
+	opacity: 0.6 !important
+}
+.unselectable2 {
+	opacity: 0.4 !important
+}
+.mark>.background {
+	opacity: 1 !important;
+}
+#arena.selecting:not(.video) #me .card:not(.selectable) {
+	opacity: 0.8
+}
+.button.character.banned,.button.card.banned {
+	opacity: 0.5
+}
+
+.card.selectable>.background,
+.card.selectable>.name,
+.card.selectable>.name2,
+.card.selectable>.info,
+.card.selectable>.range,
+.card.selectable>.gaintag,
+.button.selectable {
+	opacity: 1;
+}
+
+.card {
+	color: rgba(0,0,0,0.3);
+	text-shadow: none;
+}
+.fire {
+	color: rgba(255,0,0,0.3);
+}
+.thunder {
+	color: rgba(0,80,255,0.3);
+}
+.kami {
+	color: rgba(90,118,99,0.3);
+}
+.ice {
+	color: rgba(0,153,255,0.3);
+}
+.poison {
+	color: rgba(30, 133, 51,0.4);
+}
+.brown {
+	color: rgba(133, 92, 30, 0.4);
+}
+.purple {
+	color: rgba(177, 62, 177,0.4);
+}
+.player,.button.character {
+	color: white;
+	text-shadow: black 0 0 2px;
+}
+.turnedover>div {
+	opacity: 0.3;
+}
+.turnedover>.identity,
+.turnedover>.framebg,
+.turnedover>.marks,
+.turnedover>.judges {
+	opacity: 0.7;
+}
+.intro:not(.showintro) {
+	opacity: 0;
+	display: none !important
+}
+.intro.showintro {
+	white-space: nowrap
+}
+div:hover>.intro {
+	opacity: 1;
+}
+/*.hp>div{background: white;box-shadow:0px 1px 1px rgba(0,0,0,0.5);border:1px solid #fff;border-radius: 8px;}*/
+/*.hp>.lost{background: rgba(128,128,128,0.3);}*/
+.identity {
+	border-radius: 12px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.player .identity {
+	z-index: 4
+}
+.info {
+	border-radius: 10px;
+}
+.dialog>.bar {
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	left: 0;
+	opacity: 0;
+}
+.dialog>.bar.top {
+	top: 0;
+}
+.dialog>.bar.bottom {
+	bottom: 0;
+}
+.dialog>.content-container {
+	width: 100%;
+	height: calc(100% - 0px);
+	/*height:calc(100% - 5px);*/
+	left: 0;
+	top: 0px;
+	/*top:5px;*/
+	position: absolute;
+	overflow: scroll;
+}
+/*.dialog.scroll1>.bar.top{opacity:1}
+.dialog.scroll2>.bar.bottom{opacity:1}*/
+.dialog.slim {
+	top: 300px;
+	bottom: auto;
+	min-height: none
+}
+/*.dialog.scroll1{box-shadow:0 -10px 10px -9px rgba(0,0,0,0.1),0 -10px 0 -9px rgba(0,0,0,0.05);}
+.dialog.scroll2{box-shadow:0 10px 10px -9px rgba(0,0,0,0.1),0 10px 0 -9px rgba(0,0,0,0.05)}
+.dialog.scroll1.scroll2{box-shadow:0 -10px 10px -9px rgba(0,0,0,0.1),0 -10px 0 -9px rgba(0,0,0,0.05),
+	0 10px 10px -9px rgba(0,0,0,0.1),0 10px 0 -9px rgba(0,0,0,0.05);}*/
+/* .selected,.target { */
+/*transform: scale(1.05);*/
+/* } */
+/*.player.target{-webkit-filter:brightness(1.2)}*/
+
+/*本体选中目标高光效果调整*/
+.target {
+	box-shadow: none !important;
+}
+
+
+#mebg.target {
+	transform: none !important;
+}
+#arena[data-target_shake='shake'] .target {
+	transform: rotate(-3deg);
+}
+#arena[data-target_shake='shake'] .target2 {
+	transform: rotate(3deg);
+}
+#arena[data-target_shake='zoom'] .target,
+#arena[data-target_shake='zoom'] .target2 {
+	transform: scale(1.03);
+}
+
+
+
+
+
+/*本体触屏按钮*/
+.roundarenabutton {
+	/*width: 50px;
+	height: 50px;*/
+	left: 180px;
+	top: 210px;
+	position: absolute;
+	/*background: rgba(0,0,0,0.2);
+	box-shadow: rgba(0, 0, 0, 0.3) 0 0 0 1px;
+	border-radius:100%;*/
+	z-index: 999;
+	transition-property: opacity;
+	overflow: hidden;
+}
+#arena:not(.phone) #roundmenu {
+	display: none !important;
+}
+#roundmenu>div {
+	width: 26px;
+	height: 4px;
+	background: white;
+	position: absolute;
+	left: 12px;
+	border-radius: 2px;
+	box-shadow: black 0 0 2px;
+}
+#roundmenu.clock>div:nth-of-type(1) {
+	width: 2px;
+	height: 2px;
+	left: 24px;
+	top: 2px;
+	opacity: 1;
+}
+#roundmenu.clock>div:nth-of-type(2) {
+	width: 2px;
+	height: 2px;
+	left: 24px;
+	top: 46px;
+	opacity: 1;
+}
+#roundmenu.clock>div:nth-of-type(3) {
+	width: 2px;
+	height: 2px;
+	top: 24px;
+	left: 2px;
+	opacity: 1;
+}
+#roundmenu.clock>div:nth-of-type(4) {
+	width: 2px;
+	height: 2px;
+	top: 24px;
+	left: 46px;
+	opacity: 1;
+}
+#roundmenu.clock>div:nth-of-type(5) {
+	width: 2px;
+	height: 2px;
+	left: 24px;
+	top: 2px;
+	opacity: 0.4;
+	transform: rotate(30deg);
+	transform-origin: 1px 23px;
+}
+#roundmenu.clock>div:nth-of-type(9) {
+	width: 2px;
+	height: 2px;
+	left: 24px;
+	top: 2px;
+	opacity: 0.4;
+	transform: rotate(60deg);
+	transform-origin: 1px 23px;
+}
+#roundmenu.clock>div:nth-of-type(6) {
+	width: 2px;
+	height: 2px;
+	left: 24px;
+	top: 46px;
+	opacity: 0.4;
+	transform: rotate(30deg);
+	transform-origin: 1px -23px;
+}
+#roundmenu.clock>div:nth-of-type(10) {
+	width: 2px;
+	height: 2px;
+	left: 24px;
+	top: 46px;
+	opacity: 0.4;
+	transform: rotate(60deg);
+	transform-origin: 1px -23px;
+}
+#roundmenu.clock>div:nth-of-type(7) {
+	width: 2px;
+	height: 2px;
+	top: 24px;
+	left: 2px;
+	opacity: 0.4;
+	transform: rotate(30deg);
+	transform-origin: 23px 1px;
+}
+#roundmenu.clock>div:nth-of-type(11) {
+	width: 2px;
+	height: 2px;
+	top: 24px;
+	left: 2px;
+	opacity: 0.4;
+	transform: rotate(60deg);
+	transform-origin: 23px 1px;
+}
+#roundmenu.clock>div:nth-of-type(8) {
+	width: 2px;
+	height: 2px;
+	top: 24px;
+	left: 46px;
+	opacity: 0.4;
+	transform: rotate(30deg);
+	transform-origin: -23px 1px;
+}
+#roundmenu.clock>div:nth-of-type(12) {
+	width: 2px;
+	height: 2px;
+	top: 24px;
+	left: 46px;
+	opacity: 0.4;
+	transform: rotate(60deg);
+	transform-origin: -23px 1px;
+}
+#roundmenu.clock>div:nth-of-type(13) {
+	width: 22px;
+	height: 2px;
+	top: 24px;
+	left: 24px;
+	transform-origin: 1px 1px;
+	border-radius: 4px 40px 40px 4px/4px 4px 4px 4px;
+}
+#roundmenu.clock>div:nth-of-type(14) {
+	width: 16px;
+	height: 4px;
+	top: 23px;
+	left: 23px;
+	transform-origin: 2px 2px;
+	border-radius: 4px 23px 23px 4px/4px 4px 4px 4px;
+}
+#roundmenu.clock>div:nth-of-type(15) {
+	width: 80%;
+	height: 80%;
+	left: 10%;
+	top: 10%;
+	border-radius: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: -1;
+	opacity: 0;
+}
+
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(1),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(2),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(3),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(4),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(5),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(6),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(7),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(8),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(9),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(10),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(11),
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(12) {
+	opacity: 0;
+}
+#roundmenu.clock[data-watchface="simple"]>div:nth-of-type(15) {
+	opacity: 1;
+}
+
+#roundmenu:not(.clock)>div:nth-of-type(even) {
+	width: 20px;
+	left: 18px;
+}
+#roundmenu:not(.clock)>div:nth-of-type(odd) {
+	width: 4px;
+}
+
+#roundmenu:not(.clock)>div:nth-of-type(1),
+#roundmenu:not(.clock)>div:nth-of-type(2) {
+	top: 14px;
+}
+
+#roundmenu:not(.clock)>div:nth-of-type(3),
+#roundmenu:not(.clock)>div:nth-of-type(4) {
+	top: 23px;
+}
+
+#roundmenu:not(.clock)>div:nth-of-type(5),
+#roundmenu:not(.clock)>div:nth-of-type(6) {
+	top: 32px;
+	transform: none !important;
+}
+
+#roundmenu:not(.clock)>div:nth-of-type(7),
+#roundmenu:not(.clock)>div:nth-of-type(8),
+#roundmenu:not(.clock)>div:nth-of-type(9),
+#roundmenu:not(.clock)>div:nth-of-type(10),
+#roundmenu:not(.clock)>div:nth-of-type(11),
+#roundmenu:not(.clock)>div:nth-of-type(12),
+#roundmenu:not(.clock)>div:nth-of-type(13),
+#roundmenu:not(.clock)>div:nth-of-type(14),
+#roundmenu:not(.clock)>div:nth-of-type(15) {
+	opacity: 0;
+}
+	

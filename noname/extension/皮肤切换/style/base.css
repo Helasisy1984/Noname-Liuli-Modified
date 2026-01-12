@@ -1,0 +1,66 @@
+/*样式都来自EngEX扩展*/
+
+.confirmBox {
+    background-image: url("../images/base/lobby_ad_bgs.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 114% 125%;
+    font-family: "shousha", serif;
+    color: #714a02;
+    top: 31%;
+    left: 26%;
+    z-index: 8;
+}
+
+.confirmTextDiv {
+    width: 62%;
+    height: 45%;
+    font-size: 22px;
+    top: 16%;
+    left: 19.5%;
+    overflow: scroll;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.confirmBtnDiv {
+    width: 85%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    top: 64%;
+    left: 7.5%;
+    text-align: center;
+    color: white;
+    line-height: 38px;
+}
+
+.confirmBtn {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.progressBG {
+    width: 597px;
+    height: 47px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url("../images/base/progress_bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 20;
+    opacity: 1;
+}
+
+.progressBG > div {
+    width: 571px;
+    height: 21px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url("../images/base/progress_bar.png");
+    background-size: 0;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,494 @@
+/*弹窗-文本*/
+.taixuhuanjing_messagePopupDivText  {
+  font-size: 1.2rem;
+}
+
+/*赛季-说明*/
+.taixuhuanjing_HomeBodyText {
+  font-size: 1.8rem;
+  letter-spacing: 10px;
+}
+
+/*点将-标题*/
+.taixuhuanjing_PointTitle {
+  line-height: 3.5rem;
+  font-size: 2.5rem;
+}
+
+/*选将-武将-势力/名称*/
+.taixuhuanjing_chooseCharacterPlayBodySkills1 {
+  line-height: 1.2rem;
+  font-size: 1.5rem;
+}
+
+/*选将-武将-技能文本*/
+.taixuhuanjing_chooseCharacterPlayBodySkills3 {
+  line-height: 1.0rem;
+  font-size: 1.0rem;
+}
+
+/*选将-武将名称*/
+.taixuhuanjing_characterDivMobileName {
+  line-height: 0.9rem;
+  font-size: 0.9rem;
+}
+
+/*已点将名称*/
+.taixuhuanjing_HomeBodyPointText {
+  font-size: 1.1rem;
+}
+
+/*点将-确认按钮*/
+.taixuhuanjing_ChoiceCharacterOkButton {
+  font-size: 1.5rem;
+}
+
+/*点将-武将名称*/
+.taixuhuanjing_ChoiceCharacterPlayText {
+  font-size: 1.0rem;
+}
+
+/*点将-武将总数*/
+.taixuhuanjing_ChoiceCharacterGroupDivMax {
+  font-size: 1.5rem;
+}
+
+/*顶部-标题*/
+.taixuhuanjing_consoledeskTitleText {
+  font-size: 1.2rem;
+}
+
+/*主控台-难度*/
+.taixuhuanjing_consoledeskRunkText {
+  line-height: 2.4rem;
+  font-size: 1.3rem;
+}
+
+/*主控台-金币*/
+.taixuhuanjing_consoledeskCoinNum {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+}
+
+/*主控台-突变文本*/
+.taixuhuanjing_consoledeskEffectInfo {
+  font-size: 1.0rem;
+}
+
+/*主控台-武将名称*/
+.taixuhuanjing_consoledeskPlayName {
+  line-height: 1.0rem;
+  font-size: 1.0rem;
+}
+
+/*主控台-武将体力-数字*/
+.taixuhuanjing_consoledeskPlayHpNum {
+  line-height:1.0rem;
+  font-size: 1.2rem;
+}
+
+/*主控台-技能-技能槽*/
+.taixuhuanjing_consoledeskSkillDivText1 {
+  line-height: 1.0rem;
+  font-size: 1.2rem;
+  color:#C0B8A0;
+}
+
+/*主控台-技能-阴影*/
+.taixuhuanjing_consoledeskSkillDivText2 {
+  line-height: 1.5rem;
+  font-size: 1.6rem;
+}
+
+/*主控台-技能-渐变*/
+.taixuhuanjing_consoledeskSkillDivText3 {
+  line-height: 1.5rem;
+  font-size: 1.55rem;
+}
+
+/*调整界面-标题*/
+.taixuhuanjing_lookEquipHomeBoxTitle {
+  font-size: 2.0rem;
+  text-shadow:none;
+  color:#000B09;
+}
+
+/*调整界面-说明*/
+.taixuhuanjing_lookEquipHomeBoxText {
+  font-size: 1.5rem;
+  text-shadow:none;
+  color:#000B09;
+}
+
+/*调整界面-说明2*/
+.taixuhuanjing_lookEquipHomeBoxText2 {
+  font-size: 1.5rem;
+  text-shadow:none;
+  color:#000B09;
+}
+
+/*调整界面-技能名称-技能槽*/
+.taixuhuanjing_lookEquipHomeBoxSkillButtonText1 {
+  line-height: 1.6rem;
+  font-size: 1.6rem;
+  color:#C0B8A0;
+}
+
+/*调整界面-技能名称-阴影*/
+.taixuhuanjing_lookEquipHomeBoxSkillButtonText2 {
+  line-height: 2.0rem;
+  font-size: 2.15rem;
+}
+
+/*调整界面-技能名称-渐变*/
+.taixuhuanjing_lookEquipHomeBoxSkillButtonText3 {
+  line-height: 2.0rem;
+  font-size: 2.1rem;
+}
+
+/*调整界面-技能描述*/
+.taixuhuanjing_lookEquipHomeSkillInfo {
+  line-height: 1.6rem;
+  font-size: 1.45rem;
+}
+
+/*调整界面-确认按钮*/
+.taixuhuanjing_lookEquipHomeBoxButton {
+  line-height: 3.0rem;
+  font-size: 2.0rem;
+  text-shadow:none;
+}
+
+/*主控台-初始手牌/手牌上限/调度次数/皮肤加成*/
+.taixuhuanjing_consoledeskAttributeBody1DivText {
+  line-height: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.taixuhuanjing_consoledeskAttributeBody1DivText2 {
+  line-height: 0.8rem;
+  font-size: 0.9rem;
+}
+
+/*主控台-等级*/
+.taixuhuanjing_consoledeskAttributeBody4 {
+  font-size: 0.8rem;
+}
+
+/*主控台-经验值*/
+.taixuhuanjing_consoledeskAttributeBody5Div {
+  font-size: 0.85rem;
+}
+
+/*主控台-装备名称*/
+.taixuhuanjing_consoledeskAttributeBody3Div {
+  font-size: 0.77rem;
+}
+
+/*主控台-侍灵名称*/
+.taixuhuanjing_consoledeskServantName {
+  font-size: 1.2rem;
+}
+
+/*调整-装备栏名称*/
+.taixuhuanjing_lookEquipHomeBoxEquipDivText {
+  font-size: 1.5rem;
+}
+
+/*主控台-事件-名称*/
+.taixuhuanjing_consoledeskEventDivName {
+  font-size: 1.2rem;
+  text-shadow:none;
+}
+
+/*主控台-事件-类型*/
+.taixuhuanjing_consoledeskEventDivType {
+  font-size: 1.0rem;
+  text-shadow:none;
+}
+
+/*主控台-事件-说明*/
+.taixuhuanjing_consoledeskEventDivInfo {
+  font-size: 1.0rem;
+  text-shadow:none;
+}
+
+/*主控台-事件-查看按钮*/
+.taixuhuanjing_consoledeskEventDivButton {
+  font-size: 1.0rem;
+}
+
+/*事件-选择事件-事件标题*/
+.taixuhuanjing_lookEventHomeBoxTitle {
+  font-size: 2.0rem;
+  color:#000B09;
+  text-shadow:none;
+}
+
+/*事件-选择事件-事件说明*/
+.taixuhuanjing_lookEventHomeBoxInfo {
+  font-size: 1.9rem;
+}
+
+/*事件-选择事件-事件选项（小）*/
+.taixuhuanjing_lookEventHomeBoxButton1 {
+  line-height: 3.4rem;
+  font-size: 2.0rem;
+  text-shadow:none;
+}
+
+/*事件详情-事件标题*/
+.taixuhuanjing_lookEventHomeTitle {
+  font-size: 2.5rem;
+  text-shadow:none;
+  color:#000B09;
+}
+
+/*事件详情-技能/特殊效果/战利品/背景*/
+.taixuhuanjing_lookEventHomeTextDiv {
+  line-height: 3.0rem;
+  font-size: 1.8rem;
+}
+
+/*事件详情-文本*/
+.taixuhuanjing_lookEventHomeText {
+  font-size: 1.6rem;
+}
+
+/*事件详情-挑战按钮*/
+.taixuhuanjing_lookEventHomeButton {
+  line-height: 3.0rem;
+  font-size: 2.4rem;
+  text-shadow:none;
+}
+
+/*事件详情-武将等级*/
+.taixuhuanjing_lookEventHomePlayText1 {
+  line-height: 3.0rem;
+  font-size: 2.0rem;
+}
+
+/*战斗中-胜利条件*/
+#taixuhuanjing_gamePremiseHome {
+  line-height: 1.2rem;
+  font-size: 1.0rem;
+}
+
+/*结算-请选择一项*/
+.taixuhuanjing_StateHomeTitle2 {
+  font-size: 1.5rem;
+  text-shadow:none;
+}
+
+/*结算-奖励类型*/
+.taixuhuanjing_StateHomeBoxDivName {
+  font-size: 1.5rem;
+  text-shadow:none;
+}
+
+/*结算-奖励名称-底部*/
+.taixuhuanjing_StateHomeBoxDivInfo1 {
+  font-size: 1.2rem;
+  color:#000B09;
+  text-shadow:none;
+}
+
+/*结算-奖励名称-居中*/
+.taixuhuanjing_StateHomeBoxDivInfo3 {
+  font-size: 1.2rem;
+  color:#000B09;
+  text-shadow:none;
+}
+
+/*结算-技能名称-阴影*/
+.taixuhuanjing_StateHomeBoxDivSkillNameShadow {
+  line-height: 2.0rem;
+  font-size: 1.7rem;
+}
+
+/*结算-技能名称-渐变*/
+.taixuhuanjing_StateHomeBoxDivSkillName {
+  line-height: 2.0rem;
+  font-size: 1.6rem;
+}
+
+/*结算-技能名称-描述*/
+.taixuhuanjing_StateHomeBoxDivInfo2 {
+  font-size: 1.2rem;
+  text-shadow:none;
+}
+
+/*结算-确认选择*/
+.taixuhuanjing_StateHomeBoxButton {
+  font-size: 1.5rem;
+  text-shadow:none;
+}
+
+/*结算-等级*/
+.taixuhuanjing_StateHomelevelTitle{
+  font-size: 1.0rem;
+}
+
+/*结算-经验*/
+.taixuhuanjing_StateHomeAddExp {
+  font-size: 1.2rem;
+}
+
+/*结算-战利品*/
+.taixuhuanjing_StateHomeSpoilsTitle {
+  font-size: 1.2rem;
+}
+
+/*结算-战利品名称*/
+.taixuhuanjing_StateHomeSpoilsBoxDivName {
+  font-size: 1.0rem;
+}
+
+/*事件-选择事件-事件选项（大）*/
+.taixuhuanjing_lookEventHomeBoxButton2 {
+  line-height: 3.0rem;
+  font-size: 1.8rem;
+  text-shadow:none;
+}
+
+/*商店-栏目名称*/
+.taixuhuanjing_lookShopHomeBoxButtonTextDiv {
+  line-height: 2.6rem;
+  font-size: 1.6rem;
+  text-shadow:none;
+}
+
+/*商店-底部说明*/
+.taixuhuanjing_lookShopHomeBoxBottom {
+  font-size: 1.5rem;
+}
+
+/*商店-商品标题*/
+.taixuhuanjing_CardStyleDivTitle {
+  font-size: 1.7rem;
+  text-shadow:none;
+}
+
+/*商店-技能-阴影*/
+.taixuhuanjing_lookShopHomeBoxSkillName1 {
+  line-height: 2.1rem;
+  font-size: 2.0rem;
+}
+
+/*商店-技能-渐变*/
+.taixuhuanjing_lookShopHomeBoxSkillName2 {
+  line-height: 2.1rem;
+  font-size: 1.95rem;
+}
+
+/*商店-技能-描述*/
+.taixuhuanjing_lookShopHomeBoxSkillText2 {
+  font-size: 1.45rem;
+  text-shadow:none;
+}
+
+/*商店-价格*/
+.taixuhuanjing_lookShopHomeBoxDivButton {
+  text-indent: 1.0rem;
+  line-height: 2.7rem;
+  font-size: 1.9rem;
+  text-shadow:none;
+}
+
+.taixuhuanjing_BuffStyleDivTitle {
+  font-size: 1.8rem;
+  text-shadow:none;
+}
+
+.taixuhuanjing_BuffStyleDivInfo {
+  font-size: 1.3rem;
+  text-shadow:none;
+}
+
+/*购买弹窗-标题*/
+.taixuhuanjing_purchasePromptTitle {
+  font-size: 2.3rem;
+  text-shadow:none;
+}
+
+/*购买弹窗-说明*/
+.taixuhuanjing_purchasePromptText {
+  font-size: 1.5rem;
+  text-shadow:none;
+}
+
+/*购买弹窗-确认按钮*/
+.taixuhuanjing_purchasePromptButton1 {
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+  text-shadow:none;
+}
+
+/*购买弹窗-取消按钮*/
+.taixuhuanjing_purchasePromptButton2 {
+  line-height: 1.8rem;
+  font-size: 1.4rem;
+  text-shadow:none;
+}
+
+/*结算-等级提升*/
+.taixuhuanjing_StateHomeTitle {
+  font-size: 3.0rem;
+}
+
+/*主控台-祝福说明*/
+.taixuhuanjing_consoledeskBuffDivInfoText {
+  font-size: 1.0rem;
+}
+
+/*主控台-牌库牌-点数/花色*/
+.taixuhuanjing_consoledeskAttributeBody2Text {
+  line-height: 0.8rem;
+  font-size: 1.0rem;
+}
+
+/*突变-标题1*/
+.taixuhuanjing_chooseEffectTitle {
+  font-size: 2.5rem;
+}
+
+/*突变-标题2*/
+.taixuhuanjing_chooseEffectTitle2 {
+  font-size: 2.5rem;
+}
+
+/*突变-名称*/
+.taixuhuanjing_chooseEffectDivName {
+  font-size: 1.5rem;
+}
+
+/*突变-说明*/
+.taixuhuanjing_chooseEffectDivInfo {
+  font-size: 1.0rem;
+}
+
+/*突变-确认按钮*/
+.taixuhuanjing_chooseEffectDivButton {
+  font-size: 1.2rem;
+}
+
+/*商店-金币数量*/
+.taixuhuanjing_consoledeskCoinNum2 {
+  font-size: 2.0rem;
+  text-shadow:none;
+}
+
+/*规则-标题阴影*/
+.taixuhuanjing_HomeBodySeasonTitleShadow {
+  font-size: 1.5rem;
+}
+
+/*规则-标题颜色*/
+.taixuhuanjing_HomeBodySeasonTitle {
+  font-size: 1.5rem;
+}
+
+/*规则-文本*/
+.taixuhuanjing_HomeBodySeasonText {
+  font-size: 1.2rem;
+}

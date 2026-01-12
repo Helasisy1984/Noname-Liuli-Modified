@@ -1,0 +1,14 @@
+
+.card > .virtualMark {
+  background-size: 100% 100%;
+  top: 8px;
+  left: 8px;
+  width: 22px;
+  height: 38px;
+  background-image: url("./images/virtual.png");
+  
+}
+.card:not([data-virtual-card]) > .virtualMark {
+  display: none;
+}
+

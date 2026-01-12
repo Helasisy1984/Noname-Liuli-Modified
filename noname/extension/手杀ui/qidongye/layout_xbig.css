@@ -1,0 +1,99 @@
+/*-----------------分割线-----------------*/
+/*大启动页*/
+#splash {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	text-align: center;
+	overflow: visible;
+	transition: all 0.3s;
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+#splash.removing {
+	pointer-events: none;
+}
+/*图层*/
+#splash>div {
+    --w: 300px;
+	--h: calc(var(--w) * 1275/913);
+	width: var(--w);
+	height: var(--h);
+	top: calc(50% - 180px); /*图层下移*/
+	margin-left: 40px; /*图层左侧间距*/
+	margin-right: 40px; /*图层右侧间距*/
+	position: relative;
+	transition: all 0.8s;
+	cursor: pointer;
+}
+/*第一张图图层*/
+#splash>div:first-child {
+	margin-left: 60px; /*图层左侧间距*/
+}
+/*最后一张图图层*/
+#splash>div:last-child {
+	margin-right: 60px; /*图层右侧间距*/
+}
+#splash:not(.touch)>div:hover:not(.clicked) {
+	transform: translateY(-20px);
+}
+#splash>div.clicked {
+	transform: translateY(-20px) scale(1.5);
+	transition: all 0.3s;
+	opacity: 0;
+}
+#splash>div.hidden {
+	transform: translateY(-300px) scale(0.5);
+}
+#splash.low_performance>div.hidden {
+	transform: scale(0.8);
+}
+#splash.low_performance>div {
+	transition: all 0.5s;
+}
+/*文本*/
+#splash>div>.splashtext {
+	font-family: 'shousha','xinwei'; /*字体样式，优先使用 'shousha' 字体*/
+	font-size: 0px; /*字体大小*/
+	position: absolute;
+	right: 7px;
+	bottom: 7px;
+	z-index: 1;
+}
+
+#splash>div>.avatar {
+	width: 86px;
+	height: calc(100% - 14px);
+	left: 7px;
+	top: 7px;
+	background-size: cover;
+}
+
+/*文本*/
+#splash.slim>div>.splashtext{
+	right: 0px; /*文本左移*/
+	bottom: 200px; /*文本上移*/
+}
+/*图片*/
+#splash.slim>div>.avatar{
+	width: 300px; /*图片宽度*/
+	height: calc(100% - 0px); /*图片高度*/
+	left: 0px; /*图片右移*/
+	top: 0px; /*图片下移*/
+}
+
+#splash[data-radius_size='reduce']>div>div,
+#splash[data-radius_size='reduce']>div {
+	border-radius: 4px;
+}
+#splash[data-radius_size='off']>div>div,
+#splash[data-radius_size='off']>div {
+	border-radius: 0px;
+}
+#splash[data-radius_size='increase']>div>div,
+#splash[data-radius_size='increase']>div {
+	border-radius: 12px;
+}
+/*-----------------分割线-----------------*/

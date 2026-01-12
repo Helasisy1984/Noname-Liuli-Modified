@@ -1,0 +1,881 @@
+
+/*自己跋扈*//*整体*/
+.fubahux{
+width: 400px;
+height: 400px;         
+}
+/*x轴*/
+.fubahu{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/bahu.png'),url('image/guangqiu_bg.png');
+    background-size: 80%;
+    width:100px;
+    height:100px;/*图高*/
+    z-index:888!important;
+    visibility:hidden;            
+    animation: center1 1.5s ease-in forwards;
+}        
+/*y轴*/
+.zibahu{           
+    animation: center2 1.5s ease-out forwards;
+    z-index:888!important;
+}
+@keyframes center1 {
+     0%  {transform: translateX(-100px);visibility: visible;opacity: 0;}	  
+     50% {transform: translateX(-100px);visibility: visible;opacity: 1;}     
+    100% {transform: translateX(80px)}
+}
+@keyframes center2 {
+     0%  {transform: translateY(10px);: visible;opacity: 0;}	
+     50% {transform: translateY(10px);visibility: visible;opacity: 1;}   
+    100% {transform: translateY(-30px)}
+}
+
+
+/*自己飞扬*//*整体*/
+.fufeiyanx{
+width: 400px;
+height: 400px;         
+}
+/*x轴*/
+.fufeiyan{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/feiyan.png'),url('image/guangqiu_bg.png');
+    background-size: 80%;
+    width:100px;
+    height:100px;/*图高*/
+    visibility:hidden;            
+    z-index:888!important;
+    animation: feiyan1 1.5s ease-in forwards;
+}        
+/*y轴*/
+.zifeiyan{           
+    animation: feiyan2 1.5s ease-out forwards;
+    z-index:888!important;
+}
+@keyframes feiyan1 {
+     0%  {transform: translateX(-140px);visibility: visible;opacity: 0;}	  
+     50% {transform: translateX(-140px);visibility: visible;opacity: 1;}     
+    100% {transform: translateX(80px)}
+}
+@keyframes feiyan2 {
+     0%  {transform: translateY(10px);: visible;opacity: 0;}	
+     50% {transform: translateY(10px);visibility: visible;opacity: 1;}   
+    100% {transform: translateY(-30px)}
+}
+
+/*ai跋扈*//*整体*/
+.aifubahux{
+width: 400px;
+height: 400px;         
+}
+/*x轴*/
+.aifubahu{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/bahu.png'),url('image/guangqiu_bg.png');
+    background-size: 80%;
+    width:100px;
+    height:100px;/*图高*/
+    z-index:888!important;
+    visibility:hidden;            
+    animation: aicenter1 1.5s ease-in forwards;
+}        
+/*y轴*/
+.aizibahu{           
+    z-index:888!important;
+    animation: aicenter2 1.5s ease-out forwards;
+}
+@keyframes aicenter1 {
+     0%  {transform: translateX(-20px);visibility: visible;opacity: 0;}	  
+     50% {transform: translateX(-20px);visibility: visible;opacity: 1;}     
+  /*   85% {transform: translateX(100px);}*/
+    100% {transform: translateX(80px)}
+}
+@keyframes aicenter2 {
+     0%  {transform: translateY(200px);visibility: visible;opacity: 0;}	
+     50% {transform: translateY(200px);visibility: visible;opacity: 1;}   
+    100% {transform: translateY(-30px)}
+}
+
+
+/*ai飞扬*//*整体*/
+.aifufeiyanx{
+width: 400px;
+height: 400px;         
+}
+/*x轴*/
+.aifufeiyan{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/feiyan.png'),url('image/guangqiu_bg.png');
+    background-size: 80%;
+    width:100px;
+    height:100px;/*图高*/
+    visibility:hidden;            
+    z-index:100!important;
+    animation: aifeiyan1 1.5s ease-in forwards;
+}        
+/*y轴*/
+.aizifeiyan{           
+    z-index:888!important;
+    animation: aifeiyan2 1.5s ease-out forwards;
+}
+@keyframes aifeiyan1 {
+     0%  {transform: translateX(40px);visibility: visible;opacity: 0;}	  
+     50% {transform: translateX(40px);visibility: visible;opacity: 1;}     
+   /*  85% {transform: translateX(105px);}*/
+    100% {transform: translateX(80px)}
+}
+@keyframes aifeiyan2 {
+     0%  {transform: translateY(200px);visibility: visible;opacity: 0;}	
+     50% {transform: translateY(200px);visibility: visible;opacity: 1;}      
+    100% {transform: translateY(-30px)}
+}
+/*地主头像框*/
+.dizhukuang{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/dizhikuang_bg.png');    
+    background-size: 100%;
+    width:47px;
+    height:50px;
+    left: 94.85px;/*93.8px*/
+    bottom: 133px;
+    z-index:79 !important;/*79*/
+    transform: scale(1.07);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 2.3px #F4FF74) saturate(1.2);
+   }
+ 
+ 
+/*未命中*/
+.weimingzhong{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/weimingzhong.png')!important;    
+    background-size: 100%;
+    width:110px;
+    height:110px;
+    left: 20px;
+    visibility:hidden;    
+    bottom: -10px;
+    z-index:888!important;
+    animation: weimingzhong 1s ease-out;
+}
+@keyframes weimingzhong {
+     0%  {visibility: visible;opacity: 0.6;}	
+     50% {opacity: 1;}   
+    100% {opacity: 0;}
+}
+/*官阶特效1*/
+.offical_icon_1{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_1.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_2{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_2.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_3{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_3.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_4{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_4.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_5{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_5.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_6{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_6.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_7{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_7.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_8{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_8.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_9{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_9.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_10{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_10.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_11{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_11.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_12{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_12.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_13{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_13.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:90px;
+    height:90px;
+    left: 20px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 45px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+.offical_icon_14{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_14.png')!important;    
+    /*background-size: 100%;*/
+    background-size: contain;
+    background-position: center center;
+    width:100px;
+    height:100px;
+    left: 15px;
+    visibility:hidden;    
+    /*bottom: 45px;*/
+    bottom: 40px;
+    z-index:888!important;
+    animation: offical_icon 2s linear;
+}
+/*@keyframes offical_icon {
+     0%  {visibility: visible;transform: scale(1.3);}	
+     90% {transform: scale(1.6);}
+    100% {transform: scale(0);}
+}*/
+@keyframes offical_icon {
+     0%  {visibility: visible;transform: scale(1.4);}	
+     90% {transform: scale(1.7);}
+    100% {transform: scale(0);}
+}
+/*官阶背景*/
+.offical_icon_guang{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_guang.png')!important;    
+    /*background-size: 100%;*/
+    background-size: 100% 100%;
+    background-position: center center;
+    width:75px;
+    height:75px;
+    left: 28px;
+    visibility:hidden;    
+    bottom: 52px;
+    z-index:887!important;
+    animation: offical_icon_guang 2s linear;
+    transform-origin: 50% 50%;/*中性点偏移 x y z*/
+}
+.offical_icon_guang2{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/offical_icon_guang2.png')!important;    
+    background-size: 100% 100%;
+    background-size: contain;
+    background-position: center center;
+    width:75px;
+    height:75px;
+    left: 28px;
+    visibility:hidden;    
+    bottom: 52px;
+    z-index:887!important;
+    animation: offical_icon_guang 2s linear;
+    transform-origin: 50% 50%;/*中性点偏移 x y z*/
+}
+@keyframes offical_icon_guang {
+     0%  {visibility: visible;transform: scale(1.7) rotate(0deg);}	
+     90% {transform: scale(2.0) rotate(720deg);}
+    100% {transform: scale(0);}
+}
+/*整肃*/
+.zhengsubeijing{
+    /*position:relative;*/
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game.zhengsu_bg.png')!important;
+    background-size: 100% 100%;
+    width:140px;
+    height:50px;
+    left: 0px;       
+    bottom: 405px;
+    padding:8px 2px 2px 2px;/*内边距*/
+    /*字体*/
+    text-align: center;
+    color: #FFFFCC;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size:15px;
+	font-weight:900;	
+    z-index:8!important;    
+}
+/*整肃备用1*/
+.zhengsubeijingx{
+    /*position:relative;*/
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game.zhengsu_bg.png')!important;
+    background-size: 100% 100%;
+    width:140px;
+    height:50px;
+    left: 0px;       
+    bottom: 350px;
+    padding:8px 2px 2px 2px;/*内边距*/
+    /*字体*/
+    text-align: center;
+    color: #FFFFCC;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size:15px;
+	font-weight:900;	
+    z-index:8!important;    
+}
+/*整肃备用2*/
+.zhengsubeijingg{
+    /*position:relative;*/
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game.zhengsu_bg.png')!important;
+    background-size: 100% 100%;
+    width:140px;
+    height:50px;
+    left: 0px;       
+    bottom: 295px;
+    padding:8px 2px 2px 2px;/*内边距*/
+    /*字体*/
+    text-align: center;
+    color: #FFFFCC;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size:15px;
+	font-weight:900;	
+    z-index:8!important;    
+}
+/*仁库*/
+.renkubeijinggua{
+    /*position:relative;*/
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game.renkubg.png')!important;
+    background-size: 100% 100%;
+    width:65px;
+    height:40px;
+    left: 20px;       
+    bottom: 230px;
+    padding:25px 2px 2px 2px;/*内边距*/
+    /*字体*/
+    text-align: center;
+    color: #e2e0dc;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size:17px;
+	font-weight:900;	
+    z-index:8!important;    
+    transition: unset;
+}
+/*国战调虎离山*/
+.diaohulishanbeijing{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game.diaohulishan_new.png')!important;
+    background-size: 100% 100%;
+    left: 22.5px;
+	top: 0;
+	width: calc(102.5% - 22.5px);
+	height: 102%;
+	opacity: 1;
+    z-index:85!important;   
+    border-radius: 8px;
+}
+/*旧国战调虎离山*/
+.diaohulishanbeijing_old{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game.diaohulishan.png')!important;
+    background-size: 100% 100%;
+    left: 20px;
+	top: 0;
+	width: 85%;
+	height: 100%;
+	opacity: 1;
+    z-index:85!important;   
+}
+/*国战标记背景*/
+.biaojibeijing{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/guozhanbiaojibeijing.png');
+    background-size: 100% 100%;
+    width:170px;
+    height:64px;
+    /*left: 80px;   */    
+    left: 83px;
+    bottom: 140px;
+    z-index:8;   
+}
+/*国战标记先驱*/
+.xianqubiaoji{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/gz_ic_xianqu.png');
+    background-size: 100% 100%;
+    width:33px;
+    height:35px;
+    left: 15px;       
+    bottom: 15px;
+    z-index:16;
+}
+/*ai标记先驱*/
+.xianqubiaojiai{
+    display: block;
+	position: absolute;
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/gz_ic_xianqu.png');
+    background-size: 100% 100%;
+    width:20px;
+    height:20px;
+    left: 2px;       
+    bottom: -30px;
+    z-index:16;
+}
+/*国战野心家标记*/
+.yexinjiabiaoji{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/gz_ic_yexinjia.png');
+    background-size: 100% 100%;
+    width:33px;
+    height:35px;
+    left: 50px;       
+    bottom: 15px;
+    z-index:16;
+}
+/*ai野心家标记*/
+.aiyexinjiabiaoji{
+    display: block;
+	position: absolute;
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/gz_ic_yexinjia.png');
+    background-size: 100% 100%;
+    width:20px;
+    height:20px;
+    left: 23px;       
+    bottom: -30px;
+    z-index:16;
+}
+/*国战阴阳鱼标记*/
+.yingyanyubiaoji{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/gz_ic_yinyangyu.png');
+    background-size: 100% 100%;
+    width:33px;
+    height:35px;
+    left: 85px;       
+    bottom: 15px;
+    z-index:16;
+}
+/*ai阴阳鱼标记*/
+.aiyingyanyubiaoji{
+    display: block;
+	position: absolute;
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/gz_ic_yinyangyu.png');
+    background-size: 100% 100%;
+    width:20px;
+    height:20px;
+    left: 44px;       
+    bottom: -30px;
+    z-index:16;
+}
+/*国战珠联璧合标记*/
+.zhulianbihebiaoji{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/gz_ic_zhulianbihe.png');
+    background-size: 100% 100%;
+    width:33px;
+    height:35px;
+    left: 120px;       
+    bottom: 15px;
+    z-index:16;
+}
+/*ai珠联璧合标记*/
+.aizhulianbihebiaoji{
+    display: block;
+	position: absolute;
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/gz_ic_zhulianbihe.png');
+    background-size: 100% 100%;
+    width:20px;
+    height:20px;
+    left: 65px;       
+    bottom: -30px;
+    z-index:16;
+}
+/*国战围*/
+.guozhanwei{
+    display: block;
+    position: absolute;  
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game_gz_wei.png');
+    background-size: 100% 100%;
+    width:50px;
+    height:50px;
+    left: 95px;       
+    bottom: 140px;
+    z-index:150 !important;                                
+}
+/*国战魏队*/
+.guozhanweidui{    
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game_gz_weidui.png');
+    background-size: 100% 100%;
+    width:50px;
+    height:50px;
+    left: 95px;       
+    bottom: 140px;
+    z-index:150 !important;                                  
+}
+/*国战蜀队*/
+.guozhanshudui{
+    display: block;
+    position: absolute;  
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game_gz_shudui.png');
+    background-size: 100% 100%;
+    width:50px;
+    height:50px;
+    left: 95px;       
+    bottom: 140px;
+    z-index:150 !important;                                
+}
+/*国战吴队*/
+.guozhanwudui{
+    display: block;
+    position: absolute;  
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game_gz_wudui.png');
+    background-size: 100% 100%;
+    width:50px;
+    height:50px;
+    left: 95px;       
+    bottom: 140px;
+    z-index:150 !important;                            
+}
+/*国战群队*/
+.guozhanqundui{
+    display: block;
+    position: absolute;  
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game_gz_qundui.png');
+    background-size: 100% 100%;
+    width:50px;
+    height:50px;
+    left: 95px;       
+    bottom: 140px;
+    z-index:150 !important;                                  
+}
+/*国战晋队*/
+.guozhanjindui{
+    display: block;
+    position: absolute;  
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/game_gz_jindui.png');
+    background-size: 100% 100%;
+    width:50px;
+    height:50px;
+    left: 95px;       
+    bottom: 140px;
+    z-index:150 !important;                                  
+}
+/*国标*/
+.guofudiyi1{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/guofu_bg1.png')!important;    
+    background-size: 100%;
+    width:120px;
+    height:75px;
+    left: 10px;
+    visibility:hidden;    
+    bottom: -10px;
+    z-index:889!important;
+    padding:6.5px 2px 2px 2px;/*内边距*/
+    /*字体*/
+    text-align: center;
+    color: #FFd700;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size:15px;
+    animation: guofudiyi 3s linear;
+}
+.guofudiyi2{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/guofu_bg2.png')!important;    
+    background-size: 100%;
+    width:120px;
+    height:75px;
+    left: 10px;
+    visibility:hidden;    
+    bottom: -10px;
+    z-index:889!important;
+    padding:6.5px 2px 2px 2px;/*内边距*/
+    /*字体*/
+    text-align: center;
+    color: #FFd700;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size:15px;
+    animation: guofudiyi 3s linear;
+}
+.guofudiyi3{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/guofu_bg3.png')!important;    
+    background-size: 100%;
+    width:120px;
+    height:75px;
+    left: 10px;
+    visibility:hidden;    
+    bottom: -10px;;
+    z-index:889!important;
+    padding:4px 2px 2px 2px;/*内边距*/
+    /*字体*/
+    text-align: center;
+    color: #FFd700;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size:15px;
+    animation: guofudiyi 3s linear;
+}
+
+@keyframes guofudiyi {
+     0%  {visibility: visible;opacity: 0;}	  
+     25% {opacity: 1;}  
+     90% {opacity: 1;}     
+    100% {opacity: 0;}
+}
+/*敌人标志底图*/
+.direnbiaozhi_bg{
+    top: 182px; 
+    left: 37px; 
+    visibility:hidden;   
+    height: 100px;
+    width: 150px;   
+    animation: direnbiaozhi_bg 6s linear;
+    z-index: 6;
+}
+@keyframes direnbiaozhi_bg {
+     0%  {visibility: visible;}	           
+    100% {visibility:hidden;}
+}
+/*敌人标志三角*/
+.direnbiaozhi{
+    display: block;
+	position: absolute;
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/xs_first_arrow.png')!important;
+    background-size: 100% 100%;    
+    height: 34px;
+    width: 44px;    
+    animation: direnbiaozhi 0.7s linear infinite;
+    /*div阴影*/
+    /*box-shadow: 0px 0px 10px  black;*/
+    /*图片阴影*/
+    /*filter: drop-shadow(0px 8px 5px black);*/
+    z-index: 7;
+}
+@keyframes direnbiaozhi {
+     0%  {top: -8px;}	           
+    50% {top: 8px;}
+    100% {top: -8px;}
+}
+/*敌人标志文字*/
+.direnwenzi{
+    display: block;
+	position: absolute;    
+    background-repeat: no-repeat;
+    background-image: url('image/pubui_diren.png')!important;
+    background-size: 100% 100%;    
+    top:-6px;
+	left: 42px; 
+    height: 61px;
+    width: 33.5px;
+    text-align: center;
+    color: yellow;
+    text-shadow:-3px 0px 5px #000,0px -3px 5px #000,3px 0px 5px #000,0px 3px 5px #000;
+	font-family: suits;
+	font-size:22px;
+	/*letter-spacing:2px;*/
+	line-height:95%;
+	font-weight:900;	
+    z-index: 7;
+}

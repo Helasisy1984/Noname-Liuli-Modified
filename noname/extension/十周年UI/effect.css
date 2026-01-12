@@ -1,0 +1,424 @@
+.effect-window {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	transition-timing-function: ease-in;
+	z-index: 15;
+}
+
+/*击杀特效*/
+.effect-window>.killer-warpper {
+	display: block;
+    left: 100%;
+    top: calc(45% - 180px);
+    width: 196px;
+    height: 360px;
+	animation-name: moveout-left-killer;
+	animation-delay: 0.2s;
+	animation-duration: 2.6s;
+	animation-fill-mode: forwards;
+	z-index: 2;
+}
+
+.effect-window>.killer-warpper::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -40%;
+	top: -40%;
+	width: 180%;
+	height: 180%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url("assets/image/shine.png");
+	z-index: -1;
+}
+
+.effect-window>.killer-warpper>.killer {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+	/* filter: drop-shadow(0 0 30px yellow); */
+	/* -webkit-filter: drop-shadow(0 0 30px yellow); */
+}
+
+.effect-window>.victim {
+	display: block;
+	left: 100%;
+    top: calc(45% - 135px);
+	width: 147px;
+	height: 270px;
+	animation-name: moveout-left-victim;
+	animation-delay: 0.2s;
+	animation-duration: 2.6s;
+	animation-fill-mode: forwards;
+	z-index: 1;
+}
+
+.effect-window>.victim>div {
+	filter: drop-shadow(0 0 3px black) grayscale(1);
+	-webkit-filter: drop-shadow(0 0 3px black) grayscale(1);
+}
+
+
+.effect-window>.victim>.back {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.effect-window>.victim>.back>.part1,
+.effect-window>.victim>.back>.part2  {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+	animation-delay: 1s;
+	animation-duration: 0.6s;
+	animation-fill-mode: forwards;
+}
+
+.effect-window>.victim>.back>.part1 {
+	animation-name: split-part1;
+	clip-path: polygon(0 0, 100% 0, 100% 70%, 0 30%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 30%);
+}
+
+.effect-window>.victim>.back>.part2 {
+	animation-name: split-part2;
+	clip-path: polygon(0 30%, 100% 70%, 100% 100%, 0 100%);
+	-webkit-clip-path: polygon(0 30%, 100% 70%, 100% 100%, 0 100%);
+}
+
+.effect-window>.victim>.rout {
+	display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: rgb(70,15,15);
+	font-size: 100px;
+	font-family: xinwei;
+	text-align: center;
+	text-shadow: 0 0 10px red;
+	opacity: 0;
+	animation: scale-rout 0.5s forwards;
+	animation-delay: 0.5s;
+	filter: none;
+	-webkit-filter: none;
+}
+
+.effect-window>.victim>.rout.shadow {
+	animation: scale-rout-shadow 1s forwards;
+	animation-delay: 0.8s;
+}
+
+.effect-window>.li {
+	display: block;
+    left: 100%;
+    top: calc(50% - 5px);
+    width: 300px;
+    height: 10px;
+    border-radius: 50% / 50%;
+    background-image: radial-gradient(white, rgb(250,250,100));
+    box-shadow: 0 0 10px rgb(250,250,100), 0 0 20px rgb(250,250,100), 0 0 30px rgb(250,250,100);
+	filter: blur(1px);
+    -webkit-filter: blur(1px);
+	animation: moveout-left 0.4s forwards;
+	animation-iteration-count: 2;
+}
+
+.effect-window>.li-big {
+	display: block;
+    left: 100%;
+    top: calc(50% - 70px);
+    width: 120%;
+    height: 120px;
+	background: linear-gradient(to right, white, white 70%, transparent);
+    border-radius: 15% / 50%;
+    -webkit-filter: blur(10px) drop-shadow(0 0 50px yellow);
+    animation: moveout-left-li-big 0.8s linear forwards;
+}
+
+.effect-window>.skill-name {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: calc(50% + 150px + 15px);
+	color: rgb(215, 234, 67);
+	font-size: 60px;
+	font-family: xingkai;
+	text-shadow: 0 0 5px rgb(77, 60, 51), 0 0 4px rgb(77, 60, 51);
+	transform: translateX(-50%);
+	z-index: 99;
+	animation: scale-skill-name 2.18s linear forwards;
+}
+
+
+@keyframes moveout-left-killer {
+	0% {
+		left: 100%;
+	}
+	
+	10% {
+		left: calc(32% - 120px);
+	}
+	
+	60% {
+		left: calc(32% - 120px);
+		opacity: 1;
+	}
+	
+	100% {
+		left: calc(32% - 120px);
+		opacity: 0;
+	}
+}
+
+@keyframes moveout-left-victim {
+	0% {
+		left: 100%;
+	}
+	
+	6% {
+		left: calc(67% - 90px);
+	}
+	
+	60% {
+		left: calc(67% - 90px);
+		opacity: 1;
+	}
+	
+	100% {
+		left: calc(67% - 90px);
+		opacity: 0;
+	}
+}
+
+@keyframes moveout-left-li-big {
+	0% {
+		left: 100%;
+	}
+
+	100% {
+		left: -120%;
+	}
+}
+
+@keyframes split-part1 {
+	0% {
+		transform: translateZ(0);
+	}
+	
+	100% {
+		transform: translate(20px, -20px);
+	}
+}
+
+@keyframes split-part2 {
+	0% {
+		transform: translateZ(0);
+	}
+	
+	100% {
+		transform: translate(-20px, 20px);
+	}
+}
+
+@keyframes scale-rout {
+	0% {
+		opacity: 1;
+		transform: scale(8);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes scale-rout-shadow {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0.1;
+		transform: scale(1.8);
+	}
+}
+
+@keyframes scale-skill-name {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) scale(5);
+	}
+	
+	18% {
+		opacity: 0;
+		transform: translateX(-50%) scale(5);
+	}
+	
+	20% {
+		opacity: 1;
+		transform: translateX(-50%) scale(4.5);
+	}
+	
+	23% {
+		opacity: 1;
+		transform: translateX(-50%) scale(0.95);
+	}
+	
+	27% {
+		opacity: 1;
+		transform: translateX(-50%) scale(1);
+	}
+	
+	92% {
+		opacity: 1;
+		transform: translateX(-50%) scale(1);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateX(-50%) scale(1);
+	}
+}
+
+/*觉醒武将图*/
+.guaguadashuaibi{
+    background-size: cover;
+    background-position-x: 50%;
+    border-radius: 10px  10px  10px  10px;
+    /*十周年露头*/
+    /*width: 14%;
+    height: 52%;
+    top: 21%;
+    left: 35%;*/
+    /*手杀露头*/
+    width: 15%;
+    height: 58%;
+    top: 15.9%;
+    left: 33.7%;
+    z-index:887!important;
+    visibility:hidden;   
+    animation: avatar 2s linear;
+}
+@keyframes avatar {
+     0% {visibility: visible;translate: scale(0);filter: opacity(100%);}
+     25%  {transform: scale(2.8);}	    
+     29%  {transform: scale(2.8);filter: opacity(0%);}
+     30% {transform: scale(1) rotate(-9deg);filter: opacity(100%);}
+    100% {transform: rotate(-9deg);}
+}
+/*觉醒技能名*/
+.guaguazhendeshuai{
+    display: block;
+	position: fixed;	
+	/*left: 710px;*/
+	/*top: 260px;*/
+	left: 55%;
+	top: 60%;
+	/*color: rgb(190, 56, 134);*/
+	font-size: 90px;
+	font-family: xingkai;
+	font-weight: 900;
+	background-image: linear-gradient(180deg, #f1e7f9 30%, #7251ac 68%, #73add1 85%);
+	text-shadow:none;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(1px 1px 1px black) drop-shadow(1px 1px 2px black) drop-shadow(1px 1px 3px black) drop-shadow(1px 1px 4px black)drop-shadow(1px 1px 5px black);		
+	/*transform: translateX(-50%);*/
+	transform: translateY(-50%);
+	visibility:hidden;
+	z-index: 888!important;
+	animation: avatarguagua 2s linear;	
+    -webkit-text-stroke: 1.2px rgba(0, 0, 0, 0.7);
+}
+@keyframes avatarguagua {
+     0% {visibility: visible;translate: scale(0);opacity: 0;}    
+     20% {translate: scale(0);opacity: 0;}
+     35% {translate: scale(1);opacity: 1;}
+    100% {translate: scale(1);opacity: 1;}
+}
+/*限定技*/
+.xiguazhendeshuai{
+    display: block;
+	position: fixed;	
+	/*left: 710px;*/
+	/*top: 260px;*/
+	left: 55%;
+	top: 60%;
+	/*color: rgb(255, 215, 0);*/
+	font-size: 90px;
+	/*font-family: xingkai;*/
+	/*text-shadow: 0 0 8px rgb(77, 60, 51), 0 0 7px rgb(77, 60, 51);*/
+	font-family: xingkai;
+	font-weight: 900;
+	background-image: linear-gradient(180deg, #fcfc70 30%, #ad6e22 68%, #f5f1ce 91%);
+	text-shadow:none;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(1px 1px 1px black) drop-shadow(1px 1px 2px black) drop-shadow(1px 1px 3px black) drop-shadow(1px 1px 4px black)drop-shadow(1px 1px 5px black);
+	/*transform: translateX(-50%);*/
+	transform: translateY(-50%);
+	visibility:hidden;
+	z-index: 888!important;
+	animation: avatarguagua 2s linear;	
+    -webkit-text-stroke: 1.2px rgba(0, 0, 0, 0.7);
+}
+/*使命技*/
+.xixizhendeshuai{
+    display: block;
+	position: fixed;	
+	/*left: 710px;*/
+	/*top: 260px;*/
+	left: 55%;
+	top: 60%;
+	/*color: rgb(227, 23, 13);*/
+	font-size: 90px;
+	/*font-family: xingkai;*/
+	/*text-shadow: 0 0 8px rgb(77, 60, 51), 0 0 7px rgb(77, 60, 51);*/
+	font-family: xingkai;
+	font-weight: 900;
+	background-image: linear-gradient(180deg, #ffff9a 19%, #d9532e 73%, #f5f1ce 96%);
+	text-shadow:none;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(1px 1px 1px black) drop-shadow(1px 1px 2px black) drop-shadow(1px 1px 3px black) drop-shadow(1px 1px 4px black)drop-shadow(1px 1px 5px black);
+	/*transform: translateX(-50%);*/
+	transform: translateY(-50%);
+	visibility:hidden;
+	z-index: 888!important;
+	animation: avatarguagua 2s linear;	
+    -webkit-text-stroke: 1.2px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+
+
+

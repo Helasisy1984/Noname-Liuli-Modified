@@ -1,0 +1,334 @@
+.gshoupai{
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('assets/image/gshoupai.png')!important;
+    background-size: 100% 100%;
+    opacity:0.6 !important;
+    width:70px;
+    height:110px;
+    left: -60px;       
+    bottom: -60px;
+    padding:17px 2px 2px 2px;/*内边距*/
+    /*字体*/
+    text-align: center;
+    color: #FFFFCC;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size:15px;
+	font-weight:900;	
+    z-index:100!important;
+}
+.cooperationSquare {
+	background-image: url('assets/image/othermark.png');
+	background-color: none;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 65px;
+	height: 40px;
+	left: 20px;
+	bottom: 230px;
+	padding: 25px 2px 2px 2px;
+	text-align: center;
+	color: #e2e0dc;
+	text-shadow: -1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000, 0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size: 17px;
+	font-weight: 900;
+	z-index: 8 !important;
+	transition: unset;
+}
+#cooperationDialog {
+	background-color: #2d2420cf;
+	background-size: 100% 100%;
+	width: 40%;
+	height: 200px;
+	animation: open-dialog 0.5s!important;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	border-radius:10px;
+	z-index: 8;
+}
+.shangtiao {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 28px;
+	left: 0px;
+	box-shadow: none;
+	background-image: none;
+}
+
+.shangtiao>div:nth-child(2) {
+	width: 80px;
+}
+
+.xiatiao>div:nth-child(2) {
+	width: 80px;
+}
+
+.fengefu {
+	position: relative;
+	display: flex;
+	width: 90%;
+	height: 2px;
+	left: 4%;
+	margin: 3px 0 3px 0;
+	box-shadow: none;
+	background-color: #68684d;
+}
+
+.xiatiao {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 44px;
+	box-shadow: none;
+	background-image: none;
+}
+
+.topContent {
+	align-items: flex-end;
+	white-space: nowrap;
+	justify-content: left;
+	display: inline-flex;
+	position: relative;
+	text-align: center;
+	color: #e2e0dc;
+	font-family: shousha;
+	font-size: 17px;
+	font-weight: 900;
+	margin-left: 15px;
+	width: 45px;
+
+}
+
+
+.xtxBox1,
+.xtxBox2,
+.xtxBox0 {
+	align-items: flex-end;
+	white-space: nowrap;
+	justify-content: center;
+	display: inline-flex;
+	position: relative;
+	text-align: center;
+	color: #e2e0dc;
+	font-family: shousha;
+	font-size: 17px;
+	font-weight: 900;
+	margin-left: 15px;
+	width: 45px;
+}
+
+.xtxBox0>.downContent,
+.xtxBox1>.downContent {
+	position: absolute;
+	z-index: 2;
+	height: 2.2em;
+	width: 2.2em;
+	background-repeat: no-repeat;
+	background-size: 65px;
+	background-position-y: 10%;
+	background-position-x: 50%;
+	border: 2px solid #c9c9ab;
+}
+
+.xtxBox2>.downContent {
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	flex-wrap: wrap-reverse;
+	height: 2.2em;
+	width: 2.2em;
+	align-content: center;
+}
+
+.performerNameTarget,
+.performerNamePlayer {
+	background-color: black;
+	opacity: 0.9;
+	bottom: 0px;
+	width: 100%;
+	left: 0px;
+	text-align: center;
+	font-family: shousha;
+	font-size: 10px;
+	text-shadow: none;
+}
+.renkubeijinggua{
+    /*position:relative;*/
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('assets/image/othermark.png')!important;
+    background-size: 100% 100%;
+    width:65px;
+    height:40px;
+    left: 20px;       
+    bottom: 230px;
+    padding:25px 2px 2px 2px;/*内边距*/
+    /*字体*/
+    text-align: center;
+    color: #e2e0dc;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: shousha;
+	font-size:17px;
+	font-weight:900;	
+    z-index:8!important;    
+    transition: all 0s;
+}
+/*虚拟防御马*/
+    .game_xunifangyuma {
+    width:1px;
+    height:1px;
+    left: 39px;
+    bottom: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+    font-family: shousha;
+    font-weight:bold;
+    font-size:15px;
+    /*z-index:150!important;装备图层是75*/
+    z-index:76!important;
+}
+/*虚拟进攻马*/
+    .game_xunijingongma {
+    width:0px;
+    height:1px;
+    left: 100px;
+    bottom: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+    font-family: shousha;
+    font-weight:bold;
+    font-size:15px;
+    /*z-index:150!important;装备图层是75*/
+    z-index:76!important;
+}
+/*虚拟八卦阵*/
+    .bazhen_bagua {
+    width:50px;
+    height:10px;
+    left: 50px;
+    bottom: 23px;
+    text-align: center;
+    opacity: 0.85;
+    color: #FFFFFF;
+    text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+    font-family: shousha;
+    font-weight:bold;
+    font-size:15px;
+    /*z-index:150!important;装备图层是75*/
+    z-index:76!important;
+}
+/*基本对话框，缩放90%的情况下重新放大dialog框*/
+    #arena.decadeUI>.dialog {
+    bottom: calc(20% + 85px);
+}
+/*装备入手tag*/
+    .card>.equiped {
+    background-image: url('assets/image/cardequiped.png');
+    position: absolute;
+    background-size: contain;
+    top: 40%;
+    right: 0px;
+    width: 100%;
+    height: 30%;
+}
+/*虚拟卡牌tag*/
+    .card>.virtualMark {
+    background-size: 100% 100%;
+    top: 12px;
+    left: 8px;
+    width: 23.5px;
+    height: 42.3px;
+    background-image: url("assets/image/virtual.png");
+}
+/*队友手牌*/
+    .chakanshoupai {
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/card_tips_bg.png') !important;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    width: 70px;
+    height: 110px;
+    left: -60px;
+    bottom: -60px;
+    padding: 17px 2px 2px 2px;
+    text-align: center;
+    color: #FFFFCC;
+    text-shadow: -1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000, 0px 1.3px 2.2px #000;
+    font-family: shousha;
+    font-size: 15px;
+    font-weight: 900;
+    z-index: 8 !important;
+}
+.chakanshoupaix {
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: url('image/card_tips_bg.png') !important;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    width: 70px;
+    height: 110px;
+    left: 112px;
+    bottom: -60px;
+    padding: 17px 2px 2px 2px;
+    text-align: center;
+    color: #FFFFCC;
+    text-shadow: -1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000, 0px 1.3px 2.2px #000;
+    font-family: shousha;
+    font-size: 15px;
+    font-weight: 900;
+    z-index: 8 !important;
+}
+/*八人定位*/
+    #arena[data-mode='versus'][data-layout='nova'][data-decade-layout='off'][data-number='4'][data-pldistance='1']>.player[data-position='1'],
+#arena[data-mode='doudizhu'][data-layout='nova'][data-decade-layout='off'][data-number='3'][data-pldistance='2']>.player[data-position='1'],
+#arena[data-layout='nova'][data-decade-layout='off'][data-number='8']>.player[data-position='1'] {
+    left: auto;
+    top: 21.4%;
+    right: 32px;
+}
+#arena[data-layout='nova'][data-decade-layout='off'][data-number='8']>.player[data-position='2'] {
+    left: auto;
+    top: 44px;
+    right: calc(22% - (var(--w)/2));
+}
+#arena[data-mode='versus'][data-layout='nova'][data-decade-layout='off'][data-number='4'][data-pldistance='2']>.player[data-position='1'],
+#arena[data-layout='nova'][data-decade-layout='off'][data-number='3'][data-pldistance='0']>.player[data-position='1'],
+#arena[data-mode='doudizhu'][data-layout='nova'][data-decade-layout='off'][data-number='3'][data-pldistance='1']>.player[data-position='1'],
+#arena[data-layout='nova'][data-decade-layout='off'][data-number='8']>.player[data-position='3'] {
+    left: auto;
+    top: 7px;
+    right: calc(35.8% - (var(--w)/2));
+}
+#arena[data-mode='versus'][data-layout='nova'][data-decade-layout='off'][data-number='4'][data-pldistance='2']>.player[data-position='2'],
+#arena[data-layout='nova'][data-decade-layout='off'][data-number='8']>.player[data-position='4'] {
+    left: calc(50.2% - (var(--w)/2));
+    top: 7px;
+    right:auto;
+}
+#arena[data-mode='versus'][data-layout='nova'][data-decade-layout='off'][data-number='4'][data-pldistance='1']>.player[data-position='2'],
+#arena[data-layout='nova'][data-decade-layout='off'][data-number='3'][data-pldistance='0']>.player[data-position='2'],
+#arena[data-mode='doudizhu'][data-layout='nova'][data-decade-layout='off'][data-number='3'][data-pldistance='2']>.player[data-position='2'],
+#arena[data-layout='nova'][data-decade-layout='off'][data-number='8']>.player[data-position='5'] {
+    left: calc(36.2% - (var(--w)/2));
+    top: 7px;
+    right:auto;
+}
+#arena[data-mode='versus'][data-layout='nova'][data-decade-layout='off'][data-number='4'][data-pldistance='1']>.player[data-position='3'],
+#arena[data-layout='nova'][data-decade-layout='off'][data-number='8']>.player[data-position='6'] {
+    left: calc(22.2% - (var(--w)/2));
+    top: 44px;
+    right:auto;
+}
+#arena[data-mode='versus'][data-layout='nova'][data-decade-layout='off'][data-number='4'][data-pldistance='2']>.player[data-position='3'],
+#arena[data-mode='doudizhu'][data-layout='nova'][data-decade-layout='off'][data-number='3'][data-pldistance='1']>.player[data-position='2'],
+#arena[data-layout='nova'][data-decade-layout='off'][data-number='8']>.player[data-position='7'] {
+    left: 32px;
+    top: 21.4%;
+    right:auto;
+}

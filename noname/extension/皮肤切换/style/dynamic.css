@@ -1,0 +1,824 @@
+#skinDiv {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 61%);
+    overflow: hidden;
+    z-index: 11;
+    opacity: 0;
+    display: none;
+}
+
+#skinDiv2 {
+    background-image: url("../images/base/skinDiv.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.switchSkinButton {
+    display: block;
+    width: 58px;
+    height: 50px;
+    position: absolute;
+    top: 60%;
+    right: 0;
+    background-image: url("../images/base/pifu.png");
+    background-size: 100% 100%;
+    z-index:10;
+    transform: translateY(-60%);
+}
+
+.skinBox {
+    top: 50%;
+    left: 50%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transform: translate(-29.5%, -46%);
+}
+
+@media screen and (min-width: 1200px) {
+    #skinDiv2 {
+        height: 455px;
+        width: 828px;
+    }
+    .skinBox {
+        width: 499px;
+        height: 265px;
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 1200px) {
+    #skinDiv2 {
+        height: 390px;
+        width: 690px;
+    }
+    .skinBox {
+        width: 411px;
+        height: 223px;
+    }
+
+
+}
+
+#skinDiv2 .skins {
+    display: flex;
+    width: 85%;
+    height: 90%;
+    top: 1%;
+    left: 8.5%;
+    justify-content: space-between;
+    align-items: center;
+}
+#skinDiv2 .skins .skin-avatar {
+    flex-basis: 30%;
+    height: 100%;
+    position: relative;
+    /*margin-right: 5%;*/
+}
+
+#skinDiv2 .skins .pfqh-skin-cover {
+    position: relative;
+    /*height: calc(87.01%);*/
+    height: calc(75.01%);
+    display: block;
+    border-radius: 7px;
+    transition: background-image 0s;
+    border: none;
+    box-shadow: 0px 1px 1px 1px;
+}
+
+#skinDiv2 .skins .pfqh-skin {
+    width: calc(100%);
+    height: calc(115%);
+    top: -15%;
+    left: calc(0%);
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+    transition: background-image 0s;
+    border: none;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.pfqh-text {
+    font-size: 1.2em;
+    color: wheat;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 25.5%;
+    width: 100%;
+}
+
+.pfqhLeftArrow {
+    z-index: 35;
+    left: calc(-1.34%);
+    width: 9%;
+    height: calc(18.2%);
+    top: 42%;
+    display: block;
+    position: relative;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/huanfu/newui_arrow_left.png);
+}
+
+.pfqhRightArrow {
+    z-index: 35;
+    right: calc(-84.66%);
+    height: calc(18.2%);
+    width: 9%;
+    display: block;
+    position: relative;
+    top: 42%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/huanfu/newui_arrow_right.png);
+}
+
+.skin-character {
+    /* background-image: url(../images/huanfu/white-background.jpg); */
+    background-size: 65%;
+    background-repeat: no-repeat;
+    /* width: 500px; */
+    /* height: 120px; */
+    width: 350px;
+    height: 108px;
+    left: 60%;
+    top: 6%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#skinDiv .pfqh-selected {
+box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px,rgba(255, 0, 0, 0.4) 0 0 5px, rgba(255, 0, 0, 0.4) 0 0 12px, rgba(255, 0, 0, 0.8) 0 0 15px !important;
+}
+
+/*切换按钮 https://code.juejin.cn/pen/7144159185901453342 */
+
+#skinDiv .hellokitty {
+    width: 60%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+#skinDiv .text {
+    font-family: 'myFont', 'Bitstream Vera Serif', serif;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: capitalize;
+    position: initial;
+}
+#skinDiv .text.active {
+    /*color: #ffafb8;*/
+    color: #ef2508;
+    font-weight: 600;
+}
+#skinDiv .btn {
+    width: 110px;
+    height: 60px;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+    background: #f7c9ba;
+    box-shadow: 0 0 2px 5px #bf9c89 inset;
+    overflow: hidden;
+}
+#skinDiv .btn.right {
+    background: #ebc2c0;
+    box-shadow: 0 0 2px 5px #d39290 inset;
+}
+#skinDiv .paw {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #f8a48c;
+    left: 5px;
+    top: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+#skinDiv .kitty {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #ecb0b0;
+    right: 5px;
+    top: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 999;
+}
+#skinDiv .left .paw {
+    opacity: 1;
+}
+#skinDiv .right .paw {
+    opacity: 0;
+}
+#skinDiv .right .kitty {
+    opacity: 1;
+}
+#skinDiv .left .kitty {
+    opacity: 0;
+}
+
+#skinDiv .selectBackground {
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    height: 120px;
+    width: 160px;
+    margin-top: 11%;
+    background-image: url(../images/huanfu/white-background.jpg);
+}
+
+/*    select框*/
+#skinDiv .selectOut {
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    margin-left: 16%;
+    margin-top: 11%;
+    z-index: 10;
+    width: 100px;
+    display: block;
+}
+
+#skinDiv .selectInner {
+    height: 50px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    font-size: 16px;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #333333;
+    border-radius: 4px;
+    width: 100px;
+    text-overflow: ellipsis;
+    line-height: 50px;
+    text-align: center;
+    z-index: 5;
+}
+
+/*防止 十周年ui 换肤一直被遮盖*/
+.player.unseen>.primary-avatar,
+.player.unseen2>.deputy-avatar,
+.player.d-skin>.primary-avatar,
+.player.d-skin2>.deputy-avatar {
+    opacity: 0 !important;
+}
+
+/* 当模式是国战时, 显示自己的样式为透明隐藏 */
+#arena:not(.observe)>.player[data-position='0'].unseen>.primary-avatar, #arena:not(.observe)>.player[data-position='0'].unseen2>.deputy-avatar {
+    opacity: 0.3 !important;
+}
+
+#arena[data-dynamic-skin-outcrop='on']#arena[data-new-decade-style="off"]>.player>.dynamic-wrap>.animation-player {
+    clip-path: polygon(0% 99%, 0% 6%, 11% 1%, 52% 0%, 86% 0%, 99% 6%, 100% 100%);
+}
+
+
+
+/* 预览样式 */
+.pfqh-preview-background {
+    z-index: 3000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+
+/* 已删除l2d的相关样式 */
+
+/* 以下样式来自于千幻聆音 */
+.l2d-tool-background{
+    z-index: 40;
+    position: absolute;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.l2d-tool-background .l2d-tool-dialog {
+    z-index: 40;
+    display: block;
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    /*background-size: 100% 100%;*/
+    /* background-image: url(image/qhly_skin_out_background.png); */
+}
+
+.l2d-tool-background .model-setting{
+    position: absolute;
+    height: 780px;
+    width: 548px;
+    left: 50%;
+    top: 50%;
+    display: block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    background-image: url(wz/newui_background_wz.png);
+    z-index: 40;
+}
+
+.l2d-tool-background .l2d-button1 {
+    z-index: 40;
+    left: calc(9.54%);
+    top: calc(14.65%);
+    width: calc(14.05%);
+    height: calc(9.13%);
+    background-image: url(wz/newui_button_wz.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: white;
+    font-family: 'qh_youyuan';
+    line-height: 100%;
+    font-size: 1.3em;
+}
+
+.l2d-tool-background .l2d-button2 {
+    z-index: 40;
+    left: calc(23.44%);
+    top: calc(14.65%);
+    width: calc(14.05%);
+    height: calc(9.13%);
+    background-image: url(wz/newui_button_wz.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: white;
+    font-family: 'qh_youyuan';
+    line-height: 100%;
+    font-size: 1.3em;
+}
+
+.l2d-tool-background .l2d-button3 {
+    z-index: 40;
+    left: calc(37.34%);
+    top: calc(14.65%);
+    width: calc(14.05%);
+    height: calc(9.13%);
+    background-image: url(wz/newui_button_wz.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: white;
+    font-family: 'qh_youyuan';
+    line-height: 100%;
+    font-size: 1.3em;
+}
+.l2d-tool-background .l2d-button4 {
+    z-index: 40;
+    left: calc(51.24%);
+    top: calc(14.65%);
+    width: calc(14.05%);
+    height: calc(9.13%);
+    background-image: url(wz/newui_button_wz.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    color: white;
+    font-family: 'qh_youyuan';
+    line-height: 100%;
+    font-size: 1.3em;
+}
+
+
+.l2d-tool-background .model-set-cont1 {
+    z-index: 40;
+    left: calc(9.84%);
+    top: calc(23.52%);
+    width: calc(70.41%);
+    height: calc(67.10%);
+    display: block;
+    overflow-y: auto;
+}
+.l2d-tool-background .model-set-cont2 {
+    z-index: 40;
+    left: calc(9.84%);
+    top: calc(23.52%);
+    width: calc(70.41%);
+    height: calc(67.10%);
+    display: block;
+    overflow-y: auto;
+}
+
+.l2d-tool-background .model-set-cont3 {
+    z-index: 40;
+    left: calc(9.84%);
+    top: calc(23.52%);
+    width: calc(70.41%);
+    height: calc(67.10%);
+    display: block;
+    overflow-y: auto;
+}
+.l2d-tool-background .model-set-cont4 {
+    z-index: 40;
+    left: calc(9.84%);
+    top: calc(23.52%);
+    width: calc(70.41%);
+    height: calc(67.10%);
+    display: block;
+    overflow-y: auto;
+}
+
+
+.l2d-tool-background .cur-model {
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+.l2d-tool-background .slider-input {
+    -webkit-appearance: none;
+    width: 75%;
+    margin: 0;
+    background-color: #ebecf1;
+    background: -webkit-linear-gradient(#2492fc, #2492fc) no-repeat, #ebecf1;
+    border: 0px;
+    object-fit: contain;
+    border-radius: 5px;
+
+}
+
+/*可以修改容器的若干样式*/
+.l2d-tool-background .slider-input::-webkit-slider-container {
+}
+
+.l2d-tool-background .slider-input::-webkit-slider-runnable-track {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.l2d-tool-background .slider-input:hover {
+    cursor: pointer;
+}
+.l2d-tool-background .slider-input:focus {
+    outline: none;
+}
+/*可以修改滑块的若干样式*/
+.l2d-tool-background .slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px 0 rgba(36, 146, 252, 0.2);
+    border: solid 3px #fff;
+    background-color: #2492fc;
+    margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+    position: relative;
+}
+
+.l2d-tool-background .slider-input::-webkit-slider-thumb:hover {
+    cursor: grab;
+}
+
+.l2d-tool-background .slider-group-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.l2d-tool-background .slider-group {
+    width: 100%
+}
+
+.l2d-tool-background .slider-group .input-value {
+    margin-top: 15%;
+    margin-left: 2%;
+    font-size: 16px;
+}
+
+.l2d-tool-background .motion-group {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.l2d-tool-background .motion-group > .motion-group-name{
+    font-weight: 600;
+    color: white;
+    position: relative;
+}
+
+.l2d-tool-background .motion-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.l2d-tool-background .motion-list > .motion-btn{
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    border-radius: 4px;
+    padding: 0 14px;
+    border: none;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #689832;
+    margin: 5px;
+}
+
+/*角色更换皮肤样式开始*/
+.playerToolBox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 102 !important;
+}
+
+.playerToolBox > .skinHoverBtn {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    margin-left: 32%;
+    margin-top: 20px;
+    background-color: rgb(78 71 59);
+    text-align: center;
+}
+
+.pfqh-skin-jing {
+    display: block;
+    text-align: center;
+    color: white;
+    background-image: url("../images/huanfu/jing.png");
+    background-size: 100% 100%;
+    width: 80px;
+    height: 35px;
+    left: 10%;
+    bottom: -24%;
+    cursor: pointer;
+}
+
+.pfqh-skin-dong {
+    display: block;
+    text-align: center;
+    color: white;
+    background-image: url("../images/huanfu/dong.png");
+    background-size: 100% 100%;
+    width: 80px;
+    height: 35px;
+    left: 10%;
+    bottom: -24%;
+    cursor: pointer;
+}
+
+/* 换肤样式搬运自千幻聆音小窗经典样式与部分修改 开始 */
+
+/* 统一加上前缀, 防止与千幻样式冲突 */
+
+.pfqh-qh-skinchange-background {
+    z-index: 40;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.pfqh-qh-skinchange-border {
+    z-index: 40;
+    display: block;
+    width: 0px;
+    height: 73%;
+    background-size: auto 100%;
+    background-position: center;
+    background-image: url('../images/huanfu/qhly_border.png');
+}
+
+.pfqh-qh-skinchange-exit {
+    z-index: 10;
+    display: block;
+    right: 0px;
+    top: 0px;
+    background-image: url('../images/huanfu/newui_back_sanguo2.png');
+    width: 50px;
+    height: 55px;
+    background-size: 100% 100%;
+}
+
+.pfqh-qh-skinchange-enlarge {
+    z-index: 10;
+    display: block;
+    left: 0px;
+    top: 0px;
+    background-image: url('../images/huanfu/qhly_pic_enlarge.png');
+    width: 64px;
+    height: 44px;
+    background-size: 100% 100%;
+}
+
+.pfqh-qh-skinchange-dialog {
+    z-index: 40;
+    display: block;
+    left: 50%;
+    top: 50%;
+    width: 729px;
+    height: 315px;
+    transform: translate(-50%, -50%);
+    background-size: 100% 75%;
+    background-repeat: no-repeat;
+    background-image: url('../images/huanfu/qhly_skin_out_background.png');
+}
+
+.pfqh-qh-skinchange-cover {
+    z-index: 9;
+    display: block;
+    left: calc(3.7%);
+    top: calc(7.09%);
+    width: calc(93.14%);
+    height: calc(87.01%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pfqh-qh-skinchange-area {
+    /*z-index: 9;*/
+    display: block;
+    text-align: left;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0s;
+    overflow: hidden;
+}
+
+.pfqh-qh-skinchange-skin {
+    /*z-index: 10;*/
+    display: block;
+    left: 0px;
+    top: 0px;
+    /*width: 120px;*/
+    /*height: 180px;*/
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.pfqh-qh-skinchange-skin-text {
+    display: block;
+    bottom: 0px;
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'qh_songhei';
+    color: white;
+    z-index: 1;
+    text-shadow: .2rem 0rem .5rem blue, -.2rem 0rem .5rem blue, 0rem .2rem .5rem blue, 0rem -.2rem .5rem blue;
+}
+
+
+/* 搬运千幻聆音经典换肤样式 结束 */
+
+.pfqh-small-dynamic-skin-wrap {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* 新增：拖拽手柄样式 */
+.skin-drag-handle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    cursor: move;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.skin-drag-handle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.skin-drag-handle:active {
+    transform: scale(0.95);
+}
+
+.skin-drag-handle::before {
+    content: "⋮⋮";
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+/* 拖拽状态下的样式 */
+#skinDiv2.dragging {
+    transition: none !important;
+    user-select: none;
+}
+
+#skinDiv2.dragging * {
+    pointer-events: none;
+}
+
+/* 确保拖拽手柄在拖拽时仍然可以交互 */
+#skinDiv2.dragging .skin-drag-handle {
+    pointer-events: auto;
+}
+
+/* 千幻小窗拖拽状态样式 */
+.pfqh-qh-skinchange-dialog.dragging {
+    transition: none !important;
+    user-select: none;
+}
+
+.pfqh-qh-skinchange-dialog.dragging * {
+    pointer-events: none;
+}
+
+.pfqh-qh-skinchange-dialog.dragging .skin-drag-handle {
+    pointer-events: auto;
+}
+
+/* 角色调整窗口拖拽状态样式 */
+.editDynamic.dragging {
+    transition: none !important;
+    user-select: none;
+}
+
+.editDynamic.dragging * {
+    pointer-events: none;
+}
+
+.editDynamic.dragging .skin-drag-handle {
+    pointer-events: auto;
+}

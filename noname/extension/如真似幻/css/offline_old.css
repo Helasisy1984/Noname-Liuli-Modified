@@ -1,0 +1,67 @@
+#splash {
+background-size:100% 100% !important;
+}
+#splash>div.cxk {
+	width: 320px !important;
+	height: 100px !important;
+	border-image-source: url('../images/offline/modebtn2.png') !important;
+	border-image-slice: 25!important;
+	border-style: solid !important;
+	border-image-width: 15px !important;
+}
+#bigenter{
+width:400px;
+/*height:400px;*/
+border-radius:50%;
+box-shadow:none;
+right:5%;
+top:10%;
+position:fixed;
+display:block;
+z-index:100 !important;
+}
+#splash>div {
+	margin-left: 5px !important;
+	margin-right: 10px !important;
+	margin-top:10px !important;
+	background-color:transparent !important;
+	margin-bottom:10px !important;
+	position: relative !important;
+display:block !important;
+	width: 300px !important;
+	height: 80px !important;
+border:none !important;
+box-shadow:none !important;
+background-image: url("../images/offline/modebtn.png") !important;
+background-size:100% 100% !important;
+background-position:center !important;
+background-repeat: no-repeat !important;
+}
+#splash>div:first-child {
+	margin-top:-30px !important;
+	margin-left:5px !important;
+}
+#splash>div:last-child {
+	margin-right: 20px !important;
+}
+#offlinetext{
+position:fixed;
+height:80px;
+/*width:200px;*/
+display:block;
+left:5%;
+margin-top:20px;
+font-family:'shousha';
+z-index:2;
+}
+#logout{
+width:100px;
+border:none;
+box-shadow:none;
+background-color:transparent;
+display:block;
+position:fixed;
+height:80px;
+right:0px;
+z-index:10;
+}

@@ -1,0 +1,61 @@
+/*本体酒特效*/
+.player.playerjiu {
+	animation: game_start 0.5s;
+	-webkit-animation: game_start 0.5s;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 10px;
+	z-index: 99!important;
+	pointer-events: none;	
+	background: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(255, 0, 0, 1));
+    /*background-image: radial-gradient(closest-corner at 50% 31% , rgba(0, 0, 0, 0) 65%, rgba(255, 0, 0, 0.7));*/
+}
+
+/*去除特殊选项框里卡牌的文字以及背景*/
+.dialog.big>.content-container>.content>.caption{
+    font-size:30px;
+    text-shadow:none;
+    background-image:-webkit-linear-gradient(bottom,#c7a746 58%, #f0d775 22%); 
+	/*字体渐变色，色调*/
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+		font-weight: 700;
+	-webkit-text-stroke: 0.1px rgba(0,0,0,0.16);
+}
+.dialog.big>.content-container>.content>.buttons>.card.button.none::before{
+    border: none;
+    position: absolute;
+    background-image: url(image/cha.png);
+    width: 50px;
+    height: 50px;
+    left: 50% !important;
+    top: 10%;
+    right: 0px !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.dialog.big>.content-container>.content>.buttons>.card.button.none.selected {
+	filter: brightness(50%);
+	border: none;
+}
+
+.card.button.none>.top-name:not(.base):not(.trick):not(.equip) {
+	opacity: 0;
+}
+
+.card.button.none>.background {
+	opacity: 0;
+}
+
+.card.button.none {
+	box-shadow: none;
+	border: none;
+}
+
+/*骨骼图层*/
+#decadeUI-canvas {
+	z-index: 15 !important;
+}

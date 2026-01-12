@@ -1,0 +1,109 @@
+/* message.css */
+
+#message-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    /* 采用flex弹性布局，让容器内部的所有消息可以水平居中，还能任意的调整宽度 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3001;
+    text-shadow: none;
+}
+
+/*消除全局的影响*/
+#message-container div {
+    display: block;
+    position: unset;
+
+}
+
+#message-container .message {
+    background: #edf2fc;
+    margin: 10px 0;
+    padding: 0 10px;
+    height: 40px;
+    box-shadow: 0 0 10px 0 #ccc;
+    border-radius: 3px;
+
+    /* 让消息内部的三个元素（图标、文本、关闭按钮）可以垂直水平居中 */
+    display: flex;
+    align-items: center;
+
+    /* 增加一个过渡属性，当message元素的高度和margin变化时候将会有一个过渡动画 */
+    transition: height 0.2s ease-in-out, margin 0.2s ease-in-out;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#message-container .message .text {
+    color: #333;
+    padding: 0 20px 0 5px;
+
+
+}
+#message-container .message .close {
+    cursor: pointer;
+    color: #999;
+}
+
+/* 给每个图标都加上不同的颜色，用来区分不同类型的消息 */
+#message-container .message .icon-info {
+    color: #0482f8;
+}
+#message-container .message .icon-error {
+    color: #f83504;
+}
+#message-container .message .icon-success {
+    color: #06a35a;
+}
+#message-container .message .icon-warning {
+    color: #ceca07;
+}
+#message-container .message .icon-loading {
+    color: #0482f8;
+}
+
+
+/* 这个动画规则我们就叫做message-move-in吧，随后我们会用animation属性在某个元素上应用这个动画规则。 */
+@keyframes message-move-in {
+    0% {
+        /* 前边分析过了，弹出动画是一个自上而下的淡入过程 */
+        /* 所以在动画初始状态要把元素的不透明度设置为0，在动画结束的时候再把不透明度设置1，这样就会实现一个淡入动画 */
+        opacity: 0;
+        /* 那么“自上而下”这个动画可以用“transform”变换属性结合他的“translateY”上下平移函数来完成 */
+        /* translateY(-100%)表示动画初始状态，元素在实际位置上面“自身一个高度”的位置。 */
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        /* 平移到自身位置 */
+        transform: translateY(0);
+    }
+}
+
+#message-container .message.move-in {
+    /* animation属性是用来加载某个动画规则 请参考 https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation */
+    animation: message-move-in 0.3s ease-in-out;
+}
+
+
+@keyframes message-move-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+#message-container .message.move-out {
+    animation: message-move-out 0.3s ease-in-out;
+    /* 让动画结束后保持结束状态 */
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,927 @@
+.editDynamic {
+    height: 46%;
+    width: 22%;
+    position: absolute;
+    top: 7%;
+    right: 2%;
+    transform: translate(0px, 0px);
+    z-index: 100;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+    /*align-items: stretch;*/
+    border: 1px solid black;
+
+    background: url(../../../theme/woodden/wood2.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    color: rgba(77, 60, 51,0.8);
+    text-shadow: none;
+    border-radius: 4px;
+    overflow-y:auto;
+}
+
+.editDynamic .funcContent {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+.editDynamic .titleDiv {
+    position: relative;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.editDynamic .closeEditBtn {
+    font-size: 28px;
+    right: 10px;
+    top: 5px;
+    font-weight: bolder;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.editDynamic .btnGroup {
+    width: 96%;
+    height: 100%;
+    margin: 2%;
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.editDynamic .playerContent {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btnGroup > .btnItem {
+    flex: 1;
+    margin: 0 5px 5px 0;
+    width: calc((100% - 10px) / 2);  /* 这里的10px = (分布个数3-1)*间隙5px, 可以根据实际的分布个数和间隙区调整 */
+    min-width: calc((100% - 10px) / 2);  /* 加入这两个后每个item的宽度就生效了*/
+    max-width: calc((100% - 10px) / 2); /* 加入这两个后每个item的宽度就生效了*/
+}
+
+.btnGroup > .btnItem:nth-child(2n) {
+    margin-right: 0
+}
+
+.btnGroup > .funcBtn {
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    border-radius: 6px;
+    /*padding: 0 14px;*/
+    border: none;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #c5b898;
+    margin-top: 5px;
+    /*margin: 5px;*/
+}
+
+.editDynamic .btnSelect {
+    background-color: #e1a74a;
+}
+
+
+/* 调整工具栏的样式来自于千幻雷修 雷佬的调整样式, 为了防止冲突, 加上前缀 */
+
+.pfqh_qhly_blackbg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    z-index: 15;
+}
+
+.pfqh_qhly_blackbg .dataShowDiv {
+    width: 100px;
+    height: 125px;
+    font-size: 16px;
+    text-align: center;
+    background: url(../../../theme/woodden/wood2.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    color: rgba(77, 60, 51,0.8);
+    text-shadow: none;
+    border-radius: 4px;
+    left: 7%;
+    top: 10%;
+}
+
+.pfqh_qhly_blackbg .textInfoShow {
+    position: relative;
+    text-align: left;
+}
+
+.pfqh_qhly_blackbg .copyCurrentInfoDiv {
+    position: relative;
+    background-color: #67c23a;
+    transition: all .3s ease;
+    border-radius: 6px;
+    color: white;
+    margin: 0;
+    line-height: 1;
+    padding: 0px 9px;
+    height: 26px;
+    border: none;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 3px;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.pfqh_qhly_bigeditbar {
+    /*width: 406px;*/
+    /*height: 30px;*/
+    /*top: 30%;*/
+    /*position: absolute;*/
+    /*left: calc(2%);*/
+    /*background: linear-gradient(to top, #696464, #FFF);*/
+    /*border-radius: 15px;*/
+
+    height: 320px;
+    width: 30px;
+    top: 16%;
+    position: absolute;
+    left: calc(3%);
+    background: linear-gradient(to top, #696464, #FFF);
+    border-radius: 15px;
+}
+
+.pfqh_qhly_bigeditbar>div.forbid {
+    filter: contrast(0.1);
+    opacity: 0.4;
+}
+
+.pfqh_qhly_bigeditbutton0 {
+    /*width: 26px;*/
+    /*height: 26px;*/
+    /*top: 2px;*/
+    /*left: 20px;*/
+    /*background-size: 100% 100%;*/
+    /*background-image: url(../images/edit/fangda.webp);*/
+
+    width: 26px;
+    height: 26px;
+    top: 12px;
+    left: 2px;
+    background-size: 100% 100%;
+    background-image: url(../images/edit/放大.png);
+}
+
+.pfqh_qhly_bigeditbutton1 {
+    /*width: 26px;*/
+    /*height: 26px;*/
+    /*top: 2px;*/
+    /*left: 70px;*/
+    /*background-size: 100% 100%;*/
+    /*background-image: url('../images/edit/suoxiao.webp');*/
+
+    width: 26px;
+    height: 26px;
+    left: 2px;
+    top: 62px;
+    background-size: 100% 100%;
+    /*background-image: url(../images/edit/suoxiao.webp);*/
+    background-image: url(../images/edit/缩小.png);
+}
+
+.pfqh_qhly_bigeditbutton2 {
+    width: 26px;
+    height: 26px;
+    /*top: 2px;*/
+    /*left: 120px;*/
+
+    left: 2px;
+    top: 112px;
+
+    background-size: 100% 100%;
+    background-image: url('../images/edit/shunshizhen.webp');
+}
+
+.pfqh_qhly_bigeditbutton3 {
+    width: 26px;
+    height: 26px;
+    /*top: 2px;*/
+    /*left: 170px;*/
+    left: 2px;
+    top: 162px;
+    background-size: 100% 100%;
+    background-image: url('../images/edit/nishizhen.webp');
+}
+
+.pfqh_qhly_bigeditbutton4 {
+    width: 26px;
+    height: 26px;
+    /*top: 2px;*/
+    /*left: 220px;*/
+    left: 2px;
+    top: 212px;
+    background-size: 100% 100%;
+    background-image: url('../images/edit/shizi.png');
+}
+
+
+.pfqh_qhly_bigeditbutton5 {
+    width: 26px;
+    height: 26px;
+    /*top: 2px;*/
+    /*left: 270px;*/
+    left: 2px;
+    top: 262px;
+    background-size: 100% 100%;
+    background-image: url('../images/edit/fangqi.webp');
+}
+
+.pfqh_qhly_bigeditbutton6 {
+    width: 26px;
+    height: 26px;
+    /*top: 2px;*/
+    /*left: 320px;*/
+    left: 2px;
+    top: 312px;
+    background-size: 100% 100%;
+    background-image: url('../images/edit/baocun.webp');
+}
+
+.pfqh_qhly_bigeditbutton7 {
+    width: 26px;
+    height: 26px;
+    top: 2px;
+    left: 370px;
+    background-size: 100% 100%;
+    background-image: url('../images/edit/fangqi.webp');
+}
+/* 工具栏样式 end*/
+
+
+
+
+
+.editDynamic .group {
+    width: 48%;
+    margin: 2%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+
+
+.editDynamic .btn {
+    text-align: center;
+    position: relative;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 0 1px, rgb(0 0 0 / 45%) 0 3px 10px;
+    border-radius: 4px;
+    margin: 3%;
+    flex: 1;
+}
+
+.adjust-position {
+    border: 2px solid black;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background: red;
+    position: absolute;
+    z-index: 1000;
+}
+
+.hidden-adjust {
+    display: none !important;
+}
+
+.adjust-select {
+    background: orange;
+}
+
+.editDynamic .posNum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+.editDynamic .posNum span {
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+.editDynamic .posNum input{
+    width: 32px;
+    height: 16px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #515151;
+    color: #323232;
+    vertical-align: top;
+    margin-left: -0.08rem;
+    border-left-style: none;
+    box-sizing: content-box;
+
+}
+
+.editDynamic .pointer {
+    cursor: pointer;
+}
+
+.editDynamic .flexItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.editDynamic .posNum i{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid #515151;
+    color: #323232;
+    cursor: pointer;
+}
+
+.editDynamic .posNum .plus {
+    border-left-style: none;
+}
+
+.adjust-position-select {
+    box-shadow: 1px 1px 2px 2px rgb(64 242 55 / 70%), 2px 2px 3px 3px rgb(242 161 55 / 80%), 3px 3px 4px 4px rgb(21 93 240 / 80%), 0 0 5px 5px rgb(240 21 67 / 80%);
+}
+
+
+.adjustDirection {
+    text-align: center;
+    position: absolute;
+    top: 34%;
+    /*left: 2%;*/
+    left: 6%;
+    width: 135px;
+    height: 135px;
+    z-index: 1000;
+}
+.adjustDirection .directionDiv {
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+
+.adjustDirection .directionDiv i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+}
+
+.adjustDirection .directionDiv button {
+    width: 75%;
+    height: 75%;
+}
+
+.adjustDirection .directionDiv .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.adjustDirection .directionDiv .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.adjustDirection .directionDiv .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.adjustDirection .directionDiv .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.pfqhFadeInEffect {
+    animation: fadeIn 0.05s;
+    -webkit-animation: fadeIn 0.05s;
+}
+
+@keyframes pfqhFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes pfqhFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*武将牌动皮显示  样式摘抄自十周年UI*/
+.player>.dynamicPlayerCanvas {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 62;
+}
+
+.player>.dynamicPlayerCanvas>.animation-player {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+    clip-path: inset(0 0 0 0 round 8px); /*新增*/
+    -webkit-clip-path: inset(0 0 0 0 round 8px);
+}
+
+#arena[data-dynamic-skin-outcrop='on']>.player>.dynamicPlayerCanvas>.animation-player {
+    clip-path: url(#dskin-clip); /*新增*/
+    -webkit-clip-path: url(#dskin-clip);
+    height: 200px;
+}
+
+.player>.dynamicPlayerCanvas>.primary-bg,
+.player>.dynamicPlayerCanvas>.deputy-bg {
+    left: 0;
+    top: auto;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 8px 0 0 8px;
+    transition-property: opacity, transform;
+}
+
+.player>.dynamicPlayerCanvas>.deputy-bg {
+    left: 50%;
+}
+
+.player.d-skin>.dynamicPlayerCanvas>.primary-bg,
+.player.d-skin2>.dynamicPlayerCanvas>.deputy-bg {
+    opacity: 1;
+}
+
+#arena:not(.observe)>.player[data-position='0'].unseen.d-skin>.dynamicPlayerCanvas>.primary-bg,
+#arena:not(.observe)>.player[data-position='0'].unseen2.d-skin2>.dynamicPlayerCanvas>.deputy-bg {
+    opacity: 0.3;
+}
+
+
+.player>.chukuang-canvas-wraper {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100 !important;
+}
+
+.chukuang-canvas-wraper>.chukuang-canvas {
+    z-index: 100 !important;
+    pointer-events: none;
+}
+
+/*变换骨骼等事件绑定窗口ui start*/
+.eventBindWindow {
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 6;
+    /*background-image: url("../images/other/bg.jpg");*/
+    /*background-size: 100% 100%;*/
+}
+
+.eventBindWindow > .eventBindToolBox{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
+
+.eventBindWindow > .eventBindToolBox > .toolItems{
+
+}
+
+.eventBindWindow > .eventBindToolBox .toolItems > .triggerSelectOut{
+    position: relative;
+}
+
+.eventBindWindow .eventBindButton{
+    height: 28px;
+    font-size: 14px;
+    padding: 0 14px;
+    margin: 0 8px 14px 0;
+    display: inline-block;
+    color: #606266;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #e4e7ed;
+    cursor: pointer;
+    transition: border .4s,color .4s;
+    outline: none;
+    line-height: 28px;
+    position: relative;
+}
+
+.eventBindWindow .eventBindButton.success {
+    color: #fff;
+    border: 1px solid #67c23a;
+    background-color: #67c23a;
+    transition: all .3s ease;
+}
+
+.eventBindWindow > .eventBindToolBox .toolItems > .transformBtn{
+
+}
+
+.eventBindWindow > .transformContent{
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    height: 80%;
+}
+
+.eventBindWindow .playEffectContent {
+
+}
+
+.eventBindWindow .transformContent .contentHeaders {
+    position: relative;
+    display: block;
+    height: 15%;
+}
+
+.eventBindWindow .contentArea {
+    position: relative;
+    display: block;
+    height: 85%;
+}
+
+.eventBindWindow .contentArea .sameBox{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.eventBindWindow .contentArea .sameBox .sameBoxItem{
+    display: block;
+    position: relative;
+}
+
+.eventBindWindow .contentArea .sameBox .sameBoxItem .label {
+    text-align: center;
+    position: relative;
+}
+
+.eventBindWindow .contentArea .diffBox {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup {
+    position: relative;
+    display: block;
+    height: 80%;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup .playerInputGroup {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup .playerInputGroup .playerText {
+    width: 70px;
+    font-size: 20px;
+    font-weight: 500;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    position: relative;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup .playerInputGroup input {
+    height: 24px;
+    position: relative;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup .playerInputGroup .searchPlayer {
+    margin: 0 0 0 10px;
+    width: 60px;
+    height: 10%;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup .playerAlpha {
+    display: block;
+    position: relative;
+    height: 20%;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup .playerAlpha span {
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup .playerAlpha .firstActive {
+    color: rgb(117,186,255);;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup .wujiangIdList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: flex-start;
+    overflow-y: auto;
+    height: 60%;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .choosePlayerGroup .wujiangIdList .wujiangIdItem {
+    position: relative;
+    /*background-color: #ecf5ff;*/
+    background-color: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    height: 28px;
+    padding: 0 10px;
+    line-height: 26px;
+    font-size: 12px;
+    /*color: #409eff;*/
+    color: white;
+    border: 1px solid #d9ecff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .chooseSkin {
+    position: relative;
+    display: block;
+    height: 20%;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .chooseSkin div{
+    position: relative;
+}
+
+.eventBindWindow .labelText {
+    font-size: 18px;
+    font-weight: 500;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    position: relative;
+}
+
+.eventBindWindow select {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    padding: 0;
+    font-size: 18px;
+    height: 28px;
+    margin-right: 5px;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #aaa;
+    text-shadow: none;
+    border-radius: 4px;
+    transition: box-shadow 0.25s ease;
+}
+
+.eventBindWindow .contentArea .diffBox .dyskinSelect .chooseSkin {
+
+}
+
+.eventBindWindow .transformEffectContent .transEffectHead {
+    position: relative;
+    display: block;
+}
+
+.eventBindWindow .transformEffectContent .transItemBox {
+    position: relative;
+    display: block;
+}
+
+.eventBindWindow .transformEffectContent .transItemBox .transSettingItem{
+    position: relative;
+    display: block;
+}
+
+.eventBindWindow .transformEffectContent .transItemBox .transSettingItem .transSettingItemText{
+    width: 40px;
+}
+/*变换骨骼等事件绑定窗口ui end*/
+
+/* 按钮点击动画效果 */
+
+/* 通用按钮hover和active效果 */
+.btnGroup > .funcBtn {
+    transition: all 0.2s ease;
+}
+
+.btnGroup > .funcBtn:hover {
+    transform: scale(1.02);
+    background-color: #d4c2a1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btnGroup > .funcBtn:active {
+    transform: scale(0.95);
+    background-color: #b8a584;
+    transition: all 0.1s ease;
+}
+
+/* 按钮点击涟漪效果 */
+.btnGroup > .funcBtn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btnGroup > .funcBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btnGroup > .funcBtn:active::before {
+    width: 200px;
+    height: 200px;
+}
+
+/* 关闭按钮特殊动画效果 */
+.editDynamic .closeEditBtn {
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.editDynamic .closeEditBtn:hover {
+    transform: scale(1.1);
+    color: #ff4444;
+    text-shadow: 0 0 8px rgba(255, 68, 68, 0.6);
+}
+
+.editDynamic .closeEditBtn:active {
+    transform: scale(0.9) rotate(90deg);
+    color: #cc0000;
+    background-color: rgba(255, 68, 68, 0.2);
+    border-radius: 50%;
+    text-shadow: 0 0 12px rgba(255, 68, 68, 0.8);
+    transition: all 0.15s ease;
+}
+
+/* 选中状态的按钮增强效果 */
+.editDynamic .btnSelect {
+    animation: selectedPulse 2s infinite;
+    box-shadow: 0 0 10px rgba(225, 167, 74, 0.6);
+}
+
+@keyframes selectedPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(225, 167, 74, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(225, 167, 74, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(225, 167, 74, 0.6);
+    }
+}
+
+/* 按钮加载/点击反馈动画 */
+@keyframes buttonClick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btnGroup > .funcBtn.button-clicked {
+    animation: buttonClick 0.2s ease;
+}
+
+/* 关闭按钮旋转动画 */
+@keyframes closeButtonRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+        color: rgba(77, 60, 51, 0.8);
+    }
+    50% {
+        transform: scale(1.1) rotate(180deg);
+        color: #ff4444;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        color: #cc0000;
+    }
+}
+
+.editDynamic .closeEditBtn.close-clicked {
+    animation: closeButtonRotate 0.6s ease;
+}
+
+/* 微光扫过效果 */
+.btnGroup > .funcBtn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btnGroup > .funcBtn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btnGroup > .funcBtn:hover::after {
+    left: 100%;
+}

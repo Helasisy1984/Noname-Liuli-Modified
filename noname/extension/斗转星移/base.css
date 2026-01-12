@@ -1,0 +1,1046 @@
+
+.roundarenabutton {
+    z-index: 209;
+}
+/*全屏背景1*/
+.dz-bigBg1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 210;
+    width: 100%;
+    height: 100%;
+    background-color: RGBA(0,0,0,0.60);
+}
+/*全屏背景2*/
+.dz-bigBg2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 210;
+    width: 100%;
+    height: 100%;
+    background-image: url('image/bigBg2.png');
+    background-position: center;
+    background-size: cover;
+}
+.dz-bigBg2 div {
+    transition:all 0.1s linear;
+}
+
+/*居中*/
+.dz-center1 {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+.kdiv {
+    position: relative;
+    width: 100%;
+    height: auto;
+    vertical-align:top;
+    text-align:center;
+    overflow-y: auto;
+}
+.kdiv.left {
+    text-align: left;
+}
+.ss-textdiv {
+    position: absolute;
+    text-align:center;
+    font-family: shousha;
+    color:#A3DEC5;
+}
+.ss-textdiv2 {
+    position: relative;
+    text-align:center;
+    font-family: shousha;
+    color: #dae6da;
+    text-shadow: 0px 0px 1px black,0px 0px 1px black,0px 0px 2px black,0px 0px 2px black;
+}
+.dz-okBtn {
+    position: relative;
+    width: 106px;
+    height: 40px;
+    background-image: url('image/ok.png');
+    background-size: 100% 100%;
+}
+
+.dz-okBtn:active {
+    filter: brightness(180%);
+}
+.fy-btn {
+    position: relative;
+    width: 110px;
+    height: 55px;
+    margin: 0 5px;
+    overflow: auto;
+    white-space: nowrap;
+    line-height: 55px;
+    font-family: shousha;
+    color:#A3DEC5;
+    font-size: 20px;
+    background-image: url('image/btn6.png');
+    background-size: 100% 100%;
+}
+.fy-btn.active {
+    background-image: url('image/btn7.png');
+}
+/*返回*/
+.dz-returnBtn {
+    position: absolute;
+    width: 130px;
+    height: 100px;
+    top:0px;
+    right: 0px;
+    background-image: url('image/leaveBtn.png');
+    background-size: cover;
+    transition: none;
+}
+.dz-returnBtn:active {
+    filter: brightness(180%);
+}
+/*禁将*/
+.dz-box1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-500px,-50%);
+    width: 730px;
+    height: auto;
+    overflow-y: scroll;
+    border-top: 80px dashed;
+    border-right: 40px dashed;
+    border-bottom: 20px dashed;
+    border-left: 40px dashed;
+    border-image-source: url('image/box1.png');
+    border-image-slice: 100 60 25 60 fill;
+    text-align:center;
+}
+.dz-box2 {
+    position: absolute;
+    width: 130px;
+    height:auto;
+    /*max-height: 400px;*/
+    overflow-y: auto;
+    border: 15px solid black;
+    border-image-source: url('image/box3.png');
+    border-image-slice: 20 fill;
+    text-align:center;
+}
+/*禁将方案*/
+.banPlanBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(290px,-42%);
+    width: 175px;
+    height: 350px;
+    background-image: url('image/banPlan.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align:center;
+}
+/*设置按钮*/
+.banPlanBox>.setBtn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 6px;
+    right: 30px;
+    background-image: url('image/setBtn.png');
+    background-size: 100% 100%;
+}
+.setBtn:active {
+    filter: brightness(180%);
+}
+/*方案按钮*/
+.banPlanBtn {
+    position: relative;
+    top: 50px;
+    width: 90%;
+    height: 70px;
+    margin: 12px 0px;
+    background-image: url('image/banPlanBtn1.png');
+    background-size: 100% 100%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+}
+.banPlanBtn.active {
+    background-image: url('image/banPlanBtn2.png');
+}
+.banPlanBtn>.ss-textdiv {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    font-size: 24px;
+    font-family: shousha;
+    color:#A3DEC5;
+    line-height: 70px;
+}
+.banPlanBtn>.bianji {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 28px;
+    height: 45px;
+    background-image: url('image/bianji.png');
+    background-size: 100% 100%;
+}
+.dz-inputBox {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: calc(50% - 400px);
+    top: 10%;
+    width: 800px;
+    height: 45px;
+}
+.dz-inputBox>input {
+    width: 710px;
+    height: 100%;
+    font-size: 22px;
+}
+.dz-inputBox>.inputok {
+    position: relative;
+    width: 75px;
+    height: 45px;
+    margin: 0 5px;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+    color: black;
+    text-shadow: none;
+}
+/*水平滚动条*/
+.sp-kdiv {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    /*background-color: white;*/
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.sp-kdiv2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    /*background-color: white;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+/*禁将背景*/
+.jj-contentBg {
+    position: relative;
+    vertical-align:top;
+    border-top: 10px solid;
+    border-right: 10px solid;
+    border-left: 10px solid;
+    border-bottom: 10px solid;
+    border-image-source: url('image/bg1.png');
+    border-image-slice: 17 fill;
+    overflow-y: scroll;
+}
+.dz-box1>.jj-contentBg {
+    top: -5px;
+    width: calc(100% - 20px);
+    height: 290px;
+}
+/*武将包*/
+.jj-charPackBtn {
+    position: relative;
+    min-width: 90px;
+    max-width: 155px;
+    height: 46px;
+    text-align:center;
+    line-height: 23px;
+    font-size: 16px;
+    font-family: shousha;
+    color:#F9F5F4;
+    margin:4px;
+    text-shadow: 0px 0px 1.5px black,0px 0px 1.5px black,0px 0px 1.5px black,0px 0px 1px black,0px 0px 1px black,0px 0px 1px black,0px 0px 1px black,0px 0px 1px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black;
+}
+.jj-charPackBtn.active {
+    background-image: url('image/btnBg.png');
+    background-size: 100% 100%;
+}
+/*禁用文字*/
+.canBanTxt {
+    position: relative;
+    width: 100%;
+    height: 23px;
+    background-image: url('image/canBanTxt.png');
+    background-size: contain;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+}
+.okBanTxt {
+    position: relative;
+    width: 100%;
+    height: 23px;
+    background-image: url('image/okBanTxt.png');
+    background-size: contain;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+}
+/*武将背景*/
+.jj-charBg {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    vertical-align:top;
+    background-image: url('image/charBg.png');
+    background-size: 100% 100%;
+    margin:4px;
+}
+/*武将图*/
+.jj-charPic {
+    position: relative;
+    width: 74px;
+    height: 74px;
+    vertical-align:top;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    margin:8px;
+}
+/*禁用图*/
+.jj-banPic {
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    background-image: url('image/ban.png');
+    background-size: 80%;
+    background-position: center;
+    background-color: RGBA(9,44,42,0.5);
+    top:0px;
+    left:0px;
+}
+/*禁将设置背景*/
+.jj-SetBg {
+    position: absolute;
+    width: 700px;
+    height: 425px;
+    background-image: url('image/box3.png');
+    background-size: 100% 100%;
+    text-shadow: none;
+}
+/*方案一二三*/
+.jj-SetBg>.planTextBox {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 610px;
+    color: #282820;
+    line-height: 50px;
+    font-family: shousha;
+    font-size: 20px;
+    text-align:center;
+}
+.jj-SetBg>.planTextBox>.planText {
+    position: relative;
+    width: 110px;
+    left: 35px;
+}
+/*水平盒*/
+.hor-box1 {
+    position: relative;
+    width: calc(100% - 20px);
+    height: 50px;
+    margin:5px 0px;
+    border-top: 0px solid;
+    border-right: 10px solid;
+    border-bottom: 0px solid;
+    border-left: 10px solid;
+    border-image-source: url('image/horbox1.png');
+    border-image-slice: 0 20 0 20 fill;
+    line-height: 50px;
+    text-align:center;
+    font-size: 25px;
+    font-family: shousha;
+    color:rgb(217,194,153);
+}
+.jj-SetBg .hor-box1 {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin:5px 0px;
+    border: none;
+    background-image: url('image/horbox1.png');
+    background-size: 100% 100%;
+    line-height: 45px;
+    text-align:center;
+    font-size: 20px;
+    font-family: shousha;
+    color:rgb(209,228,206);
+}
+/*圆形开关*/
+.hor-box1>.subplan {
+    position: relative;
+    width: 110px;
+    height: 100%;
+    left: 35px;
+    background-image: url('image/circularSW1.png');
+    background-size: contain;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+}
+.hor-box1>.subplan:active {
+    filter: brightness(130%);
+}
+.hor-box1>.subplan.active {
+    background-image: url('image/circularSW2.png');
+}
+
+.jj-charPic>.kdiv {
+    position: absolute;
+}
+
+.jj-charPic>.ss-textdiv {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    height: 16px;
+    line-height: 18px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    color: #b9e0cf;
+}
+
+/*星*/
+.charStar {
+    position: absolute;
+    background-image: url('image/star.png');
+    background-size: 100% 100%;
+    width: 38px;
+    height: 38px;
+    top: -11px;
+    right: -11px;
+    line-height: 40px;
+    z-index: 10;
+    text-shadow:0px 0px 1.5px black,0px 0px 1.5px black,0px 0px 1.5px black,0px 0px 1px black,0px 0px 1px black,0px 0px 1px black,0px 0px 1px black,0px 0px 1px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 3px black,0px 0px 3px black,0px 0px 3px black,0px 0px 2.5px black,0px 0px 2px black,0px 0px 2px black;
+}
+
+.jj-gnBtn {
+    position: relative;
+    width: 110px;
+    height: 50px;
+    background-image: url('image/btn9.png');
+    background-size: 100% 100%;
+    text-align:center;
+    line-height:50px;
+    font-size: 20px;
+    font-family: 'shousha';
+    color: #dae6da;
+    text-shadow: 0px 0px 1px black,0px 0px 1px black,0px 0px 2px black,0px 0px 2px black;
+}
+.jj-gnBtn:active {
+    filter: brightness(150%);
+}
+.dz-box1>.jj-gnBtn {
+    left: -66px;
+}
+.dz-jia {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-image: url('image/jia.png');
+    background-size: 100% 100%;
+}
+.dz-jian {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-image: url('image/jian.png');
+    background-size: 100% 100%;
+}
+.dz-jia:active,
+.dz-jian:active {
+    filter: brightness(180%);
+}
+/*主界面*/
+.kdiv2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+@keyframes moveC {
+    0% {transform: translateX(1200px);}
+    100% {transform: translateX(0px);}
+}
+/*主菜单中间*/
+.menu-center {
+    height: 310px;
+    width: 763px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%, -52%);
+}
+/*经典*/
+.jingdian {
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 310px;
+    background-image: url('image/jingdian.png');
+    background-size: 100% 100%;
+    animation: moveC 300ms ease-out;
+}
+/*排位*/
+.paiwei {
+    top: 0;
+    left: 290px;
+    width: 192px;
+    height: 310px;
+    background-image: url('image/paiwei.png');
+    background-size: 100% 100%;
+    animation: moveC 300ms ease-out 50ms backwards;
+}
+/*自由*/
+.ziyou {
+    top: 0;
+    left: 510px;
+    width: 253px;
+    height: 150px;
+    background-image: url('image/ziyou.png');
+    background-size: 100% 100%;
+    animation: moveC 300ms ease-out 100ms backwards;
+}
+/*至尊*/
+.zhizun {
+    top: 160px;
+    left: 510px;
+    width: 253px;
+    height: 150px;
+    background-image: url('image/zhizun.png');
+    background-size: 100% 100%;
+    animation: moveC 300ms ease-out 150ms backwards;
+}
+
+.paiwei:active,
+.ziyou:active,
+.zhizun:active,
+.jingdian:active {
+    transform: scale(0.92);
+}
+
+@keyframes dz-expand {
+    0% {transform: translate(-50%, -50%) scale(0.2);}
+    70% {transform: translate(-50%, -50%) scale(1.1);}
+    100% {transform: translate(-50%, -50%) scale(1);}
+}
+.dz-bg2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 830px;
+    height: 392px;
+    transform: translate(-50%, -50%);
+    background-image: url('image/bg2.png');
+    background-position-x: 50%;
+    background-size: 100% 100%;
+    animation: dz-expand 0.3s linear;
+}
+.modebg {
+    position: absolute;
+    width: 80%;
+    height: 97%;
+    top: 3%;
+    right: 5%;
+    background-image: url('image/identity.jpg');
+    background-size: 100% 100%;
+    /*background-color: RGBA(0,0,0,0.50);*/
+}
+.mode-boxs{
+    position: absolute;
+    width: 160px;
+    height: 280px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-390px, -42%);
+    text-align:center;
+    /*background-color: RGBA(0,0,0,0.50);*/
+}
+.mode-boxs>.dz-modeBtn:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.mode-boxs>.dz-modeBtn:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.mode-boxs>.dz-modeBtn:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.mode-boxs>.dz-modeBtn:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.dz-modeBtn {
+    position: relative;
+    width: 90%;
+    height: 70px;
+    background-image: url('image/btn1.png');
+    background-size: 100% 100%;
+    text-align:center;
+    line-height:70px;
+    font-size: 20px;
+    font-family: 'shousha';
+    color: #EAFBFA;
+    text-shadow: -1px 0px 1px black;
+    /*animation: moveMode 0.2s ease-out backwards;*/
+    animation: moveMode 0.2s ease-out backwards;
+}
+.dz-modeBtn.active {
+    background-image: url('image/btn2.png');
+    transform: scale(1.1);
+}
+@keyframes moveMode {
+    0% {transform: translateX(-500px);}
+    100% {transform: translateX(0px);}
+}
+.kaizhan {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 30%;
+    left: 75%;
+    background-image: url('image/kaizhan.png');
+    background-size: 100% 100%;
+    /*overflow: hidden;*/
+}
+.kaizhan:active {
+    transform: scale(1.2);
+    filter: brightness(180%);
+}
+/*底部条*/
+.menu-bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 470px;
+    height: 60px;
+    bottom: 5px;
+    right: 120px;
+    /*background-color: RGBA(0,0,0,0.50);*/
+    animation: moveB 0.3s ease-out;
+}
+.menu-bottom>div {
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@keyframes moveB {
+    0% {transform: translateY(100px);}
+    100% {transform: translateY(0px);}
+}
+/*欢乐斗地主*/
+.doudizhu {
+    width: 272px;
+    height: 80px;
+    left: 120px;
+    bottom: 4px;
+    background-image: url('image/doudizhu.png');
+    background-size: 100% 100%;
+    animation: moveB 0.3s ease-out;
+}
+/*聊天*/
+.liaotian {
+    width: 144px;
+    height: 90px;
+    left: -25px;
+    bottom: 2px;
+    background-image: url('image/liaotian.png');
+    background-size: 100% 100%;
+    animation: moveB 0.3s ease-out;
+}
+
+/*加号*/
+.jiahao {
+    width: 139.5px;
+    height: 85px;
+    right: -20px;
+    bottom: 2px;
+    background-image: url('image/uijiahao.png');
+    background-size: 100% 100%;
+}
+/*武将*/
+.wujiang {
+    width: 78px;
+    height: 60px;
+    background-image: url('image/wujiang.png'),url('image/yuankuang.png');
+}
+/*皮肤*/
+.pifu {
+    width: 78px;
+    height: 60px;
+    background-image: url('image/pifu.png'),url('image/yuankuang.png');
+}
+/*官阶*/
+.guanjie {
+    width: 78px;
+    height: 60px;
+    background-image: url('image/guanjie.png'),url('image/yuankuang.png');
+}
+/*特惠*/
+.tehui {
+    width: 78px;
+    height: 60px;
+    background-image: url('image/tehui.png'),url('image/yuankuang.png');
+}
+/*商场*/
+.shangcheng {
+    width: 78px;
+    height: 60px;
+    background-image: url('image/shangcheng.png'),url('image/yuankuang.png');
+}
+/*成长*/
+.chengzhang {
+    width: 78px;
+    height: 60px;
+    background-image: url('image/chengzhang.png'),url('image/yuankuang.png');
+}
+
+.jiahao:active,
+.wujiang:active,
+.pifu:active,
+.guanjie:active,
+.tehui:active,
+.shangcheng:active,
+.chengzhang:active {
+    filter: brightness(180%);
+}
+
+/*主菜单左边*/
+.menu-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 320px;
+    width: 55px;
+    top: 50%;
+    left: 5%;
+    /*background-color: RGBA(0,0,0,0.50);*/
+    transform: translateY(-50%);
+    animation: moveL 0.5s ease-out;
+}
+@keyframes moveL {
+    0% {transform: translate(-200px,-50%);}
+    100% {transform: translate(0px,-50%);}
+}
+.menu-left>div {
+    position: relative;
+}
+/*公会*/
+.menu-left>.dgonghui {
+    height: 55px;
+    width: 55px;
+    background-image: url('image/gonghui.png');
+    background-size: 100% 100%;
+}
+/*好友*/
+.menu-left>.haoyou {
+    height: 55px;
+    width: 55px;
+    background-image: url('image/haoyou.png');
+    background-size: 100% 100%;
+}
+/*比赛*/
+.menu-left>.bisai {
+    height: 55px;
+    width: 55px;
+    background-image: url('image/bisai.png');
+    background-size: 100% 100%;
+}
+/*视频*/
+.menu-left>.shipin {
+    height: 55px;
+    width: 55px;
+    background-image: url('image/shipin.png');
+    background-size: 100% 100%;
+}
+.dgonghui:active,
+.haoyou:active,
+.bisai:active,
+.shipin:active {
+    filter: brightness(180%);
+}
+
+/*主菜单右边*/
+.menu-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 320px;
+    width: 75px;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    /*background-color: RGBA(0,0,0,0.50);*/
+    animation: moveR 0.5s ease-out;
+}
+@keyframes moveR {
+    0% {transform: translate(200px,-50%);}
+    100% {transform: translate(0px,-50%);}
+}
+.menu-right>div {
+    position: relative;
+}
+/*每日活动*/
+.menu-right>.meirihuodong {
+    height: 173px;
+    width: 75px;
+    background-image: url('image/meirihuodong.png');
+    background-size: 100% 100%;
+}
+.tehui2 {
+    height: 182px;
+    width: 78.5px;
+    left: -3px;
+    top: -3px;
+    background-image: url('image/tehui2.png');
+    background-size: 100% 100%;
+}
+/*必备武将*/
+.menu-right>.bibeiwujiang {
+    height: 70px;
+    width: 70px;
+    background-image: url('image/bibeiwujiang.png');
+    background-size: 100% 100%;
+}
+/*藏珍阁*/
+.menu-right>.cangzhenge {
+    height: 70px;
+    width: 70px;
+    background-image: url('image/cangzhenge.png');
+    background-size: 100% 100%;
+}
+.meirihuodong:active,
+.bibeiwujiang:active,
+.cangzhenge:active {
+    filter: brightness(180%);
+}
+
+/*主菜单左左边*/
+.menuLeftBg {
+    height: calc(100% - 172px);
+    width: 65px;
+    top: 0;
+    left: -20px;
+    border-top: 82px solid;
+    border-right: 0px solid;
+    border-bottom: 90px solid;
+    border-left: 0px solid;
+    border-image-source: url('image/menuLeftBg.png');
+    border-image-slice: 130 0 130 0 fill;
+}
+/*主菜单上边*/
+/*头像框*/
+@keyframes moveT {
+    0% {transform: translateY(-200px);}
+    100% {transform: translateY(0px);}
+}
+.touxiangkuang {
+    height: 82px;
+    width: 334.5px;
+    top: 0;
+    left: 45px;
+    background-image: url('image/touxiangkuang.png');
+    background-size: 100% 100%;
+    animation: moveT 0.3s ease-out;
+}
+.touxiangkuang>.ss-textdiv{
+    height: 23px;
+    left: 108px;
+    line-height: 23px;
+    font-size:14px;
+}
+.touxiangkuang>.ss-textdiv::after{
+    position:absolute;
+    display:line-block;
+    content:'';
+    height: 20px;
+    width: 20px;
+    top: 1.5px;
+    left: -23px;
+    background-image: url('image/xiaotouxiang.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.touxiangtu {
+    height: 55.5px;
+    width: 55.5px;
+    top: 8px;
+    left: 7px;
+    z-index: -1;
+    background-size: 100% 100%;
+}
+.shengji {
+    height: 24px;
+    width: 63px;
+    top: 0px;
+    background-image: url('image/shengji.png');
+    background-size: contain;
+    /*background-color: RGBA(0,0,0,0.50);*/
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 37px;
+}
+/*右上*/
+.menu-right-top {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 70px;
+    width: 280px;
+    top: -7px;
+    right: 5%;
+    /*background-color: RGBA(0,0,0,0.50);*/
+    animation: moveT 0.3s ease-out;
+}
+.menu-right-top>div {
+    position: relative;
+}
+.woyaojideng {
+    height: 70px;
+    width: 70px;
+    background-image: url('image/woyaojideng.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bangdingshouji {
+    height: 70px;
+    width: 70px;
+    background-image: url('image/bangdingshouji.png');
+    background-size: 100% 100%;
+}
+.libao {
+    height: 70px;
+    width: 70px;
+    background-image: url('image/libao.png');
+    background-size: 100% 100%;
+}
+.yueka {
+    height: 70px;
+    width: 70px;
+    left: 5px;
+    background-image: url('image/yueka.png');
+    background-size: 100% 100%;
+}
+/*vip元宝*/
+.vipjia {
+    height: 40px;
+    width: 146.5px;
+    top: 0px;
+    left: 390px;
+    background-image: url('image/vipjia.png');
+    background-size: 100% 100%;
+    animation: moveT 0.3s ease-out;
+    text-align:center;
+    font-size: 20px;
+    font-family: shousha;
+    color:#A3DEC5;
+    line-height: 40px;
+}
+.yuanbaojia {
+    height: 40px;
+    width: 146.5px;
+    top: 0px;
+    left: 540px;
+    background-image: url('image/yuanbaojia.png');
+    background-size: 100% 100%;
+    text-align:center;
+    font-size: 20px;
+    font-family: shousha;
+    color:#A3DEC5;
+    line-height: 40px;
+    animation: moveT 0.3s ease-out;
+}
+.vipjia:active,
+.yuanbaojia:active {
+    filter: brightness(180%);
+}
+
+/*资料页*/
+.ziliaoye {
+    height: 450px;
+    width: 600px;
+    top:50%;
+    left:50%;
+    transform: translate(-87px,-50%);
+    background-image: url('image/chr_detail_des_bg2.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-color: RGBA(0,0,0,0.60);*/
+}
+.barChart-box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.barChart-shenfen {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-color: RGBA(0,0,0,0.60);*/
+}
+.dz-jindutiao {
+    position: relative;
+    height: 15px;
+    width: 60%;
+    border-radius: 8px;
+    /*background-image: url('image/jindutiao.png');*/
+    background-image: linear-gradient(to right, #a9831b4d, #7ba92f, #e7f981);
+    background-size: 100% 100%;
+    clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%);
+}
+.dz-shenfenqiangdu {
+    position: relative;
+    left: 5px;
+    height: 40px;
+    width: 60px;
+    font-family: shousha;
+    font-size: 24px;
+    color:#A3DEC5;
+    line-height:40px;
+    background-image: url('image/chr_prg_cur.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dz-shenfenqiangdu:active {
+    filter: brightness(180%);
+}
+.set-starbox {
+    position: absolute;
+    top: 15px;
+    right: 130px;
+    width: 90px;
+    height: 440px;
+    background-color: RGBA(0,0,0,0.60);
+}
+.set-starbox>.jj-gnBtn {
+    width: 90px;
+    height: 40px;
+    line-height:40px;
+}

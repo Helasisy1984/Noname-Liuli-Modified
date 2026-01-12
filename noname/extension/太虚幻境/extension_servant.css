@@ -1,0 +1,310 @@
+.taixuhuanjing_chooseServantDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.taixuhuanjing_chooseServantBody {
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    /*border: 1px solid red;*/
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    /*min-width: 1300px;*/
+}
+
+.taixuhuanjing_chooseServantTopTitle {
+    background-image: url("image/icon/icon_frame1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40%;
+    height: 51px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 5;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'shousha';
+    font-size: 25px;
+    color: #e5dba5;
+}
+
+.frame0 {
+    background-image: url("image/servant/frame0.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.frame1 {
+    background-image: url("image/servant/frame1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.frame2 {
+    background-image: url("image/servant/frame2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.frame3 {
+    background-image: url("image/servant/frame3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.frame4 {
+    background-image: url("image/servant/frame4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.taixuhuanjing_chooseServantIconDiv {
+    width: 125px;
+    height: 100%;
+    border: 0.5px solid #fdea8573;
+    display: flex;
+    overflow: scroll;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0000006e;
+}
+
+.taixuhuanjing_servantSelectIcon {
+    /*border: 1px solid gold;*/
+    margin: 3% 1%;
+    flex: none;
+    position: relative;
+    width: 105px;
+    height: 100px;
+    cursor: pointer;
+    /* text-align: center; */
+    background-size: cover;
+}
+
+.taixuhuanjing_servantSelectIcon_img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.taixuhuanjing_chooseSLDiv {
+    width: 50%;
+    height: 75%;
+    /*border: 1px solid red;*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*top: 20%;*/
+    /*left: 5%;*/
+}
+
+.taixuhuanjing_chooseSLDescDiv {
+    width: 50%;
+    height: 100%;
+    /*right: 0;*/
+    position: relative;
+    /*background-color: #0000006e;*/
+    /*border-radius: 25px;*/
+    /*border: 1px solid red;*/
+    background-image: url("image/background/bg-sldesc.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.taixuhuanjing_chooseSLHeadDiv {
+    width: 100%;
+    height: 59px;
+    /*border: 1px solid red;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'shousha';
+    font-size: 36px;
+    color: #e5dba5;
+    margin: 9% 0%;
+    position: relative;
+}
+
+.taixuhuanjing_chooseSLHeadGrade {
+    margin-left: 7%;
+    width: 75px;
+    height: auto;
+}
+
+.taixuhuanjing_chooseSLTextName {
+    margin-left: 2%;
+    margin-bottom: 3%;
+}
+
+.taixuhuanjing_chooseSLBodyDiv {
+    width: 100%;
+    height: 50%;
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    position: relative;
+    font-family: 'shousha';
+}
+
+.taixuhuanjing_chooseSLSkillDescItem {
+    flex: none;
+    position: relative;
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 5%;
+}
+.taixuhuanjing_chooseSLSkillDescItem > div {
+    position: relative;
+}
+
+.taixuhuanjing_chooseSLSkillDescName {
+    color: gold;
+    font-size: 36px;
+    margin-bottom: 3%;
+    font-weight: bold;
+}
+
+.taixuhuanjing_chooseSLSkillDescDesc {
+    font-size: 19px;
+}
+
+.taixuhuanjing_chooseSLBtn {
+    width: 36%;
+    height: 70px;
+    position: absolute;
+    top: 99%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("image/icon/icon_Button5.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.taixuhuanjing_chooseSLBtnText {
+    width: 46%;
+    height: 57%;
+    background-image: url(image/icon/jixu.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.taixuhuanjing_wait {
+    width: 155.573px;
+    height: 38%;
+    position: absolute;
+    bottom: 0;
+    right: calc(100% - 265px);
+    /*border: 1px solid;*/
+}
+.taixuhuanjing_zuodian {
+    width: 155.573px;
+    height: 46.521px;
+    bottom: 0;
+    text-align: center;
+    font-size: 20px;
+    line-height: 49px;
+    font-family: "shousha", serif;
+    background-image: url("image/servant/zuodian.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.onlyBtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 68px;
+    height: 55px;
+    background-size: contain;
+}
+
+@media screen and (max-width: 1250px) {
+    .taixuhuanjing_chooseServantTopTitle {
+        font-size: 23px;
+        line-height: 38px;
+        height: 51px;
+    }
+
+    .taixuhuanjing_chooseSLDiv {
+        width: 50%;
+        height: 75%;
+        /*border: 1px solid red;*/
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .taixuhuanjing_chooseSLHeadDiv {
+        width: 100%;
+        height: 66px;
+        font-size: 30px;
+        margin: 5% 0%;
+    }
+
+    .taixuhuanjing_chooseSLHeadGrade {
+        width: 68px;
+        height: auto;
+        margin-left: 5%;
+    }
+
+    .taixuhuanjing_chooseSLSkillDescName {
+        font-size: 29px;
+        margin-bottom: 3.5%;
+    }
+
+    .taixuhuanjing_chooseSLSkillDescDesc {
+        font-size: 19px;
+    }
+
+    .taixuhuanjing_chooseSLBtn {
+        width: 36%;
+        height: 68px;
+        position: absolute;
+        top: 99%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .taixuhuanjing_chooseSLBtnText {
+        width: 46%;
+        height: 57%;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .taixuhuanjing_matchPicture {
+        width: 62%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+
+}
+
+/*.taixuhuanjing_chooseSLTextName {*/
+/*    text-align: center;*/
+/*    line-height: 2.5vw;*/
+/*    font-family: 'shousha';*/
+/*    font-size: 1.5vw;*/
+/*    color: #e5dba5;*/
+/*}*/

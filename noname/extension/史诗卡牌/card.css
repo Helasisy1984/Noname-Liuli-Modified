@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'NotoSerifTC';
+    src: url('asset/font/NotoSerifTC-Bold.otf');
+}
+
+@font-face {
+    font-family: 'NotoSansTC';
+    src: url('asset/font/NotoSansTC-Bold.otf');
+}
+
+.card.phantom {
+    pointer-events: none;
+    position: absolute;
+    opacity: 1;
+    margin: 0;
+}
+
+

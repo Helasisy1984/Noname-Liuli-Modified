@@ -1,0 +1,352 @@
+/* 历史记录栏 */
+.pausedbg > .resumedbg {
+	left: 0 !important;
+	top: 0 !important;
+	width: 100%;
+	height: 100%;
+	z-index: 15;
+}
+.pausedbg > .historybg {
+	transition: all 0.2s linear;
+	display: flex;
+	width: 467px;
+	height: 524px;
+	border-width: 18px 28px 37px 28px;
+	border-style: solid;
+	border-color: transparent;
+	border-image-source: url("image/pause/pubui_tip.9.png");
+	border-image-slice: 18 28 37 28 fill;
+	border-image-repeat: stretch;
+	/*flex-direction: column;
+    align-items: center;
+    justify-content: center;*/
+	position: absolute;
+	top: 0.7%;
+	left: 34.7%;
+	z-index: 16;
+	/*transform: translateY(-50%) scale(1.0);*/
+}
+.pausedbg > .identity_btn {
+	z-index: 16;
+	position: absolute;
+	width: 2.7em;
+	height: 2.5em;
+	top: calc(100% - 100px);
+	bottom: calc(100% - 100px);
+	left: calc(100% - 360px);
+	right: calc(100% - 360px);
+	background-image: url("image/pause/game_hist_identity.png");
+	background-size: 100% 100%;
+	background-position: center;
+}
+.pausedbg > .identity_btn > .identity_cai {
+	left: 5px;
+	top: 3px;
+	width: 2em;
+	height: 2em;
+	background-image: url("image/pause/game_hist_unknown.png");
+	background-size: 100% 100%;
+	background-position: center;
+}
+.pausedbg > .scrollbar {
+	z-index: 16;
+	position: fixed; /* 固定位置，以便在滚动时保持在视图中 */
+	width: 10px;
+	height: 85%;
+	top: 5%;
+	right: 22%;
+	border-width: 4px 0px 7px 0px;
+	border-style: solid;
+	border-color: transparent;
+	border-image-source: url("image/pause/pub_scrollbar_bg.png");
+	border-image-slice: 4 0 7 0 fill;
+	border-image-repeat: stretch;
+	background: none;
+	overflow: hidden;
+}
+.pausedbg > .scrollbar > .scrollbutton {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	border-width: 4px 0px 7px 0px;
+	border-style: solid;
+	border-color: transparent;
+	border-image-source: url("image/pause/pub_scrollbar_src.png");
+	border-image-slice: 4 0 7 0 fill;
+	border-image-repeat: stretch;
+	background: none;
+}
+.pausedbg > .scrollbar > .scrollbutton.top {
+	top: 0%;
+	transition: top 0.1s ease-in-out;
+}
+.pausedbg > .scrollbar > .scrollbutton.bottom {
+	bottom: 0%;
+	transition: bottom 0.1s ease-in-out;
+}
+.pausedbg > div:first-child {
+	/*font-size: 30px;*/
+	top: 0.7%;
+	left: 34.7%;
+}
+.pausedbg > .content {
+	left: 29.2% !important;
+	top: 2.7% !important;
+	overflow: visible;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+	max-width: 88px;
+	z-index: 16;
+}
+.pausedbg > .content > .headbg {
+	width: 88px !important;
+	height: 88px !important;
+	margin: -1px;
+	background-image: url("image/pause/game_hist_headbg.png");
+	background-size: 100% 100%;
+	background-position: center;
+	zoom: 0.79;
+	opacity: 1;
+	z-index: 16;
+}
+.pausedbg > .content > .headbg > .char {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat;
+	/*background-size: 170px;*/
+	background-size: 120% auto;
+	background-position-y: 10%;
+	background-position-x: center;
+	/* background-position-x: 50%; */
+	/* background-size: 100% 100% !important; */
+	/* background-position: center; */
+	margin: 4px;
+}
+.pausedbg > .content > .headbg > .char > .namebg {
+	width: 80px;
+	height: 16px;
+	bottom: 0px;
+	left: 0px;
+	line-height: 19px;
+	white-space: nowrap;
+	font-weight: 200;
+}
+.pausedbg > .content > .headbg > .char > .namebg > .name {
+	display: flex;
+	font-size: 20px;
+	font-family: "shousha";
+	top: -10px;
+	color: rgb(217, 194, 153);
+	justify-content: center;
+}
+.pausedbg > .content > .headbg > .headbg_selected {
+	position: absolute;
+	width: 94px;
+	height: 92px;
+	margin: -4px !important;
+	background-image: none;
+	/*background-position-x: 50%;*/
+	background-size: 100% 100% !important;
+	background-position: center;
+	filter: none !important;
+}
+.pausedbg > .content > .headbg > .headbg_selected.light {
+	background-image: url("image/pause/game_hist_head_selected.png");
+}
+.pausedbg > .content > .headbg > .identity {
+	right: auto;
+	top: -20px;
+	left: -25px;
+	width: 50px;
+	height: 50px;
+	line-height: 51px;
+	font-size: 31px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+	transform: none;
+	transition: none;
+}
+.pausedbg > .content.guozhan {
+	left: 16.8% !important;
+	top: 1.8% !important;
+	max-width: 222px;
+}
+.pausedbg > .content.guozhan > .headbg.guozhan {
+	width: 222px !important;
+	height: 93px !important;
+	background-image: url("image/pause/game_hist_gz_headbg.png");
+}
+.pausedbg > .content.guozhan > .headbg.guozhan > .char {
+	top: 3%;
+	left: 22.3%;
+}
+.pausedbg > .content.guozhan > .headbg.guozhan > .char.guozhan {
+	left: 61.3%;
+}
+.pausedbg > .content.guozhan > .headbg.guozhan > .char > .char_biaoji {
+	top: 6px;
+	right: 54px;
+	color: rgb(151, 133, 106);
+	font-family: "shousha";
+	font-weight: 900;
+	font-size: 21px;
+	letter-spacing: 1.5px;
+	text-shadow: rgb(43, 31, 25) -1.7px 0px 2.5px, rgb(43, 31, 25) 0px -1.7px 2.5px, rgb(43, 31, 25) 1.7px 0px 2.5px, rgb(43, 31, 25) 0px 1.7px 2.5px;
+	filter: drop-shadow(rgb(43, 31, 25) 0px 0px 0.5px) drop-shadow(rgb(43, 31, 25) 0px 0px 0.5px);
+}
+.pausedbg > .content.guozhan > .headbg.guozhan > .headbg_selected.guozhan {
+	width: 227px;
+	height: 100px;
+}
+.pausedbg > .content.guozhan > .headbg.guozhan > .identity.guozhan {
+	top: -8px;
+	left: 180px;
+}
+.pausedbg > .content.guozhan > .headbg.guozhan > .headbg_selected.guozhan.light {
+	background-image: url("image/pause/game_hist_gz_head_selected.png");
+}
+.pausedbg > .content.guozhan > .headbg.guozhan > .seat_num {
+	z-index: 11;
+	width: 75px;
+	height: 65px;
+	bottom: 12px;
+	left: -25px;
+	background-image: url("../image/pause/game_hist_num8.png");
+	background-size: 100% 100%;
+	background-position: center;
+}
+.pausedbg > .content.guozhan > .headbg[data-seat-num="1"].guozhan > .seat_num {
+	background-image: url("../image/pause/game_hist_num1.png");
+}
+.pausedbg > .content.guozhan > .headbg[data-seat-num="2"].guozhan > .seat_num {
+	background-image: url("../image/pause/game_hist_num2.png");
+}
+.pausedbg > .content.guozhan > .headbg[data-seat-num="3"].guozhan > .seat_num {
+	background-image: url("../image/pause/game_hist_num3.png");
+}
+.pausedbg > .content.guozhan > .headbg[data-seat-num="4"].guozhan > .seat_num {
+	background-image: url("../image/pause/game_hist_num4.png");
+}
+.pausedbg > .content.guozhan > .headbg[data-seat-num="5"].guozhan > .seat_num {
+	background-image: url("../image/pause/game_hist_num5.png");
+}
+.pausedbg > .content.guozhan > .headbg[data-seat-num="6"].guozhan > .seat_num {
+	background-image: url("../image/pause/game_hist_num6.png");
+}
+.pausedbg > .content.guozhan > .headbg[data-seat-num="7"].guozhan > .seat_num {
+	background-image: url("../image/pause/game_hist_num7.png");
+}
+.pausedbg > .content.guozhan > .headbg[data-seat-num="8"].guozhan > .seat_num {
+	background-image: url("../image/pause/game_hist_num8.png");
+}
+.pausedbg > .identity_btn > .identity_cai.guozhan {
+	background-image: url("../image/pause/game_hist_gz_unknown.png");
+}
+#sidebar {
+	left: 0;
+	top: 0;
+	width: 467px;
+	height: calc(100% - 15px);
+	text-align: left;
+	padding: 0px;
+	overflow-y: scroll;
+	z-index: 16;
+	font-size: 18px;
+	color: rgb(217, 194, 153);
+	line-height: 19px;
+	/*display: flex;
+	flex-direction: column-reverse;
+	flex-wrap: wrap;*/
+}
+#sidebar > div {
+	font-family: "shousha";
+}
+/* 卡牌名称 */
+#sidebar > div > .yellowtext {
+	color: rgb(255, 255, 25);
+	letter-spacing: 4px;
+	text-shadow: 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037;
+}
+/* 武将名称 */
+#sidebar > div > .bluetext {
+	color: rgb(37, 197, 35);
+}
+/* 技能名称 */
+#sidebar > div > .greentext {
+	color: rgb(189, 100, 32);
+	letter-spacing: 4px;
+	text-shadow: 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037;
+}
+/* 弃牌堆卡牌名称 */
+#sidebar3 > div {
+	color: rgb(255, 255, 25);
+	letter-spacing: 4px;
+	text-shadow: 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037;
+}
+/* #sidebar::-webkit-scrollbar {
+    width: 18px;
+    height: 509px;
+    zoom: 0.7;
+}
+#sidebar::-webkit-scrollbar-track {
+    border-width: 3px 0px 5px 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('../image/pause/pub_scrollbar_bg.png');
+    border-image-slice: 3 0 5 0 fill;
+    border-image-repeat: stretch;
+    background: none;
+}
+#sidebar::-webkit-scrollbar-thumb {
+    border-width: 4px 0px 7px 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('../image/pause/pub_scrollbar_src.png');
+    border-image-slice: 4 0 7 0 fill;
+    border-image-repeat: stretch;
+    background: none;
+} */
+.pausedbg > .content > .headbg > .identity.guessing {
+	cursor: help;
+}
+.pausedbg > .content > .headbg > .identity-mark-box {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	flex-wrap: wrap;
+	/* top: 20%; */
+	top: 4%;
+	left: 16%;
+	/* width: 68%; */
+	width: 136%;
+	height: auto;
+	z-index: 199;
+}
+.pausedbg > .content > .headbg > .identity-mark-box > .identity-mark-item {
+	position: static;
+	width: auto;
+	height: auto;
+	min-width: 20px;
+	line-height: 20px;
+	border-style: solid;
+	border-width: 10px;
+	border-image-width: 18px;
+	border-image-slice: 31 31 fill;
+	border-image-source: url("../image/pause/item_bg.png");
+	cursor: pointer;
+	color: rgb(77, 60, 51);
+	font-family: "shousha";
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: none;
+	transition: opacity, background, transform 0.3s;
+}
+.pausedbg > .content > .headbg > .identity-mark-box > .identity-mark-item:active {
+	transform: scale(0.9);
+}

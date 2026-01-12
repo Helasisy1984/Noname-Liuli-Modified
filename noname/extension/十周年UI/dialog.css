@@ -1,0 +1,1116 @@
+
+/*基本对话框*/
+#arena.decadeUI>.dialog {
+	bottom: calc(23% + 86px);
+	color: rgb(255, 255, 150);
+}
+
+
+
+/*-----------------分割线-----------------*/
+/*选项光标*/
+#arena.decadeUI[data-loading-style='on']>.dialog .tdnode {
+	--h: 30px;
+	--w: calc(var(--h) * 77 / 44);
+	width: var(--w) !important;
+	height: var(--h) !important;
+	padding: 0 !important;
+	border-radius: 0 !important;
+	background-image: url('assets/image/tnode-A1.png');
+	background-size: 100% 100%;
+	line-height: var(--h);
+	text-align: center;
+}
+#arena.decadeUI[data-loading-style='on']>.dialog .tdnode.bluebg,
+#arena.decadeUI[data-loading-style='on']>.dialog .tdnode.thundertext {
+	background-image: url('assets/image/tnode-A2.png') !important;
+}
+
+
+#arena.decadeUI[data-loading-style='On']>.dialog .tdnode {
+	--h: 35px;
+	--w: calc(var(--h) * 100 / 70);
+	width: var(--w) !important;
+	height: var(--h) !important;
+	padding: 0 !important;
+	border-radius: 3px !important;
+	background-image: url('assets/image/tnode-B1.png');
+	background-size: 110% 115% !important;
+	background-position: center;
+	line-height: var(--h);
+	text-align: center;
+}
+#arena.decadeUI[data-loading-style='On']>.dialog .tdnode.bluebg,
+#arena.decadeUI[data-loading-style='On']>.dialog .tdnode.thundertext {
+	background-image: url('assets/image/tnode-B3.png') !important;
+}
+
+
+#arena.decadeUI[data-loading-style='othersOn']>.dialog .tdnode {
+	--h: 30px;
+	--w: calc(var(--h) * 77 / 44);
+	width: var(--w) !important;
+	height: var(--h) !important;
+	padding: 0 !important;
+	border-radius: 0 !important;
+	background-image: url('assets/image/tnode-C1.png');
+	background-size: 100% 100%;
+	line-height: var(--h);
+	text-align: center;
+}
+#arena.decadeUI[data-loading-style='othersOn']>.dialog .tdnode.bluebg,
+#arena.decadeUI[data-loading-style='othersOn']>.dialog .tdnode.thundertext {
+	background-image: url('assets/image/tnode-C4.png') !important;
+}
+
+
+/*-----------------分割线-----------------*/
+
+
+
+
+
+/*-----------------分割线-----------------*/
+#arena.decadeUI[data-loading-style='On']>.dialog.scroll1:not([dialog-name='wugu']),
+#arena.decadeUI[data-loading-style='On']>.dialog.scroll2:not([dialog-name='wugu']) { /*所有选项框*/
+	background-position: center;
+	background-image: url('assets/image/dialog1.png') !important;
+	background-size: 100% 100% !important;
+	background-repeat: no-repeat !important;
+	/*padding: -10px 120px !important; /*高度 + 宽度*/
+	/*margin: -10px -120px !important;*/
+	white-space: normal;
+	width: 900px !important;
+	left: calc(50% - 450px) !important;
+	height: 200px;
+}
+#arena.decadeUI[data-loading-style='on']>.dialog.scroll1:not([dialog-name='wugu']),
+#arena.decadeUI[data-loading-style='on']>.dialog.scroll2:not([dialog-name='wugu']) { /*所有选项框*/
+	background-position: center;
+	background-image: url('assets/image/dialog2.png') !important;
+	background-size: 100% 100% !important;
+	background-repeat: no-repeat !important;
+	/*padding: -10px 120px !important; /*高度 + 宽度*/
+	/*margin: -10px -120px !important;*/
+	white-space: normal;
+	width: 900px !important;
+	left: calc(50% - 450px) !important;
+	height: 200px;
+}
+#arena.decadeUI[data-loading-style='othersOn']>.dialog.scroll1:not([dialog-name='wugu']),
+#arena.decadeUI[data-loading-style='othersOn']>.dialog.scroll2:not([dialog-name='wugu']) { /*所有选项框*/
+	background-position: center;
+	background-image: url('assets/image/dialog3.png') !important;
+	background-size: 100% 100% !important;
+	background-repeat: no-repeat !important;
+	/*padding: -10px 120px !important; /*高度 + 宽度*/
+	/*margin: -10px -120px !important;*/
+	white-space: normal;
+	width: 900px !important;
+	left: calc(50% - 450px) !important;
+	height: 200px;
+}
+/*-----------------分割线-----------------*/
+
+
+
+/*选将界面*/
+#arena.decadeUI.choose-character>.dialog{
+	bottom: 70px;
+	zoom: 1.1;
+}
+
+#window>.dialog.bosscharacter {
+	bottom: calc(1% + 70px);
+}
+
+/*出牌响应提示*/
+#arena>.hand-tip {
+	left: 150px;
+	right: 150px;
+	bottom: calc(20% + 14px);
+	height: 20px;
+	line-height: 20px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	text-shadow: none;
+	z-index: 6;
+	transition: opacity 0.1s linear;
+	pointer-events: none;
+}
+
+#arena.dui-mobile>.hand-tip {
+	bottom: calc(20% + 28px); /*提示条高度*/
+}
+
+#arena>.hand-tip::before {
+	content: attr(data-text);
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	color: transparent;
+	-webkit-text-stroke: 3px rgb(65, 52, 25);
+	z-index: -1;
+}
+
+
+#arena>.hand-tip>span[data-type='phase'] {
+	color: rgb(245, 145, 5);
+}
+
+#arena>.hand-tip>span[data-type='player'] {
+	color: rgb(200, 140, 75);
+}
+
+#arena>.hand-tip>span[data-type='number'] {
+	color: rgb(255, 155, 0);
+}
+
+#arena>.hand-tip>span[data-type='card'] {
+	color: rgb(255, 150, 0);
+}
+
+/*技能卡牌响应文字*/
+/*部分技能在这，比如赵襄的扶汉*/
+#arena>.hand-tip-info {
+	left: 150px;
+	right: 150px;
+	top: 230px;
+	bottom: calc(20% + 80px);
+	height: 90px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background: linear-gradient(to right, transparent 0%, rgba(156,102,31,0.2) 10%, rgba(156,102,31,0.2) 90%, transparent 100%);
+	/*文本背景，156，102，31是颜色，0.2可调整透明度*/
+	color: rgb(255, 255, 255);
+	font-size: 22px;
+	text-align: center;
+	text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px rgb(0,0,0);
+	/*文本发光:2像素黑色发光三次*/
+	transition: opacity 0.1s linear;
+	pointer-events: none;
+	z-index: 6;
+}
+
+#arena.dui-mobile>.hand-tip-info {
+	bottom: calc(24% + 80px);
+}
+
+#arena>.hand-tip-info:empty {
+	visibility: hidden;
+	font-size: 25px;
+}
+/*卡牌（毒，赠予等）和部分技能在这，比如马钧的精械*/
+/*界面文本提示框*/
+#arena.decadeUI>.dialog.prompt {
+    top: auto;
+	height: auto;
+	background: none;
+	transform: none;
+	box-shadow: none;
+	bottom: calc(24% + 80px);/*技能描述框高度*/
+}
+
+#arena.decadeUI>.dialog.prompt>.content-container,
+#arena.decadeUI>.dialog.prompt>.content-container>.content {
+	position: relative;
+	font-size: 22px;
+}
+
+#arena.decadeUI>.dialog.prompt>.content-container>.content>.caption {
+	border: none;
+    bottom: 0;
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: rgb(255, 255, 255);
+	background: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.2) 90%, transparent 100%);
+	/*文本背景:0,0,0,黑色，255,255,255,白色0.2可调整透明度*/
+	font-size: 25px;
+	text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px rgb(0,0,0);
+}
+
+/* #arena.decadeUI>.dialog:not(.prompt)>.dui-container>.dui-content>.caption:last-child { */
+	/* margin-bottom: 10px; */
+/* } */
+
+/* #arena.decadeUI>.dialog.prompt>.dui-container>.dui-content>.caption>.text { */
+	/* text-align: center; */
+/* } */
+
+/*基本技能框*/
+.skill-dialog {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: auto;
+    height: auto;
+	border-width: 46px 59px 28px 59px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('image/decoration/dialog.png');
+    border-image-slice:  46 59 28 59 fill;
+	transition: opacity, background, transform 0.5s;
+    z-index: 6;
+}
+
+#arena>.skill-dialog {
+	left: 18%;
+    top: auto;
+    right: 18%;
+	bottom: calc(20% + 85px);
+}
+
+#arena>.skill-dialog {
+	bottom: calc(23% + 86px);
+}
+
+.skill-dialog>.caption {
+	position: absolute;
+	left: auto;
+    top: -45px;
+    padding-top: 0;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    font-family: shousha;
+    color: rgb(255,255,200);
+    text-align: center;
+	pointer-events: auto;
+}
+
+.skill-dialog>div {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.skill-dialog>.content {
+	flex-grow: 1;
+}
+
+.skill-dialog>.content>div {
+	margin: 0;
+	flex: 0 0 auto;
+}
+
+.skill-dialog>.tip:not(:empty) {
+	height: 24px;
+	line-height: 24px;
+    color: rgb(50,25,0);
+    font-size: 20px;
+    font-family: shousha;
+    text-align: center;
+    text-shadow: none;
+}
+
+.skill-dialog>.controls {
+	display: flex;
+	justify-content: center;
+	height: 40px;
+}
+
+.skill-dialog>.controls:empty {
+	display: none;
+}
+
+.skill-dialog>.controls>.control-button {
+	position: static;
+	line-height: 28px;
+    color: rgb(40,30,20);
+    font-size: 28px;
+    font-family: xingkai;
+    text-align: center;
+    text-shadow: none;
+    white-space: nowrap;
+    border-width: 6px 36px 6px 36px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('image/decoration/button.png');
+    border-image-slice: 6 36 6 36 fill;
+    box-shadow: none;
+    border-radius: 0;
+	cursor: pointer;
+	transition: opacity, background, transform 0.5s;
+}
+
+.skill-dialog>.controls>.control-button.disable {
+	cursor: default;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+}
+
+.skill-dialog>.controls>.control-button:not(.disable):hover {
+	filter: brightness(1.1);
+	-webkit-filter: brightness(1.1);
+}
+
+.skill-dialog>.controls>.control-button:not(.disable):active {
+	filter: brightness(0.8);
+	-webkit-filter: brightness(0.8);
+}
+
+
+/*拼点框*/
+.skill-dialog.compare>.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.skill-dialog.compare>.content>div {
+	position: relative;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.skill-dialog.compare>.content>.player-character {
+	width: 120px;
+	height: 180px;
+	background: rgba(0,0,0,0.4);
+    box-shadow: 0px -1px 5px black, 0px 3px 15px black;
+	border-radius: 8px;
+}
+
+.skill-dialog.compare>.content>.player-character.player1 {
+	order: 1;
+	margin-left: 6px;
+}
+
+.skill-dialog.compare>.content>.player-character.player2 {
+	order: 5;
+	margin-right: 6px;
+}
+
+.skill-dialog.compare>.content>.player-character>.image {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+	border-radius: 8px;
+}
+
+#arena[data-outcrop-skin='on']>.skill-dialog.compare>.content>.player-character>.image {
+	height: 207.5px;
+	/*clip-path: url(#solo-clip);
+    -webkit-clip-path: url(#solo-clip);*/
+}
+
+.skill-dialog.compare>.content>.vs {
+	order: 3;
+	width: 70px;
+    height: 70px;
+	margin: 0;
+    background: url('image/decoration/vs.png');
+}
+
+.skill-dialog.compare>.content>.player-card {
+	order: 2;
+}
+
+.skill-dialog.compare>.content>.target-card {
+	order: 4;
+}
+
+.skill-dialog.compare>.content>.player-card,
+.skill-dialog.compare>.content>.target-card {
+	width: 108px;
+    height: 150px;
+	background: rgb(141,125,103);
+    box-shadow: 1px 1px 4px rgb(66,66,66) inset
+}
+
+.skill-dialog.compare>.content>.player-card>div,
+.skill-dialog.compare>.content>.target-card>div {
+	margin: 0;
+}
+
+.skill-dialog.compare>.content>.player-card::before,
+.skill-dialog.compare>.content>.target-card::before {
+	content: attr(data-text);
+    position: absolute;
+    left: 0;
+	top: calc(50% + 80px);
+    width: 100%;
+    height: auto;
+    color: red;
+    font-family: xingkai;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: none;
+}
+
+.skill-dialog.compare>.content>.player-card::after {
+	content: attr(data-result);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    color: red;
+    font-size: 66px;
+    font-family: xingkai;
+    text-align: center;
+    text-shadow: 0 0 5px black, 0 0 7px black, 0 0 10px black;
+    
+}
+
+.skill-dialog.compare>.content>.player-card[data-result='赢']::after {
+	color: red;
+	animation: open 0.2s;
+}
+
+.skill-dialog.compare>.content>.player-card[data-result='没赢']::after {
+	color: white;
+	animation: open 0.2s;
+}
+
+/*拼点框*/			
+.skill-dialog{
+min-height:0px !important;
+}	
+.skill-dialog.compare{
+   position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+   /* top:0px !important;*/
+    bottom:40% !important;
+	left: 0px !important;
+	right: 0px !important;
+    min-height: 0px !important;
+    max-height: 250px !important;
+    border-width: 50px 0px 1px 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('assets/scdialog2.png');
+    border-image-slice: 50 1 50 1 fill;
+    transition: opacity, background, transform 0.5s;
+    z-index: 6;
+}	
+.skill-dialog.compare>.caption {
+    top: -30px;
+    font-family: 'yuanli';
+    font-size:30px;
+    text-shadow:none;
+    background-image:-webkit-linear-gradient(bottom,#c7a746 58%, #f0d775 22%); 
+	/*字体渐变色，色调*/
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+		font-weight: 700;
+	-webkit-text-stroke: 0.1px rgba(0,0,0,0.16);
+    }  
+.skill-dialog.compare>.content{
+bottom:0px !important;
+top:auto;
+
+}      
+.skill-dialog.compare>.content>.player-card::before, 
+.skill-dialog.compare>.content>.target-card::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0%;
+    display: flex;
+    writing-mode: vertical-lr;
+    width: 1.8em;
+    word-break: break-word;
+    height: 100%;
+    text-align: center;
+    left: -50%;
+    color: white;
+    font-family: 'yuanli';
+    font-size: 24px;
+    text-align: center;
+    text-shadow: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: flex-start;    
+    background-image: url('assets/image/name.png');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}    
+.skill-dialog.compare>.content>.player-character>.image {
+    height: 0px;
+    opacity:0;
+    box-shadow:none;
+    background:none;
+    /*clip-path: url(#solo-clip);
+    -webkit-clip-path: url(#solo-clip);*/
+}
+.skill-dialog.compare>.content>.player-character{
+opacity:0;
+}
+.skill-dialog.compare>.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom:20px;
+}
+.skill-dialog.compare>.content>.vs{
+opacity:0;
+}
+.skill-dialog.compare>.content>.target-card{
+left:2%;
+}
+.skill-dialog.compare>.content>.target-card::after, .skill-dialog.compare>.content>.player-card::after {
+    content: attr(data-result);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:50%;
+    width: 80%;
+    height: 80%;
+    background-size: 100% 100%;
+    color: red;
+    font-size: 0px;
+    font-family: xingkai;
+    text-align: center;
+    left: 30%;
+}
+.skill-dialog.compare>.content>.target-card[data-result='赢']::after,
+.skill-dialog.compare>.content>.player-card[data-result='赢']::after {
+	background-image: url('assets/image/win2.png');
+	z-index:100;
+	width: 100%;
+	height: 60%;
+	/*background-position: 180% 120%;*/
+}
+.skill-dialog.compare>.content>.target-card[data-result='没赢']::after,
+.skill-dialog.compare>.content>.player-card[data-result='没赢']::after {
+	background-image: url('assets/image/lose2.png');
+	width: 100%;
+	height: 60%;
+	z-index:100;
+	/*background-position: 100% 60%;*/
+}
+
+/*观星*/
+.confirm-box {
+	display: block;
+    position: absolute;
+    left: 12%;
+    top: 10%;
+    right: 12%;
+    /* bottom: 25%; */
+    width: auto;
+    height: auto;
+	min-height: 100px;
+    border-width: 46px 59px 28px 59px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('image/decoration/dialog.png');
+    border-image-slice: 46 61 28 59 fill;
+    pointer-events: auto;
+    z-index: 5;
+    animation: player-died 0.5s linear forwards;
+    -webkit-animation: open 0.4s;
+}
+
+.confirm-box>.caption {
+	position: absolute;
+	left: auto;
+    top: -45px;
+    padding-top: 0;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    font-family: shousha;
+    color: rgb(255,255,200);
+    text-align: center;
+	pointer-events: auto;
+}
+
+.confirm-box>.tip {
+	position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    line-height: 24px;
+    color: rgb(50,25,0);
+    font-size: 20px;
+    font-family: shousha;
+    text-align: center;
+    text-shadow: none;
+	pointer-events: auto;
+}
+
+.confirm-box.guan-xing>.button.ok {
+	position: relative;
+	cursor: pointer;
+    left: calc(50% - 66px);
+    bottom: -2px;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(40,30,20);
+    font-size: 30px;
+    font-family: shousha;
+    text-align: center;
+    text-shadow: none;
+	white-space: nowrap;
+    background: rgb(150,150,100);
+    border-width: 6px 36px 6px 36px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('image/decoration/button.png');
+    border-image-slice: 6 36 6 36 fill;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.confirm-box.guan-xing.ok-disable>.button.ok {
+	cursor: default;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+}
+
+.confirm-box.guan-xing:not(.ok-disable)>.button.ok:hover {
+	color: white;
+}
+
+
+
+.confirm-box.guan-xing>.content {
+	position: relative;
+	width: 100%;
+    height: 80%;
+    background: linear-gradient(rgb(145,125,106), rgb(145,125,106) 149px, rgb(224,197,161) 150px, rgb(224,197,161) 159px, rgb(145,125,106) 160px, rgb(145,125,106));
+	transition: none;
+}
+    
+.confirm-box.guan-xing>.content>.card {
+	cursor: pointer;
+	position: absolute;
+	margin: 0;
+	left: 35px;
+	zoom: 0.95;
+}
+
+.confirm-box.guan-xing>.content>.header {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    width: 30px;
+    height: 150px;
+    color: rgb(50,25,0);
+    font-size: 22px;
+    font-weight: bold;
+    font-family: shousha;
+    text-align: center;
+    text-shadow: none;
+    background: rgb(194,164,131);
+}
+
+.confirm-box.guan-xing>.content>.header:last-of-type {
+	bottom: 0;
+}
+
+.confirm-box.guan-xing>.content>.card.selected::after {
+	opacity: 0;
+}
+
+.confirm-box.guan-xing>.content>.card.selected>.card-mask {
+	display: block !important;
+	opacity: 1;
+}
+
+/*同时拼点*/
+.compareDialog {
+	background-image: url('assets/scdialog2.png');
+	background-size: 100% 100%;
+	width: 1000px;
+	height: 360px;
+	left: 3%;
+	top: 0%;
+	/* pointer-events: none; */
+	z-index: 7;
+}
+.compareDialogTitle{
+	font-size: 24px;
+	left:390px;
+	right: 0px;
+	bottom:320px;
+	width: 225px;
+	height: 20px;	
+	text-align: center;
+}
+.compareDialogMultiple>:nth-child(n+3){
+	margin-left: 5px;
+
+}
+
+.playerAreaDialog {
+	top: 50px;
+	left: 200px;
+	width: 115px;
+	height: 180px;
+	background-size: 100% 100%;
+	border: 1px solid rgb(98 89 34);
+	display: inline-block;
+	position: relative;
+	white-space: nowrap;
+}
+
+.playerAreaName {
+	left: 5px;
+	top: 2px;
+	width: 105px;
+	height: 30px;
+	background-size: 100% 100%;
+	background-image: url('assets/image/compareTarget.png');
+	font-family: shousha;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #eddac3;
+	text-shadow: -1.5px 0px 2px #392f22, 0px -1.5px 2px #392f22, 1.5px 0px 2px #392f22, 0px 1.5px 2px #392f22;
+}
+
+.playerArea {
+	left: 5px;
+	top: 35px;
+	width: 105px;
+	height: 140px;
+	background-size: 100% 100%;
+	background-image: url('assets/image/compareCard.png');
+}
+
+.playerArea>div {
+	top: -10px;
+	right: 5px;
+}
+
+.targetAreaDialog {
+	left: 300px;
+	top: 50px;
+	width: 115px;
+	height: 180px;
+	background-size: 100% 100%;
+	border: 1px solid rgb(98 89 34);
+	margin-left: 50px;
+	display: inline-block;
+	position: relative;
+	white-space: nowrap;
+}
+
+.targetAreaName {
+	left: 5px;
+	top: 2px;
+	width: 105px;
+	height: 30px;
+	background-size: 100% 100%;
+	background-image: url('assets/image/compareTarget.png');
+	font-family: shousha;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #eddac3;
+	text-shadow: -1.5px 0px 2px #392f22, 0px -1.5px 2px #392f22, 1.5px 0px 2px #392f22, 0px 1.5px 2px #392f22;
+}
+
+.targetArea {
+	left: 5px;
+	top: 35px;
+	width: 105px;
+	height: 140px;
+	background-size: 100% 100%;
+	background-image: url('assets/image/compareCard.png');
+}
+
+.targetArea>div {
+	top: -10px;
+	right: 5px;
+}
+
+.targetArea>div[data-result='win']::before {
+	background-image: url('assets/image/win2.png') !important;
+	content: '';
+	background-size: 100% 100%;
+	z-index: 1;
+	opacity: 1;
+	width: 80px;
+	height: 80px;
+	bottom: -5px;
+	top: auto;
+	left: auto;
+	right: -25px;
+	animation: losewin 2s;
+}
+
+.targetArea>div[data-result='lose']::before {
+	background-image: url('assets/image/lose2.png') !important;
+	content: '';
+	background-size: 100% 100%;
+	z-index: 1;
+	opacity: 1;
+	width: 100px;
+	height: 80px;
+	bottom: -10px;
+	top: auto;
+	left: auto;
+	right: -30px;
+	animation: losewin 2s;
+}
+
+.playerArea>div[data-result='win']::before {
+	background-image: url('assets/image/win2.png') !important;
+	content: '';
+	background-size: 100% 100%;
+	z-index: 1;
+	opacity: 1;
+	width: 80px;
+	height: 80px;
+	bottom: -5px;
+	top: auto;
+	left: auto;
+	right: -25px;
+	animation: losewin 2s;
+}
+
+.playerArea>div[data-result='lose']::before {
+	background-image: url('assets/image/lose2.png') !important;
+	content: '';
+	background-size: 100% 100%;
+	z-index: 1;
+	opacity: 1;
+	width: 100px;
+	height: 80px;
+	bottom: -10px;
+	top: auto;
+	left: auto;
+	right: -30px;
+	animation: losewin 2s;
+}
+
+@keyframes losewin {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+/*同时拼点结束*/
+
+/*多人拼点*/
+.compareDialogMultiple{
+	background-image: url('assets/scdialog2.png');
+	background-size: 100% 100%;
+	width: 1138px;
+	height: 350px;
+	left: -3%;
+	top: 0%;
+	/* pointer-events: none; */
+	z-index: 7;
+}
+.compareTitleMultiple{
+	font-size: 24px;
+	left:470px;
+	right: 0px;
+	bottom:310px;
+	width: 200px;
+	height: 20px;	
+	text-align: center;
+	
+
+}
+.cardArea{
+	top: 60px;
+	left: 260px;
+	width: 160px;
+	height: 150px;
+	background-size: 100% 100%;
+	/* border: 1px solid rgb(98 89 34); */
+	display: inline-block;
+	position: relative;
+	white-space: nowrap;
+	margin-left: 50px;
+}
+.cardArea>.playerAreaName{
+	background-image: url('assets/image/lose2.png') !important;
+	background-size: 100% 100%;
+}
+.cardArea>.playerArea{
+	left: 50px;
+	top: 5px;
+	width: 105px;
+	height: 140px;
+	background-size: 100% 100%;
+	background-image: url('assets/image/compareCard.png');
+}
+.cardArea>.targetArea{
+	left: 50px;
+	top: 5px;
+	width: 105px;
+	height: 140px;
+	background-size: 100% 100%;
+	background-image: url('assets/image/compareCard.png');
+}
+.cardArea>.playerAreaName{
+	background-image: url('assets/image/name.png') !important;
+	background-size: 100% 100%;
+	height:140px;
+	width:35px;
+	writing-mode: tb-rl;
+	font-size:20px;
+}
+.cardArea>.targetAreaName{
+	background-image: url('assets/image/name.png') !important;
+	background-size: 100% 100%;
+	height:140px;
+	width:35px;
+	writing-mode: tb-rl;
+	font-size:20px;
+}
+.cardArea:not(:first-child){
+	margin-left:3px;
+}
+/*多人拼点结束*/
+
+/*五谷*/
+.xtx {
+	position: absolute;
+	bottom: -20px;
+	left: -10px;
+	z-index: 2;
+	height: 2.2em;
+	width: 2.2em;
+	background-repeat: no-repeat;
+	background-size: 50px;
+	background-position-y: 15%;
+	background-position-x: 50%;
+	border: 2px solid #c9c9ab;
+}
+
+.xtxName {
+	position: inherit;
+	display: flex;
+	align-items: flex-start;
+	font-family: shousha;
+	font-size: 16px;
+	color: #eddac3;
+	width: 100px;
+	left: 40px;
+	bottom: 0px;
+	z-index: 2;
+}
+
+.huise {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.4;
+	z-index: 1;
+}
+
+.card.fullskin.button[sourcecard="wugu"]>.card-mask {
+	opacity: 0 !important;
+}
+
+.dialog[dialog-name='wugu'] {
+	bottom: calc(23% + 86px);
+	color: #eddac3;
+}
+
+.dialog.scroll1[dialog-name='wugu'],
+.dialog.scroll2[dialog-name='wugu'] {
+	background-position: center;
+	background-image: url("assets/scdialog2.png") !important;
+	background-size: 100% 100% !important;
+	background-repeat: no-repeat;
+	white-space: normal;
+	width: 1000px;
+	left: calc(50% - 510px);
+	top: 10%;
+	height: 310px !important;
+	background-color: transparent !important;
+	box-shadow: none;
+	animation: losewin 1s !important;
+}
+
+.dialog[dialog-name='wugu']>.content-container>.content>.caption {
+	font-size: 24px;
+	left: 8px;
+	bottom: 8px;
+}
+
+.dialog[dialog-name='wugu']>.content-container>.content>.buttons {
+	zoom: 0.8 !important;
+	bottom: -5px;
+}
+
+.dialog[dialog-name='wugu']>.content-container>.content>.buttons>div {
+	margin: 4px;
+}
+
+/*.jindutiao_wugu {*/
+	/*top: 12vw;*/
+	/*position: absolute;*/
+	/*background-color: rgba(0, 0, 0, 0.4);*/
+	/*width: 620px;*/
+	/*height: 12.3px;*/
+	/*left: calc(50% - 320px);*/
+	/*border-radius: 1000px;*/
+	/*box-shadow: 0px 0px 9px #2e2b27 inset, 0px 0px 2.1px #FFFFD5;*/
+	/*overflow: hidden;*/
+	/*border: 1.2px solid #000000;*/
+	/*z-index: 7;*/
+/*}*/
+/**/
+/*.jindutiaox_wugu {*/
+	/*background-image: linear-gradient(#fccc54 15%, #d01424 30%, #cc6953 90%);*/
+	/*height: 12.8px;*/
+	/*width: 640px;*/
+	/*z-index: 8;*/
+	/*left: calc(50% - 320px);*/
+	/*animation: wugujindu 100s;*/
+/*}*/
+/**/
+/*@keyframes wugujindu {*/
+	/*from {*/
+		/*width: 630px;*/
+	/*}*/
+/**/
+	/*to {*/
+		/*width: 0;*/
+	/*}*/
+/*}*/
+
+
+
+
+
+
+
+
+

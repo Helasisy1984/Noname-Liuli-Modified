@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style >
+        .item {
+            display: block;
+            width: 240px;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        /* 图片预览 */
+        .modal {
+            touch-action: none;
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.75);
+            user-select: none;
+        }
+        .modal > img {
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            /* transition: all var(--delay_time); */
+            transform: translateZ(0);
+        }
+    </style>
+    <style>
+        .pfqh-skins {
+            display: block;
+            position: absolute;
+            width: 60%;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .pfqh-skins .characters{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .pfqh-skins .characters .player {
+            width: 180px;
+            height: 120px;
+            margin-top: 15px;
+            position: relative;
+            margin-right: 3px;
+
+        }
+
+        .pfqh-skins .characters .player .primary-only {
+            height: 120px;
+            position: absolute;
+            left: 0;
+            background-size: cover;
+            z-index: 61;
+        }
+
+
+        .pfqh-skins .characters .player .primary {
+            position: absolute;
+            width: 90px;
+            height: 120px;
+            left: 0;
+            background-size: cover;
+            z-index: 61;
+            border-radius: 5px;
+        }
+
+        .pfqh-skins .characters .player .deputy {
+            left: 93px;
+            width: 90px;
+            height: 120px;
+            position: absolute;
+            background-size: cover;
+            z-index: 61;
+            border-radius: 5px;
+        }
+
+        .pfqh-skin-box {
+            position: relative;
+            height: 600px;
+            width: 1200px;
+        }
+
+        .pfqh-skins .skin-list{
+            display: flex;
+            justify-content: flex-start;
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            left: 5%;
+        }
+        .pfqh-skins .skin-item {
+            flex: 1;
+            height: 120px;
+            margin: 0 5px 5px 0;
+            background-color: #999;
+            width: calc((100% - 10px) / 3);
+            min-width: calc((100% - 10px) / 3);
+            max-width: calc((100% - 10px) / 3);
+        }
+
+        .pfqh-skins .skin-item:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        .pfqh-skins .left-arrow {
+            display: block;
+            position: absolute;
+            width: 5%;
+            height: 5%;
+            left: 0;
+            top: 5%;
+        }
+
+        .pfqh-skins .right-arrow {
+            display: block;
+            position: absolute;
+            width: 5%;
+            height: 5%;
+            right: 0;
+            top: 5%;
+        }
+
+        #switchJingDong {
+            width: 100px;
+            height: 50px;
+            border-radius: 4px;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<!--<div id="list" style="padding: 0 10px;">-->
+<!--    &lt;!&ndash; <img class="item" src="https://loremflickr.com/cache/resized/65535_52250298258_87d249a67f_h_1280_720_nofilter.jpg" />-->
+<!--    <img class="item" src="https://loremflickr.com/cache/resized/65535_51878986199_e63c0b4f89_h_1280_720_nofilter.jpg" />-->
+<!--    <img class="item" src="https://loremflickr.com/cache/resized/65535_51973162578_f8efc2e338_k_1280_720_nofilter.jpg" />-->
+<!--    <img class="item" src="https://loremflickr.com/cache/resized/4443_37699289166_d681688dda_h_1280_720_nofilter.jpg" /> &ndash;&gt;-->
+<!--    <img class="item" src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8dGVjaHxlbnwwfHx8fDE2NjIwMjc1MzI&ixlib=rb-1.2.1&q=80&w=500">-->
+<!--    <img class="item" src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8Y2F0fGVufDB8fHx8MTY2MjAyNzg3Nw&ixlib=rb-1.2.1&q=80&w=500">-->
+<!--    <img class="item" src="https://images.unsplash.com/photo-1561948955-570b270e7c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8OHx8Y2F0fGVufDB8fHx8MTY2MjAyNzg3Nw&ixlib=rb-1.2.1&q=80&w=500">-->
+<!--    <img class="item" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8NXx8dGVjaHxlbnwwfHx8fDE2NjIwMjc1MzI&ixlib=rb-1.2.1&q=80&w=500">-->
+<!--    <img class="item" src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8dGVjaHxlbnwwfHx8fDE2NjIwMjc1MzI&ixlib=rb-1.2.1&q=80&w=500">-->
+<!--</div>-->
+
+
+<div class="pfqh-skins">
+    <div class="characters">
+        <div class="player">
+            <div class="primary" style="background-image: url('./hetaihou/媚颜柳骨.jpg')"></div>
+            <div class="deputy" style="background-image: url('./hetaihou/惊鸿绝艳.jpg')"></div>
+        </div>
+        <div class="player">
+            <div class="primary" style="background-image: url('./hetaihou/媚颜柳骨.jpg')"></div>
+            <div class="deputy" style="background-image: url('./hetaihou/惊鸿绝艳.jpg')"></div>
+        </div>
+        <div class="player">
+            <div class="primary" style="background-image: url('./hetaihou/媚颜柳骨.jpg')"></div>
+            <div class="deputy" style="background-image: url('./hetaihou/惊鸿绝艳.jpg')"></div>
+        </div>
+        <div class="player">
+            <div class="primary" style="background-image: url('./hetaihou/媚颜柳骨.jpg')"></div>
+            <div class="deputy" style="background-image: url('./hetaihou/惊鸿绝艳.jpg')"></div>
+        </div>
+        <div class="player">
+            <div class="primary" style="background-image: url('./hetaihou/媚颜柳骨.jpg')"></div>
+            <div class="deputy" style="background-image: url('./hetaihou/惊鸿绝艳.jpg')"></div>
+        </div>
+        <div class="player">
+            <div class="primary" style="background-image: url('./hetaihou/媚颜柳骨.jpg')"></div>
+            <div class="deputy" style="background-image: url('./hetaihou/惊鸿绝艳.jpg')"></div>
+        </div>
+        <div class="player">
+            <div class="primary" style="background-image: url('./hetaihou/媚颜柳骨.jpg')"></div>
+            <div class="deputy" style="background-image: url('./hetaihou/惊鸿绝艳.jpg')"></div>
+        </div>
+        <div class="player">
+            <div class="primary" style="background-image: url('./hetaihou/媚颜柳骨.jpg')"></div>
+            <div class="deputy" style="background-image: url('./hetaihou/惊鸿绝艳.jpg')"></div>
+        </div>
+    </div>
+    <div id="switchJingDong" v="dong" style="background-color: #ffe100">切换静皮</div>
+
+
+    <div class="pfqh-skin-box">
+      <div class="left-arrow">左</div>
+      <div class="skin-list">
+          <div class="skin-item">
+              <div class="skin-name">皮肤名称</div>
+              <div class="avatar"></div>
+              <div class="skin-button-group">
+                  <div class="skin-button">预览</div>
+                  <div class="skin-button">设置</div>
+              </div>
+          </div>
+          <div class="skin-item">
+              <div class="skin-name">皮肤名称</div>
+              <div class="avatar"></div>
+              <div class="skin-button-group">
+                  <div class="skin-button">预览</div>
+                  <div class="skin-button">设置</div>
+              </div>
+          </div>
+          <div class="skin-item">
+              <div class="skin-name">皮肤名称</div>
+              <div class="avatar"></div>
+              <div class="skin-button-group">
+                  <div class="skin-button">预览</div>
+                  <div class="skin-button">设置</div>
+              </div>
+          </div>
+      </div>
+      <div class="right-arrow">右</div>
+  </div>
+</div>
+
+</body>
+
+<script>
+document.getElementById('switchJingDong').onclick = function (e) {
+    let switchJingDong = document.getElementById('switchJingDong')
+    console.log(switchJingDong.getAttribute('v'))
+    if (switchJingDong.getAttribute('v') === 'dong') {
+        switchJingDong.setAttribute('v', 'jing')
+        switchJingDong.innerText = '切换动皮'
+        switchJingDong.style.backgroundColor = '#0059ff'
+    } else {
+        switchJingDong.setAttribute('v', 'dong')
+        switchJingDong.innerText = '切换静皮'
+        switchJingDong.style.backgroundColor = '#ffe100'
+    }
+}
+
+</script>
+
+<script>
+    let scale = 1
+    let offset = { left: 0, top: 0 }
+    let origin = 'center'
+    // let initialData = { offset: {}, origin: 'center', scale: 1 }
+    let startPoint = { x: 0, y: 0 } // 记录初始触摸点位
+    let isTouching = false // 标记是否正在移动
+    let isMove = false // 正在移动中，与点击做区别
+    let touches = new Map() // 触摸点数组
+    let lastDistance = 0
+    let lastScale = 1 // 记录下最后的缩放值
+    let scaleOrigin = { x: 0, y: 0, }
+
+    const { innerWidth: winWidth, innerHeight: winHeight } = window
+    let cloneEl = null
+    let originalEl = null
+
+    document.getElementById('list').addEventListener('click', function (e) {
+        e.preventDefault()
+        if (e.target.classList.contains('item')) {
+            originalEl = e.target
+            cloneEl = originalEl.cloneNode(true)
+            originalEl.style.opacity = 0
+            openPreview()
+        }
+    })
+
+    function openPreview() {
+        scale = 1
+        const { offsetWidth, offsetHeight } = originalEl
+        const { top, left } = originalEl.getBoundingClientRect()
+        // 创建蒙层
+        const mask = document.createElement('div')
+        mask.classList.add('modal')
+        // 添加在body下
+        document.body.appendChild(mask)
+        // 注册事件
+        mask.addEventListener("click", clickFunc)
+        mask.addEventListener('mousewheel', zoom, { passive: false })
+        // 遮罩点击事件
+        function clickFunc() {
+            setTimeout(() => {
+                if (isMove) {
+                    isMove = false
+                } else {
+                    changeStyle(cloneEl, ['transition: all .3s', `left: ${left}px`, `top: ${top}px`, `transform: translate(0,0)`, `width: ${offsetWidth}px`])
+                    setTimeout(() => {
+                        document.body.removeChild(this)
+                        originalEl.style.opacity = 1
+                        mask.removeEventListener('click', clickFunc)
+                    }, 300)
+                }
+            }, 280)
+        }
+        // 添加图片
+        changeStyle(cloneEl, [`left: ${left}px`, `top: ${top}px`])
+        mask.appendChild(cloneEl)
+        // 移动图片到屏幕中心位置
+        const originalCenterPoint = { x: offsetWidth / 2 + left, y: offsetHeight / 2 + top }
+        const winCenterPoint = { x: winWidth / 2, y: winHeight / 2 }
+        const offsetDistance = { left: winCenterPoint.x - originalCenterPoint.x + left, top: winCenterPoint.y - originalCenterPoint.y + top }
+        const diffs = { left: ((adaptScale() - 1) * offsetWidth) / 2, top: ((adaptScale() - 1) * offsetHeight) / 2 }
+        changeStyle(cloneEl, ['transition: all 0.3s', `width: ${offsetWidth * adaptScale() + 'px'}`, `transform: translate(${offsetDistance.left - left - diffs.left}px, ${offsetDistance.top - top - diffs.top}px)`])
+        // 消除偏差
+        setTimeout(() => {
+            changeStyle(cloneEl, ['transition: all 0s', `left: 0`, `top: 0`, `transform: translate(${offsetDistance.left - diffs.left}px, ${offsetDistance.top - diffs.top}px)`])
+            offset = { left: offsetDistance.left - diffs.left, top: offsetDistance.top - diffs.top } // 记录值
+        }, 300)
+    }
+
+    // 滚轮缩放
+    const zoom = (event) => {
+        if (!event.deltaY) {
+            return
+        }
+        event.preventDefault()
+        origin = `${event.offsetX}px ${event.offsetY}px`
+        // 缩放执行
+        if (event.deltaY < 0) {
+            scale += 0.1 // 放大
+        } else if (event.deltaY > 0) {
+            scale >= 0.2 && (scale -= 0.1) // 缩小
+        }
+        offset = getOffsetCorrection(event.offsetX, event.offsetY)
+        changeStyle(cloneEl, ['transition: all .15s', `transform-origin: ${origin}`, `transform: translate(${offset.left + 'px'}, ${offset.top + 'px'}) scale(${scale})`])
+    }
+
+    // 获取中心改变的偏差
+    function getOffsetCorrection(x = 0, y = 0) {
+        const touchArr = Array.from(touches)
+        if (touchArr.length === 2) {
+            const start = touchArr[0][1]
+            const end = touchArr[1][1]
+            x = (start.offsetX + end.offsetX) / 2
+            y = (start.offsetY + end.offsetY) / 2
+        }
+        origin = `${x}px ${y}px`
+        const offsetLeft = (scale - 1) * (x - scaleOrigin.x) + offset.left
+        const offsetTop = (scale - 1) * (y - scaleOrigin.y) + offset.top
+        scaleOrigin = { x, y }
+        return { left: offsetLeft, top: offsetTop }
+    }
+
+    // 操作事件
+    window.addEventListener('pointerdown', function (e) {
+        e.preventDefault()
+        touches.set(e.pointerId, e) // TODO: 点击存入触摸点
+        isTouching = true
+        startPoint = { x: e.clientX, y: e.clientY }
+        if (touches.size === 2) { // TODO: 判断双指触摸，并立即记录初始数据
+            lastDistance = getDistance()
+            lastScale = scale
+        }
+    })
+    window.addEventListener('pointerup', function (e) {
+        touches.delete(e.pointerId) // TODO: 抬起移除触摸点
+        if (touches.size <= 0) {
+            isTouching = false
+        } else {
+            const touchArr = Array.from(touches)
+            // 更新点位
+            startPoint = { x: touchArr[0][1].clientX, y: touchArr[0][1].clientY }
+        }
+        setTimeout(() => {
+            isMove = false
+        }, 300);
+    })
+    window.addEventListener('pointermove', (e) => {
+        e.preventDefault()
+        if (isTouching) {
+            isMove = true
+            if (touches.size < 2) { // 单指滑动
+                offset = {
+                    left: offset.left + (e.clientX - startPoint.x),
+                    top: offset.top + (e.clientY - startPoint.y),
+                }
+                changeStyle(cloneEl, ['transition: all 0s', `transform: translate(${offset.left + 'px'}, ${offset.top + 'px'}) scale(${scale})`, `transform-origin: ${origin}`])
+                // 更新点位
+                startPoint = { x: e.clientX, y: e.clientY }
+            } else {
+                // 双指缩放
+                touches.set(e.pointerId, e)
+                const ratio = getDistance() / lastDistance
+                scale = ratio * lastScale
+                offset = getOffsetCorrection()
+                changeStyle(cloneEl, ['transition: all 0s', `transform: translate(${offset.left + 'px'}, ${offset.top + 'px'}) scale(${scale})`, `transform-origin: ${origin}`])
+            }
+        }
+    })
+    window.addEventListener('pointercancel', function (e) {
+        touches.clear() // 可能存在特定事件导致中断，真机操作时 pointerup 在某些边界情况下不会生效，所以需要清空
+    })
+
+    // 修改样式，减少回流重绘
+    function changeStyle(el, arr) {
+        const original = el.style.cssText.split(';')
+        original.pop()
+        el.style.cssText = original.concat(arr).join(';') + ';'
+    }
+
+    // 计算自适应屏幕的缩放值
+    function adaptScale() {
+        const { offsetWidth: w, offsetHeight: h } = originalEl
+        let scale = 0
+        scale = winWidth / w
+        if (h * scale > winHeight - 80) {
+            scale = (winHeight - 80) / h
+        }
+        return scale
+    }
+
+    // 获取距离
+    function getDistance() {
+        const touchArr = Array.from(touches)
+        if (touchArr.length < 2) {
+            return 0
+        }
+        const start = touchArr[0][1]
+        const end = touchArr[1][1]
+        return Math.hypot(end.x - start.x, end.y - start.y)
+    }
+
+</script>
+</html>

@@ -1,0 +1,353 @@
+.taixuhuanjing_messagePopupDivText  {
+  font-size: 1.2vw;
+}
+
+.taixuhuanjing_HomeBodyText {
+  font-size: 1.8vw;
+  letter-spacing: 10px;
+}
+
+.taixuhuanjing_PointTitle {
+  line-height: 3.5vw;
+  font-size: 2.5vw;
+}
+
+.taixuhuanjing_chooseCharacterPlayBodySkills1 {
+  line-height: 1.2vw;
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_chooseCharacterPlayBodySkills3 {
+  line-height: 1.0vw;
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_characterDivMobileName {
+  line-height: 0.9vw;
+  font-size: 0.9vw;
+}
+
+.taixuhuanjing_HomeBodyPointText {
+  font-size: 1.1vw;
+}
+
+.taixuhuanjing_ChoiceCharacterOkButton {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_ChoiceCharacterPlayText {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_ChoiceCharacterGroupDivMax {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_consoledeskTitleText {
+  font-size: 1.2vw;
+}
+.taixuhuanjing_consoledeskRunkText {
+  line-height: 2.5vw;
+  font-size: 1.4vw;
+}
+
+.taixuhuanjing_consoledeskCoinNum {
+  line-height: 2.5vw;
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_consoledeskEffectInfo {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_consoledeskPlayName {
+  line-height: 1.0vw;
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_consoledeskSkillDivText1 {
+  line-height: 1.0vw;
+  font-size: 1.2vw;
+}
+
+.taixuhuanjing_consoledeskSkillDivText2 {
+  line-height: 1.8vw;
+  font-size: 1.8vw;
+  -webkit-text-stroke: 2.0px #40404091;
+}
+
+.taixuhuanjing_consoledeskSkillDivText3 {
+  line-height: 1.8vw;
+  font-size: 1.75vw;
+  -webkit-text-stroke: 0.3px rgba(38,37,34,0.5);
+}
+
+.taixuhuanjing_lookEquipHomeBoxTitle {
+  font-size: 2.0vw;
+}
+
+.taixuhuanjing_lookEquipHomeBoxText {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_lookEquipHomeBoxText2 {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_lookEquipHomeBoxSkillButtonText1 {
+  line-height: 1.6vw;
+  font-size: 1.6vw;
+}
+
+.taixuhuanjing_lookEquipHomeBoxSkillButtonText2 {
+  line-height: 2.3vw;
+  font-size: 2.6vw;
+}
+
+.taixuhuanjing_lookEquipHomeBoxSkillButtonText3 {
+  line-height: 2.3vw;
+  font-size: 2.5vw;
+}
+
+.taixuhuanjing_lookEquipHomeSkillInfo {
+  line-height: 1.6vw;
+  font-size: 1.45vw;
+}
+
+.taixuhuanjing_lookEquipHomeBoxButton {
+  line-height: 3.0vw;
+  font-size: 2.0vw;
+}
+
+.taixuhuanjing_consoledeskAttributeBody1DivText {
+  line-height: 1.1vw;
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_consoledeskAttributeBody1DivText2 {
+  line-height: 0.8vw;
+  font-size: 0.9vw;
+}
+
+.taixuhuanjing_consoledeskAttributeBody4 {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_consoledeskAttributeBody5Div {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_consoledeskAttributeBody3Div {
+  font-size: 0.9vw;
+}
+
+.taixuhuanjing_consoledeskServantName {
+  font-size: 1.2vw;
+}
+
+.taixuhuanjing_lookEquipHomeBoxEquipDivText {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_consoledeskEventDivName {
+  font-size: 1.2vw;
+}
+
+.taixuhuanjing_consoledeskEventDivType {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_consoledeskEventDivInfo {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_consoledeskEventDivButton {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_lookEventHomeBoxTitle {
+  font-size: 2.0vw;
+}
+
+.taixuhuanjing_lookEventHomeBoxInfo {
+  font-size: 1.9vw;
+}
+
+.taixuhuanjing_lookEventHomeBoxButton1 {
+  line-height: 3.8vw;
+  font-size: 2.0vw;
+}
+
+.taixuhuanjing_lookEventHomeTitle {
+  font-size: 2.5vw;
+}
+
+.taixuhuanjing_lookEventHomeTextDiv {
+  line-height: 3.0vw;
+  font-size: 1.8vw;
+}
+
+.taixuhuanjing_lookEventHomeText {
+  font-size: 1.6vw;
+}
+
+.taixuhuanjing_lookEventHomeButton {
+  line-height: 3.3vw;
+  font-size: 2.4vw;
+}
+
+.taixuhuanjing_lookEventHomePlayText1 {
+  line-height: 3.0vw;
+  font-size: 2.0vw;
+}
+
+#taixuhuanjing_gamePremiseHome {
+  line-height: 1.2vw;
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_StateHomeTitle2 {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_StateHomeBoxDivName {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_StateHomeBoxDivSkillNameShadow {
+  line-height: 2.0vw;
+  font-size: 1.8vw;
+}
+
+.taixuhuanjing_StateHomeBoxDivSkillName {
+  line-height: 2.0vw;
+  font-size: 1.7vw;
+}
+
+.taixuhuanjing_StateHomeBoxDivInfo2 {
+  font-size: 1.2vw;
+}
+
+.taixuhuanjing_StateHomeBoxDivInfo1 {
+  font-size: 1.2vw;
+}
+
+.taixuhuanjing_StateHomeBoxDivInfo3 {
+  font-size: 1.2vw;
+}
+
+.taixuhuanjing_StateHomeBoxButton {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_StateHomelevelTitle{
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_StateHomeAddExp {
+  font-size: 1.2vw;
+}
+
+.taixuhuanjing_StateHomeSpoilsTitle {
+  font-size: 1.2vw;
+}
+
+.taixuhuanjing_StateHomeSpoilsBoxDivName {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_lookEventHomeBoxButton2 {
+  line-height: 4.0vw;
+  font-size: 2.0vw;
+}
+
+.taixuhuanjing_lookShopHomeBoxButtonTextDiv {
+  line-height: 3.0vw;
+  font-size: 2.0vw;
+}
+
+.taixuhuanjing_lookShopHomeBoxBottom {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_CardStyleDivTitle {
+  font-size: 1.8vw;
+}
+
+.taixuhuanjing_lookShopHomeBoxSkillName1 {
+  line-height: 2.25vw;
+  font-size: 2.4vw;
+}
+
+.taixuhuanjing_lookShopHomeBoxSkillName2 {
+  line-height: 2.25vw;
+  font-size: 2.3vw;
+}
+
+.taixuhuanjing_lookShopHomeBoxSkillText2 {
+  font-size: 1.45vw;
+}
+
+.taixuhuanjing_lookShopHomeBoxDivButton {
+  line-height: 3.0vw;
+  font-size: 2.0vw;
+}
+
+.taixuhuanjing_BuffStyleDivTitle {
+  font-size: 1.8vw;
+}
+
+.taixuhuanjing_BuffStyleDivInfo {
+  font-size: 1.3vw;
+}
+
+.taixuhuanjing_purchasePromptTitle {
+  font-size: 2.4vw;
+}
+
+.taixuhuanjing_purchasePromptText {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_purchasePromptButton1 {
+  line-height: 2.25vw;
+  font-size: 1.4vw;
+}
+
+.taixuhuanjing_purchasePromptButton2 {
+  line-height: 2.25vw;
+  font-size: 1.4vw;
+}
+
+.taixuhuanjing_StateHomeTitle {
+  font-size: 4.0vw;
+}
+
+.taixuhuanjing_consoledeskbuffDivInfoText {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_consoledeskAttributeBody2Text {
+  line-height: 0.8vw;
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_chooseEffectTitle {
+  font-size: 2.5vw;
+}
+
+.taixuhuanjing_chooseEffectTitle2 {
+  font-size: 2.5vw;
+}
+
+.taixuhuanjing_chooseEffectDivName {
+  font-size: 1.5vw;
+}
+
+.taixuhuanjing_chooseEffectDivInfo {
+  font-size: 1.0vw;
+}
+
+.taixuhuanjing_chooseEffectDivButton {
+  font-size: 1.2vw;
+}

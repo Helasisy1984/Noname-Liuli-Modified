@@ -1,0 +1,323 @@
+
+
+/*选中阴影显示*/
+.card::before {
+	content: '';
+    position: absolute;
+    top: -7px;
+	left: -2.5%;
+	height: 100%;
+    width: 100%;
+	/*border-image-source: url('assets/image/card_select.png');
+    border-image-slice: 8 7 7 8;
+    border-style: solid;
+    border-image-width: 8px 7px 7px 8px;*/
+    border-width: 7px;
+	box-shadow: none;
+	/*border-radius: inherit;*/
+	opacity: 0;
+	transition: opacity 0s linear;
+    z-index: 0;
+}
+.content>.buttons>.card::before,
+.handcards>.card::before {
+    border-image-source: url('assets/image/card_select.png');
+    border-image-slice: 8 7 7 8;
+    border-style: solid;
+	left: -8%;
+	height: 100%;
+	width: 100%;
+    border-image-width: 8px 7px 7px 8px;
+    border-radius: inherit
+}
+.card::after {
+	display: none;
+}
+
+.card.selected::before {
+    opacity: 1;
+}
+/*不显示选择的属性noselect，专门写的*/
+.card.selected.noselect::before {
+    opacity: 0;
+}
+
+#arena>.card.thrown {
+	z-index: 5;
+	opacity:1；
+}
+#arena>.card.thrown.invalided:not(.invalidlock):not(.cardfly) {
+	z-index: 5;
+	transition: all 0.7s;
+	opacity: 0.6;
+}
+#arena>.card.thrown.cardfly {
+	z-index: 5;
+	transition: all 0.3s ease;
+	opacity: 0;
+}
+#arena>.card.thrown:not(.phantom):not(#judgeCard){
+	/*transition: transform 0.46s linear;*/
+	transition-timing-function:ease;
+}
+#arena>.card.thrown.gainingcard,
+#arena>.card.thrown.drawingcard {
+	z-index: 6;
+}
+
+.card>.animation {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	line-height: 150px;
+	color: black;
+	font-size: 100px;
+	font-family: 'xingkai';
+	font-display: swap;
+	text-align: center;
+	text-shadow: 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.card>.animation[data-nature='fire'] {
+	text-shadow: 0 0 4px #FFF, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 10px #f80, 2px -25px 20px #f20;
+}
+
+.card>.animation[data-nature='thunder']::before {
+	content:'';
+	display: block;
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50% - 30px);
+	width: 100px;
+  	height: 60px;
+	text-shadow: 0 0 10px white !important;
+  	background: linear-gradient(to bottom, white, rgba(100,100,255,1) 15%, white 30%, rgba(100,100,255,1) 50%, white 70%, rgba(100,100,255,1) 85%, white);
+  	clip-path: polygon(100% 0, 20% 50%, 37% 60%, 0 100%, 80% 50%, 63% 40%);
+  	-webkit-clip-path: polygon(100% 0, 20% 50%, 37% 60%, 0 100%, 80% 50%, 63% 40%);
+	transform: scale(1.5);
+	z-index: -1;
+	pointer-events: none;
+}
+
+.card>.animation-player {
+	display: block;
+	position: absolute;
+	left: -120%;
+	top: -70%;
+	width: 340%;
+	height: 240%;
+	transition: none;
+	pointer-events: none;
+	z-index: 8;
+}
+
+/*出牌来源提示*/
+.card > .used-info {
+	opacity: 0;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 0px;
+	bottom: 20px;
+	text-align: center;
+	/*	-webkit-text-stroke: 0.5px #392f22;*/
+	text-shadow: -1px 0px 1px #392f22,0px -1px 1px #392f22,1px 0px 1px #392f22, 0px 1px 1px #392f22;
+	color: #eddac3;
+	font-size: 20px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	width: 100%;
+	height: 33%;
+	display: block;
+	filter: drop-shadow(0.5px 0 0 #453325) drop-shadow(-0.5px 0 0 #453325) /*drop-shadow(0 0.5px 0 #453325) drop-shadow(0 -0.5px 0 #453325)*/;
+	align-items: center; /*属性定义项目在交叉轴上如何对齐。stretch | flex-start | flex-end | center | baseline*/
+	align-content: center; /*只适用于"多行"的  flex 容器，并且当交叉轴上有多余空间使flex容器内的flex线对齐*/
+	justify-content: center;
+	font-family: xinwei;
+	z-index: 4;
+}
+
+.card.thrown:not(.drawingcard):not(.movingcard)>.used-info:not(:empty) {
+	opacity: 1;
+}
+
+/*卡牌转换提示，标记 ，拿牌提示*/
+/*卡牌标记类*/
+.card > .gaintag.info,
+.card.button > .gaintag.info {
+	position: absolute;
+	--w: 66px;
+	width: var(--w);
+	height: calc(var(--w) * 50/104);
+	left: -1px;
+	top: calc(50% + 12px);
+	right: 4px;
+	color: white;
+	font-size: 17px;
+	font-family: shousha;
+	line-height: 32px;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 2px 0px 5px #453325,-2px 0px 5px #453325,0px 2px 5px #453325,0px -2px 5px #453325;
+	/*	-webkit-filter: drop-shadow(2px 0 0 #453325) drop-shadow(-2px 0 0 #453325) drop-shadow(0 2px 0 #453325) drop-shadow(0 -2px 0 #453325);*/
+	/*text-shadow: -1.7px 0px 3px #A01358, 0px -1.7px 3px #A01358, 1.7px 0px 3px #A01358,0px 1.7px 3px #A01358;*/
+	white-space: nowrap;
+	background-image: url("image/vcard/biaojiXXXX.png");
+	background-size: 100% 100%;
+	border-radius: 0px;
+	pointer-events: none; /*è¿™ä¸ªè®©å®ƒæ— æ³•è¢«ç‚¹å‡»*/
+	z-index: 2;
+	/*	-webkit-filter: drop-shadow(2px 0 0 #453325) drop-shadow(-2px 0 0 #453325) drop-shadow(0 2px 0 #453325) drop-shadow(0 -2px 0 #453325);*/
+	/*text-shadow: -1.7px 0px 3px #A01358, 0px -1.7px 3px #A01358, 1.7px 0px 3px #A01358,0px 1.7px 3px #A01358;*/
+}
+
+/*拿牌提示*/
+.card.button > .gaintag.info {
+	position: absolute;
+	--w: 106px;
+	--h: calc(var(--w) * 63/212); /*高和长*/
+	width: var(--w); /*按比例调节*/
+	height: var(--h); /*同理*/
+	left: 1px;
+	top: calc(50% - 22px);
+	right: 4px;
+	color: #7aeb1c;
+	font-size: 20px;
+	line-height: 35px;
+	font-family: shousha;
+	white-space: nowrap;
+	text-shadow: -1.7px 0px 3px #A01358, 0px -1.7px 3px #A01358, 1.7px 0px 3px #A01358,0px 1.7px 3px #A01358;
+	background-image: url("image/vcard/wugunapai.png");
+	background-size: 100% 100%;
+	/*background: rgba(228, 207, 166, 0.8);*/
+	border-radius: 0px;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.card>.gaintag.info:empty,
+.card.button>.gaintag.info:empty {
+	display: none;
+}
+
+/*卡名辅助显示及控制*/
+/*在卡牌上额外显示卡牌名，牌多的时候便于查看手牌。*/
+.card>.name,
+.card.fullskin>.name,
+.card.fullskin>.name.long,
+.dialog .buttons>.card>.name.long {
+	top: auto;
+	bottom: 5px;
+	line-height: 16px;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: shousha;
+	text-shadow: 0 0 1px white, 0 0 3px white;
+	border: 1px solid black;
+	border-radius: 2px;
+	z-index: 1;
+	writing-mode: vertical-lr;
+	/*Helasisy改：新增背景和发光*/
+	border-width: 1.5px !important;
+	width: 17px;
+	background-color: rgba(255,255,255,0.6);
+	box-shadow: 0 0 1px 1.5px rgba(255,255,255,0.6);
+	/*filter: drop-shadow(0 0 3px #FFF);*/
+}
+
+.card.decade-card:not(*[data-card-type='basic'])>.name {
+	bottom: 20px;
+}
+
+#window[data-card-alternate-name-visible='off'] .card>.name,
+#window[data-card-alternate-name-visible='off'] .card>.range:not(.card-tag) {
+	display: none;
+}
+
+
+/****** 转换牌显示 ******/
+/*视为类卡牌，锁定技之类的*/
+.card > .temp-name {
+	width: 100%; /*按比例调节*/
+	height: 100%; /*同理*/
+	left: 0px;
+	top: 0px;
+	font-size: 0px;
+	background-size: 100% 100%;
+	z-index: 0;
+}
+
+/*卡牌在手转化显示*/
+.card > .temp-handCard {
+	width: 99%; /*按比例调节100*/
+	height: 20%; /*同理30*/
+	left: 0.5px;
+	top: 40%;
+	font-size: 0px;
+	text-shadow: none;
+	background-size: 100% 100%;
+	pointer-events: none;
+	z-index: 0;
+}
+
+	.card > .temp-handCard::before {
+		width: 100%; /*按比例调节*/
+		height: 25%; /*同理*/
+		left: 0.5px;
+		top: 38%;
+		font-size: 0px;
+		background-image: url('image/vcard/UI.png');
+		background-size: 100% 100%;
+		pointer-events: none;
+		z-index: 0;
+	}
+
+.card > .temp-name[data-nature='thunder'] {
+	color: blue;
+	text-shadow: 0 0 5px lightblue, 0 0 10px lightblue;
+}
+
+
+/* .card>.temp-name[data-nature='thunder']::before { */
+/* content:''; */
+/* display: block; */
+/* position: absolute; */
+/* left: calc(50% - 50px); */
+/* top: calc(50% - 30px); */
+/* width: 100px; */
+/* height: 60px; */
+/* text-shadow: 0 0 10px white !important; */
+/* background: linear-gradient(to bottom, white, blue 15%, white 30%, blue 50%, white 70%, blue 85%, white);; */
+/* clip-path: polygon(100% 0, 20% 50%, 37% 60%, 0 100%, 80% 50%, 63% 40%); */
+/* -webkit-clip-path: polygon(100% 0, 20% 50%, 37% 60%, 0 100%, 80% 50%, 63% 40%); */
+/* transform: scale(0.8); */
+/* } */
+.card > .temp-name:empty {
+	display: none;
+}
+.card > .temp-suit {
+	width: 20%; /*按比例调节*/
+	height: 25%; /*同理*/
+	left: 4px;
+	top: 22px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	z-index: 15;
+}
+
+.card > .suit-num > .wuseText {
+	color: #868482;
+}
+
+.card > .suit-num > .redText {
+	color: red;
+}
+
+.card > .suit-num > .blackText {
+	color: black;
+}
+
+

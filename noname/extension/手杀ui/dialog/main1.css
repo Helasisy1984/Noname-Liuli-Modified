@@ -1,0 +1,105 @@
+/*.dialog.xdialog {
+  left: 0;
+  width: 100%;
+  font-family: HYZLSJ;
+}
+.dialog.xdialog.scroll1,
+.dialog.xdialog.scroll2 {
+  background: rgba(0, 0, 0, .4);
+}
+
+#control:not(.hidden):not(.removing) ~ .dialog.xdialog.onlycaption {
+  top: auto !important;
+  height: 20px !important;
+  bottom: 205px !important;
+  background: none;
+  box-shadow: none;
+}
+.dialog.xdialog.onlycaption .caption {
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap;
+}
+.dialog.xdialog.nobutton {
+  left: 25%;
+  max-width: 50%;
+  background: none;
+  box-shadow: none;
+}
+
+.dialog.xdialog .tdnode {
+  --h: 30px;
+  --w: calc(var(--h) * 77 / 44);
+  width: var(--w) !important;
+  height: var(--h) !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background-image: url("./images/tnode.png");
+  background-size: 100% 100%;
+  line-height: var(--h);
+  text-align: center;
+}
+.dialog.xdialog .tdnode.bluebg {
+  background-image: url("./images/tnode-active.png") !important;
+}
+
+#window > .dialog.xdialog.popped {
+  color: #fff;
+  background: rgba(0, 0, 0, .8);
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+#window > .dialog.xdialog.popped .caption:first-child {
+  color: #e3db55;
+}
+
+#control {
+  left: 50px;
+  width: calc(100% - 100px);
+  text-align: center;
+}*/
+
+/* Mark */
+.player.xplayer > .marks {
+  top: auto;
+  left: var(--border-width) !important;
+  bottom: 72px;
+  width: calc(100% - var(--border-width));
+  padding: 0;
+  /*background: rgba(75, 68, 61, .8);*/
+  background-image: url("./images/dialog.png");
+  border-radius: 2px;
+  border: 1px solid #42372c;
+  box-sizing: border-box;
+}
+.unshow {
+  display: none !important;
+}
+.marks > .markitem {
+  width: 100%;
+  height: 20px;
+  position: relative;
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  font-family: 'HYZLSJ';
+  color: #FFF !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+.marks > .markitem > div {
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  display: inline-block !important;
+  vertical-align: middle;
+}
+.marks > .markitem > div:not(:first-child):not(.unshow) {
+  margin-left: 5px;
+}
+.marks > .markitem > div > div {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  line-height: 20px;
+}

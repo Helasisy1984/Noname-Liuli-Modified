@@ -1,0 +1,118 @@
+#splash {
+background-size:100% 100% !important;
+z-index:10 !important;
+}
+#splash>div.cxk {
+	transform: scale(1.04) translate(1%,0);
+	/*width: 320px !important;
+	height: 100px !important;*/
+	/*border-image-source: url('../images/offline/modebtn2.png') !important;*/
+	background-image: url('../images/offline/modebtn2.png') !important;
+	/*border-image-slice: 25!important;
+	border-style: solid !important;
+	border-image-width: 15px !important;*/
+	/*background-size:80% 105% !important;*/
+	width: 330px !important;/*320px*/
+	z-index:11 !important;
+}
+#bigenter{
+width:800px;
+/*height:400px;*/
+border-radius:50%;
+box-shadow:none;
+right:-5%;
+top:-23%;
+position:fixed;
+display:block;
+z-index:10 !important;
+}
+#splash>div>.splashtexthela {
+	writing-mode:lr-tb;
+	font-family: 'shousha';
+	font-size: 35px;
+	position: absolute;
+	right: 10% !important;
+	/*bottom: 30% !important;*/
+	bottom: 26% !important;
+	z-index: 15 !important;
+	/*金色字体组合套*/
+    background-image: linear-gradient(180deg, #f0d775 30%, #ab8c31 57%, #b0a04d 67%);	/*字体渐变色，色调*/
+    font-weight:lighter;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	white-space: nowrap;
+	-webkit-text-stroke: 0px rgba(38,37,34,0.5);
+	text-shadow: none;
+}
+#splash>div>.splashtext2hela {
+	writing-mode:lr-tb;
+	font-family: 'shousha';
+	font-size: 35px;
+	position: absolute;
+	right: 10% !important;
+	/*bottom: 30% !important;*/
+	bottom: 26% !important;
+	z-index: 14 !important;
+	font-weight:lighter;
+	color: rgba(0,0,0,0.7);
+	transform: translate(0.5px,0.5px);
+	filter: drop-shadow(0px 0px 4px rgba(200,200,150,0.6));
+}
+#splash>div>.avatar{
+	width: 90px;
+	height: calc(100% - 10px);
+	left: 5px;
+	top: 5px;
+	/*background-position:center right !important;*/
+	background-position:center 15% !important;
+	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
+}
+#splash>div {
+	transition: all 0.4s ease;
+    left:8%;
+	margin-left: 5px !important;
+	margin-right: 10px !important;
+	margin-top:25px !important;
+	background-color:transparent !important;
+	margin-bottom:10px !important;
+	position: relative !important;
+    display:block !important;
+	width: 320px !important;/*300px*/
+	height: 80px !important;
+	border:none !important;
+	box-shadow:none !important;
+	background-image: url("../images/offline/modebtn.png") !important;
+	background-size:80% 105% !important;
+	background-position:center right !important;
+	background-repeat: no-repeat !important;
+	transform: scale(1);
+	z-index:11 !important;
+}
+#splash>div:first-child {
+	margin-top:-30px !important;
+	margin-left:5px !important;
+}
+#splash>div:last-child {
+	margin-right: 20px !important;
+}
+#offlinetext{
+position:fixed;
+height:80px;
+/*width:200px;*/
+display:block;
+left:6%;/*5%*/
+margin-top:20px;
+font-family:'shousha';
+z-index:13;
+}
+#logout{
+width:125px;
+height:100px;
+border:none;
+box-shadow:none;
+background-color:transparent;
+display:block;
+position:fixed;
+right:0px;
+z-index:20;
+}

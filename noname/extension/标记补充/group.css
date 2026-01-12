@@ -1,0 +1,17 @@
+/*选中*/
+#arena.decadeUI.selecting>.dialog.scroll1.scroll2>.content-container>.content>.buttons>.card.button.selected.selectable[data-nature="jingx"]::before{
+    border:none;
+	background-image: url('group/sgroup.png') !important;
+	background-size:100% 100%;
+background-repeat:no-repeat;
+	border-radius:50% !important;
+	width:132px;
+	height:132px;
+	top:auto;
+	left:auto;
+	right:0px;
+	bottom:0px;
+	background-position:100% 100%;
+	box-shadow: none;	
+}
+

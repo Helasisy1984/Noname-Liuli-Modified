@@ -1,0 +1,135 @@
+.dizhuqiangdu {
+    background-size: 100% 100%;
+    z-index:20;
+    top:-65px;
+    left:-35px;
+    width:150px;
+    height:62px;
+    opacity: 1;
+    display:block;
+    overflow:visible !important;
+    position:relative;
+    /*background-color:red;*/
+    animation: dizhuqiangdux 0.4s ease-in ;
+}
+@keyframes dizhuqiangdux {
+    0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+#arena.decadeUI.choose-character>#chooseable.dialog {
+    bottom: 100px !important;
+    height:300px !important;
+    overflow: visible !important;
+    display:inline-block !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background-image:none !important;
+    background:none !important;
+    box-shadow:none !important;
+    border:none !important;
+}
+#identitychoose.dialog.doudizhuxuan>.content-container,
+#identitychoose.dialog.doudizhuxuan>.content-container>.content>.buttons,
+#identitychoose.dialog.doudizhuxuan>.content-container>.content,
+#chooseable.dialog>.content-container,
+#chooseable.dialog>.content-container>.content>.buttons,
+#chooseable.dialog>.content-container>.content {
+    overflow: visible !important;
+    overflow-y:visible !important;
+}
+#chooseable.dialog>.content-container>.content>.buttons>.button.character.decadeUI.newstyle {
+    /*欢乐模式开始的悬空选将框*/
+    border-image-source: url('assets/image/jbg.png');
+    /*border-image-slice: 15 16 26 40 fill;*/
+    border-image-slice: 18.3 11.7 31.72 43.78 fill;
+    float: top;
+    overflow: visible !important;
+    /*border-width:上10px 右7.5px 下20px 左24px;*/
+    border-width:10.98px 7.02px 19.03px 26.27px;
+    border-style: solid;
+    box-shadow: none;
+    margin-left:10px;
+    /*border-radius: 2px 2px 2px 2px;*/
+    border-radius: 2px;
+    /*左上到左下顺时针*/
+    z-index: 10;
+    zoom: 1.07;
+    background: content-box;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+    /*filter: none;*/
+}
+div.control.dou>div {
+    /*抢地主按钮*/
+    height: 100px !important;
+    background-size: contain;
+    width:100px !important;
+    padding: 1px 1px !important;
+    /*按钮高度+宽度 建议别调*/
+    margin: 2px 5px 160px 25px !important;
+    /*外边距，别管*/
+    font-size: 0px;
+    /*字体大小*/
+    /*border-radius: 50%;阴影*/
+    background-repeat:no-repeat;
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 1)) blur(0.2px);
+}
+.weizhitip {
+    /*斗地主右上角位置提示*/
+    display: block;
+    position: absolute;
+    right:-5%;
+    width:240px;
+    height:120px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    top:-2%;
+    z-index:7;
+}
+#arena[data-mode='doudizhu']>#identitychoose.dialog>.content-container>.content>.buttons {
+    margin-top: 30px;
+    transition:all 0s;
+}
+.zhuanshu {
+    /*地主专属*/
+    /*width: 130px !important;*/
+    /*height: 192px !important;*/
+    width: 133px !important;
+    height: 192px !important;
+    background-image: url('assets/image/jbg.png');
+    background-size: 100% 100% !important;
+    /* background-position: 50% -2px !important;*/
+    background-repeat: no-repeat;
+    border:none;
+    box-shadow:none;
+    background-color:transparent;
+    /*margin-left:25px;*/
+    justify-content: center;
+    align-items: center;
+    transform: translate(0px, -1.3px);
+    /*display: flex;*/
+    
+}
+.zhuanshu>div.zhuanshubiao {
+    border:none !important;
+    background-image: url('assets/image/zhuanshu.png') !important;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    width:140px;
+    height:40px;
+    left:-5px;
+    top:70px;
+    background-position:contain;
+    box-shadow: none;
+    display:block;
+    z-index:40;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

@@ -1,0 +1,421 @@
+#pfqhCzg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.czgBg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/cangZhenGe/czg_layer_bg.jpg");
+    background-repeat: round;
+    background-size: 100%;
+    /*background-position: center;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform: translate(-50%,-50%);*/
+}
+
+.ret-back1 {
+    z-index: 999;
+    width: 16%;
+    height: 30%;
+    background-image: url(../images/cangZhenGe/back.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 92.3%;
+    top: 11.8%;
+    transform: translate(-50%,-50%);
+}
+
+#pfqhCzg .czg-logo {
+    z-index: 999;
+    width: 18.5%;
+    height: 25%;
+    background-image: url(../images/cangZhenGe/czg_logo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 10.5%;
+    top: 5.2%;
+    transform: translate(-50%,-50%);
+}
+
+#pfqhCzg .stat-btn {
+    width: 8%;
+    height: 8%;
+    left: 24%;
+    top: 2.2%;
+    background-image: url(../images/cangZhenGe/lobbyui1/czg_record_get.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    cursor: pointer;
+    z-index: 30;
+}
+
+#pfqhCzg .stat-bg {
+    width: 28%;
+    height: 80%;
+    top: 12%;
+    left: 12%;
+    z-index: 1000;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background: rgb(255,255,255, 0.8);
+}
+
+#pfqhCzg .stat-close-btn {
+    right: 5%;
+    color: red;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#pfqhCzg .stat-text {
+    color: black;
+    font-size: 20px;
+    left: 5px;
+    max-height: 100%;
+    overflow: scroll;
+}
+
+#pfqhCzg .back1 {
+    width: 16%;
+    height: 30%;
+    background-image: url("../images/cangZhenGe/back.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 94.3%;
+    top: 11.8%;
+    transform: translate(-50%,-50%);
+}
+
+#pfqhCzg .box-bg {
+    height: 70%;
+    width: 20.5%;
+    top: 16%;
+    overflow-y: scroll;
+}
+
+#pfqhCzg .box-bg .box-item {
+    width: 100%;
+    height: 18%;
+    background-image: url(../images/cangZhenGe/box.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+#pfqhCzg .box-bg .box-item-select {
+    background-image: url(../images/cangZhenGe/box_sel.png);
+}
+
+.box-item .name-parent {
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.box-item .box-item-name {
+    font-size: 20px;
+    position: relative;
+    display: block;
+    font-weight:500;
+    font-family:'shousha';
+    color:#FFDEAD;
+    /*text-shadow:0 0 3px black,0 0 3px black,0 0 3px black,0 0 3px black*/
+}
+
+.box-item .box-item-count {
+    font-size:15px;
+    position: relative;
+    display: block;
+    font-weight:600;
+    font-family:'shousha';
+    color:grey;
+    /*text-shadow:0 0 3px black,0 0 3px black,0 0 3px black,0 0 3px black*/
+}
+.box-item .box-item-hot-tag {
+    width: 20%;
+    height: 100%;
+    right: 15%;
+    top: -25%;
+    z-index: 900;
+    background-image: url(../images/cangZhenGe/lobbyui1/btn_tag.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.czgBg .chouka-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/cangZhenGe/czg_box_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.czg-canvas-wrapper {
+    position: absolute;
+    /*width: 100%;*/
+    /*height: 100%;*/
+
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    z-index: 1;
+    pointer-events: none;
+}
+.cangzhenge-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.czgBg .open-one{
+    width: 16%;
+    height: 10%;
+    background-image: url(../images/cangZhenGe/open_one.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 42%;
+    top: 90%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.czgBg .open-all{
+    width: 16%;
+    height: 10%;
+    background-image: url(../images/cangZhenGe/open_all.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 65%;
+    top: 90%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.czgBg .open-all-tip {
+    font-size: 15px;
+    left: 65.3%;
+    top: 95%;
+    z-index: 999;
+    transform: translate(-50%,-50%);
+}
+
+.czgBg .box-buy-tip {
+    font-size: 18px;
+    left: 54%;
+    top: 80.5%;
+    z-index: 0;
+    transform: translate(-50%,-50%);
+
+}
+
+.czgBg .reword-div {
+    z-index: 1000;
+    width: 58%;
+    height: 31.3%;
+    background-image: url(../images/cangZhenGe/rewardresult/dialog2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 52%;
+    top: 52.5%;
+    transform: translate(-50%,-50%);
+}
+
+.czgBg .reword-div-title {
+    z-index: 1000;
+    width: 19%;
+    height: 19.3%;
+    background-image: url(../images/cangZhenGe/rewardresult/rr_title.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 52%;
+    top: 34.0%;
+    transform: translate(-50%,-50%);
+}
+.czgBg .reword-div-title-light {
+    z-index: 999;
+    width: 19%;
+    height: 19.3%;
+    background-image: url(../images/cangZhenGe/rewardresult/rr_title_light.png);
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100%;*/
+    background-position: center;
+    left: 52%;
+    top: 34.0%;
+    transform: translate(-50%,-50%);
+}
+
+.czgBg .reword-div-title-yuanpan {
+    z-index: 998;
+    width: 24%;
+    height: 43.3%;
+    background-image: url(../images/cangZhenGe/rewardresult/rr_yuan_pan.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 52%;
+    top: 46%;
+    transform: translate(-50%,-50%);
+}
+
+
+.czgBg .kx1 {
+    z-index: 1001;
+    left: 17.2%;
+    top: 19.5%;
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/cangZhenGe/game_hist_headbg.png);
+    background-size: 100%;
+    /*animation: chuxian 0.3s;*/
+}
+
+.czgBg .reward-item {
+    width: 96%;
+    height: 96%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+#pfqhCzg .drag-div {
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.czgBg .xishizhenbao {
+    width: 10.5%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 88.3%;
+    top: 39.5%;
+    transform: rotate(6.5deg) translate(-50%,-50%);
+}
+
+.czgBg .xishizhenbao-img {
+    width: 104%;
+    height: 104%;
+    left: -2%;
+    top: -2%;
+    background-image: url(../images/cangZhenGe/skin_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.czgBg .xishizhenbao-rare-label {
+    width: 36%;
+    height: 56%;
+    left: 66%;
+    background-image: url(../images/cangZhenGe/史诗.png);
+    background-repeat: no-repeat;
+    background-size: 93%;
+    background-position: center;
+}
+
+.czgBg .xishizhenbao-label-text {
+    width: 41%;
+    height: 70%;
+    left: 78%;
+    top: 36%;
+    background-image: url(../images/cangZhenGe/rare_flag.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transform: rotate(-6.5deg);
+}
+
+.czgBg .xishizhenbao-text {
+    width: 41%;
+    height: 47%;
+    top: 26%;
+    left: 4%;
+    font-family: 'shousha';
+    writing-mode: vertical-lr;
+    font-size: 18px;
+    text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+
+.cbgBtnsGroup {
+    width: 20%;
+    height: 10%;
+    left: 76%;
+    top: 84.8%;
+    position: relative;
+}
+
+.cbgBtnsGroup .cbgTehuiBtn {
+    width: 30%;
+    height: 100%;
+    background-image: url(../images/cangZhenGe/btn_tehui_activity.png);
+    background-repeat: no-repeat;
+    background-size: 113%;
+    position: relative;
+    top: 10%;
+    background-position: center;
+    margin-right: 2%;
+}
+.cbgBtnsGroup .cbgXinyuanBtn {
+    width: 30%;
+    height: 100%;
+    background-image: url(../images/cangZhenGe/btn_heart_shop.png);
+    background-repeat: no-repeat;
+    background-size: 92%;
+    background-position: center;
+    position: relative;
+    margin-right: 2%;
+
+}
+
+.cbgBtnsGroup .cbgYuranBtn {
+    width: 30%;
+    height: 100%;
+    background-image: url(../images/cangZhenGe/btn_rr_preview.png);
+    background-repeat: no-repeat;
+    background-size: 106%;
+    background-position: center;
+    position: relative;
+}
+
+
+
+/*.clickContinue {*/
+/*    color: #DEB887;*/
+/*    text-shadow: 0 0 1px black;*/
+/*    font-weight: 500;*/
+/*    font-family: shousha;*/
+/*    letter-spacing: 1px;*/
+/*    font-size: 20px;*/
+/*}*/

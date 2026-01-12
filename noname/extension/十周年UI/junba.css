@@ -1,0 +1,559 @@
+.junbazhu {
+    /*主提示底框*/
+    top: -20px;
+    left: 25%;
+    width: 48%;
+    height: 245px;
+    background-image: url("image/identity/info.png");
+    background-size: 100% 100%;
+    z-index: 7;
+}
+.junbaseat {
+    /*座位提示底框*/
+    top: -1.9%;
+    right: 3%;
+    --w: 220px;
+    --h: calc(var(--w) * 191/334);
+    width: var(--w);
+    height: var(--h);
+    background-image: url("image/identity/seat.png");
+    background-size: contain;
+    z-index: 7;
+}
+.junbaseat>.metip {
+    /*右上角玩家身份提示*/
+    display: block;
+    position: relative;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    font-family: shousha;
+    font-size: 24px;
+    bottom: -80%;
+    z-index: 7;
+}
+.junbaseat>.num {
+    /*右上角座位基础图*/
+    background-image: url("image/identity/unknown.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    --w: 28px;
+    --h: calc(var(--w) * 58/38);
+    width: var(--w);
+    height: var(--h);
+    padding-bottom: 0px;
+}
+.junbaseat>.num.num0 {
+    /*我的位置*/
+    right: 1px;
+    bottom: 1px;
+}
+.junbaseat>.num.num1 {
+    right: 5%;
+    bottom: 40%;
+}
+.junbaseat>.num.num2 {
+    right: 18.2%;
+    bottom: 50%;
+}
+.junbaseat>.num.num3 {
+    right: 31.4%;
+    bottom: 60%;
+}
+.junbaseat>.num.num4 {
+    right: 44.6%;
+    bottom: 60%;
+}
+.junbaseat>.num.num5 {
+    right: 57.8%;
+    bottom: 60%;
+}
+.junbaseat>.num.num6 {
+    right: 71%;
+    bottom: 50%;
+}
+.junbaseat>.num.num7 {
+    right: 84.2%;
+    bottom: 40%;
+}
+.junbaseat>.num.zhu {
+    /*主公*/
+    background-image: url("image/identity/zhu.png");
+}
+.junbaseat>.num.zhong {
+    /*忠*/
+    background-image: url("image/identity/zhong.png");
+}
+.junbaseat>.num.fan {
+    background-image: url("image/identity/fan.png");
+}
+.junbaseat>.num.nei {
+    background-image: url("image/identity/nei.png");
+}
+.junbaseat>.num.null {
+    background-image: url("image/identity/null.png");
+    opacity: 0.7;
+}
+.junbazhu>.left>.biao {
+    /*主公提示框的主公标记*/
+    top: 20px;
+    top: 3px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("image/identity/zhu1.png");
+    background-size: contain;
+    z-index: 20;
+}
+/*新的，不以人的意志为转移*/
+.junbazhu>.biao {
+    /*主公提示框的新的主公标记*/
+    left: 25.7%;
+    top: auto;
+    bottom: 67%;
+    
+    /*top: 20px;
+    top: 3px;
+    right: -10px;*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("image/identity/zhu1.png");
+    background-size: contain;
+    z-index: 20;
+}
+.junbazhu>.biankuangname {
+    /*武将边框*/
+    background-size: 100% 100%;
+    width: 23.6%;
+    /*width: 24.1%;*/
+    left: 9%;
+    /*left: 8.5%;*/
+    height: 70.5%;
+    bottom: 13%;
+    top: auto;
+    z-index: 8;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 1));
+}
+.junbazhu>.biankuangname>.name {
+    /*武将名字*/
+    writing-mode: vertical-lr;
+    background-size: 100% 100%;
+    width: 100%;
+    left: 2%;
+    height: 100%;
+    font-family: shousha;
+    top: 12%;
+    z-index: 100;
+}
+.junbazhu>.biankuangname>.hp-wrap {
+    display: block;
+    left: 2px;
+    /*左移*/
+    bottom: 15px;
+    /*上移*/
+    width: 15px;
+    height: 100%;
+    pointer-events: none;
+    transition-property: transform, opacity, height;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    z-index: 88;
+}
+.junbazhu>.biankuangname>.hp-wrap>.hp {
+    /*Hp>5(数值)*/
+    display: flex;
+    left: 0;
+    right: 0;
+    width: 12px;
+    /*右移*/
+    bottom: 0px;
+    /*上移*/
+    font-family: 'huangcao';
+	font-weight: bolder;/*加粗*/
+    font-size: 16px;
+    /*字体大小*/
+    line-height: 10px;
+    /*纵向间隔*/
+    flex-direction: column-reverse;
+}
+.junbazhu>.biankuangname>.hp-wrap>.hp.textstyle {
+    /*Hp>5(数值)*/
+    left: 5px;
+    flex-direction: column-reverse;
+}
+/*高体力勾玉分离*/	  	
+.junbazhu>.biankuangname> .hp-wrap > .hp.textstyle>div{
+	margin-bottom: 3px;
+}
+.junbazhu>.biankuangname>.hp-wrap>.hp>div {
+    /*Hp<=5(勾玉)*/
+    position: static;
+    margin-top: 1px;
+    /*纵向间隔*/
+    width: 14px;
+    /*宽度*/
+    height: 14px;
+    /*高度*/
+    line-height: 100%;
+    border: none;
+}
+.junbazhu>.zhuover {
+    /*主公已选将*/
+    left: 30%;
+    top: 10%;
+    background-image: url("image/identity/zhuover.png");
+    bottom: auto;
+    width: 40%;
+    height: 12.5%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 9;
+}
+.junbazhu>.xuanjiangwenzi {
+     position:absolute;
+     /*right:20%;*/
+     left: 38%;
+     top:36%;
+     font-size:36px;
+     font-family:shousha;
+     color:#C9BFB5;
+     text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
+     filter:blur(0.4px);
+     letter-spacing:2px;
+}
+.junbazhu>.left {
+    /*主公图片*/
+    /*left: 12.95%;*/
+    left: 13.2%;
+    top: auto;
+    /*bottom: 13.8%;*/
+    bottom: 14%;
+    border-radius: 6px;
+    width: 19%;
+    height: 77%;
+    /*background-size: 100% 100%;*/
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 9;
+}
+.junbazhu>div.right {
+    /*右边技能提示*/
+    left: 35%;
+    width: 60%;
+    box-sizing: border-box;
+    /*padding: 20px 15px 20px 0;*/
+    padding: 15px 15px 20px 0;
+    overflow: auto;
+    top: auto;
+    top: 25%;
+    max-height: 60%;
+}
+.junbazhu>div.right>div {
+    width: 100%;
+    height: 60%;
+    overflow: auto;
+}
+.junbazhu>div.right div {
+    position: relative;
+    bottom: -35%;
+}
+.junbazhu>div.right .xcaption {
+    width: 100%;
+    bottom: 0%;
+    color: #C8A82C;
+    /*技能名称*/
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    font-family: 'shousha';
+}
+.junbazhu>div.right .xskill {
+    width: 100%;
+    bottom: 0%;
+}
+.junbazhu>div.right .xskill>div {
+    display: inline;
+    color: white;
+    /*技能文描述颜色*/
+    text-shadow: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'shousha';
+}
+.junbazhu>div.right .xskill>div[data-color] {
+    color: #F0DB1E;
+}
+.junbazhu>div.right .xskill>div[data-color="red"] {
+    color: #F0DB1E;
+}
+.junbazhu>div.right .xskill>div[data-color="black"] {
+    color: #F0DB1E;
+}
+.junbazhu>div.right .xskill+.xskill {
+    margin-top: 15px;
+}
+.dizhutip {
+    /*下面选将提示*/
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 24px;
+    bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: shousha;
+    color: #E7DAC9;
+    text-shadow: 1px 1px 2.5px rgba(62, 57, 38, 0.1);
+    z-index: 8;
+    pointer-events: none;
+	text-shadow: -1.5px 0px 2.5px black, 0px -1.5px 2.5px black, 1.5px 0px 2.5px black ,0px 1.5px 2.5px black;
+    /* 设置1像素宽度的黑色描边*/
+    font-weight: 900;
+    text-stroke: 0.5px black;
+    filter: brightness(95%);
+    transition:all 0s;
+}
+.hjk {
+    display:flex;
+    justify-content: space-evenly;
+	/*align-items: center;
+/*	text-align: center;*/
+    background-image: url("assets/image/hjk.png");
+    background-size: 100% 100%;
+    z-index:7;
+    bottom:0px;
+    right:63px;
+    width:264.6px;
+    height:63.2px;
+    flex-direction: column;
+}
+.hjk>div{
+    display:inline;
+    position:relative;
+    font-family: 'HYZLSJ';
+    margin-left:100px;
+    color:#DAA520;
+    filter: brightness(80%);
+    font-size:23px;
+    transition:all 0s;
+}
+/*新版样式*/
+#identityXuanNew {
+    /*自由选将按钮*/
+    /*width: 150px !important;
+    height: 185px !important;*/
+    width: calc(0.95*150px) !important;
+    height: calc(0.95*185px) !important;
+    background-image: url('assets/image/borderx.png');
+    background-size: 100% 110% !important;
+    background-position: 50% -2px !important;
+    background-repeat: no-repeat;
+    /*margin-left:25px;*/
+    margin-left:5px;
+    filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, .8));
+    transform: translateX(7px) translateY(1px);
+}
+#identityXuanNew>div {
+    all: unset;
+}
+/*旧版样式*/
+#identityXuan {
+    /*自由选将按钮*/
+    width: 150px !important;
+    height: 185px !important;
+    background-image: url('assets/image/borderx.png');
+    background-size: 100% 110% !important;
+    background-position: 50% -2px !important;
+    background-repeat: no-repeat;
+    margin-left:25px;
+}
+#identityXuan>div {
+    all: unset;
+}
+#identitychoose {
+    animation: none !important;
+    transition: all 0s;
+    height: 250px !important;
+    width: 94%;
+    left: 40px;
+    top: 37%;
+    bottom: auto;
+    right: auto;
+    /* background-image: url("assets/image/dialogx.png") !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;*/
+    
+}
+#identitychoose::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/image/dialogx.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+#identitychoose>.content-container>.content>.caption:first-child {
+    position: fixed;
+    margin-top: -5px;
+}
+#identitychoose>.content-container>.content>.caption+.buttons:not(*:last-child) {
+    text-align: left;
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+/*#arena.choose-character>.dialog>.content-container>.content>.buttons {
+    transform: scale(1,1.2);
+    transform-origin: left top;
+    transition: all 0s;
+}*/
+    #arena.choose-character>.dialog>.content-container>.content>.buttons>div.button:not(.control) {
+    /*margin-left:20px;*/
+    margin-left:21px
+}
+/*#identitychoose>.content-container>.content>.buttons {
+    transform: scale(1.23, 1.45) !important;
+    transform-origin: left top;
+    transition: all 0s;
+    margin-top: 16px !important;
+}*/
+#identitychoose>.content-container>.content>.caption+.buttons:not(*:last-child) {
+    text-align: left;
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+#identitychoose>.content-container>.content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+#identitychoose>.content-container>.content>div {
+    text-align: left;
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.xuanback {
+    /*同步手杀ui的大小*/
+    /*width: 115.5px;*/
+    width: 130px;
+    /*height: 87px;*/
+    height: 105px;
+    right: -4px;/*0px*/
+    top: 0px;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    background-image: url("assets/image/closebutton.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: 100;
+}
+.dialog#choosegroup {
+    animation: none !important;
+    transition: all 0s !important;
+    transform:none !important;
+    top:20%;
+    left:-10%;
+    background-image: url('assets/scdialog.png') !important;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    width:120%;
+    height:60% !important;
+}
+.dialog#choosegroup>.content-container>.content>.caption {
+    letter-spacing: 3px!important;
+    background: linear-gradient(#C8BEB4 1%,#FCF8CC 12%, #F3F0BE,#FEF5A8,#E1D275,#C9B173,#D6CB6F,#A99355,#AC9557,#A38A51,#A38A51,#B29983,#B19786,#B19786,#B19786, #9B8583 ), linear-gradient(to right,#FCF8CC , #AC9557);
+    font-family: 'HYZLSJ';
+    font-size: 35px !important;
+    font-weight: normal;
+    -webkit-background-clip: text;
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 0 0.5px #2F1809) drop-shadow(-2px 0 1.5px #2F1809) drop-shadow(0 2px 1px #2F1809) drop-shadow(0 -2px 1.5px #2F1809) blur(0.55px) saturate(1.25) contrast(1.25) grayscale(0.08) sepia(0.1);
+}
+#choosegroup>.content-container>.content>.buttons>.card.button {
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    transform:none !important;
+    background-color:transparent;
+}
+#choosegroup>.content-container>.content>.buttons>.card.button.selected::before {
+    border:none !important;
+    background-image: url('assets/image/sgroup.png') !important;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    border-radius:50% !important;
+    width:100%;
+    height:100%;
+    top:auto;
+    left:auto;
+    right:0px;
+    bottom:0px;
+    background-position:100% 100%;
+    box-shadow: none;
+    background-color:transparent;
+}
+.nmjindutiao {
+    /*抢地主和选将进度条*/
+    display: block;
+    position: absolute;
+    width:46%;
+    background-image: url('assets/image/time.png');
+    left:27%;
+    bottom:5px;
+    height:20px;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    border-radius:20px;
+    z-index:7;
+    transition:all 0s;
+}
+.nmjindutiaox {
+    display: block;
+    position: absolute;
+    background-image:url('assets/image/timex.png');
+    width:46%;
+    left:27%;
+    bottom:5.2px;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    border-radius:20px;
+    height:20px;
+    z-index:8;
+    animation:nmxiaoshi 90s;
+    transition:all 0s;
+}
+@keyframes nmxiaoshi {
+      0% {width: 46%; left:27%;filter: opacity(100%);}
+     90% {filter: opacity(100%);}
+     95% {width: 2%; left:27.5%;filter: opacity(30%);}
+    100% {width: 46%; left:27%;filter: opacity(100%);}
+}
+/*比较突兀的进度条，已废弃*/
+@keyframes nmxiaoshi_old {
+    from {
+    width: 46%;
+    left:27%;
+}
+to {
+    width: 2%;
+    left:27.5%;
+}
+}

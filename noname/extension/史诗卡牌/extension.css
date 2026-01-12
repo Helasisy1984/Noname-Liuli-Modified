@@ -1,0 +1,615 @@
+/*@font-face {
+    font-family: HYZLSJ;
+    src: url('asset/font/HYZLSJ.ttf');
+}*/
+
+@font-face {
+    font-family:'wenqold';
+    src:url('asset/font/wenqold.TTF');
+}
+
+.testdiv {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border: 1px solid red;
+    z-index: 10;
+}
+
+.emojiBtn {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-image: url("asset/img/base/emoji.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 76%;
+    bottom: 35%;
+    z-index: 5;
+}
+
+.emojiDiv {
+    width: 100%;
+    height: 100%;
+    background-color: #00000030;
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.emojiBox {
+    width: 185px;
+    height: 129px;
+    position: absolute;
+    background-image: url("asset/img/emoji/emojibox.png");
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.emojiContent {
+    width: 90%;
+    height: 95px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -56%);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+.emojiIcon {
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 8px 0 0 10px;
+}
+
+.emojiTarget {
+    position: absolute;
+    text-align: center;
+    display: none;
+    writing-mode: vertical-rl;
+    font-family: "shousha";
+    font-size: 31px;
+    height: 178px;
+    color: white;
+    left: 30%;
+    text-shadow: 1px 1px 1px red;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    pointer-events:none;
+    animation: blink 0.8s ease-in-out infinite alternate;
+    z-index: 62;
+}
+
+.emojiEgg {
+    position: absolute;
+    display: block;
+    transition: all 0.3s;
+    width: 50px;
+    height: 42px;
+    z-index: 5;/*原本是4*/
+}
+
+.emojiFlowerFly {
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    /*transition: translate 0.5s;*/
+    width: 65px;
+    z-index: 5;/*原本是4*/
+}
+
+.emojiJiuHu {
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    /*transition: translate 0.5s;*/
+    width: 61px;
+    z-index: 5;/*原本是4*/
+}
+
+.emojiEggFly {
+    transition: all 0.5s;
+    animation: moveAndRotate 1s linear 1 forwards;
+}
+
+.emojiFlowerFlying {
+    transition: all 0.5s;
+    animation: moveAndRotate2 0.5s linear 1 forwards;
+}
+
+.emojiJiuHuFly {
+    transition: all 0.5s;
+    animation: moveAndRotate3 0.5s linear 1 forwards;
+}
+
+.emojiEggFlyOver {
+    opacity: 0;
+    transition: all 0.5s;
+    animation: lose 1s linear forwards;
+}
+
+.emojiEggFly2 {
+    transform: translate(var(--x)px, var(--y)px) rotate(var(--rotate));
+    /*animation: moveAndScale 0.7s linear forwards;*/
+}
+
+.emojiFlower {
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    width: 71px;
+    z-index: 5;/*原本是4*/
+}
+
+@keyframes moveAndRotate {
+    from {
+        transform: translate(var(--x1), var(--y1));
+    }
+    to {
+        transform: translate(var(--x), var(--y)) rotate(var(--rotate));
+    }
+}
+
+@keyframes moveAndRotate2 {
+    from {
+        transform: translate(var(--x1), var(--y1)) rotate(var(--rotate));
+    }
+    to {
+        transform: translate(var(--x), var(--y)) rotate(var(--rotate));
+    }
+}
+
+@keyframes moveAndRotate3 {
+    from {
+        transform: translate(var(--x1), var(--y1)) rotate(var(--rotate)) scale(0);
+    }
+    to {
+        transform: translate(var(--x), var(--y)) rotate(var(--rotate)) scale(1);
+    }
+}
+
+@keyframes lose {
+    from {
+        opacity: 1;
+        transform: translate(var(--x), calc(var(--y)));
+    }
+    to {
+        opacity: 0;
+        transform: translate(var(--x), calc(var(--y) + 5px));
+    }
+}
+
+@keyframes moveAndScale {
+    /*from {*/
+    /*    transform: translate(var(--x), var(--y)) scale(1);*/
+    /*}*/
+    to {
+        transform: translate(var(--x), var(--y)) scale(0.6);
+    }
+}
+
+.cardShanbi {
+    animation: shanbiMove 1s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@keyframes shanbiMove {
+    from {
+        transform: translateX(0px) perspective(1000px) rotateY(var(--rotateY)) rotateX(25deg) ;
+    }
+    to {
+        transform: translateX(var(--translateX)) perspective(1000px) rotateY(var(--rotateY)) rotateX(25deg) ;
+    }
+}
+
+.emojiRotate {
+    animation: rotation 1s infinite linear;
+}
+
+
+.emojiTuoxie1 {
+    position: absolute;
+    display: block;
+    transition: all 0.6s;
+    width: 90px;
+    /*height: 170px;*/
+    z-index: 5;
+}
+
+.emojiTuoxie2 {
+    position: absolute;
+    display: block;
+    transition: all 1s;
+    width: 90px;
+    height: 170px;
+    z-index: 5;/*原本是4*/
+}
+
+.emojiImg {
+    position: absolute;
+    display: block;
+    width: 31px;
+    left: 5px;
+    bottom: 5px;
+    /*rotate: -16deg;*/
+}
+
+.emojiDescIcon {
+    position: absolute;
+    display: block;
+    left: 2px;
+    top: 0;
+    width: 40px;
+}
+
+.emojiLevel {
+    position: absolute;
+    display: block;
+    width: 19px;
+    right: 0;
+    top: 0;
+}
+
+.emojiText {
+    position: absolute;
+    display: block;
+    font-family: shousha;
+    font-size: 8px;
+    color: #c5a600;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: 33px;
+    text-align: center;
+}
+
+.SequenceFrame {
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.SequenceFrameOver {
+    transition: all 0.5s;
+    animation: blink 1s;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.testIMG {
+    position: absolute;
+    display: block;
+    transition: all 1s;
+    transform: translate(647px, 450px);
+    z-index: 5;
+}
+
+.testPP {
+    width: 100px;
+    position: absolute;
+    transition: none;
+    z-index: 5;
+    transform-origin: left;
+}
+
+
+.characterBack {
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    z-index: -1 !important;
+    display: block;
+    bottom: 0;
+}
+
+.player>.camp-wrap>.camp-name {
+    backface-visibility: hidden;
+}
+
+.fanpaian {
+    animation: fp 1s forwards ease;
+}
+
+.koupaian {
+    animation: kp 1s forwards ease;
+}
+
+@keyframes kp {
+    to {
+        transform: perspective(1000px) rotateY(-180deg);
+    }
+}
+
+@keyframes fp {
+    0% {
+        transform: perspective(1000px) translateY(0px) rotateY(-180deg);
+    }
+    50% {
+        transform: perspective(1000px) translateY(-25px) rotateY(-180deg);
+    }
+    100% {
+        transform: perspective(1000px) translateY(0px) rotateY(0deg);
+    }
+}
+
+.scsPage {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: url("asset/img/scs/scsbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 10;/*7*/
+    transition: all 0.5s ease-in-out;
+}
+
+.scsOut {
+    opacity: 1 !important;
+}
+
+.scsBox {
+    transition: all 0.2s linear;
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-width: 60px 18px 12px 18px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url('asset/img/base/dialog.png');
+    border-image-slice: 61 18 12 18 fill;
+    border-image-repeat: stretch;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(1.0);
+    z-index: 6;
+}
+
+.scsBoxTitle {
+    bottom: 102%;
+}
+
+.scsBoxTitle > .scsArrow {
+    bottom: 6px;
+    right: 9px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: all 0.2s linear;
+}
+
+.scsContent {
+    width: 100%;
+    /*max-height: 100%;*/
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /*padding-top: 20px;*/
+    position: unset;
+    transition: all 0.2s linear;
+}
+
+.scsContent:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+.scsXJQ {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    position: unset;
+}
+
+.scsType {
+    width: 45px;
+    height: 145px;
+    writing-mode: vertical-rl;
+    background-image: url(asset/img/base/scsType.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    font-size: 25px;
+    font-family: shousha;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 35px 0 25%;
+    position: unset;
+    margin-top: 20px;
+}
+
+.scsWujiangqu {
+    position: unset;
+    width: 37%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.scsFooter {
+    font-family: shousha;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037;
+    position: relative;
+    letter-spacing: 4px;
+}
+
+#fu {
+    justify-content: space-between;
+    width: 537px;
+    margin-top: 11px;
+}
+
+.KCharacter {
+    width: 128px;
+    height: 171.5px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+}
+
+.KCharacter::after {
+    filter: none;
+}
+
+.KCharacterName {
+    writing-mode: vertical-rl;
+    font-size: 16px;
+    color: white;
+    font-family: shousha;
+    top: 28px;
+    left: 4px;
+}
+
+.KCharacterImgDiv {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 183px;
+}
+
+.KCharacterSelect {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    box-shadow: none;
+    /*border-width: 5px;*/
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url("asset/img/base/select.png");
+    border-image-slice: 42 fill;
+    background-image: url("asset/img/base/selectText.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:100px 75px;
+    z-index: 1;
+}
+
+.KCharacterImg {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 183px;
+}
+
+.sayDiv {
+    top: -27px;
+    left: 19px;
+    display: none;
+    opacity: 0;
+    font-size: 17px;
+    font-family: shousha;
+    width: 101px;
+    height: 56px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-repeat: stretch;
+    border-image-source: url(asset/img/base/chat.png);
+    border-image-slice: 1 1 4 1 fill;
+    padding: 13px 10px 15px;
+    color: black;
+    transition: all 0.2s linear;
+}
+
+.sayDiv > div {
+    width: 115px;
+    height: 39px;
+    overflow: scroll;
+}
+
+.characterXZ {
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 90 !important;
+}
+
+.characterXZImg {
+    top: 37%;
+    left: 53%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 89%;
+    text-align: center;
+}
+
+.characterLC {
+    font-family: shousha;
+    font-size: 40px;
+    color: white;
+    text-shadow: 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.characterLC > p {
+    position: relative;
+    margin: 0;
+    left: 39px;
+    top: 67px;
+    z-index: 1;
+}
+
+.characterLCImg {
+    transform: scale(0.8);
+}
+
+.characterPopup {
+    display: none;
+    transition: unset;
+    max-width: 229px;
+    border-width: 9px 9px 13px 9px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-repeat: stretch;
+    border-image-source: url(asset/img/base/textbox.png);
+    border-image-slice: 9 9 13 9 fill;
+    z-index: 6;
+}
+.characterPopupText {
+    font-size: 14px;
+    font-family: shousha;
+    position: relative;
+    color: white;
+    text-shadow: 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037, 0px 0px 3px #4c4037, 0 0 3px #4c4037, 0 0 3px #4c4037;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,241 @@
+
+/*检查你的类名，没有的加上，有的可以补充*/
+.skill-control .trigger,
+.skill-control .enable,
+.skill-control .special-enable,
+.skill-control .special-trigger{
+    height: auto;
+    transform:scale(1,1.06);
+    width: auto;
+    justify-content: right;/*自动向右对齐*/
+}
+
+.skill-control .trigger([dialog-id='identitychoose']),
+.skill-control .enable,
+.skill-control .special-enable,
+.skill-control .special-trigger{
+    height: auto;
+    transform:scale(1,1.06);
+    width: auto;
+    justify-content: right;/*自动向右对齐*/
+}
+
+.skill-control > .special-enable {
+    position:absolute!important;
+	margin: 0 0 0 0;
+	font-size:23px;
+	font-weight:bold;
+	font-family: 'HYZLSJ';
+	transform:scale(1,1.02);
+	z-index: 30;
+}
+
+.skill-control > .special-trigger {
+    position:absolute!important;
+}
+
+.skill-control> .special-enable >* .skillitem-child {
+	position: absolute;
+	-webkit-text-stroke: none;
+	opacity:0;
+	z-index: -1;
+}
+
+.skill-control> .special-trigger >* .skillitem-child {
+	position: absolute;
+	-webkit-text-stroke: none;
+	opacity:0;
+	z-index: -1;
+}
+
+
+.skill-control > .special-trigger > div {	
+	margin: -10px -11px -8px -13px;
+	font-family: 'HYZLSJ';/*只有normal和bold*/
+	text-align: center;
+	font-weight: 600;
+	text-shadow: none;
+	-webkit-text-stroke: 0.4px rgba(33,33,16,0.8);
+    background-image: linear-gradient(180deg, #f1d977 29%, #a68414 57%,#C2A255 90%);  	/*字体渐变色，色调*/
+	-webkit-background-clip: text;	
+	-webkit-text-fill-color: transparent;
+	white-space: nowrap;
+	left:9px;
+	font-size: 22px;
+	width: auto;
+	letter-spacing:1px;
+	opacity:1;
+}
+
+.skill-control > .special-enable > * {
+    text-shadow: none;
+    background-size: 100% 100%;
+    font-family: 'HYZLSJ';
+    background: linear-gradient(180deg, #f1d977 29%, #a68414 57%,#C2A255 90%);  
+    -webkit-text-stroke: 0.3px rgba(33,33,16,0.8);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	position: relative;
+	font-size: 21.4px;
+	margin: 2px 4px 9px 13px;
+	font-weight: 600;
+	white-space:nowrap;
+	z-index:4;
+	letter-spacing:1px;
+	opacity:1;
+}
+
+
+
+/*决进*/
+.skill-control > .special-enable > .skillitem_mbjuejin::before {
+        z-index: -1;
+        content: '';
+        --w: auto;
+        --h: calc(var(--w) * 1045/ 669);
+        line-height: var(--h);
+        text-align: center;
+        display: block;
+        position: absolute;
+        margin: 1px 7px;
+        width: 140%;
+        height: 165%;
+        font-family: 'HanYiZhongLiShuFan','HYZLSJ';
+        background-image: url("./images/qianlong_btn_normal.png");
+        background-size: 100% 100%;
+}
+.skill-control > .special-enable > .skillitem_mbjuejin.select::before {
+        background-image: url("./images/qianlong_btn_select.png");
+}
+.skill-control > .special-enable > .skillitem_mbjuejin:not(.usable):not(.select)::before {
+        background-image: url("./images/qianlong_btn_gray.png");
+}
+/*决进*/
+
+
+/*决进others*/
+.skill-control > .enable > .skillitem_mbjuejin::before {
+        z-index: -1;
+        content: '';
+        --w: auto;
+        --h: calc(var(--w) * 1045/ 669);
+        line-height: var(--h);
+        text-align: center;
+        display: block;
+        position: absolute;
+        margin: 1px 7px;
+        width: 140%;
+        height: 165%;
+        font-family: 'HanYiZhongLiShuFan','HYZLSJ';
+        background-image: url("./images/btn0.png");
+        background-size: 100% 100%;
+}
+.skill-control > .enable > .skillitem_mbjuejin.select::before {
+        background-image: url("./images/btn1.png");
+}
+.skill-control > .enable > .skillitem_mbjuejin:not(.usable):not(.select)::before {
+        background-image: url("./images/btn2.png");
+}
+/*决进others*/
+
+
+/*酒诗*/
+.skill-control > .special-enable >.skillitem_mbcmjiushi::before {
+        z-index: -1;
+        content: '';
+        --w: auto;
+        --h: calc(var(--w) * 1045/ 669);
+        line-height: var(--h);
+        text-align: center;
+        display: block;
+        position: absolute;
+        margin: 1px 7px;
+        width: 140%;
+        height: 165%;
+        font-family: 'HanYiZhongLiShuFan','HYZLSJ';
+        background-image: url("./images/qianlong_btn_normal.png");
+        background-size: 100% 100%;
+}
+.skill-control > .special-enable > .skillitem_mbcmjiushi.select::before {
+        background-image: url("./images/qianlong_btn_select.png");
+}
+.skill-control > .special-enable > .skillitem_mbcmjiushi:not(.usable):not(.select)::before {
+        background-image: url("./images/qianlong_btn_gray.png");
+}
+/*酒诗*/
+
+
+/*酒诗others*/
+.skill-control > .enable >.skillitem_mbcmjiushi::before {
+        z-index: -1;
+        content: '';
+        --w: auto;
+        --h: calc(var(--w) * 1045/ 669);
+        line-height: var(--h);
+        text-align: center;
+        display: block;
+        position: absolute;
+        margin: 1px 7px;
+        width: 140%;
+        height: 165%;
+        font-family: 'HanYiZhongLiShuFan','HYZLSJ';
+        background-image: url("./images/btn0.png");
+        background-size: 100% 100%;
+}
+.skill-control > .enable > .skillitem_mbcmjiushi.select::before {
+        background-image: url("./images/btn1.png");
+}
+.skill-control > .enable > .skillitem_mbcmjiushi:not(.usable):not(.select)::before {
+        background-image: url("./images/btn2.png");
+}
+/*酒诗others*/
+
+/*放逐*/
+.skill-control > .special-enable >.skillitem_mbcmfangzhu::before {
+        z-index: -1;
+        content: '';
+        --w: auto;
+        --h: calc(var(--w) * 1045/ 669);
+        line-height: var(--h);
+        text-align: center;
+        display: block;
+        position: absolute;
+        margin: 1px 7px;
+        width: 140%;
+        height: 165%;
+        font-family: 'HanYiZhongLiShuFan','HYZLSJ';
+        background-image: url("./images/qianlong_btn_normal.png");
+        background-size: 100% 100%;
+}
+.skill-control > .special-enable > *.select::before {
+        background-image: url("./images/qianlong_btn_select.png");
+}
+.skill-control > .special-enable > .skillitem_mbcmfangzhu:not(.usable):not(.select)::before {
+        background-image: url("./images/qianlong_btn_gray.png");
+}
+/*放逐*/
+
+/*放逐others*/
+.skill-control > .enable >.skillitem_mbcmfangzhu::before {
+        z-index: -1;
+        content: '';
+        --w: auto;
+        --h: calc(var(--w) * 1045/ 669);
+        line-height: var(--h);
+        text-align: center;
+        display: block;
+        position: absolute;
+        margin: 1px 7px;
+        width: 140%;
+        height: 165%;
+        font-family: 'HanYiZhongLiShuFan','HYZLSJ';
+        background-image: url("./images/btn0.png");
+        background-size: 100% 100%;
+}
+.skill-control > .enable > *.select::before {
+        background-image: url("./images/btn1.png");
+}
+.skill-control > .enable > .skillitem_mbcmfangzhu:not(.usable):not(.select)::before {
+        background-image: url("./images/btn2.png");
+}
+/*放逐others*/

@@ -1,0 +1,6304 @@
+@font-face {
+  font-family: 'shoushaJian';
+  src: local('汉仪小隶书简'), url('../../extension/太虚幻境/image/fonts/hanyixiaolishujian.TTF');
+}
+
+@font-face {
+  font-family: 'shoushaFan';
+  src: local('汉仪小隶书繁'), url('../../extension/太虚幻境/image/fonts/hanyixiaolishufan.TTF');
+}
+
+@font-face {
+  font-family: 'HanYiZhongLiShuFan';
+  src: local('汉仪中隶书繁'), url('../../extension/太虚幻境/image/fonts/HanYiZhongLiShuFan.TTF');
+}
+
+.taixuhuanjing_collectHome {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_collectHomeBody {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  -webkit-transition: all 0s;
+  /*background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 140% 236%;
+  background-image: url(../../extension/太虚幻境/image/background/rougelike_handbook.png);*/
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame15.png);
+  -webkit-transition: all 0s;
+}
+
+.taixuhuanjing_collectHomeBoxTitle {
+    position: absolute;
+    width: 18%;
+    height: 7%;
+    left: 41%;
+    top: 1.9%;
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_huanjingjilu_title.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_collectHomeBox {
+    position: absolute;
+    width: 92%;
+    height: 81%;
+    left: 4%;
+    top: 15%;
+    text-align: center;
+    white-space: pre-wrap;
+    -webkit-transition: all 0s;
+    /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_collectHomeBoxDiv {
+    position: relative;
+    width: 98%;
+    height: 20%;
+    left: 0%;
+    top: 2%;
+    margin: 0% 0% 1% 0%;
+    text-align: center;
+    -webkit-transition: all 0s;
+    border: 2px solid rgb(0 0 0);
+    background: #1e160fde;
+}
+
+.taixuhuanjing_collectHomeBoxDivImp {
+    position: absolute;
+    width: 8%;
+    height: 0;
+    padding-bottom: 8%;
+    left: 15%;
+    top: 5%;
+    -webkit-transition: all 0s;
+    border: 1px solid rgba(255,255,255,1);
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.taixuhuanjing_collectHomeBoxDivRank {
+    position: absolute;
+    width: 5%;
+    height: 80%;
+    left: 50%;
+    top: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    color: #fff8e8;
+    font-family: shoushaFan;
+    -webkit-transition: all 0.1s;
+    z-index: 10;
+}
+
+.taixuhuanjing_collectHomeBoxDivName {
+    position: absolute;
+    width: 25%;
+    height: 80%;
+    left: 25%;
+    top: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    color: #fff8e8;
+    font-family: shoushaFan;
+    -webkit-transition: all 0.1s;
+    z-index: 10;
+}
+
+.taixuhuanjing_collectHomeBoxDivNum1 {
+    position: absolute;
+    width: 12%;
+    height: 80%;
+    left: 0%;
+    top: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    white-space: nowrap;
+    font-size: 3rem;
+    color: #fff8e8;
+    font-family: shoushaFan;
+    -webkit-transition: all 0.1s;
+    z-index: 10;
+}
+
+.taixuhuanjing_collectHomeBoxDivNum2 {
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    right: 3%;
+    top: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    white-space: nowrap;
+    font-size: 3rem;
+    text-shadow: 0px 0px 10px #ffc800;
+    color: rgb(255 255 155);
+    font-family: shoushaFan;
+    -webkit-transition: all 0.1s;
+    z-index: 10;
+}
+
+.taixuhuanjing_collectHomeTitle {
+  position: absolute;
+  width: 16%;
+    height: 6.5%;
+    left: 42%;
+    top: 2.6%;
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_huanjingtujian_title.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_collectTypeBox {
+    position: absolute;
+    width: 12%;
+    height: 84%;
+    left: 3.0%;
+    top: 13%;
+    z-index: 10;
+}
+
+.taixuhuanjing_collectHomeButton {
+    position: absolute;
+    /*width: 9.0%;
+    height: 12%;
+    right: 0%;
+    top: 0%;*/
+    width: 130px;
+    height: 105px;
+    right: -4px;
+    top: 0px;
+    z-index: 10;
+    /*background-position: center center;*/
+    background-position: top right;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-size: contain;
+    background-image: url(../../extension/太虚幻境/image/icon/button1.png);
+}
+
+.taixuhuanjing_collectTypeDiv {
+    position: relative;
+    width: 117%;
+    height: 17%;
+    left: -8%;
+    top: 0%;
+    text-align: left;
+    overflow: auto;
+    z-index: 10;
+    margin: 0% 0% -19% 0%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_Button1.png);
+}
+
+.taixuhuanjing_collectTypeDivText {
+    position:absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    color: #fff8e8;
+    font-family: shoushaFan;
+    -webkit-transition: all 0.1s;
+    z-index: 10;
+}
+
+.taixuhuanjing_collectTypeDiv2 {
+    position: relative;
+    width: 106%;
+    height: 27%;
+    left: -3%;
+    top: 0%;
+    text-align: left;
+    overflow: auto;
+    z-index: 10;
+    margin: 2% 0% 0% 0%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_Button17.png);
+}
+
+.taixuhuanjing_collectShowBox {
+    position: absolute;
+    width: 79.5%;
+    height: 81%;
+    left: 16%;
+    top: 15.5%;
+    z-index: 10;
+}
+
+.taixuhuanjing_collectShowBoxAllDiv {
+    position: relative;
+    width: 32%;
+    height: 22%;
+    left: 0%;
+    top: 0%;
+    margin: 3% 0.5% 0% 0.5%;
+    z-index: 10;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.taixuhuanjing_collectShowBoxAllDivText {
+    position: absolute;
+    width: 70%;
+    height: 30%;
+    left: 30%;
+    top: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    color: rgb(239,235,183);
+    font-family: shoushaFan;
+    font-weight: 500;
+    text-shadow: 0px 0.1vw black;
+    -webkit-text-stroke: 0.1px #00000085;
+    z-index: 10;
+}
+
+.taixuhuanjing_collectShowBoxAllDivSpeedBox {
+    position: absolute;
+    width: 60%;
+    height: 17.5%;
+    left: 35%;
+    top: 55%;
+    z-index: 10;
+    z-index: 10;
+    overflow: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/bg_1.png);
+}
+
+.taixuhuanjing_collectShowBoxAllDivSpeedColor {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
+  background-image: url(../../extension/太虚幻境/image/icon/bg_2.png);
+}
+
+.taixuhuanjing_showBoxcContentDivCard {
+    position: relative;
+    width: 19%;
+    height: 43%;
+    left: 0%;
+    top: 0%;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-transition: all 0.1s;
+    margin: 2.5% 0.5% 0% 0.5%;
+    /*Helasisy除掉*/
+    /*box-shadow: 0px 1px 1px 1px rgb(0 0 0 / 75%);*/
+    border-left: 1px solid rgb(0 0 0 / 75%);
+    border-right: 1px solid rgb(0 0 0 / 75%);
+    border-bottom: 2px solid rgb(0 0 0 / 75%);
+    box-sizing: border-box;
+    /*到这里是伪阴影*/
+    overflow: hidden;
+}
+
+.taixuhuanjing_showBoxcContentDivSkill {
+    position: relative;
+    width: 15.0%;
+    height: 10.0%;
+    left: 0%;
+    top: 0%;
+    text-align: center;
+    -webkit-transition: all 0.1s;
+    margin: 2.5% 2% 3% 3%;
+}
+
+.taixuhuanjing_showBoxcContentDivSkillImp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    text-align: center;
+    -webkit-transition: all 0.1s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_skill_true.png);
+}
+
+.taixuhuanjing_showBoxcContentDivBuff {
+    position: relative;
+    width: 10%;
+    height: 0;
+    left: 0%;
+    top: 0%;
+    padding-bottom: 10%;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-transition: all 0.1s;
+    margin: 0.5% 3.5% 1.5% 3%;
+}
+
+.taixuhuanjing_showBoxcContentDivBuffImp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    text-align: center;
+    -webkit-transition: all 0.1s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.taixuhuanjing_showBoxcContentDivSeason {
+    position: relative;
+    width: 32%;
+    height: 41%;
+    left: 0%;
+    top: 0%;
+    -webkit-transition: all 0.1s;
+    margin: 1% 0.5% 1% 0.5%;
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonImp1 {
+    position: absolute;
+    width: 93%;
+    height: 76%;
+    left: 3.5%;
+    top: 4.5%;
+    -webkit-transition: all 0.1s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonImp2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    -webkit-transition: all 0.1s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_frame22.png);
+}
+
+.taixuhuanjing_showBoxcContentDivSeason2 {
+    position: absolute;
+    width: 67%;
+    height: 80%;
+    left: 0%;
+    top: 2%;
+    -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_showBoxcContentDivSeason2button {
+    position: absolute;
+    width: 3%;
+    height: 5.5%;
+    right: 0.5%;
+    top: 2.0%;
+    -webkit-transition: all 0.1s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/button3.png);
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonImp3 {
+    position: absolute;
+    width: 96%;
+    height: 86.5%;
+    left: 2.5%;
+    top: 2.5%;
+    -webkit-transition: all 0.1s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonImp4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    -webkit-transition: all 0.1s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_frame23.png);
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonText {
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    left: 5%;
+    top: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 1.8rem;
+    color: rgb(239,235,183);
+    font-family: shoushaFan;
+    font-weight: 500;
+    text-shadow: 0px 0.1vw black;
+    -webkit-text-stroke: 0.8px #00000085;
+    z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonText2 {
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    left: 5%;
+    top: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    color: rgb(239,235,183);
+    font-family: shoushaFan;
+    font-weight: 500;
+    text-shadow: 0px 0.1vw black;
+    -webkit-text-stroke: 1px #00000085;
+    z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonText3 {
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    left: 4%;
+    top: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    color: rgb(243 240 200);
+    font-family: shoushaFan;
+    font-weight: 500;
+    text-shadow: 0px 0.1vw black;
+    -webkit-text-stroke: 0.5px #00000085;
+    z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonSpeedBox {
+    position: absolute;
+    width: 92%;
+    height: 9%;
+    left: 4%;
+    top: 83%;
+    z-index: 10;
+    overflow: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/bg_1.png);
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonSpeedColor {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 5;
+  background-image: url(../../extension/太虚幻境/image/icon/bg_2.png);
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonSpeedBox2 {
+    position: absolute;
+    width: 92%;
+    height: 5%;
+    left: 4%;
+    top: 90.7%;
+    z-index: 10;
+    overflow: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/bg_1.png);
+}
+
+.taixuhuanjing_showBoxcContentDivSeasonSpeedColor2 {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 5;
+  background-image: url(../../extension/太虚幻境/image/icon/bg_2.png);
+}
+
+.taixuhuanjing_showBoxcContentDivSeason2NodesBox {
+    position: absolute;
+    width: 30%;
+    height: 95%;
+    right: 2%;
+    top: 2%;
+    text-align: center;
+    -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_showBoxcContentDivSeason2Node {
+    position: relative;
+    width: 86%;
+    height: 18%;
+    left: 0%;
+    top: 0%;
+    -webkit-transition: all 0.1s;
+    margin: 0% 0% 2% 0%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*图鉴技能底图*/
+.taixuhuanjing_showBoxcContent2TextDivSkillName1 {
+  position:absolute;
+  width: 100%;
+    height: 100%;
+    right: 0%;
+    bottom: 0%;
+    -webkit-text-stroke: 1px #40404071;
+    color: #40404071;
+    line-height: 2rem;
+    font-size: 1.8rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 800;
+  text-shadow: none;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+/*图鉴技能图*/
+.taixuhuanjing_showBoxcContent2TextDivSkillName2 {
+  position:absolute;
+  width: 100%;
+    height: 100%;
+    right: 0%;
+    top: 0%;
+    line-height: 2rem;
+    font-size: 1.7rem;
+    font-family: HanYiZhongLiShuFan;
+    font-weight: 700;
+    text-shadow: none;
+    background-size: 100% 100%;
+    -webkit-text-stroke: 0.1px rgba(38,37,34,0.5);
+  text-shadow: none;
+    background-image: linear-gradient(180deg, #f0d775 30%, #ab8c31 57%, #b0a04d 67%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.taixuhuanjing_showBoxTitles {
+    position: absolute;
+    width: 63%;
+    height: 10%;
+    left: 0%;
+    top: 0%;
+    /*border: 1px solid rgba(255,255,255,1);*/
+    text-align: left;
+    z-index: 10;
+}
+
+.taixuhuanjing_showBoxTitle {
+    position: relative;
+    width: 19%;
+    height: 100%;
+    left: 1.1%;
+    top: 5%;
+    margin: 0% 0% 0% 0.5%;
+    z-index: 10;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_Button19.png);
+}
+
+.taixuhuanjing_showBoxTitleText {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    left: 0%;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-size: 1.6rem;
+    color: #fff8e8;
+    font-family: shoushaFan;
+    z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContent {
+    position: absolute;
+    width: 63%;
+    height: 75%;
+    left: 0%;
+    top: 11%;
+    z-index: 10;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/background/frame16.png);
+}
+
+.taixuhuanjing_showBoxcContentBody {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    left: 2.5%;
+    top: 2.5%;
+    text-align: left;
+    overflow: auto;
+    z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContentDiv {
+    position: relative;
+    width: 15%;
+    height: 0;
+    top: 2%;
+    left: 0%;
+    padding-bottom: 15%;
+    margin: 0% 0% 1% 1.5%;
+    z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContentDivImp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.taixuhuanjing_showBoxcContent2 {
+    position: absolute;
+    width: 36.5%;
+    height: 88%;
+    left: 63.8%;
+    top: 11%;
+    text-align: left;
+    z-index: 10;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/background/frame17.png);
+}
+
+.taixuhuanjing_showBoxcContent3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    text-align: left;
+    z-index: 10;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.taixuhuanjing_showBoxcContent2Body {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    left: 2.5%;
+    top: 2.5%;
+    text-align: left;
+    overflow: auto;
+    z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContent2Title {
+    position: absolute;
+    width: 60%;
+    height: 8.8%;
+    left: 20%;
+    top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    white-space:nowrap;/*不换行*/
+    font-size: 1.5rem;
+    color: rgb(239,235,183);
+    font-family: shousha;
+    font-weight: 500;
+    text-shadow: 0px 0.1vw black;
+    -webkit-text-stroke: 0.5px #00000085;
+    z-index: 10;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_title1.png);
+}
+
+.taixuhuanjing_showBoxcContent2TitleTab {
+  position: absolute;
+  width: 15%;
+    height: 0;
+    left: 6%;
+    top: 8%;
+    padding-bottom: 15%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContent2Text {
+    position: absolute;
+    width: 90%;
+    height: 78%;
+    left: 5%;
+    top: 20%;
+    text-align: left;
+    overflow: auto;
+    font-size: 1.2rem;
+    color: #403c32;
+    font-family: shoushaFan;
+    text-shadow: none;
+    z-index: 10;
+    background-color: rgb(117 107 87);
+    border-radius: 0px 0px 10px 10px;
+    /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_showBoxcContent2TextDiv {
+    position: relative;
+    width: 20%;
+    height: 10.5%;
+    left: 0%;
+    top: 0%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #230a0a;
+    font-family: shoushaFan;
+    text-shadow: none;
+    margin: 1% 2.5% 0% 2.5%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+/*图鉴技能底图*/
+.taixuhuanjing_showBoxcContent2TextDivName1 {
+  position:absolute;
+  width: 100%;
+    height: 100%;
+    right: 0%;
+    bottom: 0%;
+    -webkit-text-stroke: 1px #40404071;
+    color: #40404071;
+    line-height: 2rem;
+    font-size: 1.3rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 800;
+  text-shadow: none;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+/*图鉴技能图*/
+.taixuhuanjing_showBoxcContent2TextDivName2 {
+  position:absolute;
+  width: 100%;
+    height: 100%;
+    right: 0%;
+    top: 0%;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    font-family: HanYiZhongLiShuFan;
+    font-weight: 700;
+    text-shadow: none;
+    background-size: 100% 100%;
+    -webkit-text-stroke: 0.1px rgba(38,37,34,0.5);
+  text-shadow: none;
+    background-image: linear-gradient(180deg, #f0d775 30%, #ab8c31 57%, #b0a04d 67%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContent2TextDiv2 {
+    position: relative;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    text-align: left;
+    font-size: 1.15rem;
+    color: #230a0a;
+    font-family: shoushaFan;
+    text-shadow: none;
+    z-index: 5;
+}
+
+.taixuhuanjing_showBoxcContent2TextDiv3 {
+    position: relative;
+    width: 70%;
+    height: 9%;
+    left: 1%;
+    top: 0%;
+    text-indent:1.0rem;
+    text-align: left;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    color: #e4e3ca;
+    font-family: shoushaFan;
+    text-shadow: none;
+    margin: 3% 0% 3% 0%;
+    background: -webkit-linear-gradient(left,rgb(80 66 29),rgb(255 255 255 / 0%));
+}
+
+.taixuhuanjing_showBoxcContent2TextDiv4 {
+    position: relative;
+    width: 93%;
+    left: 7%;
+    top: 0%;
+    text-align: left;
+    font-size: 1.15rem;
+    color: #230a0a;
+    font-family: shoushaFan;
+    text-shadow: none;
+    z-index: 5;
+}
+
+.taixuhuanjing_showBoxcContent2Group {
+  position: absolute;
+  width: 15%;
+    height: 12%;
+    top: 0%;
+    left: 4%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.taixuhuanjing_showBoxcContent2Button1 {
+    position: absolute;
+    width: 18%;
+    height: 6%;
+    left: 5%;
+    top: 13.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-size: 1.0rem;
+    color: #ffffff;
+    font-family: shoushaFan;
+    text-shadow: none;
+    border-radius: 5px 5px 0px 0px;
+    z-index: 10;
+    background-color: rgb(165 154 132 / 72%);
+}
+
+.taixuhuanjing_showBoxcContent2Button2 {
+    position: absolute;
+    width: 18%;
+    height: 6%;
+    left: 24%;
+    top: 13.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    overflow: auto;
+    font-size: 1.0rem;
+    color: #ffffff;
+    font-family: shoushaFan;
+    text-shadow: none;
+    border-radius: 5px 5px 0px 0px;
+    z-index: 10;
+    background-color: rgb(165 154 132 / 72%);
+}
+
+.taixuhuanjing_showBoxcContent2Text1 {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  left: -2px;
+  top: 0px;
+  background: -webkit-linear-gradient(left, rgba(99, 184, 255,0), rgba(79 ,79, 79,1), rgba(99, 184, 255,0)); 
+  border: 1px solid rgb(255 ,211, 155);
+  box-shadow: 3px 3px 5px rgba(255 ,211, 155,0.5);
+  -webkit-transition: all 0.2s;
+}
+
+
+.taixuhuanjing_examineModeHome {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_examineModeBody {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/launcher.png);
+  -webkit-transition: all 0s;
+  z-index: 5;
+}
+
+.taixuhuanjing_BuffStyleDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/style/goods_effect_common.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_BuffStyleDivTitle {
+  position:absolute;
+  width:100%;
+  height: 15%;
+  left: 0%;
+  top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.5rem;
+  color: #FFF;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  text-shadow: 3px 5px 7px #703a07;
+  z-index: 10;
+}
+
+.taixuhuanjing_BuffStyleDivBg {
+  position: absolute;
+  width: 42%;
+  height: 0;
+  left: 29%;
+  top: 20%;
+  border-radius: 50%;
+  padding-bottom: 42%;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_shuimo.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_BuffStyleDivIcon {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.taixuhuanjing_BuffStyleDivInfo {
+  position:absolute;
+  width:90%;
+  height: 35%;
+  left: 5%;
+  bottom: 0%;
+  text-align: left;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-size: 1.8rem;
+  color: #442727;
+  text-shadow:none;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_SkillStyleDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/style/goods_skill_common.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_CardStyleDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/style/goods_effect_common.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_CardStyleDivTitle {
+  position:absolute;
+  width:100%;
+  height: 15%;
+  left: 0%;
+  top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.5rem;
+  -webkit-text-stroke: 0.5px #989181;/*40404096*/
+  color: #E5DECB;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  text-shadow: 3px 5px 7px #703a07;
+  z-index: 10;
+}
+
+.taixuhuanjing_CardStyleDivCard {
+  position: absolute;
+  width: 46%;
+  height: 70%;
+  left: 27%;
+  top: 20%;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.taixuhuanjing_transitionDialog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transition: all 0s;
+  z-index: 9999;
+}
+
+.taixuhuanjing_transitionDialogTopBody {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/background/yun-top.png);
+  z-index: 10;
+  animation-duration:2.5s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: yunTopAnimation-1;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes yunTopAnimation-1 {
+  0%{
+    opacity:0;
+    -webkit-transform: scale(1.5);
+  }
+  25%{
+    opacity:1;
+    -webkit-transform: scale(1.0);
+  }
+  70%{
+    opacity:1;
+    -webkit-transform: scale(1.0);
+  }
+  to {
+    opacity:0;
+    -webkit-transform: scale(1.5);
+  }
+}
+
+.taixuhuanjing_transitionDialogBottomLeft1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/background/yun-left1.png);
+  z-index: 8;
+  animation-duration:2.5s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: yunLeftAnimation-1;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes yunLeftAnimation-1 {
+  0%{
+    left: -100%;
+  }
+  30%{
+    left: 0%;
+  }
+  65%{
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+.taixuhuanjing_transitionDialogBottomRight1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/background/yun-right1.png);
+  z-index: 8;
+  animation-duration:2.5s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: yunRightAnimation-1;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes yunRightAnimation-1 {
+  0%{
+    right: -100%;
+  }
+  30%{
+    right: 0%;
+  }
+  65%{
+    right: 0%;
+  }
+  to {
+    right: -100%;
+  }
+}
+
+.taixuhuanjing_transitionDialogBottomLeft2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/background/yun-left2.png);
+  z-index: 9;
+  animation-duration:2.5s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: yunLeftAnimation-2;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes yunLeftAnimation-2 {
+  0%{
+    left: -100%;
+  }
+  40%{
+    left: 0%;
+  }
+  60%{
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+.taixuhuanjing_transitionDialogBottomRight2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/background/yun-right2.png);
+  z-index: 9;
+  animation-duration:2.5s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: yunRightAnimation-2;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes yunRightAnimation-2 {
+  0%{
+    right: -100%;
+  }
+  40%{
+    right: 0%;
+  }
+  60%{
+    right: 0%;
+  }
+  to {
+    right: -100%;
+  }
+}
+
+.taixuhuanjing_StateHome {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0,0,0,0.65);
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBody {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  -webkit-transition: all 0s;
+  z-index: 5;
+}
+
+.taixuhuanjing_StateHomeBody2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  /*border: 1px solid rgba(255,255,255,1);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame3.png);
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeTitle {
+  position:absolute;
+  width:25%;
+  height:15%;
+  right: 37.5%;
+  top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 4.0rem;
+  color: #de9d30;
+  font-family: shoushaFan;
+  text-shadow: 0 0 3px rgba(255,100,40,0.5),0 0 5px rgba(255,100,40,0.5),0 0 7px rgba(255,100,40,0.5),0 0 10px rgba(255,100,40,0.5);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_StateHomeTitle2 {
+  position:absolute;
+  width:25%;
+  height:7%;
+  right: 37.5%;
+  top: 26.0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.8rem;
+  color: #ffd400;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_StateHomeBox {
+  position:absolute;
+  width:90%;
+  height:60%;
+  right: 5%;
+  top: 33.5%;
+  -webkit-transition: all 0.1s;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.taixuhuanjing_StateHomeBoxDiv {
+  position: relative;
+  width: 20%;
+  height: 75%;
+  left: 0%;
+  top: 5%;
+  z-index: 5;
+  text-align: center;
+  white-space: nowrap;
+  margin: 0% 2% 0% 2%;
+}
+
+.taixuhuanjing_StateHomeBoxDivBg1 {
+  position: absolute;
+  width: 125%;
+  height: 115%;
+  left: -12.5%;
+  top: -7.5%;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.taixuhuanjing_StateHomeBoxDivBg2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  z-index: 6;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame17.png);
+}
+
+.taixuhuanjing_StateHomelevelBody {
+  position: absolute;
+  width: 32%;
+  height: 8%;
+  left: 34%;
+  top: 50%;
+  z-index: 6;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame19.png);
+}
+
+.taixuhuanjing_StateHomelevelTitle {
+  position:absolute;
+  width:10%;
+  height: 80%;
+  left: 0%;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  color: #b7ad9a;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeExpBody {
+  position:absolute;
+  width: 83%;
+  height: 25%;
+  left: 9.5%;
+  top: 41%;
+  z-index: 8;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_StateHomeExpBodyImp {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  z-index: 8;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame8.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_StateHomeSpoilsBody {
+  position: absolute;
+  width: 42%;
+  height: 28%;
+  left: 29%;
+  top: 60%;
+  z-index: 6;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame4.png);
+}
+
+.taixuhuanjing_StateHomeGameIcon {
+  position: absolute;
+  width: 34%;
+  height: 60%;
+  left: 33%;
+  bottom: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/style/game_win_icon.png);
+  z-index: 10;
+  animation-duration:0.3s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: stateTopAnimation-1;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes stateTopAnimation-1 {
+  0%{
+    bottom: 100%;
+  }
+  to {
+    bottom: 45%;
+  }
+}
+
+.taixuhuanjing_StateHomeGameText {
+  position: absolute;
+  width: 50%;
+  height: 32%;
+  left: 25%;
+  bottom: 30%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/style/game_win_text.png);
+  z-index: 10;
+  animation-duration:0.6s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: stateTopAnimation-2;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes stateTopAnimation-2 {
+  0%{
+    opacity:0;
+    -webkit-transform: scale(2.5);
+  }
+  50%{
+    opacity:0;
+    -webkit-transform: scale(2.5);
+  }
+  to {
+    opacity:1;
+    -webkit-transform: scale(1);
+  }
+}
+
+.taixuhuanjing_StateHomeGameInfo {
+  position: absolute;
+  width: 170%;
+  height: 36%;
+  top: 50%;
+  left: -35%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/style/caidai.png);
+  z-index: 10;
+  animation-duration:0.6s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: stateTopAnimation-3;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes stateTopAnimation-3 {
+  0%{
+    opacity:0;
+    -webkit-transform: scale(0);
+  }
+  50%{
+    opacity:0;
+    -webkit-transform: scale(0);
+  }
+  to {
+    opacity:1;
+    -webkit-transform: scale(1);
+  }
+}
+
+.taixuhuanjing_StateHomeGameScore {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgb(0 0 0 / 50%), rgb(0 0 0 / 50%), rgb(0 0 0 / 50%), rgb(0 0 0 / 50%), rgb(0 0 0 / 50%),rgba(0,0,0,0));
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeGameIcon2 {
+  position: absolute;
+  width: 34%;
+  height: 45%;
+  left: 33%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/style/game_win_icon.png);
+  z-index: 10;
+  animation-duration:0.3s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: stateTopAnimation-1;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+  -webkit-transition: all 0.5s;
+}
+
+.taixuhuanjing_StateHomeGameText2 {
+  position: absolute;
+  width: 45%;
+  height: 32%;
+  left: 27.5%;
+  bottom: 32%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/style/game_win_text.png);
+  z-index: 10;
+  animation-duration:0.6s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: stateTopAnimation-2;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+  -webkit-transition: all 0.5s;
+}
+
+.taixuhuanjing_StateHomeGameText3 {
+  position: absolute;
+  width: 50%;
+    height: 10%;
+    left: 25%;
+    top: 58%;
+    letter-spacing: 0.2rem;
+  text-align: center;
+  white-space:nowrap;/*不换行*/
+  font-size: 1.5rem;
+  color:  rgb(239,235,183);
+  font-family: shousha;
+  font-weight: 500;
+  -webkit-text-stroke: 5.5px #000000;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeGameText4 {
+  position: absolute;
+  width: 50%;
+    height: 10%;
+    left: 25%;
+    top: 58%;
+    letter-spacing: 0.2rem;
+  text-align: center;
+  white-space:nowrap;/*不换行*/
+  font-size: 1.5rem;
+  color: rgb(251, 248, 207);
+  font-family: shousha;
+  font-weight: 500;
+  text-shadow: none;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeGameInfo2 {
+  position: absolute;
+  width: 170%;
+  height: 38%;
+  top: 50%;
+  left: -35%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/style/caidai.png);
+  z-index: 10;
+  animation-duration:0.6s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: stateTopAnimation-3;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+  -webkit-transition: all 0.5s;
+}
+
+.taixuhuanjing_StateHomeGameScoreBody {
+    position: absolute;
+    width: 70%;
+    height: 58%;
+    left: 15%;
+    top: 18%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/background/frame19.png);
+    z-index: 10;
+    animation-duration:0.6s; /*动画时间*/
+    animation-fill-mode: both; /*播放后的状态*/
+    animation-name: stateTopAnimation-2;/*动画名称*/
+    animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+    transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyName {
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    left: 35%;
+    top: 33%;
+    text-align: center;
+    white-space:nowrap;/*不换行*/
+    font-size: 1.0rem;
+    color: rgb(251, 248, 207);
+    font-family: shoushaFan;
+    font-weight: 500;
+    text-shadow: none;
+    -webkit-transition: all 0.1s;
+    z-index: 10;
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyEventBox {
+    position: absolute;
+    width: 12%;
+    height: 38%;
+    left: 20%;
+    top: 40%;
+    z-index: 10;
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyEventTextBg {
+    position: absolute;
+    width: 70%;
+    height: 55%;
+    left: 15%;
+    top: 40%;
+    z-index: 10;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_zhanqi.png);
+    -webkit-transition: all 0.2s;
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyEventText {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0%;
+    top: 50%;
+    z-index: 10;
+    text-align: center;
+    white-space:nowrap;/*不换行*/
+    font-size: 1.2rem;
+    color: rgb(251, 248, 207);
+    font-family: shoushaFan;
+    font-weight: 500;
+    text-shadow: none;
+    -webkit-transition: all 0.2s;
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyEventImp {
+    position: absolute;
+    width: 82%;
+    height: 0;
+    left: 8%;
+    top: 6%;
+    z-index: 10;
+    border-radius: 50%;
+    padding-bottom: 82%;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: all 0.2s;
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyEventRound {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0%;
+    top: 0%;
+    z-index: 10;
+    border-radius: 50%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_frame9.png);
+    -webkit-transition: all 0.2s;
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyNodeBox {
+    position: absolute;
+    width: 35%;
+    height: 40%;
+    left: 32.5%;
+    top: 38%;
+    z-index: 10;
+    text-align: center;
+    overflow: hidden;
+    /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyNodeDiv {
+    position: relative;
+    width: 88%;
+    height: 12%;
+    left: 6%;
+    top: 0%;
+    z-index: 10;
+    margin: 0% 0% 0% 0%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_scoreNode.png);
+    -webkit-transition: all 0.2s;
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyNodeDivText {
+  position:absolute;
+  width:50%;
+  height: 100%;
+  left: 2%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  text-indent: 0.5rem;
+  color: #d1ceca;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyNodeDivNum {
+  position:absolute;
+  width:20%;
+  height: 100%;
+  right: 5%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  text-align: right;
+  white-space: nowrap;
+  font-size: 1.0rem;
+  color: #b7ad9a;
+  font-family: shousha;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeGameScoreBodyClickPrompt {
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    left: 35%;
+    bottom: 10.5%;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    color: rgb(255 253 224 / 70%);
+    font-family: shoushaFan;
+    font-weight: 400; 
+    text-shadow: none;
+    -webkit-transition: all 0.1s;
+    z-index: 10;
+}
+
+.taixuhuanjing_StateHomeAddExp {
+  position:absolute;
+  width:80%;
+  height: 1%;
+  right: 10%;
+  bottom: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 1.6rem;
+  color: #b7ad9a;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeSpoilsTitle {
+  position:absolute;
+  width:80%;
+  height: 10%;
+  right: 10%;
+  top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  color: #b7ad9a;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeSpoilsBox {
+  position:absolute;
+  width: 90%;
+  height: 75%;
+  right: 5%;
+  top: 15%;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_StateHomeSpoilsBoxDiv {
+  position: relative;
+  width: 18%; 
+  height: 0;
+  top: 15%;
+  left: 0%;
+  padding-bottom: 18%;
+  margin: 0% 0.5% 0% 0.5%;
+}
+
+.taixuhuanjing_StateHomeSpoilsBoxDivImp {
+  position: absolute;
+  width: 60%; 
+  height: 0;
+  top: 15%;
+  left: 20%;
+  padding-bottom: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.taixuhuanjing_StateHomeSpoilsBoxDivImp2 {
+  position: absolute;
+  width: 90%; 
+  height: 120%;
+  bottom: 0%;
+  left: 5%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.taixuhuanjing_StateHomeSpoilsBoxDivImp3 {
+  position: absolute;
+  width: 100%; 
+  height: 120%;
+  top: 0%;
+  left: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_zhanqi.png);
+}
+
+.taixuhuanjing_StateHomeSpoilsBoxDivName {
+  position: absolute;
+  width: 100%; 
+  height: 15%;
+  bottom: 0%;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  color: #b7ad9a;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeSpoilsBoxDivName2 {
+  position: absolute;
+  width: 100%; 
+  height: 20%;
+  bottom: 40%;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.0rem;
+  color: #b7ad9a;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeSpoilsBoxDivName3 {
+  position: absolute;
+  width: 100%; 
+  height: 30%;
+  top: 10%;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeOkButton {
+  position: absolute;
+  width: 14%;
+  height: 10%;
+  left: 43%;
+  bottom: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button5.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeOkText {
+  position: absolute;
+  width: 40%;
+  height: 48%;
+  left: 30%;
+  top: 22%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/jixu.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBoxDivName {
+  position:absolute;
+  width:80%;
+  height: 10%;
+  right: 10%;
+  top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 2.0rem;
+  color: #b7ad9a;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBoxDivImpBg {
+  position: absolute;
+  width: 40%;
+  height: 0;
+  left: 30%;
+  top: 34%;
+  z-index: 5;
+  padding-bottom: 40%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_shuimo.png);
+  z-index: 9;
+}
+
+.taixuhuanjing_StateHomeBoxDivImp {
+  position: absolute;
+  width: 30%;
+  height: 0;
+  left: 35%;
+  top: 37.5%;
+  z-index: 5;
+  padding-bottom: 30%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBoxDivDesc {
+  position: absolute;
+    width: 220%;
+    z-index: 7;
+    border: 1px solid white;
+    left: 50%;
+    white-space: pre-wrap;
+    top: -20%;
+    text-align: left;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: "shoushaFan", serif;
+    z-index: 11;
+}
+
+.taixuhuanjing_StateHomeBoxDivImp2 {
+  position: absolute;
+  width: 50%;
+  height: 0;
+  left: 25%;
+  top: 35%;
+  /*overflow: hidden;*/
+  z-index: 5;
+  padding-bottom: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBoxDivImp3 {
+  position: absolute;
+  width: 86.5%; 
+  height: 120%;
+  bottom: 0%;
+  left: 6.75%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.taixuhuanjing_consoledeskAttributeBody2Imp {
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.taixuhuanjing_consoledeskAttributeBody2Text {
+  position:absolute;
+  width:20%;
+  height: 10%;
+  left: 3%;
+  top: 5%;
+  text-shadow: none;
+  text-align: center;
+  line-height: 0.8rem;
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: rgb(0,0,0);
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBoxDivInfo1 {
+  position:absolute;
+  width: 90%;
+  height: 36%;
+  right: 5%;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: pre-wrap;
+  font-size: 1.8rem;
+  color: #514f49;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBoxDivInfo2 {
+  position:absolute;
+  width: 90%;
+  height: 55%;
+  right: 5%;
+  bottom: 10%;
+  text-align: left;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-size: 1.6rem;
+  color: #514f49;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBoxDivInfo3 {
+  position:absolute;
+  width: 90%;
+  height: 36%;
+  right: 5%;
+  bottom: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: pre-wrap;
+  font-size: 1.8rem;
+  color: #514f49;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBoxDivSkill {
+  position: absolute;
+  width: 60%;
+  height: 14%;
+  left: 20%;
+  top: 16%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_point3.png);
+  z-index: 10;
+}
+
+/*升级奖励技能底图*/
+.taixuhuanjing_StateHomeBoxDivSkillNameShadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  line-height:3.25rem;
+  font-size: 3.2rem;
+  color: #40404071;
+  -webkit-text-stroke: 5.5px #40404071;/*40404096*/
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 800;
+  background-size: 100% 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: visible;
+  z-index: 8;
+}
+
+/*升级奖励技能图*/
+.taixuhuanjing_StateHomeBoxDivSkillName {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  line-height:3.25rem;
+  font-size: 3.0rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 700;
+  text-shadow: none;
+  background-size: 100% 100%;
+  /*渐变*/
+  -webkit-text-stroke: 0.6px rgba(38,37,34,0.5);
+  text-shadow: none;
+    background-image: linear-gradient(180deg, #f0d775 30%, #ab8c31 57%, #b0a04d 67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  overflow: visible;
+  z-index: 10;
+}
+
+.taixuhuanjing_StateHomeBoxButton {
+  position: absolute;
+  width: 16%;
+  height: 15%;
+  left: 42%;
+  top: 82.5%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: shoushaFan;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button7.png);
+  -webkit-transition: all 0.2s;
+}
+
+#taixuhuanjing_adjustHome {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0,0,0,0.5);
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_lookEventHome {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0,0,0,0.5);
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_lookEventHomeBody {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  /*border: 1px solid rgba(255,255,255,1);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0s;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookBossHomeBody {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  /*border: 1px solid rgba(255,255,255,1);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame2.png);
+  -webkit-transition: all 0s;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookBossHomeBox {
+  position: absolute;
+  width: 96%;
+  height: 90%;
+  left: 2%;
+  top: 5%;
+  display: block;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomeBox {
+  position: absolute;
+  width: 62%;
+  height: 100%;
+  left: 19%;
+  top: 0%;
+  display: block;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame5.png);
+}
+
+.taixuhuanjing_lookEquipHomeBox {
+  position: absolute;
+  width: 58%;
+  height: 100%;
+  left: 21%;
+  top: 0%;
+  display: block;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame9.png);
+}
+
+.taixuhuanjing_lookEquipHomeSkillInfoBox {
+  position: absolute;
+  width: 30%;
+  height: 65%;
+  left: 80%;
+  top: 15%;
+  display: block;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/bg-sldesc.png);
+}
+
+.taixuhuanjing_lookEquipHomeSkillInfo {
+  position:absolute;
+  width:95%;
+  height:95%;
+  right: 2.5%;
+  top: 2.5%;
+  text-align: left;
+  color: rgb(255,255,255);
+  line-height: 3rem;
+  font-size: 2.3rem;
+  font-family:  shoushaFan;
+  font-weight: 400;
+  z-index: 9;
+}
+
+.taixuhuanjing_lookShopHomeBox {
+  position: absolute;
+  width: 82%;
+  height: 100%;
+  left: 9%;
+  top: 0%;
+  display: block;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame6.png);
+}
+
+.taixuhuanjing_lookEquipHomeBoxTitle {
+  position:absolute;
+  width:70%;
+  height:6%;
+  right: 15%;
+  top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  color: rgba(5,5,5,0.25);
+  line-height: 4rem;
+  font-size: 2.4rem;
+  font-family:  shoushaFan;
+  font-weight: 400;
+  white-space: nowrap;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame10.png);
+  z-index: 9;
+}
+
+.taixuhuanjing_lookEquipHomeBoxText {
+  position:absolute;
+  width:80%;
+  height:4%;
+  right: 10%;
+  top: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  color: rgba(5,5,5,0.25);
+  line-height: 4rem;
+  font-size: 2.0rem;
+  font-family:  shoushaFan;
+  font-weight: 400;
+  white-space: nowrap;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  z-index: 9;
+}
+
+.taixuhuanjing_lookEquipHomeBoxText2 {
+  position:absolute;
+  width:80%;
+  height:4%;
+  right: 10%;
+  top: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  color: rgba(5,5,5,0.25);
+  line-height: 4rem;
+  font-size: 2.0rem;
+  font-family:  shoushaFan;
+  font-weight: 400;
+  white-space: nowrap;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  z-index: 9;
+}
+
+.taixuhuanjing_lookEquipHomeBoxSkillBody {
+  position: absolute;
+  width: 90%;
+  height: 30%;
+  left: 5%;
+  top: 17%;
+  overflow: auto;
+  text-align: left;
+  border: 1px solid rgba(5,5,5,0.25);
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEquipHomeBoxSkillButton {
+  position: relative;
+  width: 20%;
+  height: 25.25%;
+  left: 0%;
+  top: 5%;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_skill_null.png);
+  margin: 0% 3% 2% 2%;
+}
+
+.taixuhuanjing_lookEquipHomeBoxSkillButton2 {
+  position: relative;
+  width: 20%;
+  height: 21%;
+  left: 0%;
+  top: 20%;
+  z-index: 5;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_skill_null.png);
+  margin: 0% 3% 2% 2%;
+}
+
+
+.taixuhuanjing_lookEquipHomeBoxSkillButtonText1 {
+  position:absolute;
+  width:80%;
+  height:80%;
+  right: 10%;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.4rem;
+  color: #7b6958;
+  font-weight: 600;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_lookEquipHomeBoxSkillButtonText2 {
+  position:absolute;
+  width:80%;
+  height:80%;
+  right: 10%;
+  bottom: 10%;
+  -webkit-text-stroke: 3.5px #40404071;/*40404096*/
+  color: #40404071;
+  font-size: 3.2rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 800;
+  text-shadow: none;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+.taixuhuanjing_lookEquipHomeBoxSkillButtonText3 {
+  position:absolute;
+  width:80%;
+  height:80%;
+  right: 10%;
+  bottom: 10%;
+  font-size: 3rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 600;
+  background-color: none;
+  background-size: 100% 100%;
+  /*渐变*/
+  -webkit-text-stroke: 0.6px rgba(38,37,34,0.5);
+  text-shadow: none;
+  background-image: linear-gradient(180deg, #f0d775 30%, #ab8c31 57%, #b0a04d 67%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.taixuhuanjing_lookEquipHomeBoxEquipBody {
+  position: absolute;
+  width: 90%;
+  height: 30%;
+  left: 5%;
+  top: 17%;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEquipHomeBoxEquipDiv {
+  position: relative;
+  width: 22%;
+  height: 90%;
+  left: 0%;
+  top: 5%;
+  border-radius: 8px;
+  background-color: #b7ad9a;
+  z-index: 5;
+  margin: 0% 3.9% 0% 0%;
+}
+
+.taixuhuanjing_lookEquipHomeBoxEquipDiv2 {
+  position: relative;
+  width: 22%;
+  height: 90%;
+  left: 0%;
+  top: 5%;
+  border-radius: 8px;
+  background-color: #b7ad9a;
+  z-index: 5;
+  margin: 0% 3.9% 0% 0%;
+}
+
+.taixuhuanjing_lookEquipHomeBoxEquipDivText {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0%;
+  top: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  color: rgba(5,5,5,0.25);
+  line-height: 4rem;
+  font-size: 2.5rem;
+  font-family:  shoushaFan;
+  font-weight: 400;
+  background-color: #b7ad9a;
+  border: 1px solid rgba(5,5,5,0.25);
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEquipHomeBoxSkillBody2 {
+  position: absolute;
+  width: 90%;
+  height: 36%;
+  left: 5%;
+  top: 48%;
+  overflow: auto;
+  text-align: left;
+  display: block;
+  border-radius: 8px;
+  background-color: #b7ad9a;
+  border: 1px solid rgba(5,5,5,0.25);
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEquipHomeBoxEquipBody2 {
+  position: absolute;
+  width: 90%;
+  height: 36%;
+  left: 5%;
+  top: 48%;
+  display: block;
+  border-radius: 8px;
+  background-color: #b7ad9a;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEquipHomeBoxEquipBody3 {
+  position: absolute;
+  width: 90%;
+  height: 30%;
+  left: 5%;
+  top: 54%;
+  overflow-x: auto;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEquipHomeBoxButton {
+  position: absolute;
+  width: 30%;
+  height: 10%;
+  left: 35%;
+  bottom: 4.0%;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  color: #332207;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:4.5rem;
+  font-size: 2.5rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button4.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_lookShopHomeBoxButtonbg {
+  position: absolute;
+  width: 92%;
+  height: 60%;
+  left: 4%;
+  bottom: 5%;
+  text-align: center;
+  background-color: #b7ad9a;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookShopHomeBoxButtonTitle {
+  position: absolute;
+  width: 100%;
+  height: 12%;
+  left: 0%;
+  top: -12%;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookShopHomeBoxButtonTextDiv {
+  position: relative;
+  width: 24.5%; 
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  text-align: center;
+  white-space: nowrap;
+  color: #332207;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:4.5rem;
+  font-size: 2.5rem;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button9.png);
+  margin: 0% 0.25% 0% 0.25%;
+}
+
+.taixuhuanjing_lookShopHomeBoxCardDiv {
+  position: relative;
+  width: 32%; 
+  height: 75%;
+  top: 2%;
+  left: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0% 0.5% 0% 0.5%;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_lookShopHomeBoxSkillDiv {
+  position: relative;
+  width: 28%; 
+  height: 80%;
+  top: 2%;
+  left: 0%;
+  margin: 0% 0.5% 0% 0.5%;
+}
+
+.taixuhuanjing_lookShopHomeBoxSkillTitle  {
+  position: absolute;
+  width: 50%; 
+  height: 16%;
+  top: 18%;
+  left: 25%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_point3.png);
+}
+
+/*商店技能底图*/
+.taixuhuanjing_lookShopHomeBoxSkillName1 {
+  position:absolute;
+  width:100%;
+  height:100%;
+  right: 0%;
+  bottom: 0%;
+  -webkit-text-stroke: 5.5px #40404071;/*40404096*/
+  color: #40404071;
+  line-height: 3.25rem;
+  font-size: 3.6rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 800;
+  text-shadow: none;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+/*商店技能图*/
+.taixuhuanjing_lookShopHomeBoxSkillName2 {
+  position:absolute;
+  width:100%;
+  height:100%;
+  right: 0%;
+  top: 0%;
+  line-height: 3.25rem;
+  font-size: 3.5rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 700;
+  text-shadow: none;
+  background-size: 100% 100%;
+  /*渐变*/
+  -webkit-text-stroke: 0.6px rgba(38,37,34,0.5);
+  text-shadow: none;
+    background-image: linear-gradient(180deg, #f0d775 30%, #ab8c31 57%, #b0a04d 67%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.taixuhuanjing_lookShopHomeBoxSkillText1 {
+  position: absolute;
+  width: 96%;
+  height: 62%;
+  left: 2%;
+  bottom: 3%;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  z-index: 5;
+}
+
+/*商店技能描述*/
+.taixuhuanjing_lookShopHomeBoxSkillText2 {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  left: 2.5%;
+  top: 2.5%;
+  overflow: auto;
+  text-align: left;
+  white-space: pre-wrap;
+  color: #332207;
+  text-shadow:none;
+  font-family: shoushaFan;
+  font-weight: 400;
+  font-size: 2.0rem;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookShopHomeBoxDivButton {
+  position: absolute;
+  width: 68%;
+  height: 19%;
+  left: 16%;
+  top: 105%;
+  text-align: center;
+  white-space: nowrap;
+  text-indent: 1.0rem;
+  line-height: 4.5rem;
+  font-size: 3rem;
+  color: #74562c;
+  font-family: shoushaFan;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button11.png);
+  /*border: 1px solid rgba(255,255,255,1);*/
+  z-index: 5;
+}
+
+.taixuhuanjing_lookShopHomeBoxSkillButton {
+  position: absolute;
+  width: 68%;
+  height: 15%;
+  left: 16%;
+  top: 105%;
+  text-align: center;
+  white-space: nowrap;
+  text-indent: 1.5rem;
+  line-height: 4.0rem;
+  font-size: 3rem;
+  color: #74562c;
+  font-family: shoushaFan;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button11.png);
+  /*border: 1px solid rgba(255,255,255,1);*/
+  z-index: 5;
+}
+
+.taixuhuanjing_lookShopHomeBoxButtonBox {
+  position: absolute;
+  width: 100%;
+  height: 88%;
+  left: 0%;
+  top: 1%;
+  overflow-x: auto;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookShopHomeBoxBottom {
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  left: 0%;
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.0rem;
+  color: rgba(255 ,250 ,205 ,1);
+  font-family: shoushaFan;
+  background-color: rgba(5,5,5,0.35);
+  z-index: 6;
+}
+
+.taixuhuanjing_lookShopHomeBoxImp {
+  position: absolute;
+  width: 92%;
+  height: 22%;
+  left: 4%;
+  top: 5%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomeBoxImp {
+  position: absolute;
+  width: 95%;
+  height: 24%;
+  left: 2.5%;
+  top: 5%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomeBoxTitle {
+  position: absolute;
+  width: 70%;
+  height: 7%;
+  left: 15%;
+  top: 30%;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  color: #332207;
+  font-family: shoushaFan;
+  font-weight: 400;
+  font-size: 3.0rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame10.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomeBoxInfo {
+  position: absolute;
+  width: 95%;
+  height: 30%;
+  left: 2.5%;
+  top: 40%;
+  text-align: center;
+  color: #332207;
+  text-shadow:none;
+  font-family: shoushaFan;
+  font-weight: 400;
+  font-size: 2.4rem;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomeBoxButtonbg {
+  position: absolute;
+  width: 92%;
+  height: 25%;
+  left: 4%;
+  top: 72%;
+  text-align: center;
+  background-color: #b7ad9a;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomeBoxButton1 {
+  position: relative;
+  width: 98%;
+  height: 40%;
+  left: 0%;
+  top: 5%;
+  text-align: center;
+  white-space: nowrap;
+  color: #332207;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:6rem;
+  font-size: 3.0rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button8.png);
+  margin: 0% 0% 2% 0%;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomeBoxButton2 {
+  position: relative;
+  width: 48.5%;
+  height: 40%;
+  left: 0%;
+  top: 5%;
+  text-align: center;
+  white-space: nowrap;
+  color: #332207;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:6rem;
+  font-size: 3.0rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button8.png);
+  margin: 0% 0.5% 2% 0.5%;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomePlayBody {
+  position: absolute;
+  width: 35%;
+  height: 94%;
+  left: 2%;
+  top: 3%;
+  display: block;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomePlayImp {
+  position: absolute;
+  width: 97%;
+  height: 96%;
+  left: 1.5%;
+  top: 2%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomePlayFrame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/style/style_frame1.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomePlayArrow1 {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 0%;
+  top: 45%;
+  display: none;/*block*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_arrow1.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomePlayArrow2 {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  right: 0%;
+  top: 45%;
+  display: none;/*block*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_arrow2.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomePlayText {
+  position: absolute;
+  width: 90%;
+  height: 9%;
+  left: 5%;
+  bottom: 3%;
+  text-align: left;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomePlayText1 {
+  position: relative;
+  height: 100%;
+  left: 0%;
+  top: 1%;
+  z-index: 5;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  font-family: shoushaFan;
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
+.taixuhuanjing_lookEventHomePlayText2 {
+  position: relative;
+  width: 10%; 
+  height: 0;
+  top: 15%;
+  left: 0%;
+  padding-bottom: 10%;
+  color: rgb(207, 107, 0);
+  font-weight: 400;
+  font-family: shoushaFan;
+  line-height:1.2rem;
+  font-size: 2.0rem;
+  z-index: 10;
+  text-align: left;
+  white-space: nowrap;
+  text-shadow: 0 0 3px rgba(0,0,0,1),0 0 5px rgba(0,0,0,1),0 0 7px rgba(0,0,0,1),0 0 10px rgba(0,0,0,1);
+  margin: 0% 0% 0% 2.5%;
+}
+
+.taixuhuanjing_lookEventHomePlayType {
+  position: absolute;
+  width: 12%;
+  height: 10%;
+  right: 4%;
+  top: 3%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 6;
+}
+
+.taixuhuanjing_lookEventHomePlayType2 {
+  position: absolute;
+  width: 17.5%;
+  height: 15%;
+  right: 4%;
+  top: 3%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 6;
+}
+
+.taixuhuanjing_lookEventHomeTitle {
+  position: absolute;
+  width: 58%;
+  height: 10%;
+  left: 40%;
+  top: 2%;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  color: #332207;
+  font-family: shoushaFan;
+  font-weight: 400;
+  font-size: 3.5rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame10.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomeTextBox {
+  position: absolute;
+  width: 58%;
+  height: 58%;
+  left: 40%;
+  top: 22%;
+  text-align: center;
+  display: block;
+  background-color: #ac9f8c;
+  z-index: 5;
+}
+
+.taixuhuanjing_lookEventHomeText {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  left: 2.5%;
+  top: 2.5%;
+  text-align: left;
+  overflow: auto;
+  color: #332207;
+  text-shadow:none;
+  font-family: shoushaFan;
+  font-weight: 600;
+  font-size: 2.5rem;
+  z-index: 5;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_lookEventHomeTextTitle {
+  position: absolute;
+  width: 100%;
+  height: 14%;
+  left: 0%;
+  top: -14%;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 5;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_lookEventHomeTextDiv {
+  position: relative;
+  width: 24.5%; 
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  text-align: center;
+  white-space: nowrap;
+  color: #332207;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:4.5rem;
+  font-size: 2.5rem;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button9.png);
+  margin: 0% 0.25% 0% 0.25%;
+}
+
+.taixuhuanjing_lookEventHomeButton {
+  position: absolute;
+  width: 20%;
+  height: 12%;
+  left: 58.5%;
+  bottom: 5%;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  color: #332207;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:5rem;
+  font-size: 3.5rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button4.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_chooseEffectDialog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_chooseEffectBody {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  -webkit-transition: all 0s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  z-index: 5;
+}
+
+.taixuhuanjing_chooseEffectBox {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  left: 0%;
+  top: 5%;
+  text-align: center;
+  white-space: nowrap;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame11.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_chooseEffectTitle {
+  position:absolute;
+  width:25%;
+  height:10%;
+  right: 37.5%;
+  top: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 4.0rem;
+  font-family: shoushaFan;
+  /*text-shadow: 0 0 3px rgba(255,100,40,0.5),0 0 5px rgba(255,100,40,0.5),0 0 7px rgb(255 ,71 ,0,50%),0 0 10px rgb(255, 71 ,0, 50%);*/
+  text-shadow: 0 0 1px rgba(255,100,40,0.5),0 0 3px rgba(255,100,40,0.5),0 0 5px rgb(255 ,71 ,0,0.5),0 0 5px rgb(255, 71 ,0,0.5);
+  -webkit-transition: all 0.1s;
+  background-image: linear-gradient(180deg, #fdfff1 32%, #f5b86c 62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.taixuhuanjing_chooseEffectTitle2 {
+  position:absolute;
+  width:25%;
+  height:10%;
+  right: 37.5%;
+  top: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 4.0rem;
+  font-family: shoushaFan;
+  text-shadow: none;
+  -webkit-transition: all 0.1s;
+  background-image: linear-gradient(180deg, #fdfff1 32%, #f5b86c 62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.taixuhuanjing_chooseEffectDiv {
+  position: relative;
+  width: 18%; 
+  height: 70%;
+  top: 25%;
+  left: 0%;
+  border-radius: 10px;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame6.png);
+  margin: 0% 2% 0% 2%;
+}
+
+.taixuhuanjing_chooseEffectDivIcon {
+  position: absolute;
+  width: 35%;
+  height: 0;
+  left: 32.5%;
+  top: 0%;
+  padding-bottom: 35%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_chooseEffectDivIcon2 {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame9.png);
+  z-index: 5;
+}
+
+.taixuhuanjing_chooseEffectDivName {
+  position: absolute;
+  width: 60%;
+  height: 5%;
+  left: 20%;
+  top: 25%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:2.0em;
+  font-size: 2.2em;
+}
+
+.taixuhuanjing_chooseEffectDivInfo {
+  position: absolute;
+  width: 70%;
+  height: 20%;
+  left: 15%;
+  top: 38%;
+  z-index: 5;
+  text-align: center;
+  white-space: pre-wrap;
+  color: #fff;
+  font-family: shoushaFan;
+  font-size: 1.6em;
+}
+
+.taixuhuanjing_chooseEffectDivInfo2 {
+  position: absolute;
+  width: 70%;
+  height: 5%;
+  left: 15%;
+  top: 60%;
+  z-index: 5;
+  text-align: center;
+  white-space: pre-wrap;
+  color: #fff;
+  font-family: shoushaFan;
+  font-size: 1.2em;
+}
+
+.taixuhuanjing_chooseEffectDivInfo3 {
+    position: absolute;
+    width: 70%;
+    height: 5%;
+    left: 15%;
+    top: 66%;
+    z-index: 5;
+    text-align: center;
+    white-space: pre-wrap;
+    color: #ffd79d;
+    font-family: shousha;
+    font-size: 1.5em;
+    text-shadow: none;
+}
+
+.taixuhuanjing_chooseEffectDivButton {
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  left: 25%;
+  bottom: 16%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:2.0em;
+  font-size: 2.0em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button13.png);
+}
+
+.taixuhuanjing_chooseCharacterDialog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  -webkit-transition: all 0s;
+  z-index: 5;
+}
+
+.taixuhuanjing_chooseCharacterBody {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  -webkit-transition: all 0s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  z-index: 5;
+}
+
+.taixuhuanjing_chooseCharacterCharacterBody {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  left: 0%;
+  bottom: 51%;
+  display: block;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  background-color: rgba(0,0,0,0.35);
+  z-index: 5;
+}
+
+.taixuhuanjing_chooseCharacterOkButton {
+  position: absolute;
+  width: 12%;
+  height: 10%;
+  left: 44%;
+  top: 92%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button5.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterOkButton:hover{
+  -webkit-transform:scale(1.1);
+}
+
+
+.taixuhuanjing_chooseCharacterOkText {
+  position: absolute;
+  width: 40%;
+  height: 48%;
+  left: 30%;
+  top: 22%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/jixu.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterDiv {
+  position: relative;
+  width: 10.0%; 
+  height: 80%;
+  top: 10%;
+  left: 0%;
+  border-radius: 10px;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0% 1.2% 0% 1.2%;
+}
+
+.taixuhuanjing_characterDivMobile {
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.taixuhuanjing_consoledeskPlayName {
+  position: absolute;
+  text-align: center;
+  width: 10%;
+  height: 42%;
+  top: 15%;
+  right: 86%;
+  color: rgb(255, 255, 255);
+  font-family: shoushaFan;
+  line-height:1.5rem;
+  font-size: 1.6rem;
+  text-shadow: none;
+  z-index: 10;
+  white-space: pre-wrap;
+}
+
+.taixuhuanjing_consoledeskPlayHpBox {
+  position: absolute;
+  width: 10%;
+  height: 45%;
+  bottom: 3%;
+  left: 5.5%;
+  -webkit-transition: all 0.1s;
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 10;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_consoledeskPlayHpICON {
+  position: relative;
+  width: 100%; 
+  height: 0;
+  left: 0%;
+  padding-bottom: 100%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10% 0% 0% 0%;
+}
+
+.taixuhuanjing_consoledeskPlayHpICON2 {
+  position: relative;
+  width: 100%; 
+  height: 0;
+  left: 0%;
+  bottom: 65%;
+  padding-bottom: 100%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10% 0% 0% 0%;
+}
+
+.taixuhuanjing_consoledeskPlayHpNum {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 40%;
+  left: 0%;
+  text-align: center;
+  white-space: nowrap;
+  color: #f3e8dd;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:1.0rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),0 0 7px rgba(0,0,0,0.5),0 0 10px rgba(0,0,0,0.5);
+}
+
+.taixuhuanjing_characterDivMobileName {
+  position: absolute;
+  text-align: center;
+  width: 10%;
+  height: 42%;
+  top: 15%;
+  right: 87%;
+  color: rgb(255, 255, 255);
+  font-family: shoushaFan;
+  line-height:1.2rem;
+  font-size: 1.4rem;
+  text-shadow: none;
+  z-index: 10;
+  white-space: pre-wrap;
+}
+
+.taixuhuanjing_characterDivMobileRankBody2 {
+  position: absolute;
+  text-align: center;
+  width: 90%;
+  height: 20%;
+  top: 5%;
+  right: 5%;
+  z-index: 10;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.taixuhuanjing_characterDivMobileStarICON2 {
+  position: relative;
+  width: 20%; 
+  height: 0;
+  left: 0%;
+  padding-bottom: 20%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_star.png);
+  margin: 0% 0% 0% 0%;
+}
+
+.taixuhuanjing_characterDivMobileRankBody {
+  position: absolute;
+  width: 13%;
+  height: 45%;
+  bottom: 3%;
+  left: 3.5%;
+  -webkit-transition: all 0.1s;
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 10;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_characterDivMobileStarICON {
+  position: relative;
+  width: 100%; 
+  height: 0;
+  left: 0%;
+  padding-bottom: 100%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_star.png);
+  margin: -15% 0% 0% 0%;
+}
+
+.taixuhuanjing_chooseCharacterPlayBody {
+  position: absolute;
+  width: 50%;
+  height: 40%;
+  left: 25%;
+  top: 51%;
+  display: block;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.35);
+  /*z-index: 5;*/
+  z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterPlayBodyDiv {
+  position: absolute;
+  width: 20%; 
+  height: 80%;
+  top: 10%;
+  left: 5%;
+  opacity:0;
+  border-radius: 10px;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-duration:0.4s; /*动画时间*//*原0.6s*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: none;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes dlcAnimation-1 {
+  0%{
+    opacity:0;
+    -webkit-transform: scale(0.5);
+  }
+  85%{
+    opacity:1;
+    -webkit-transform: scale(1.5);
+  }
+  to {
+    opacity:1;
+    -webkit-transform: scale(1);
+  }
+}
+
+.taixuhuanjing_chooseCharacterDifficultyChooseBody {
+    position: absolute;
+    width: 16%;
+    height: 6%;
+    left: 7%;
+    top: 0%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_Popup1.png);
+    z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterDifficultyChooseBodyText {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    left: 0%;
+    bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    color: rgb(255 219 119);
+    font-family: shoushaFan;
+    font-weight: 400;
+    z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterDifficultyChooseBodyButton {
+    position: absolute;
+    width: 13%;
+    height: 100%;
+    right: 5%;
+    top: 0%;
+    transform: rotate(90deg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_arrow1.png);
+    z-index: 10;
+}
+
+.taixuhuanjing_difficultyChooseBodyButtonsDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: : 0%;
+    top: 100%;
+    text-align: left;
+    background-color: #221f18e0;
+    margin: 0%0% 0% 0%;
+}
+
+.taixuhuanjing_difficultyChooseBodyButtonsDivT {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    left: 56%;
+    top: 0%;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 1.6rem;
+    font-size: 1.0rem;
+    color: rgb(255 255 255);
+    font-family: shoushaFan;
+    font-weight: 400;
+    margin: 0% 25% 3% 0%;
+}
+
+.taixuhuanjing_difficultyChooseBodyButtonsIcon {
+    position: absolute;
+    width: 15%;
+    height: 50%;
+    right: 5%;
+    top: 25%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../extension/太虚幻境/image/icon/icon_suotuo.png);
+    z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterDifficultyInfoBodyTitle {
+    position: absolute;
+    width: 20%;
+    height: 6%;
+    left: 0%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    color: rgb(255 219 119);
+    font-family: shoushaFan;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterDifficultyInfoBody {
+    position:absolute;
+    width: 20%;
+    left: 5%;
+    top: 56%;
+    text-align: left;
+    font-size: 1.0rem;
+    font-family: shoushaFan;
+    font-weight: 500;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgb(0 0 0 / 50%), rgb(0 0 0 / 50%),rgba(0,0,0,0));
+    z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterStarBodyTitle {
+    position: absolute;
+    width: 20%;
+    height: 6%;
+    right: 9%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    color: rgb(255 219 119);
+    font-family: shoushaFan;
+    font-weight: 500;
+    z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterStarBody {
+    position:absolute;
+    width: 20%;
+    right: 5%;
+    top: 56%;
+    text-align: left;
+    font-size: 1.0rem;
+    font-family: shoushaFan;
+    font-weight: 500;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgb(0 0 0 / 50%), rgb(0 0 0 / 50%),rgba(0,0,0,0));
+    z-index: 10;
+}
+
+.taixuhuanjing_chooseCharacterPlayBodySkills {
+  position: absolute;
+  width: 70%; 
+  height: 80%;
+  top: 10%;
+  right: 2.5%;
+}
+
+.taixuhuanjing_chooseCharacterPlayBodySkills1 {
+  position: relative;
+  height: 15%;
+  top: 0%;
+  left: 5%;
+  color: rgb(207, 107, 0);
+  font-weight: 400;
+  font-family: shoushaFan;
+  line-height:1.2rem;
+  font-size: 2.0rem;
+  z-index: 10;
+  text-align: left;
+  white-space: nowrap;
+  text-shadow: 0 0 3px rgba(0,0,0,1),0 0 5px rgba(0,0,0,1),0 0 7px rgba(0,0,0,1),0 0 10px rgba(0,0,0,1);
+   margin: 0% 2.5% 0% 0%;
+}
+
+.taixuhuanjing_chooseCharacterPlayBodySkills2 {
+  position: relative;
+  width: 4%; 
+  height: 0;
+  top: 0%;
+  left: 5%;
+  padding-bottom: 4%;
+  color: rgb(207, 107, 0);
+  font-weight: 400;
+  font-family: shoushaFan;
+  line-height:1.2rem;
+  font-size: 2.0rem;
+  z-index: 10;
+  text-align: left;
+  white-space: nowrap;
+  text-shadow: 0 0 3px rgba(0,0,0,1),0 0 5px rgba(0,0,0,1),0 0 7px rgba(0,0,0,1),0 0 10px rgba(0,0,0,1);
+  margin: 0% 0% 0% 2.5%;
+}
+
+.taixuhuanjing_chooseCharacterPlayBodySkills3 {
+  position: absolute;
+  width: 95%; 
+  height: 85%;
+  top: 15%;
+  left: 5%;
+  color: #f3e8dd;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:1.5rem;
+  font-size: 1.5rem;
+  z-index: 10;
+  text-align: left;
+  overflow: auto;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),0 0 7px rgba(0,0,0,0.5),0 0 10px rgba(0,0,0,0.5);
+}
+
+.taixuhuanjing_chooseCharacterPlayBodyHpICON {
+  position: relative;
+  width: 100%;
+  height: 0;
+  top: 0%;
+  left: 0%;
+  padding-bottom:100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0% 0% 0% 5%;
+}
+
+.taixuhuanjing_chooseCharacterPlayBodyHpNum {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  white-space: nowrap;
+  color: #f3e8dd;
+  font-family: shoushaFan;
+  font-weight: 400;
+  line-height:2.0rem;
+  font-size: 2.5rem;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5),0 0 5px rgba(0,0,0,0.5),0 0 7px rgba(0,0,0,0.5),0 0 10px rgba(0,0,0,0.5);
+}
+
+.taixuhuanjing_Home {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform:translate(-50%,-50%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/bg-touming-1.jpg);
+  z-index: 5;
+}
+
+.taixuhuanjing_Home2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0s;
+  z-index: 5;
+}
+
+.taixuhuanjing_HomeBody {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/bg-touming-5.png);
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBody2 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame1.png);
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBody3 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  display: block;
+  transform: translate(-50%,-50%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0s;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodyBackground1 {
+  position: absolute;
+  width: 76%;
+  height: 95%;
+  left: 0%;
+  bottom: 0%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodySeasonName {
+  position: absolute;
+  width: 30%;
+  height: 12%;
+  left: 5%;
+  top: 5%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodySeasonRule {
+  position: absolute;
+  width: 12%;
+  height: 50%;
+  right: 0%;
+  top: 25%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_rule.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodySeasonBox {
+  position: absolute;
+  width: 58%;
+  height: 70%;
+  right: 33.0%;
+  top: 18%;
+  display: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame0.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodySeasonTitleShadow {
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  left: 5%;
+  top: 5%;
+  text-align: left;
+  white-space:nowrap;/*不换行*/
+  font-size: 1.5rem;
+  color:  rgb(239,235,183);
+  font-family: shousha;
+  font-weight: 500;
+  -webkit-text-stroke: 5.5px #000000;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodySeasonTitle {
+  position: absolute;
+  width: 90%;
+  height: 10%;
+  left: 5%;
+  top: 5%;
+  text-align: left;
+  white-space:nowrap;/*不换行*/
+  font-size: 1.5rem;
+  color: rgb(251, 248, 207);
+  font-family: shousha;
+  font-weight: 500;
+  text-shadow: none;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodySeasonText {
+  position: absolute;
+  width: 90%;
+  height: 73%;
+  left: 5%;
+  top: 15%;
+  overflow: auto;
+  text-align: left;
+  font-size: 1.2rem;
+  color: rgb(106,49,16);
+  font-family: shousha;
+  font-weight: 500;
+  text-shadow: none;
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodyRankBody {
+  position: absolute;
+  width: 60%;
+  height: 15%;
+  left: 20%;
+  bottom: 11%;
+  text-align: center;
+  white-space: pre-wrap;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodyRankDiv {
+  position: relative;
+  width: 14%;
+  height: 0;
+  left: 0%;
+  top: 0%;
+  z-index: 10;
+  padding-bottom: 14%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+  margin: 0% 1% 0% 1%;
+}
+
+.taixuhuanjing_HomeBodyTuJianButton {
+  position: absolute;
+  width: 9%;
+  height: 0;
+  right: 13%;
+  top: 4%;
+  padding-bottom: 9%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_tujian.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodyJiLuButton {
+  position: absolute;
+  width: 9%;
+  height: 0;
+  right: 3%;
+  top: 4%;
+  padding-bottom: 9%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_jilu.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodyNewJourney {
+  position: absolute;
+  width: 25%;
+  height: 26%;
+  right: 0%;
+  top: 45%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_NewJourney.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodyOldJourney {
+  position: absolute;
+  width: 25%;
+  height: 26%;
+  right: 0%;
+  top: 22%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_OldJourney.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodyPoint {
+  position: absolute;
+  width: 10%;
+  height: 22%;
+  right: 7.5%;
+  bottom: 5%;
+  display: block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_point5.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodyPointImp1 {
+  position: absolute;
+  width: 60%;
+  height: 50%;
+  left: 20%;
+  bottom: 20%;
+  z-index: 10;
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+} 
+
+.taixuhuanjing_HomeBodyPointImp2 {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  left: 0%;
+  top: 0%;
+  z-index: 9;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s;
+} 
+
+.taixuhuanjing_HomeBodyPointText {
+  position: absolute;
+  width:80%;
+  height:25%;
+  right: 10%;
+  bottom: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space:nowrap;/*不换行*/
+  font-size: 1.8rem;
+  color: rgba(200,200,200,1);
+  font-family: shoushaFan;
+  font-weight: 600;
+  background-color: rgba(0,0,0,0.75);
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_HomeBodyText {
+  position:absolute;
+  width: 76%;
+  height: 10.5%;
+  left: 0%;
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 2.2rem;
+  letter-spacing: 12px;
+  color: #ffffff;
+  font-family: shoushaFan;
+  text-shadow: 0 0 3px rgba(255,250,40,0.5),0 0 5px rgba(255,250,40,0.5),0 0 7px rgba(255,250,40,0.5),0 0 10px rgba(255,250,40,0.5);
+  /*font-weight:bold;
+  border: 1px solid rgba(255,255,255,1);*/
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_PointTitle {
+  position:absolute;
+  width:8%;
+  height:7%;
+  right: 46%;
+  top: 2.5%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/dianjiang.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_PointBody {
+  position: absolute;
+  width: 92%;
+  height: 82%;
+  left: 4%;
+  top: 15%;
+  overflow: auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.taixuhuanjing_PointGroup {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  left: 0%;
+  top: 2.7%;
+  white-space: nowrap;
+  text-align: center;
+  z-index: 10;
+}
+
+/*.taixuhuanjing_PointGroupDiv {
+  position: relative;
+  width: 15%; 
+  height: 82.15%;
+  top: 5%;
+  left: 0%;
+  border-radius: 8px;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0% 1% 0% 0%;
+}*/
+.taixuhuanjing_PointGroupDiv {
+  position: relative;
+  width: 12.5%; /*其实就修改了这一句的参数，这么做是为了让选将框有足够的位置显示晋势力按钮*/
+  height: 82.15%;
+  top: 5%;
+  left: 0%;
+  border-radius: 8px;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0% 1% 0% 0%;
+}
+
+.taixuhuanjing_PointPlayBox {
+  position: absolute;
+  width: 98%;
+  height: 70%;
+  left: 1%;
+  top: 15%;
+  z-index: 10;
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/background/bg-touming-6.png);
+}
+
+.taixuhuanjing_PointPlayBody {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  left: 1%;
+  top: 1%;
+  overflow: auto;
+  text-align: left;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.taixuhuanjing_PointPlayDiv {
+  position: relative;
+  width: 12%; 
+  height: 45%;
+  top: 3%;
+  left: 0%;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_point2.png);
+  margin: 0% 1.12% 0.75% 1.12%;
+}
+
+.taixuhuanjing_consoledeskTitle {
+  position:absolute;
+  width:35%;
+  height:8%;
+  right: 32.5%;
+  top:0%;
+  z-index: 10;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame1.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskTitleText {
+  position:absolute;
+  width:80%;
+  height:60%;
+  right: 10%;
+  top:0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskEventTop {
+  position:absolute;
+  width:32%;
+  height:0.65%;
+  right: 34%;
+  top:10%;
+  z-index: 10;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame12.png);
+}
+
+.taixuhuanjing_consoledeskEventTopImp {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  z-index: 8;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame14.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskEventTopBoss {
+  position:absolute;
+  width: 12%;
+  height: 800%;
+  left: 93%;
+  top: -140%;
+  z-index: 8;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_text_boss.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskEventTopStore {
+  position:absolute;
+  width: 12%;
+  height: 800%;
+  left: 90%;
+  top: -140%;
+  z-index: 8;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_text_shop.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskCoinBody {
+  position:absolute;
+  width:15%;
+  height:6%;
+  right: 10%;
+  top:3%;
+  z-index: 10;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button12.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskCoinBody2 {
+  position:absolute;
+  width: 15%;
+  height: 7%;
+  right: 10%;
+  bottom: 100%;
+  z-index: 10;
+  -webkit-transition: all 0.1s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_consoledeskEffectIcon {
+  position:absolute;
+  width:4.5%;
+  height: 0;
+  left: 11%;
+  top:9%;
+  z-index: 10;
+  padding-bottom: 4.5%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame11.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskEffectIcon2 {
+  position:absolute;
+  width:70%;
+  height: 70%;
+  left: 15%;
+  top: 15%;
+  z-index: 10;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskEffectInfo {
+  /*position:absolute;
+  width: 330%;
+  left: 50%;
+  top: 50%;
+  text-align: left;
+  display:none;
+  z-index: 10;
+  font-size: 1.5em;
+  font-family:  shoushaFan;
+  text-shadow: 3px 5px 7px #703a07;
+  background-color: rgba(0,0,0,0.5);
+  -webkit-transition: all 0.1s;*/
+  position: absolute;
+  width: 330%;
+  z-index: 7;
+  border: 1px solid gold;
+  right: 0%;
+  top: 105%;
+  text-align: left;
+  display:none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "shoushaFan", serif;
+  z-index: 10;
+}
+
+.taixuhuanjing_consoledeskRunkTextInfo {
+  position: absolute;
+  width: 140%;
+  z-index: 7;
+  border: 1px solid gold;
+  left: 50%;
+  top: 120%;
+  text-align: left;
+  display:none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "shoushaFan", serif;
+  z-index: 10;
+}
+
+.taixuhuanjing_skillInfoDesc {
+  position: absolute;
+  width: 30%;
+  z-index: 7;
+  border: 1px solid white;
+  left: 35%;
+  top: 50%;
+  text-align: left;
+  display:none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "shoushaFan", serif;
+  z-index: 10;
+  transform-origin: center bottom;
+}
+
+.taixuhuanjing_equipInfoDesc {
+  position: absolute;
+  width: 30%;
+  z-index: 7;
+  border: 1px solid white;
+  left: 17%;
+  top: 66%;
+  text-align: left;
+  display:none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "shoushaFan", serif;
+  z-index: 10;
+}
+
+.taixuhuanjing_consoledeskCoinNum {
+  position:absolute;
+  width:90%;
+  height:70%;
+  right: 0%;
+  top:15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.2rem;
+  color: #FFF;
+  font-family: shoushaFan;
+  z-index: 10;
+  -webkit-transition: all 0.1s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_consoledeskCoinIcon {
+  position:absolute;
+  width:25%;
+  height: 0;
+  left: 5%;
+  top:5%;
+  z-index: 10;
+  padding-bottom: 25%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/coin.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskCoinNum2 {
+  position:absolute;
+  width:80%;
+  height:70%;
+  right: 0%;
+  top:22.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.0rem;
+  color: #FFF;
+  font-family: shoushaFan;
+  z-index: 10;
+  -webkit-transition: all 0.1s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_consoledeskRunkBody {
+  position:absolute;
+  width:14%;
+  height:5%;
+  left: 10%;
+  top:3%;
+  z-index: 10;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_point4.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskRunkText {
+  position:absolute;
+  width:80%;
+  height:70%;
+  right: 10%;
+  top:10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.2rem;
+  color: #FFF;
+  font-family: shoushaFan;
+  z-index: 10;
+  -webkit-transition: all 0.1s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_consoledeskBottom {
+  position:absolute;
+  width:100%;
+  height:8.85%;
+  right: 0%;
+  bottom: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame2.png);
+  -webkit-transition: all 0.1s;
+}
+
+/*主控台-菜单按钮*/
+.taixuhuanjing_consoledeskHomeButton {
+  /*已修改和千幻返回按钮一致*/
+  position:absolute;
+  /*width: 130px;*/
+  width: 127px;
+  /*height: 95px;*/
+  height: 105px;
+  /*right: -2px;*/
+  right: -4px;
+  /*top: 0%;*/
+  top: -0.5px;
+  z-index: 10;
+  -webkit-transition: all 0.3s;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;/*cover*/
+  background-image: url(../../extension/太虚幻境/image/icon/button.png);
+}
+
+.taixuhuanjing_consoledeskHomeButtonBox {
+  position:absolute;
+  /*width: 205%;*/
+  width: 210%;
+  height: 100%;
+  right: 2px;
+  top: 0%;
+  z-index: 10;
+  -webkit-transition: all 0.3s;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../extension/太虚幻境/image/icon/button2.png);
+}
+
+.taixuhuanjing_consoledeskHomeButtonMenu {
+  position:absolute;
+  width: 24%;
+  height: 0;
+  left: 2%;
+  top: 20%;
+  z-index: 10;
+  padding-bottom: 18%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_menu.png);
+}
+
+.taixuhuanjing_consoledeskHomeButtonOut {
+  position:absolute;
+  width: 24%;
+  left: 30.5%;
+  top: 20%;
+  z-index: 10;
+  padding-bottom: 18%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_out.png);
+}
+
+.taixuhuanjing_consoledeskPlayBody {
+  position:absolute;
+  width: 13.5%;
+  height: 30%;
+  right: 0%;
+  bottom:0.2%;
+  z-index: 10;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskPlayBg {
+  position:absolute;
+  width:100%;
+  height:100%;
+  right: 0%;
+  bottom:0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.1s;
+  /*将面阴影*/
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.7));
+  
+}
+.taixuhuanjing_consoledeskPlayImp2 {
+  position:absolute;
+  width:78.5%;
+  height:108.5%;
+  right: 3.25%;
+  bottom:2.5%;
+  border-radius: 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskPlayImp3 {
+  position:absolute;
+  width:78.5%;
+  height: 106%;
+  right: 3.25%;
+  bottom:2.5%;
+  border-radius: 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskPlayImp1 {
+  position:absolute;
+  width:78%;
+  height: 96.75%;
+  right: 3.35%;
+  bottom:1.25%;
+  border-radius: 12px 12px 10px 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskPlayImpX {
+  position:absolute;
+  width:100%;
+  height:114.5%;
+  right: 0%;
+  bottom: 0%;
+  /*border-radius: 34px 34px 8px 8px;*/
+  border-radius: 8px 8px 8px 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskPlayImp {
+  position:absolute;
+  width:78%;
+  height:96.5%;
+  right: 3.35%;
+  bottom:-0.25%;
+  /*border-radius: 34px 34px 8px 8px;*/
+  border-radius: 8px 8px 8px 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskPlayImpL {
+  position:absolute;
+  width:99%;
+  height:100%;
+  right: 0%;
+  bottom: 0%;
+  /*border-radius: 30px 30px 8px 8px;*/
+  border-radius: 8px 8px 8px 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskEventBox {
+  position:absolute;
+  width: 70%; 
+  height: 50%;
+  bottom: 30%;
+  right: 15%;
+  text-align: center;
+}
+
+.taixuhuanjing_consoledeskSkillBox {
+  position:absolute;
+  width: 20%;
+  height: 30%;
+  left: 67%;
+  bottom: 0%;
+  z-index: 9;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame4.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskSkillBody {
+  position:absolute;
+  width: 90%; 
+  height: 90%;
+  bottom: 0%;
+  right: 0%;
+  overflow: auto;
+  text-align: left;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_consoledeskEventDiv {
+  position: relative;
+  width: 24.5%; 
+  height: 93%;
+  top:5%;
+  left: 0%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame5.png);
+  margin: 0% 1% 0% 1%;
+}
+
+.taixuhuanjing_consoledeskEventDiv3 {
+  position: relative;
+  width: 24.5%; 
+  height: 93%;
+  top:5%;
+  left: 0%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame7.png);
+  margin: 0% 1% 0% 1%;
+}
+
+.taixuhuanjing_consoledeskEventDivImp {
+  position: absolute;
+  width: 54%;
+  height: 0;
+  left: 23%;
+  top: 2%;
+  z-index: 10;
+  border-radius: 50%;
+  padding-bottom: 54%;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.2s;
+}
+
+.taixuhuanjing_consoledeskEventDivRound {
+  position: absolute;
+  width: 60%;
+  height: 0;
+  left: 20%;
+  top: 0%;
+  z-index: 10;
+  border-radius: 50%;
+  padding-bottom: 60%;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame9.png);
+  -webkit-transition: all 0.2s;
+}
+
+.taixuhuanjing_consoledeskEventDivName {
+  position:absolute;
+  width:90%;
+  height:7%;
+  right: 5%;
+  top: 36%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  color: #916843;
+  text-shadow:none;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskEventDivChangeButton {
+  position:absolute;
+  width: 15%;
+  height: 0;
+  right: 42.5%;
+  top: 27.5%;
+  z-index: 10;
+  padding-bottom: 15%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_change.png);
+  -webkit-transition: all 0.1s;
+  animation-duration:1s; /*动画时间*/
+  animation-name: none;
+  animation-iteration-count: infinite; /*动作循环的次数：infinite 无限循环*/
+  transform-origin: center; /*设置动画旋转元素的基点为：居中靠下*/
+}
+
+@keyframes changeButton-1 {
+  0%{
+  transform: rotate(360deg);
+  }
+  100%{
+  transform: rotate(0deg);
+  }
+}
+
+.taixuhuanjing_consoledeskEventDivChangeButton:hover{
+  animation-name: changeButton-1;
+}
+
+.taixuhuanjing_consoledeskEventDivType {
+  position:absolute;
+  width:90%;
+  height:6%;
+  right: 5%;
+  top: 43%;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  color: #342727;
+  text-shadow:none;
+  font-family: shoushaFan;
+}
+
+.taixuhuanjing_consoledeskEventDivLine {
+  position:absolute;
+  width:80%;
+  height:3%;
+  right: 10%;
+  top: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame16.png);
+}
+
+.taixuhuanjing_consoledeskEventDivInfo {
+  position:absolute;
+  width: 74%;
+  height: 25%;
+  right: 13%;
+  top: 54%;
+  text-align: left;
+  overflow: auto;
+  font-size: 1.4rem;
+  color: #9d8566;
+  text-shadow:none;
+  font-family: shoushaFan;
+}
+
+.taixuhuanjing_consoledeskEventDivOff {
+  position: absolute;
+  width: 20%;
+  height: 0;
+  right: 0%;
+  top: 0%;
+  z-index: 10;
+  padding-bottom: 20%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_off.png);
+  -webkit-transition: all 0.2s;
+}
+
+.taixuhuanjing_consoledeskEventDivButton {
+  position: absolute;
+  width: 40%;
+  height: 9%;
+  left: 30%;
+  top: 79%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: shoushaFan;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button13.png);
+  -webkit-transition: all 0.2s;
+}
+
+.taixuhuanjing_consoledeskSkillDiv {
+  position: relative;
+  width: 45%; 
+  height: 21%;
+  top:2%;
+  left: 0%;
+  -webkit-transition: all 0.1s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_skill_null.png);
+  margin: 0% 4% 2% 1%;
+}
+
+.taixuhuanjing_consoledeskSkillDivText1 {
+  position:absolute;
+  width:80%;
+  height:80%;
+  right: 10%;
+  bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  color: #7b6958;
+  font-weight: 600;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+}
+
+/*技能栏底图*/
+.taixuhuanjing_consoledeskSkillDivText2 {
+  position:absolute;
+  width:80%;
+  height:80%;
+  right: 10%;
+  bottom: 10%;
+  color: #40404091;
+  font-size: 2.6rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 800;
+  text-shadow: none;
+  -webkit-text-stroke: 3.5px #40404091;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+/*技能栏图*/
+.taixuhuanjing_consoledeskSkillDivText3 {
+  position:absolute;
+  width:80%;
+  height:80%;
+  right: 10%;
+  bottom: 10%;
+  font-size: 2.5rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 600;
+  background-color: none;
+  background-size: 100% 100%;
+  -webkit-text-stroke: 0.6px rgba(38,37,34,0.5);
+  text-shadow: none;
+    background-image: linear-gradient(180deg, #f0d775 30%, #ab8c31 57%, #b0a04d 67%);
+  text-shadow: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+#effectStyleBox2 {
+  position:absolute;
+  width:50%;
+  height:50%;
+  left: 25%;
+  top: 25%;
+  opacity:1;
+  z-index: 2022;
+  border: 1px solid rgba(255,25,25,1);
+}
+
+.player>.playerbuffstyle {
+  position:absolute;
+  width:160%;
+  height:20%;
+  right: 110%;
+  bottom: 100%;
+  text-align: left;
+  -webkit-transition: all 0.1s;
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 2022;
+}
+
+.skill-control> .playerbuffstyle2 {
+  z-index: 7;
+  width: 150px;
+  margin-bottom: 35px;
+  justify-content: right;
+  left: -3px;
+  right: 23px;
+  top: 56%;
+  float: right;
+  position: relative;
+  /*border: 1px solid gold;*/
+}
+
+.player>.playerbuffstyle3 {
+  min-width: 150px;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  justify-content: right;
+  right: 139px;
+  bottom: 80%;
+}
+
+.SLBuff {
+  height: 30px;
+  margin-left: 4px;
+  z-index: 7;
+}
+
+.SLBuffDesc {
+  position: absolute;
+  width: 30%;
+  z-index: 7;
+  border: 1px solid gold;
+  top: 44%;
+  left: 37%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "shoushaFan", serif;
+}
+
+.SLBuffAnim {
+  border-radius: 50%;
+  box-shadow: -5px 0px 5px rgba(255, 220, 100, 0.75),
+  0px -5px 5px rgba(255, 200, 100, 0.75),
+  5px 0px 5px rgba(255, 255, 0, 0.75),
+  0px 5px 5px rgba(255, 255, 0, 0.75);
+  animation-name: buffAnimation-1;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.taixuhuanjing_consoledeskServantBox {
+  position:absolute;
+  width:16.0%;
+  height:8%;
+  left: -0.25%;
+  bottom: 17.9%;
+  z-index: 8;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame21.png);
+}
+
+.taixuhuanjing_consoledeskServantDiv {
+  position:absolute;
+  width:90.0%;
+  height: 400%;
+  left: 5%;
+  bottom: 80%;
+  z-index: 8;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskServantName {
+  position:absolute;
+  width:70.0%;
+  height: 37%;
+  left: 15%;
+  bottom: 30%;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 2.0rem;
+  color: #fff;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskbuffBox {
+  position:absolute;
+  width:30%;
+  height:16%;
+  left: 37%;
+  bottom: 14%;
+  z-index: 8;
+  text-align: left;
+  -webkit-transition: all 0.1s;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.taixuhuanjing_consoledeskbuffBody {
+  position: relative;
+  width: 100%; 
+  height: 30%;
+  top:0%;
+  left: 0%;
+  text-align: left;
+  -webkit-transition: all 0.1s;
+  margin: 2% 0% 0% 0%;
+}
+
+.taixuhuanjing_consoledeskbuffBody2 {
+  position: relative;
+  width: 100%; 
+  height: 100%;
+  top:0%;
+  left: 0%;
+  text-align: left;
+  -webkit-transition: all 0.1s;
+  margin: 5% 0% 0% 0%;
+}
+
+#taixuhuanjing_consoledeskBuffDiv {
+  position: relative;
+  width: 10%; 
+  height: 0;
+  top:2%;
+  left: 0%;
+  border-radius: 50%;
+  padding-bottom: 10%;
+  -webkit-transition: all 0.1s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0% 1% 0% 1%;
+}
+
+@keyframes buffAnimation-1 {
+  0%{
+    transform: scale(1.0);
+  }
+  10%{
+    transform: scale(1.2);
+  }
+  75%{
+    transform: scale(1.2);
+  }
+  to{
+    transform: scale(1.0);
+  }
+} 
+
+#taixuhuanjing_consoledeskBuffDiv2 {
+  position: relative;
+  width: 20%; 
+  height: 0;
+  top:2%;
+  left: 0%;
+  border-radius: 50%;
+  padding-bottom: 20%;
+  -webkit-transition: all 0.1s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0% 2% 0% 2%;
+}
+
+.taixuhuanjing_consoledeskbuffDivInfoName {
+  position: absolute;
+  width: 100%; 
+  height: 120%;
+  top:0%;
+  left: -10%;
+  opacity:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.0rem;
+  color: #fff;
+  font-family: yuanli;
+  text-shadow: 0 0 3px rgba(255,100,40,0.75),0 0 5px rgba(255,100,40,0.75),0 0 7px rgba(255,100,40,0.75),0 0 10px rgba(255,100,40,0.75);
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0% 2% 0% 2%;
+}
+
+@keyframes buffAnimation-2 {
+  0%{
+    opacity:0;
+    transform: scale(1.0);
+  }
+  80%{
+    opacity:1;
+    transform: scale(1.5);
+  }
+  95%{
+    opacity:1;
+    transform: scale(1.5);
+  }
+  to{
+    opacity:0;
+    transform: scale(2.0);
+  }
+} 
+
+.taixuhuanjing_consoledeskbuffDivInfobody {
+  position: absolute;
+  width: 650%;
+  height: 300%;
+  /*right: -150%;*/
+  /*top: 100%;*/
+  left: -680%;
+  bottom: 50%;
+  display: none;
+  text-align: left;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.taixuhuanjing_consoledeskbuffDivInfoText {
+  position: absolute;
+  width: 90%;
+  right: 10%;
+  top: 0%;
+  font-size: 1.5rem;
+  font-family:  shoushaFan;
+  text-shadow: 3px 5px 7px #703a07;
+  background-color: rgba(0,0,0,0.45);
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.taixuhuanjing_consoledeskAttributeBox {
+  position:absolute;
+  width:68%;
+  height:18%;
+  left: 0%;
+  bottom: 0%;
+  z-index: 8;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame3.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody1 {
+  position:absolute;
+  width: 41%;
+  height: 51%;
+  right: 4.0%;
+  bottom: 2.5%;
+  z-index: 8;
+  text-align: center;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody2 {
+  position:absolute;
+  width: 25%;
+  height: 97.5%;
+  left: 23%;
+  bottom: 2.5%;
+  z-index: 8;
+  text-align: left;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody2Shadow {
+  position:absolute;
+  width: 25%;
+  height: 97.5%;
+  left: 23%;
+  bottom: 2.5%;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow:0 0 5px 3px rgba(155,155,155,1) inset;
+}
+
+.taixuhuanjing_consoledeskAttributeBody3 {
+  position:absolute;
+  width: 15%;
+  height: 104%;
+  left: 3.65%;
+  bottom: 0%;
+  z-index: 8;
+  text-align: center;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody4 {
+  position:absolute;
+  width: 8%;
+  height: 13%;
+  left: 49%;
+  top: 29%;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: shoushaFan;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame0.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody5 {
+  position:absolute;
+  width: 41%;
+  height: 10%;
+  left: 55%;
+  top: 30%;
+  z-index: 8;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody5Div {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody5Imp {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  z-index: 8;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_frame8.png);
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody1Div {
+  position: relative;
+  width: 44%;
+  height: 40%;
+  left: 0%;
+  top: 3.5%;
+  text-align: center;
+  white-space: nowrap;
+  margin: 0% 2% 1.5% 2%;
+}
+
+.taixuhuanjing_consoledeskAttributeBody1DivText {
+  position: relative;
+  height: 100%;
+  left: 0%;
+  top: 15%;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  margin: 0% 2% 0% 2%;
+}
+
+.taixuhuanjing_consoledeskAttributeBody1DivText2 {
+  position: relative;
+  height: 100%;
+  left: 0%;
+  top: 20%;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.0rem;
+  font-weight: 400;
+  color: #fff;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  margin: 0% 2% 0% 2%;
+}
+
+.taixuhuanjing_consoledeskAttributeBody2Div {
+  position: relative;
+  width: 44%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  /*Helasisy改：卡牌圆角border-radius: 8px;*/
+  border-radius: 1px;
+  text-align: center;
+  -webkit-transition: all 0.1s;
+  margin: 0% -10% 0% 0%;
+  overflow: hidden;
+}
+
+.taixuhuanjing_consoledeskAttributeBody2DivCard {
+  position:absolute;
+  width: 100%;
+  height:100%;
+  left: 0%;
+  bottom: 0%;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.taixuhuanjing_consoledeskAttributeBody2DivCardName {
+  position:absolute;
+  width:90%;
+  height:30%;
+  right: 5%;
+  top:5%;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 1.4rem;
+  color: #8B0000;
+  font-family: shoushaFan;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody2DivCardType {
+  position:absolute;
+  width:17%;
+  left: 3%;
+  bottom:5%;
+  text-align: center;
+  white-space: pre-wrap;
+  font-size: 1.0rem;
+  color: #CD2626;
+  font-family: yuanli;
+  border: 1px solid #CD2626;
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_consoledeskAttributeBody3Div {
+  position: relative;
+  width: 100%;
+  height: 24%;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space: nowrap;
+  line-height:2.5rem;
+  font-size: 1.25rem;
+  color: #fff;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  margin: 0% 0% 1.0% 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button6.png);
+}
+
+
+.taixuhuanjing_ChoiceSkillTitle {
+  position:absolute;
+  width:20%;
+  height:7%;
+  right: 40%;
+  bottom:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 4.0rem;
+  color: #de9d30;
+  font-family: yuanli;
+  text-shadow: 0 0 3px rgba(255,100,40,0.5),0 0 5px rgba(255,100,40,0.5),0 0 7px rgba(255,100,40,0.5),0 0 10px rgba(255,100,40,0.5);
+  /*font-weight:bold;
+  border: 1px solid rgba(255,255,255,1);*/
+  -webkit-transition: all 0.1s;
+}
+
+.taixuhuanjing_ChoiceSkillBody {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  left: 10%;
+  top: 0%;
+  overflow: auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.taixuhuanjing_ChoiceSkillDiv {
+  position: relative;
+  width: 26%; 
+  height: 85%;
+  top:0%;
+  left: 0%;
+  -webkit-transition: all 0.1s;
+  /*border: 1px solid rgba(255,255,255,1);*/
+  margin: 3% 1% 0.5% 1%;
+}
+
+.taixuhuanjing_ChoiceSkillDivNameColor {
+  position:absolute;
+  width:100%;
+  height:20.1%;
+  right: 0%;
+  top: 0%;
+  background-color: #EE7600;
+  z-index: 9;
+}
+
+.taixuhuanjing_ChoiceSkillDivName {
+  position:absolute;
+  width:100%;
+  height:15%;
+  right: 0%;
+  top: 0%;
+  line-height:5.25rem;
+  font-size: 3.0rem;
+  font-family:  HanYiZhongLiShuFan;
+  font-weight: 800;
+  background-color: #EE7600;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.75);
+  text-shadow: none;
+  background-size: 100% 100%;
+  /*渐变*/
+  background-image: linear-gradient(180deg, #f0d775 32%, #9a8038 62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.taixuhuanjing_ChoiceSkillDivInfo {
+  position:absolute;
+  width:98%;
+  height:80%;
+  right: 1%;
+  top: 20%;
+  overflow: auto;
+  text-align: left;
+  font-size: 1.8rem;
+  font-family:  shoushaFan;
+  background-color: #fff;
+  color: #8B4C39; /*字体颜色，这个还有用*/
+  z-index: 8;
+}
+
+.taixuhuanjing_ChoiceSkillOkButton {
+  position: absolute;
+  width: 14%; 
+  height: 15%;
+  top: 100%;
+  left: 43%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 2.8rem;
+  color: #FFEC8B;
+  font-family: HanYiZhongLiShuFan;
+  border-radius: 8px;
+  background-color: #FFA500;
+}
+
+.taixuhuanjing_ChoiceCharacterGroup {
+  position: absolute;
+  width: 98%;
+  height: 15%;
+  left: 1%;
+  top: 0%;
+  white-space: nowrap;
+  text-align: left;
+  z-index: 10;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_ChoiceCharacterGroupDiv {
+  position: relative;
+  width: 15%; 
+  height: 62%;
+  top: 20%;
+  left: 0%;
+  border-radius: 8px;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0% 2% 0% 0%;
+}
+
+.taixuhuanjing_ChoiceCharacterGroupDivName {
+  position:absolute;
+  width:50%;
+  height:60%;
+  right: 25%;
+  top: -5%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.taixuhuanjing_ChoiceCharacterGroupDivMax {
+  position:absolute;
+  width:100%;
+  height:45%;
+  right: 0%;
+  top: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 3rem;
+  color: #958264;
+  font-weight: 800;
+  font-family:  HanYiZhongLiShuFan;
+  text-shadow: none;
+  -webkit-text-stroke: 0.5px rgba(0,0,0,1);
+  z-index: 10;
+}
+
+.taixuhuanjing_ChoiceCharacterPlayBody {
+  position: absolute;
+  width: 98%;
+  height: 70%;
+  left: 1%;
+  top: 15%;
+  overflow: auto;
+  text-align: left;
+  z-index: 10;
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../extension/太虚幻境/image/background/bg-touming-4.png);
+}
+
+.taixuhuanjing_ChoiceCharacterPlayDiv {
+  position: relative;
+  width: 12%; 
+  height: 0;
+  top: 3%;
+  left: 0%;
+  overflow: hidden;
+  border-radius: 8px;
+  padding-bottom: 12%;
+  -webkit-transition: all 0.1s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/prize-box10.png);
+  margin: 0% 1.12% 0.75% 1.12%;
+}
+
+.taixuhuanjing_ChoiceCharacterPlayImp1 {
+  position: absolute;
+  width: 80%;
+  height: 0;
+  left: 10%;
+  bottom: 10%;
+  z-index: 10;
+  border-radius: 8px;
+  padding-bottom: 80%;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+} 
+
+.taixuhuanjing_ChoiceCharacterPlayImp2 {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  left: 0%;
+  top: 0%;
+  z-index: 9;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s;
+} 
+
+.taixuhuanjing_ChoiceCharacterPlayText {
+  position: absolute;
+  width:100%;
+  height:22%;
+  right: 0%;
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  white-space:nowrap;/*不换行*/
+  font-size: 1.5rem;
+  color: rgba(200,200,200,1);
+  font-family: shoushaFan;
+  font-weight: 600;
+  background-color: rgba(0,0,0,0.75);
+  -webkit-transition: all 0.1s;
+  z-index: 10;
+}
+
+.taixuhuanjing_ChoiceCharacterOkButton {
+  position: absolute;
+  width: 14%; 
+  height: 12%;
+  bottom: 1.5%;
+  left: 43%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  font-size: 2.5rem;
+  color: #FFEC8B;
+  font-family: HanYiZhongLiShuFan;
+  border-radius: 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button3.png);
+}
+
+.taixuhuanjing_ChoiceCharacterOkButton:hover{
+  -webkit-transform:scale(1.1);
+}
+
+#taixuhuanjing_gamePremiseHome {
+  position: absolute;
+  width: 30%;
+  height: 9.2%;
+  position: absolute;
+  top: 0px;
+  left: -26px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  line-height:2.9rem;
+  font-size: 1.6rem;
+  color: #FFF;
+  font-family: shoushaFan;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+#taixuhuanjing_messagePopupHome {
+  width:100%;
+  height:70%;
+  left: 0%;
+  bottom: 20%;
+  pointer-events: none;
+  text-align: center;
+  z-index: 2022;
+}
+
+.taixuhuanjing_messagePopupDiv {
+  position: relative;
+  width:100%;
+  height:5%;
+  top: 100%;
+  left: 0%;
+  text-align: center;
+  animation-duration:1.6s; /*动画时间*/
+  animation-fill-mode: both; /*播放后的状态*/
+  animation-name: messagePopupAnimation-1;/*动画名称*/
+  animation-iteration-count: 1; /*动画循环次数：infinite 无限循环*/
+  transform-origin: center center; /*设置动画旋转元素的基点为：居中靠下*/
+  margin: 0% 0% 0% 0%;
+}
+
+@keyframes messagePopupAnimation-1 {
+  0%{
+    opacity:0;
+    top: 100%;
+  }
+  25%{
+    opacity:1;
+    top: 95%;
+  }
+  80%{
+    opacity:1;
+    top: 95%;
+  }
+  to {
+    opacity:0;
+    top: 80%;
+  }
+}
+
+.taixuhuanjing_messagePopupDivBg {
+  position:absolute;
+  width:20%;
+  height:120%;
+  top: 50%;
+  left: 50%;
+  opacity:1;
+  transform: translate(-50%,-50%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Popup1.png);
+  -webkit-transition: all 0s;
+}
+
+.taixuhuanjing_messagePopupDivText {
+  position:absolute;
+  height:100%;
+  left: 50%;
+  top: 50%;
+  opacity:1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: shoushaJian;
+  color: #FFF;
+  text-shadow: 0 0 3px red,0 0 3px red,0 0 5px red,0 0 7px red;
+  -webkit-transition: all 0s;
+}
+
+.taixuhuanjing_purchasePromptPopup {
+  width:100%;
+  height:100%;
+  left: 0%;
+  top: 0%;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.taixuhuanjing_purchasePromptBody {
+  width:50%;
+  height:58%;
+  left: 25%;
+  top: 21%;
+  pointer-events: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/background/frame8.png);
+  z-index: 10;
+}
+
+.taixuhuanjing_purchasePromptTitle {
+  width:90%;
+  height:10%;
+  top: 7%;
+  left: 5%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-indent: 1rem;
+  letter-spacing:1rem;
+  font-size: 3rem;
+  color: #FFF;
+  font-family: shoushaFan;
+  -webkit-transition: all 0.1s;
+  text-shadow: 3px 5px 7px #703a07;
+}
+
+.taixuhuanjing_purchasePromptText {
+  position:absolute;
+  width:88%;
+  height:60%;
+  top: 22%;
+  left: 6%;
+  text-align: left;
+  text-indent: 3.2rem;
+  font-size: 2.0rem;
+  font-family: shoushaFan;
+  color: #342319;
+  /*border: 1px solid rgba(255,255,255,1);*/
+}
+
+.taixuhuanjing_purchasePromptButton1 {
+  position:absolute;
+  width:18%;
+  height:10%;
+  bottom: 8%;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height:3.25rem;
+  font-size: 2.0rem;
+  font-family: shoushaFan;
+  color: rgba(255,255,255,1);
+  z-index: 10;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button13.png);
+}
+.taixuhuanjing_purchasePromptButton1:hover{
+  -webkit-transform: scale(1.1);
+}
+
+.taixuhuanjing_purchasePromptButton2 {
+  position:absolute;
+  width:18%;
+  height:10%;
+  bottom: 8%;
+  right: 30%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height:3.25rem;
+  font-size: 2.0rem;
+  font-family: shoushaFan;
+  color: rgba(255,255,255,1);
+  z-index: 10;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../extension/太虚幻境/image/icon/icon_Button13.png);
+}
+.taixuhuanjing_purchasePromptButton2:hover{
+  -webkit-transform: scale(1.1);
+}
+
+.taixuhuanjing_spoilStyleDiv {
+  width:100%;
+  height:100%;
+  left: 0%;
+  top: 0%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}

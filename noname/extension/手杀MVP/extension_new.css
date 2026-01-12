@@ -1,0 +1,227 @@
+.qy-mvp-container{
+    width: 80%;
+    height: 80%;
+    left: 48%;
+    top: 44%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.qy-mvp-piaodai-left{
+    width: 100%;
+    height: 40%;
+    top: -5%;
+    left: -10%;
+    background-size: 100% 100%;
+    background-image: url("images/piaodai2_zuo.png");
+    z-index: -1;
+    position: relative;
+}
+
+.qy-mvp-piaodai-right{
+    height: 40%;
+    width: 36%;
+    background-size: 100% 100%;
+    z-index: -1;
+    position: relative;
+    top: 0%;
+    left: 16%;
+    background-image: url("images/piaodai2_you.png");
+}
+
+   /*图片整体位置*/
+.qy-center-container{
+    position: relative;
+    height: 110%;
+    width: 85%;
+    left: 7%;
+}
+
+.qy-mvp-avatarbox{
+    width: 150%;
+    height: 90%;
+    top: 0%;
+    left: -46%;
+    background-size: 100% 100%;
+    transform: rotate(-6deg);
+    background-image: url("images/avatarbox2.png");
+}
+
+.qy-mvp-avatarborder{
+    width: 45%;
+    height: 58%;
+    top: 22%;
+    left: 30%;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+.qy-mvp-avatarborder::before{
+    content:attr(data-name);
+    top: 20%;
+    position: absolute;
+    width: 20px;
+    left: 5.5%;
+    font-size: 2.4vw;
+    font-family: shousha;
+}
+
+   /*武将图片*/
+.qy-mvp-avatar{
+    background-size: cover;
+    background-position-x: 50%;
+    width: 37%;
+    height: 54%;
+    top: 23.4%;
+    left: 36%;
+}
+
+   /*数据整体位置*/
+.qy-mvp-qyInfo {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 27%;
+    left: 80%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+.qy-mvp-qyInfo div {
+    position: relative;
+    width: 100%;
+}
+
+.qy-mvp-title{
+    height: 36%;
+    top: -18%;
+    left: -10%;
+    font-size: 1.7vw;
+    background-image: url("images/quanchangzuijia2.png");
+    background-size: 100% 100%;
+}
+
+.qy-mvp-center{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+.qy-mvp-center div{
+    font-family: shousha;
+    font-weight: 800;
+}
+
+   /*玩家名称*/
+.qy-player-info * {
+    font-size: 2.7vw;
+    color: rgb(234, 138, 76);
+    top: -110%;
+}
+
+.qy-mvp-icon{
+    background-image: url("images/dajiangjun.png");
+    background-size: 100% 100%;
+    width: 42% !important;
+    height: 140%;
+    top: -120%;
+    left: -2%;
+}
+
+   /*名字*/
+.qy-mvp-name-info{
+    font-size: 4.1vw !important;
+    top:-110%;
+    color: #D9B46C;
+}
+
+   /*分数详情*/
+.qy-mvp-scoreInfo {
+    top: -15%;
+    left: 4%;
+}
+
+/*---------------修改增加星星--------------*/
+   /*星星*/
+   .qy-mvp-xing{
+    position: relative;
+    width: 15px;
+    height: 24%;
+    top: 52%;
+    left: 29.5%;
+    z-index: 9;
+    display: inline-flex;
+    flex-direction: column-reverse;
+}
+.qy-mvp-xing > .item{
+    position: relative;
+    /*background: url(images/pdxx_00000.png);*/
+    /*background-size: cover;*/
+    background-size: 100% 100%;
+    transform: rotate(0deg);/*星星旋转角度*/
+    width: 24px;
+    height: 24px;
+    left: 90%;
+    z-index: 9;
+}
+/* 星星图片亮 */
+.qy-mvp-xing > .on {
+    background-image: url(images/chr_star_on.png);
+}
+
+/* 星星图片暗 */
+.qy-mvp-xing > .off {
+    background-image: url(images/chr_star_off.png);
+    width: 3.4vw;
+    height: 3.4vw;
+    left: 78%;
+}
+/*---------------修改增加星星--------------*/
+
+.qy-mvp-scoreInfo *{
+    font-family: shousha;
+    font-weight: 800;
+    font-size: 2.7vw;
+    color: #9F9D7C;
+}
+
+.qy-mvp-name-title:first-child {
+    color: #BC9467;
+}
+
+.qy-mvp-name-title:last-child {
+    color: #CC941C;
+}
+
+
+@media (min-width: 1920px) {
+    .qy-mvp-avatarbox{
+        height: 110%;
+        top: -2%;
+    }
+}
+
+.qy-mvp-player-nickname {/*本人昵称*/
+    font-size: 3.6vw;
+    color: #D9B46C;
+}
+
+.qy-mvp-player-nickname > img {/*本人图标*/
+    position: absolute;
+    width: 10vw;
+    top: -10px;
+    margin-left: 15px;
+}
+
+
+.qy-mvp-share-button {/*分享图标*/
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 85px;
+    height: 96px;
+    background-image: url("images/pubtn_share.png");
+    background-size: 100% 100%;
+}

@@ -1,0 +1,109 @@
+/*玩家标记显示-新样式*/
+#arena[data-player-mark-style="decade"]>.player>.dui-marks {
+    display: inline;
+    left: 24.1px;
+	top: auto;
+	bottom: 68px;
+	line-height: 20px; /*换行间距*/
+	word-wrap: break-word;
+	height: auto;
+	width: 113px;
+	/*z-index: 63;被副将覆盖了*/
+	z-index: 80;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/*background-image: url('assets/image/bg.png');*/
+	background-image: none;
+	background-size: 100% 100%;
+}
+/*创举，元素内容为空时执行以下css效果*/
+#arena[data-player-mark-style="decade"]>.player>.dui-marks:empty {
+    /*没有内容时去掉边框*/
+    border: none;
+}
+/*死亡隐藏标记*/
+#arena[data-player-mark-style="decade"]>.player.dead>.dui-marks { 
+    display:none;
+}
+#arena[data-player-mark-style="decade"]>.player>.dui-marks>.mark {/*标记图层看不见=文字+数字*/
+	display: inline;
+	min-width: 100px;	
+	height: 23px !important;
+	white-space:pre;
+	transition:all 0s;
+	/*word-break:break-all;
+	/*box-shadow: -13px -2px 16px rgba(0,0,0,0.7), -13px 5px 16px rgba(0,0,0,0.2);border-radius:2px;*/
+    /*  text-align: left;*/
+    	bottom: -2px;
+    	left: -2px;
+    /*	animation: fade-in 0.5s;*/
+    /*	margin-left: 5px*/;
+}
+
+#arena[data-player-mark-style="decade"]>.player>.dui-marks>.mark>.mark-text {/*标记文字*/
+	display: inline;
+	position: relative;
+	border-radius: 1px;
+	margin-left: 18px;
+	left:-16px;
+	/*margin-right: 10px;*/
+	/*line-height: 15px; /*换行间距*/
+	font-size: 17px;/*原版18px*/ /*字体大小*/
+	text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: 'shousha' !important; /*字体样式*/
+	text-align: center;
+	margin-bottom: 0px;
+	color: white;
+	font-weight: 200 !important;
+	background-image: none;
+	letter-spacing: -0.8px;
+	box-shadow: none;
+	animation: none;
+}
+#arena[data-player-mark-style="decade"]>.player>.dui-marks>.mark>.mark-text::before {
+	display: none;
+}
+
+#arena[data-player-mark-style="decade"]>.player>.dui-marks>.mark>.mark-count {
+	display: inline;
+	position: static;
+	line-height: 18px; /*换行间距*/
+	border-radius: 1px;
+	text-align: center;
+	font-size: 17px;/*原版18px*/ /*字体大小*/
+	text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: 'shousha' !important; /*字体样式*/
+	font-weight: 200 !important;
+    /*	white-space:normal;*/
+	color: white;
+	margin-left: -13px;
+	background: none;
+	letter-spacing: -0.8px;
+	box-shadow: none;
+}
+
+.mark-container.marks>.mark {
+	white-space:pre;
+}
+
+.mark-container.marks>.mark>.mark-text {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: black;
+	font-size: 20px;
+}
+
+.mark-container.marks>.mark>.mark-count {
+	display: block;
+	position: absolute;
+	right: -5px;
+	width: 15px;
+	background: white;
+	border-radius: 1px;
+}

@@ -1,0 +1,151 @@
+/*玩家标记显示-新样式*/
+#arena[data-player-mark-style="decade"]>.player>.dui-marks {
+    display: inline;
+    left: calc(22.6px + 1.5px);/*20px，纯阴影23px*/
+	top: auto;
+	bottom: 69px;
+	line-height: 20px; /*换行间距*/
+	height: auto;
+	width: calc(103px + 10px);/*原图108px，高清图105px，纯阴影不带border104.3*/
+	z-index: 80;
+	flex-direction: column;
+	flex-wrap: wrap;
+	background-image: none;
+	background-size: 100% 100%;
+	border-radius: 4px;/*原来是5px*/
+	/*用边框(这里是阴影加边线)的方式代替图片效果，可以有效避免圆角和边框粗细被拉伸改变*/
+	/*box-shadow: 0px 0px 0px 1px rgba(155,130,110,0.9);
+	border: 1px solid rgba(100,90,80,0.9);*/
+	box-shadow: none;
+	border: none;
+	/*box-shadow: 0px 0px 0.4px 1.8px rgba(155,130,110,0.9)l*/
+	
+	/*border-radius: 5px;
+	border: 3px solid rgba(155,130,110,1);*/
+	/*filter: 'blur(0.5px)';减少清晰度*/
+	/*transition: all 0.3s;标记过渡*/
+	/*纯阴影版备份：
+	box-shadow: 0px 0px 0.4px 1.8px rgba(155,130,110,0.9);
+	border-radius: 5px;
+	width: 104.3px;
+	left: 23px;
+	*/
+}
+
+#arena[data-player-mark-style="decade"]>.player>.dui-marks::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 11px;
+    bottom: 0;
+    /*background-color: #FFFFFF; /* 白色覆盖层 */
+    /*opacity: 0.5; /* 调整透明度以看到下面的背景图像 */
+    z-index: -1; /* 确保覆盖层在内容之下 */
+    pointer-events: none; /* 允许鼠标点击穿透该层 */
+    background-image: url('assets/image/bg.png');
+	background-size: 100% 100%;
+	border-radius: 4px;/*原来是5px*/
+	/*用边框(这里是阴影加边线)的方式代替图片效果，可以有效避免圆角和边框粗细被拉伸改变*/
+	/*box-shadow: 0px 0px 0px 1px rgba(155,130,110,0.9);
+	border: 1px solid rgba(100,90,80,0.9);*/
+	box-shadow: 0px 0px 0px 0.8px rgba(140,130,120,0.9),
+	             0px 0px 6px 1px rgba(0,0,0,1);
+	border: 0.8px solid rgba(100,90,80,0.9);
+}
+
+/*创举，元素内容为空时执行以下css效果*/
+#arena[data-player-mark-style="decade"]>.player>.dui-marks:empty {
+    /*没有内容时去掉边框*/
+    box-shadow: none;
+    border: none;
+}
+#arena[data-player-mark-style="decade"]>.player>.dui-marks:empty::before {
+    /*没有内容时去掉边框*/
+    box-shadow: none;
+    border: none;
+}
+/*死亡隐藏标记*/
+#arena[data-player-mark-style="decade"]>.player.dead>.dui-marks { 
+display:none;
+}
+#arena[data-player-mark-style="decade"]>.player>.dui-marks>.mark {/*标记图层看不见=文字+数字*/
+	display: inline;
+	min-width: 100px;	
+	height: 23px !important;
+	white-space:pre;
+	transition:all 0s;
+	/*word-break:break-all;
+	/*box-shadow: -13px -2px 16px rgba(0,0,0,0.7), -13px 5px 16px rgba(0,0,0,0.2);border-radius:2px;*/
+  /*  text-align: left;*/
+	bottom: -2px;
+	left:0px;
+/*	animation: fade-in 0.5s;*/
+/*	margin-left: 5px*/;
+}
+
+#arena[data-player-mark-style="decade"]>.player>.dui-marks>.mark>.mark-text {/*标记文字*/
+	display: inline;
+	position: relative;
+	border-radius: 1;
+	margin-left: 18px;
+	left:-16px;
+	/*margin-right: 10px;*/
+	/*line-height: 15px; /*换行间距*/
+	font-size: 17px;/*原版18px*/ /*字体大小*/
+	text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-family: 'shousha' !important; /*字体样式*/
+	/*text-align: center;*/
+	margin-bottom: 0px;
+	color: rgba(240,240,240,1);/*原版white纯白*/
+	font-weight: normal;/*原版bold加粗*/
+	background-image: none;
+	box-shadow: none;
+	animation: none;
+}
+#arena[data-player-mark-style="decade"]>.player>.dui-marks>.mark>.mark-text::before {
+	display: none;
+}
+
+#arena[data-player-mark-style="decade"]>.player>.dui-marks>.mark>.mark-count {
+	display: inline;
+	position: static;
+	line-height: 18px; /*换行间距*/
+	border-radius: 1;
+	text-align: center;
+	font-size: 17px;/*原版18px*/ /*字体大小*/
+	font-family: 'shousha' !important; /*字体样式*/
+	text-shadow:-1.3px 0px 2.2px #000, 0px -1.3px 2.2px #000, 1.3px 0px 2.2px #000 ,0px 1.3px 2.2px #000;
+	font-weight: normal;/*原版bold加粗*/
+/*	white-space:normal;*/
+	color: rgba(240,240,240,1);/*原版white纯白*/
+	margin-left: -13px;
+	background: none;
+	box-shadow: none;
+}
+
+.mark-container.marks>.mark {
+	white-space:pre;
+}
+
+.mark-container.marks>.mark>.mark-text {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: black;
+	font-size: 20px;
+}
+
+.mark-container.marks>.mark>.mark-count {
+	display: block;
+	position: absolute;
+	right: -5px;
+	width: 15px;
+	background: white;
+	border-radius: 1px;
+}

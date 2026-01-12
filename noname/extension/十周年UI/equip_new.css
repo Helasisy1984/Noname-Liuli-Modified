@@ -1,0 +1,190 @@
+
+/*其他玩家装备栏*/
+#arena>.player>.equips, 
+#arena>.player:not(.minskin)>.equips {
+	left: 18%;/*右边距*/
+	/*right: -50%;/*左边距*/
+	width: 85%;/*宽度，自动匹配*/
+	height: 84px;/*高度*/
+	bottom: -2%;/*整体上移*/
+	box-shadow: none;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.84), rgba(0,0,0,0));
+	/*background-image: url('assets/image/game_equip_bg.png');*/
+	/*background-image: none;*/
+	pointer-events: none;
+	z-index: 75;
+	transform: none;
+	transform-origin: center;
+	position: absolute;
+    border-radius: 8px;
+	display: flex;
+	flex-direction: column-reverse;
+	flex-wrap: wrap-reverse;
+}
+
+#arena[data-new-decade-style='on']>.player>.equips, 
+#arena[data-new-decade-style='on']>.player:not(.minskin)>.equips {
+	left: 8%;
+	right: 13.8%;
+}
+
+#arena>.player>.equips:empty {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0,0,0,0));
+}
+
+#arena[data-new-decade-style='off']>.player>.equips, 
+#arena[data-new-decade-style='off']>.player:not(.minskin)>.equips {
+	left: 17.5%;
+	right: 0.5%;
+	top: 53%;
+	border-radius: 8px;
+}
+
+#arena[data-new-decade-style='othersOn']>.player>.equips, 
+#arena[data-new-decade-style='othersOn']>.player:not(.minskin)>.equips {
+	left: 13.8%;
+	right: 0.4%;
+}
+
+
+.player>.equips>div,
+.player>.equips>.card {
+	position: absolute;
+}
+
+.player>.equips>.card {
+	top: -16px;
+}
+
+.player>.equips>div.equip1 {
+	top: 30px;
+	left: 2px;
+	overflow:hidden;
+	max-width:96px;
+}
+
+.player>.equips>div.equip2 {
+	top: 46px;
+	left: 2px;
+	overflow:hidden;
+	max-width:96px;
+}
+
+/*.player>.equips>div.equip3,
+.player>.equips>div.equip6 {*/
+.player>.equips>div.equip3 {
+	top: 62px;
+	left: 1px;
+	overflow:hidden;
+	max-width:52px;
+}
+
+.player>.equips>div.equip4 {
+	top: 62px;
+	left: 49px;
+	overflow:hidden;
+	max-width:52px;
+	bottom: 0;
+}
+
+.player>.equips>div.equip5 {
+	top: 14px;
+	left: 2px;
+	overflow:hidden;
+	max-width:96px;
+}
+
+/*新加的6，主要是太虚*/
+.player>.equips>div.equip6 {
+	top: 62px;
+	left: 2px;
+	overflow:hidden;
+	max-width:96px;
+}
+
+
+#arena.decadeUI:not(.long).mobile:not(.oldlayout) .player.unseen:not([data-position="0"]) .equips:not(*:empty),
+#arena.decadeUI:not(.long):not(.mobile):not(.oldlayout) .player.unseen .equips:not(*:empty),
+#arena.decadeUI.long.mobile:not(.oldlayout) .player.unseen2:not([data-position="0"]) .equips:not(*:empty),
+#arena.decadeUI.long:not(.mobile):not(.oldlayout) .player.unseen2 .equips:not(*:empty){
+	background: none;
+	border-radius: 0;
+	overflow: hidden;
+	box-shadow: none;
+}
+
+.player>.equips>.card,
+.player.unseen>.equips>.card,
+.player.unseen2>.equips>.card {/*AI装备栏*/
+	display: flex;
+	align-items: center;
+	align-content: flex-start;
+	justify-content: center;
+	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0)) !important;
+	border-image:linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0));
+	box-shadow:none;
+	box-sizing: border-box;
+	border-radius: 1px;/*圆角*/
+	width: 100%;
+	height: 16px;
+	text-shadow: none;
+}
+
+.player:not(.selectable)>.equips>.card,
+.player:not(.selectable)>.equips>.card>div {
+	pointer-events: auto;
+}
+
+.player>.equips>.card>div {
+	position: static;
+}
+
+.player>.equips>.card>.name2 {/*AI装备名*/
+	position: absolute;
+	left: 5px;
+	top: 0;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: flex-start;
+	width: 100%;
+	height: 100%;
+	line-height: 15px;
+	color: white;/*颜色*/
+	font-size: 14px;/*字体大小*/
+	font-weight: bold;/*加粗*/
+	font-family: shousha, xinwei, xinkai !important;
+/*	text-shadow: 1px 1px 1px black;*/
+	text-align: center;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	pointer-events: none;
+/*	-webkit-text-stroke: 0.5px black;*/
+	overflow:hidden;
+}
+
+/*
+.player>.equips>.card[data-suit='heart']>.name2,
+.player>.equips>.card[data-suit='diamond']>.name2 {
+	color: #8B0000;
+}
+*/
+
+.eng-feichu {
+	z-index: 5;
+	height: 100%;
+}
+
+/*.player>.equips>.card>.image { /*图片效果*/*/
+	/*display: block;*/
+	/*left: 3px;*/
+	/*top: -1px;*/
+	/*bottom: 3px;*/
+	/*width: 17px;*/
+	/*height: 17px;*/
+	/*position: absolute;*/
+	/*visibility: visible !important;*/
+	/*z-index: 2;*/
+}

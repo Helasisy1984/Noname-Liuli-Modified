@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互动出框播放控制</title>
+    <link rel="stylesheet" href="interactive-chukuang.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+    <!-- 主控制面板 -->
+    <div id="interactive-panel" class="interactive-panel">
+        <div class="panel-header">
+            <h3>互动出框播放</h3>
+            <button id="panel-toggle" class="panel-toggle">
+                <i class="iconfont icon-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="panel-content">
+            <!-- 基础设置 -->
+            <div class="settings-group">
+                <h4>基础设置</h4>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="enable-touch" checked>
+                        <span class="checkmark"></span>
+                        启用触摸控制
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="enable-gesture" checked>
+                        <span class="checkmark"></span>
+                        启用手势识别
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="enable-hover">
+                        <span class="checkmark"></span>
+                        悬停触发
+                    </label>
+                </div>
+            </div>
+
+            <!-- 触发设置 -->
+            <div class="settings-group">
+                <h4>触发设置</h4>
+                <div class="setting-item">
+                    <label>触发延迟</label>
+                    <input type="range" id="trigger-delay" min="0" max="2000" value="200" step="100">
+                    <span id="delay-value">200ms</span>
+                </div>
+                <div class="setting-item">
+                    <label>双击间隔</label>
+                    <input type="range" id="double-tap-delay" min="200" max="800" value="400" step="50">
+                    <span id="double-tap-value">400ms</span>
+                </div>
+            </div>
+
+            <!-- 动画设置 -->
+            <div class="settings-group">
+                <h4>动画设置</h4>
+                <div class="setting-item">
+                    <label>播放速度</label>
+                    <input type="range" id="animation-speed" min="0.5" max="3" value="1" step="0.1">
+                    <span id="speed-value">1.0x</span>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="auto-loop">
+                        <span class="checkmark"></span>
+                        自动循环播放
+                    </label>
+                </div>
+            </div>
+
+            <!-- 手势控制 -->
+            <div class="settings-group">
+                <h4>手势控制</h4>
+                <div class="gesture-controls">
+                    <div class="gesture-item" data-gesture="tap">
+                        <div class="gesture-icon">👆</div>
+                        <span>单击</span>
+                        <select class="gesture-action">
+                            <option value="GongJi">攻击动画</option>
+                            <option value="TeShu">特殊动画</option>
+                            <option value="chuchang">出场动画</option>
+                            <option value="hudong">互动动画</option>
+                        </select>
+                    </div>
+                    <div class="gesture-item" data-gesture="doubletap">
+                        <div class="gesture-icon">👆👆</div>
+                        <span>双击</span>
+                        <select class="gesture-action">
+                            <option value="TeShu">特殊动画</option>
+                            <option value="GongJi">攻击动画</option>
+                            <option value="chuchang">出场动画</option>
+                            <option value="hudong">互动动画</option>
+                        </select>
+                    </div>
+                    <div class="gesture-item" data-gesture="press">
+                        <div class="gesture-icon">👇</div>
+                        <span>长按</span>
+                        <select class="gesture-action">
+                            <option value="hudong">互动动画</option>
+                            <option value="TeShu">特殊动画</option>
+                            <option value="GongJi">攻击动画</option>
+                            <option value="chuchang">出场动画</option>
+                        </select>
+                    </div>
+                    <div class="gesture-item" data-gesture="swipe">
+                        <div class="gesture-icon">👈👉</div>
+                        <span>滑动</span>
+                        <select class="gesture-action">
+                            <option value="chuchang">出场动画</option>
+                            <option value="GongJi">攻击动画</option>
+                            <option value="TeShu">特殊动画</option>
+                            <option value="hudong">互动动画</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 音效设置 -->
+            <div class="settings-group">
+                <h4>音效设置</h4>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="enable-sound" checked>
+                        <span class="checkmark"></span>
+                        启用音效
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>音效音量</label>
+                    <input type="range" id="sound-volume" min="0" max="100" value="50">
+                    <span id="volume-value">50%</span>
+                </div>
+            </div>
+
+            <!-- 快捷操作 -->
+            <div class="settings-group">
+                <h4>快捷操作</h4>
+                <div class="quick-actions">
+                    <button class="action-btn" data-action="GongJi">
+                        <i class="iconfont icon-sword"></i>
+                        攻击
+                    </button>
+                    <button class="action-btn" data-action="TeShu">
+                        <i class="iconfont icon-star"></i>
+                        特殊
+                    </button>
+                    <button class="action-btn" data-action="chuchang">
+                        <i class="iconfont icon-play"></i>
+                        出场
+                    </button>
+                    <button class="action-btn" data-action="hudong">
+                        <i class="iconfont icon-heart"></i>
+                        互动
+                    </button>
+                </div>
+            </div>
+
+            <!-- 状态显示 -->
+            <div class="settings-group">
+                <h4>状态信息</h4>
+                <div class="status-info">
+                    <div class="status-item">
+                        <span>当前状态:</span>
+                        <span id="current-status">就绪</span>
+                    </div>
+                    <div class="status-item">
+                        <span>触发次数:</span>
+                        <span id="trigger-count">0</span>
+                    </div>
+                    <div class="status-item">
+                        <span>最后动作:</span>
+                        <span id="last-action">无</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 触摸指示器 -->
+    <div id="touch-indicator" class="touch-indicator">
+        <div class="ripple"></div>
+    </div>
+
+    <!-- 手势提示 -->
+    <div id="gesture-hint" class="gesture-hint">
+        <div class="hint-content">
+            <div class="hint-icon"></div>
+            <div class="hint-text"></div>
+        </div>
+    </div>
+
+    <!-- 音效文件预加载 -->
+    <audio id="touch-sound" preload="auto">
+        <source src="../audio/touch.mp3" type="audio/mpeg">
+        <source src="../audio/touch.ogg" type="audio/ogg">
+    </audio>
+    <audio id="gesture-sound" preload="auto">
+        <source src="../audio/gesture.mp3" type="audio/mpeg">
+        <source src="../audio/gesture.ogg" type="audio/ogg">
+    </audio>
+
+    <script src="any-touch.umd.min.js"></script>
+    <script src="interactive-chukuang.js"></script>
+</body>
+</html> 

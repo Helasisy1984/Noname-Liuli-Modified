@@ -1,0 +1,100 @@
+/* 用于瞬发技字体 */
+@font-face {
+	font-family: 'FZBWKSJ';
+	src: url("./image/fonts/FZBWKSJ.TTF");
+}
+@font-face {
+	font-family: 'songhei';
+	src: url("./image/fonts/songhei.TTF");
+}
+@font-face {
+	font-family: 'xinwei';
+	src: url("./image/fonts/xinwei.TTF");
+}
+/*感谢 雷 的技术支持 感谢 萌新(转型中) 的授权*/
+.Fool-dibeijing {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+.Fool-skilltip {
+	width: 20%;
+	min-height: 5%;
+	left: 50%;
+	top: 50%;
+	font-size: 16px;
+	color: #ccad76;
+	font-family: 'shousha';
+	background-color: rgba(36, 29, 19, 0.85);
+	border: #523a24 3px solid;
+	border-radius: 10px;
+	position: absolute;
+	display: block;
+	padding: 8px;
+	transform: translate(-50%, -50%);
+	transition: none;
+}
+.Fool-skilltip2 {
+	width: 20%;
+	min-height: 5%;
+	left: 50%;
+	top: 50%;
+	font-size: 16px;
+	color: #443317;
+	font-family: 'FZBWKSJ';
+	background-color: rgba(245, 238, 212, 0.85);
+	border: #d4bc86 3px solid;
+	border-radius: 10px;
+	position: absolute;
+	display: block;
+	padding: 8px;
+	transform: translate(-50%, -50%);
+	transition: none;
+}
+.Fool_liegone_shousha {
+	z-index: 100;
+	top: calc(50% - 13px);
+	font-family: 'HYZLSJ';
+	font-size: 24px;
+	text-shadow: 2px 2px 5px black;
+	transform: translate(-40%,-38%);
+	color: #fcfc91;
+	writing-mode: vertical-rl;
+	text-align: center;
+}
+.Fool_liegone_olten {
+	z-index: 100;
+	top: calc(50% - 13px);
+	font-family: 'xinwei';
+	font-size: 13px;
+	color: #fff700;
+	background: linear-gradient(to right, transparent 0%, rgba(100,0,0,0.5) 35%, rgba(100,0,0,0.5) 65%, transparent 100%);
+	text-align: center;
+}
+.Fool_liegone_ol {
+	z-index: 80;
+	top: calc(50% - 13px);
+	font-family: 'songhei';
+	font-size: 20px;
+	color: #c8a253;
+	transform: translateY(300%);
+	text-align: center;
+}
+
+/*禁选标语*/
+.biaojishousha {
+	text-shadow:0px 0px 0px #fcfc91;
+    color: #fcfc91 ;
+    -webkit-text-stroke: 1px rgba(190,190,50,0.8);
+}
+.biaojiolten {
+	text-shadow:0px 0px 0px #fff700;
+    color: #fff700 ;
+}
+.biaojiola {
+	text-shadow:0px 0px 0px #c8a253;
+    color: #c8a253 ;
+}
