@@ -1,0 +1,185 @@
+.drag-read-updateContent {
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.drag-read-updateContentClose {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drag-read-updateContentClose:hover {
+    background: #ff6b81;
+    transform: scale(1.1);
+}
+
+.drag-read-updateContentClose:before {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+.drag-read-updateContentClose:after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: white;
+    transform: rotate(-45deg);
+}
+
+.drag-read-updateContentButton {
+    z-index: 1000;
+    position: absolute;
+    bottom: 20px;
+    width: 200px;
+    left: calc(50% - 100px);
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.drag-read-updateContentButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.drag-read-importZip {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    width: 300px;
+    height: 60px;
+    left: calc(50% - 150px);
+    bottom: 45%;
+    z-index: 1000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.drag-read-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000000;
+}
+
+.drag-read-extension-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    height: 110px;
+}
+
+.drag-read-modal-title {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    color: #2c3e50;
+    text-align: center;
+    text-shadow: none;
+    width: 90%;
+    left: 5%;
+}
+
+.drag-read-modal-input {
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    top: 50px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.drag-read-modal-input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.drag-read-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15px;
+}
+
+.drag-read-modal-btn {
+    padding: 8px 35px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    margin-right: 15px;
+}
+
+.drag-read-modal-btn.confirm {
+    background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+    color: white;
+}
+
+.drag-read-modal-btn.cancel {
+    background: #e74c3c;
+    color: white;
+}
+
+.drag-read-modal-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
